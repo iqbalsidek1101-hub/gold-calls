@@ -54,9 +54,36 @@
     }
     header h1 { margin: 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
     .sub { color: var(--muted); font-size: .75rem; margin-top: 3px; }
+    .refresh {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      min-height: 52px;
+      border: 0;
+      border-radius: 14px;
+      background: #0284c7;
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .refresh:disabled { opacity: .65; }
     .live {
       display: flex; align-items: center; gap: 8px; margin-top: 8px;
-      font-variant-numeric: tabular-nums; font-size: .85rem; min-height: 1.2em;
+      font-variant-numeric: tabular-nums; font-size: .95rem; min-height: 1.2em;
+    }
+    .updated, .disclaimer {
+      color: var(--muted);
+      font-size: .72rem;
+      line-height: 1.35;
+      margin-top: 4px;
+    }
+    .ptr {
+      height: 0;
+      overflow: hidden;
+      text-align: center;
+      color: var(--accent);
+      font-size: .8rem;
+      line-height: 36px;
     }
     .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--buy); box-shadow: 0 0 8px var(--buy); flex: none; }
     .dot.off { background: var(--muted); box-shadow: none; }
@@ -116,7 +143,7 @@
       width: 100%;
       display: grid;
       grid-template-columns: auto auto 1fr auto;
-      grid-template-areas: "id badge . status" "entry entry time time";
+      grid-template-areas: "id badge . rasmi" "entry entry time time" "est est est est";
       column-gap: 8px;
       row-gap: 6px;
       align-items: center;
@@ -131,9 +158,15 @@
     }
     .id { grid-area: id; font-weight: 700; font-size: 1.02rem; }
     .badge { grid-area: badge; }
-    .status { grid-area: status; justify-self: end; }
+    .rasmi { grid-area: rasmi; justify-self: end; text-align: right; }
+    .rasmi-k { display: block; color: var(--muted); font-size: .62rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
     .entry { grid-area: entry; font-variant-numeric: tabular-nums; font-weight: 600; font-size: .95rem; }
     .meta { grid-area: time; justify-self: end; color: var(--muted); font-size: .78rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .est { grid-area: est; font-size: .75rem; font-weight: 600; line-height: 1.3; color: #cbd5e1; }
+    .est.tp { color: #4ade80; }
+    .est.sl { color: #f87171; }
+    .est.in { color: #7dd3fc; }
+    .est.wait, .est.tamat { color: #cbd5e1; }
     .status { font-size: .75rem; font-weight: 700; letter-spacing: .03em; }
     .status.PENDING { color: #facc15; }
     .status.TP { color: #4ade80; }
@@ -225,7 +258,10 @@
   <header>
     <h1>Charlie · XAUUSD</h1>
     <div class="sub">Senarai call · data calls.json, bukan akaun broker</div>
+    <button type="button" class="refresh" id="refreshBtn">Muat semula</button>
     <div class="live"><span class="dot off" id="liveDot"></span><span id="livePx">Harga live: —</span></div>
+    <div class="updated" id="updatedLine" aria-live="polite">Dikemaskini: —</div>
+    <div class="disclaimer" id="disclaimer">anggaran (harga awam, beza ~$1 dari JustMarkets)</div>
     <div class="tabs" id="tabs" role="tablist">
       <button type="button" role="tab" id="tab-SCALP" data-type="SCALP" aria-selected="false">Scalping</button>
       <button type="button" role="tab" id="tab-INTRADAY" data-type="INTRADAY" aria-selected="false">Intraday</button>
@@ -233,6 +269,7 @@
     </div>
     <button type="button" class="back" id="backBtn" hidden>← Senarai</button>
   </header>
+  <div class="ptr" id="ptr"></div>
   <main id="app">Memuat…</main>
   <div class="zoom" id="zoom" hidden>
     <button type="button" class="zoom-close" id="zoomClose">Tutup</button>
@@ -246,9 +283,16 @@
       { key: 'SWING', label: 'Swing' }
     ];
     const MONTHS = ['Jan','Feb','Mac','Apr','Mei','Jun','Jul','Ogos','Sep','Okt','Nov','Dis'];
+    const BIQUOTE = 'https://biquote.io/api/XAUUSD';
+    const LS_RANGE = 'charlie-gold-spot-range-v1';
+    const TF_MS = { '1m': 60000, '5m': 300000, '15m': 900000, '1h': 3600000 };
     let data = null;
     let activeType = 'INTRADAY';
     let detailId = null;
+    let refreshing = false;
+    let updatedAt = null;
+    let callsError = '';
+    let market = { ok: false, mode: 'off', mid: null, time: null, candles: [] };
 
     function money(n) {
       const x = Number(n);
@@ -311,6 +355,172 @@
       if (!risk) return '—';
       return (reward / risk).toFixed(2);
     }
+    function fmtMYTDate(date) {
+      const t = new Date(date.getTime() + 8 * 3600 * 1000);
+      const hh = String(t.getUTCHours()).padStart(2, '0');
+      const mm = String(t.getUTCMinutes()).padStart(2, '0');
+      return t.getUTCDate() + ' ' + (MONTHS[t.getUTCMonth()] || '') + ', ' + hh + ':' + mm + ' MYT';
+    }
+    function parseMYT(s) {
+      const m = String(s || '').match(/(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})(?::(\d{2}))?/);
+      if (!m) return null;
+      return Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4] - 8, +m[5], +(m[6] || 0));
+    }
+    function fmtEstR(r) {
+      if (r == null || !Number.isFinite(r)) return '—';
+      const n = Math.round(r * 100) / 100;
+      return (n > 0 ? '+' : '') + n.toFixed(2) + 'R';
+    }
+    function tfLabel(ms) {
+      if (ms <= 60000) return 'M1';
+      if (ms <= 300000) return 'M5';
+      if (ms <= 900000) return 'M15';
+      if (ms <= 3600000) return 'H1';
+      return 'OHLC';
+    }
+    async function fetchJson(url) {
+      const res = await fetch(url, { cache: 'no-store' });
+      if (!res.ok) throw new Error(res.status + ' ' + url);
+      return res.json();
+    }
+    function parseBars(payload, ms) {
+      return (payload.bars || []).map((b) => ({
+        t: Date.parse(b.openTime),
+        h: Number(b.high),
+        l: Number(b.low),
+        c: Number(b.close),
+        ms
+      })).filter((b) => [b.t, b.h, b.l, b.c].every(Number.isFinite))
+        .sort((a, b) => a.t - b.t);
+    }
+    function stitch(layers) {
+      let out = [];
+      for (const layer of layers) {
+        if (!layer.bars.length) continue;
+        if (!out.length) { out = layer.bars.slice(); continue; }
+        const coveredFrom = out[0].t;
+        const extra = layer.bars.filter((b) => b.t + b.ms <= coveredFrom);
+        out = extra.concat(out);
+      }
+      return out;
+    }
+    async function fetchTf(interval) {
+      const ms = TF_MS[interval];
+      const j = await fetchJson(BIQUOTE + '/ohlc?interval=' + interval + '&limit=1000');
+      return { ms, bars: parseBars(j, ms) };
+    }
+    function earliestPendingMs() {
+      let earliest = null;
+      ((data && data.calls) || []).forEach((c) => {
+        if (String(c.status || 'PENDING').toUpperCase() !== 'PENDING') return;
+        const t = parseMYT(c.created_myt);
+        if (t != null && (earliest == null || t < earliest)) earliest = t;
+      });
+      return earliest;
+    }
+    function readRanges() {
+      try { return JSON.parse(localStorage.getItem(LS_RANGE) || '{}') || {}; }
+      catch (e) { return {}; }
+    }
+    function spotCandle(id, price) {
+      const all = readRanges();
+      const now = Date.now();
+      const prev = all[id];
+      const rec = prev && Number.isFinite(prev.hi) && Number.isFinite(prev.lo)
+        ? prev
+        : { hi: price, lo: price, since: now };
+      rec.hi = Math.max(rec.hi, price);
+      rec.lo = Math.min(rec.lo, price);
+      if (!rec.since) rec.since = now;
+      all[id] = rec;
+      try { localStorage.setItem(LS_RANGE, JSON.stringify(all)); } catch (e) {}
+      return { t: rec.since, h: rec.hi, l: rec.lo, c: price, ms: Math.max(1000, now - rec.since), weak: true };
+    }
+    function walkCall(c, candles, now) {
+      const dir = dirKey(c.direction);
+      const lo = Number(c.entry_lo), hi = Number(c.entry_hi);
+      const sl = Number(c.sl), tp = Number(c.tp);
+      const created = parseMYT(c.created_myt);
+      const until = parseMYT(c.valid_until_myt);
+      if (dir === 'WAIT' || created == null || ![lo, hi, sl, tp].every(Number.isFinite)) {
+        return { label: null, r: null, partial: false, tfs: [] };
+      }
+      const fill = dir === 'SELL' ? lo : hi;
+      const risk = Math.abs(fill - sl);
+      const rAt = (price) => risk ? (dir === 'SELL' ? (fill - price) / risk : (price - fill) / risk) : null;
+      const relevant = candles.filter((b) => b.t + b.ms > created && (until == null || b.t < until));
+      const partial = !candles.length || candles[0].t > created;
+      let filled = false;
+      const tfs = [];
+      for (const b of relevant) {
+        if (!b.live) tfs.push(b.ms);
+        const entryHit = dir === 'SELL' ? b.h >= lo : b.l <= hi;
+        const slHit = dir === 'SELL' ? b.h >= sl : b.l <= sl;
+        const tpHit = dir === 'SELL' ? b.l <= tp : b.h >= tp;
+        if (!filled) {
+          if (!entryHit) continue;
+          filled = true;
+        }
+        if (slHit) return { label: 'ANGGARAN SL', r: -1, partial, tfs, at: b.t };
+        if (tpHit) return { label: 'ANGGARAN TP', r: rAt(tp), partial, tfs, at: b.t };
+      }
+      const expired = until != null && now >= until;
+      const px = market.mid != null ? market.mid : (relevant.length ? relevant[relevant.length - 1].c : null);
+      if (!filled) return { label: expired ? 'TAMAT' : 'MENUNGGU ENTRY', r: 0, partial, tfs };
+      if (expired) return { label: 'TAMAT', r: rAt(px), partial, tfs };
+      return { label: 'DAH MASUK', r: rAt(px), partial, tfs };
+    }
+    function estimateOf(c) {
+      const official = statusLabel(c.status);
+      if (String(c.status || 'PENDING').toUpperCase() !== 'PENDING') {
+        return { official, label: null, rText: '', kind: '', note: '', weak: false };
+      }
+      const base = 'anggaran (harga awam, beza ~$1 dari JustMarkets)';
+      if (market.mode === 'off' || (market.mode !== 'spot' && !market.candles.length && market.mid == null)) {
+        return { official, label: null, rText: '', kind: '', note: base + '. Harga awam offline — anggaran tak dikira.', weak: false, unavailable: true };
+      }
+      const now = Date.now();
+      let candles = market.candles;
+      let weak = market.mode === 'spot';
+      if (weak && market.mid != null) candles = [spotCandle(c.id, market.mid)];
+      else if (market.mid != null) candles = market.candles.concat([{ t: now, h: market.mid, l: market.mid, c: market.mid, ms: 1000, live: true }]);
+      const walked = walkCall(c, candles, now);
+      if (!walked.label) return { official, label: null, rText: '', kind: '', note: base, weak };
+      const names = [...new Set(walked.tfs.map(tfLabel))];
+      let note = base;
+      if (weak) note += '. Lemah: spot + high/low sejak app ini buka, bukan laluan OHLC.';
+      else if (walked.partial) note += '. Sejarah OHLC tak sampai masa call dicipta.';
+      else note += '. Sumber biquote ' + (names.join('/') || 'OHLC') + '.';
+      const kind = walked.label === 'ANGGARAN TP' ? 'tp'
+        : walked.label === 'ANGGARAN SL' ? 'sl'
+        : walked.label === 'DAH MASUK' ? 'in'
+        : walked.label === 'TAMAT' ? 'tamat' : 'wait';
+      return { official, label: walked.label, rText: fmtEstR(walked.r), kind, note, weak, partial: walked.partial };
+    }
+    function disclaimerText() {
+      const base = 'anggaran (harga awam, beza ~$1 dari JustMarkets)';
+      if (market.mode === 'ohlc') return base + '. Sumber biquote XAUUSD OHLC.';
+      if (market.mode === 'spot') return base + '. Lemah: spot + high/low sejak app ini buka, bukan OHLC.';
+      return base + '. Harga awam offline — anggaran tak dikira.';
+    }
+    function paintChrome() {
+      const btn = $('refreshBtn');
+      if (btn) {
+        btn.disabled = refreshing;
+        btn.textContent = refreshing ? 'Memuat…' : 'Muat semula';
+      }
+      if (market.mid == null) {
+        $('livePx').textContent = 'Harga awam offline';
+        $('liveDot').classList.add('off');
+      } else {
+        $('livePx').textContent = 'Live ' + Number(market.mid).toFixed(2);
+        $('liveDot').classList.toggle('off', market.mode === 'off');
+      }
+      if (updatedAt) $('updatedLine').textContent = 'Dikemaskini: ' + fmtMYTDate(updatedAt);
+      else if (callsError) $('updatedLine').textContent = 'Dikemaskini: gagal';
+      else $('updatedLine').textContent = 'Dikemaskini: —';
+      $('disclaimer').textContent = disclaimerText();
+    }
     function callsOf(type) {
       const list = (data && data.calls) || [];
       return list
@@ -363,12 +573,19 @@
       const rows = list.map((c) => {
         const dir = dirKey(c.direction);
         const st = statusKey(c.status);
+        const est = estimateOf(c);
+        const estHtml = est.unavailable
+          ? '<span class="est">Anggaran tak tersedia</span>'
+          : est.label
+            ? `<span class="est ${est.kind}">${est.weak ? 'Anggaran lemah' : 'Anggaran'}: ${esc(est.label)} · ${esc(est.rText)}${est.partial && !est.weak ? ' · sejarah tak penuh' : ''}</span>`
+            : '';
         return `<button type="button" class="row" data-id="${esc(c.id)}">
           <span class="id">#${esc(c.id)}</span>
           <span class="badge ${dir}">${esc(dir)}</span>
-          <span class="status ${st}">${esc(statusLabel(c.status))}</span>
+          <span class="rasmi"><span class="rasmi-k">rasmi</span><span class="status ${st}">${esc(est.official)}</span></span>
           <span class="entry">${esc(fmtEntry(c))}</span>
           <span class="meta">${esc(fmtWhen(c.created_myt, false))} MYT</span>
+          ${estHtml}
         </button>`;
       }).join('');
       $('app').innerHTML = `
@@ -385,6 +602,13 @@
       setTabsVisible(false);
       const dir = dirKey(c.direction);
       const st = statusKey(c.status);
+      const est = estimateOf(c);
+      const estBlock = est.unavailable
+        ? `<div class="field wide"><div class="l">Anggaran</div><div class="v">Tak tersedia</div></div>`
+        : est.label
+          ? `<div class="field"><div class="l">${est.weak ? 'Anggaran lemah' : 'Anggaran'}</div><div class="v">${esc(est.label)}</div></div>
+             <div class="field"><div class="l">Anggaran R</div><div class="v">${esc(est.rText)}</div></div>`
+          : '';
       const chart = c.chart || '';
       const chartBlock = chart
         ? `<button type="button" class="chart-btn" id="chartBtn" data-src="${esc(chart)}">
@@ -397,11 +621,14 @@
           <div class="id">#${esc(c.id)}</div>
           <div>
             <span class="badge ${dir}">${esc(dir)}</span>
-            <span class="status ${st}" style="margin-left:8px">${esc(statusLabel(c.status))}</span>
+            <span class="rasmi"><span class="rasmi-k">rasmi</span><span class="status ${st}">${esc(est.official)}</span></span>
           </div>
         </div>
         <div class="when">${esc(TYPES.find((t) => t.key === String(c.type || '').toUpperCase())?.label || c.type || '')} · ${esc(fmtWhen(c.created_myt, true))} MYT</div>
         <div class="grid2">
+          <div class="field"><div class="l">Status rasmi</div><div class="v">${esc(est.official)}</div></div>
+          ${estBlock}
+          ${est.unavailable || est.label ? `<div class="field wide"><div class="l">Nota anggaran</div><div class="v prose">${esc(est.note || disclaimerText())}</div></div>` : ''}
           <div class="field wide"><div class="l">Entry</div><div class="v">${esc(fmtEntry(c))}</div></div>
           <div class="field"><div class="l">SL</div><div class="v">${esc(money(c.sl))}</div></div>
           <div class="field"><div class="l">TP</div><div class="v">${esc(money(c.tp))}</div></div>
@@ -414,13 +641,13 @@
         </div>
         ${chartBlock}
       `;
-      window.scrollTo(0, 0);
     }
-    function render() {
+    function render(opts) {
+      paintChrome();
       if (!data) return;
       if (detailId) {
         const c = findCall(detailId);
-        if (c) { renderDetail(c); return; }
+        if (c) { renderDetail(c); if (opts && opts.scroll) window.scrollTo(0, 0); return; }
         detailId = null;
       }
       renderList();
@@ -430,7 +657,7 @@
       const c = findCall(id);
       if (c && c.type) activeType = String(c.type).toUpperCase();
       history.pushState({ type: activeType, detailId }, '', '#/' + activeType + '/' + encodeURIComponent(id));
-      render();
+      render({ scroll: true });
     }
     function showList(push) {
       detailId = null;
@@ -485,10 +712,7 @@
       }
     });
 
-    async function loadCalls() {
-      const res = await fetch('calls.json?ts=' + Date.now());
-      if (!res.ok) throw new Error('calls.json ' + res.status);
-      data = await res.json();
+    function applyHash() {
       const hash = location.hash || '';
       const parts = hash.replace(/^#\/?/, '').split('/').filter(Boolean);
       const typeFromHash = (parts[0] || '').toUpperCase();
@@ -496,29 +720,142 @@
       activeType = TYPES.some((t) => t.key === typeFromHash) ? typeFromHash : newestType();
       detailId = idFromHash && findCall(idFromHash) ? idFromHash : null;
       history.replaceState({ type: activeType, detailId }, '', detailId ? '#/' + activeType + '/' + encodeURIComponent(detailId) : '#/' + activeType);
+    }
+    async function fetchCalls() {
+      const res = await fetch('calls.json?t=' + Date.now(), { cache: 'no-store' });
+      if (!res.ok) throw new Error('calls.json ' + res.status);
+      data = await res.json();
+      updatedAt = new Date();
+      callsError = '';
+    }
+    async function loadMarket() {
+      try {
+        const [quote, m1, m5] = await Promise.all([
+          fetchJson(BIQUOTE),
+          fetchTf('1m').catch(() => ({ ms: 60000, bars: [] })),
+          fetchTf('5m').catch(() => ({ ms: 300000, bars: [] }))
+        ]);
+        const mid = Number(quote.mid ?? ((Number(quote.bid) + Number(quote.ask)) / 2));
+        const layers = [m1, m5].filter((layer) => layer.bars.length);
+        const candles = stitch(layers);
+        if (!Number.isFinite(mid) && !candles.length) throw new Error('tiada harga');
+        market = {
+          ok: true,
+          mode: candles.length ? 'ohlc' : 'spot',
+          mid: Number.isFinite(mid) ? mid : candles[candles.length - 1].c,
+          time: quote.timestamp || null,
+          candles,
+          layers
+        };
+      } catch (e) {
+        market = {
+          ok: false,
+          mode: market.candles.length ? 'ohlc' : (market.mid != null ? 'spot' : 'off'),
+          mid: market.mid,
+          time: market.time,
+          candles: market.candles,
+          layers: market.layers || []
+        };
+      }
+    }
+    async function backfillCandles() {
+      if (!data || market.mode !== 'ohlc') return;
+      const earliest = earliestPendingMs();
+      if (earliest == null) return;
+      let layers = (market.layers || []).slice();
+      let candles = stitch(layers);
+      const needs = () => !candles.length || candles[0].t > earliest;
+      if (!needs()) { market.candles = candles; return; }
+      if (!layers.some((layer) => layer.ms === 900000)) {
+        const m15 = await fetchTf('15m').catch(() => ({ ms: 900000, bars: [] }));
+        if (m15.bars.length) layers = layers.concat([m15]);
+        candles = stitch(layers);
+      }
+      if (needs() && !layers.some((layer) => layer.ms === 3600000)) {
+        const h1 = await fetchTf('1h').catch(() => ({ ms: 3600000, bars: [] }));
+        if (h1.bars.length) layers = layers.concat([h1]);
+        candles = stitch(layers);
+      }
+      market.layers = layers;
+      if (candles.length) {
+        market.candles = candles;
+        market.mode = 'ohlc';
+        market.ok = true;
+      }
+    }
+    async function pollSpot() {
+      try {
+        const quote = await fetchJson(BIQUOTE);
+        const mid = Number(quote.mid ?? ((Number(quote.bid) + Number(quote.ask)) / 2));
+        if (!Number.isFinite(mid)) throw new Error('mid');
+        const snap = () => ((data && data.calls) || []).map((c) => {
+          const e = estimateOf(c);
+          return c.id + (e.label || '') + (e.rText || '');
+        }).join('|');
+        const before = snap();
+        market.mid = mid;
+        market.time = quote.timestamp || market.time;
+        market.ok = true;
+        if (market.mode === 'off') market.mode = 'spot';
+        const after = snap();
+        if (data && before !== after) render();
+        else paintChrome();
+      } catch (e) {
+        if (market.mid == null) market.mode = 'off';
+        market.ok = false;
+        paintChrome();
+      }
+    }
+    let booted = false;
+    async function refreshAll() {
+      if (refreshing) return;
+      refreshing = true;
+      paintChrome();
+      const [callsResult] = await Promise.allSettled([fetchCalls(), loadMarket()]);
+      if (callsResult.status === 'rejected') {
+        callsError = 'gagal';
+        console.error(callsResult.reason);
+      }
+      try { await backfillCandles(); } catch (e) { console.error(e); }
+      refreshing = false;
+      if (!data) {
+        $('app').innerHTML = '<div class="empty">Gagal muat calls.json. Tarik semula atau ketik Muat semula.</div>';
+        paintChrome();
+        return;
+      }
+      if (!booted) { applyHash(); booted = true; }
       render();
     }
 
-    async function pollQuote() {
-      try {
-        const r = await fetch('https://biquote.io/api/XAUUSD', { cache: 'no-store' });
-        const j = await r.json();
-        const mid = j.mid ?? ((j.bid + j.ask) / 2);
-        $('livePx').textContent = 'Live ~' + Number(mid).toFixed(2) + ' (biquote · ≠ JM)';
-        $('liveDot').classList.remove('off');
-      } catch (e) {
-        $('livePx').textContent = 'Live quote offline';
-        $('liveDot').classList.add('off');
+    let pullY = null;
+    window.addEventListener('touchstart', (e) => {
+      if (window.scrollY > 2 || !e.touches || e.touches.length !== 1) { pullY = null; return; }
+      pullY = e.touches[0].clientY;
+    }, { passive: true });
+    window.addEventListener('touchmove', (e) => {
+      if (pullY == null) return;
+      const dy = e.touches[0].clientY - pullY;
+      if (dy > 12 && window.scrollY <= 0) {
+        if (e.cancelable) e.preventDefault();
+        const h = Math.min(64, (dy - 12) * 0.45);
+        $('ptr').style.height = h + 'px';
+        $('ptr').textContent = dy > 110 ? 'Lepas untuk muat semula' : 'Tarik untuk muat semula';
       }
-    }
+    }, { passive: false });
+    window.addEventListener('touchend', () => {
+      if (pullY == null) return;
+      pullY = null;
+      const h = $('ptr').offsetHeight;
+      $('ptr').style.height = '0px';
+      $('ptr').textContent = '';
+      if (h >= 48) refreshAll();
+    });
+    $('refreshBtn').addEventListener('click', refreshAll);
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').catch(() => {});
     }
-    loadCalls().catch((err) => {
-      $('app').innerHTML = '<div class="empty">Gagal muat calls.json.</div>';
-      console.error(err);
-    }).then(() => { pollQuote(); setInterval(pollQuote, 15000); });
+    refreshAll().then(() => { setInterval(pollSpot, 20000); });
   </script>
 </body>
 </html>

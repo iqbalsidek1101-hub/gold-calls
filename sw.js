@@ -1,5 +1,5 @@
 /* Charlie Gold PWA — cache shell + last calls.json for offline read */
-const CACHE = 'charlie-gold-v3';
+const CACHE = 'charlie-gold-v4';
 const PRECACHE = [
   './',
   './index.html',
@@ -21,9 +21,29 @@ self.addEventListener('activate', (e) => {
     caches.keys().then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())
   );
 });
+function callsCacheRequest() {
+  return new Request(new URL('calls.json', self.registration.scope).href);
+}
+async function networkFirstCalls(request) {
+  const cache = await caches.open(CACHE);
+  const key = callsCacheRequest();
+  try {
+    const res = await fetch(request);
+    if (res && res.ok) await cache.put(key, res.clone());
+    return res;
+  } catch (err) {
+    const hit = await cache.match(key) || await cache.match(request, { ignoreSearch: true });
+    if (hit) return hit;
+    throw err;
+  }
+}
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
   if (url.origin !== self.location.origin) return; // don't cache biquote etc.
+  if (url.pathname.endsWith('/calls.json')) {
+    e.respondWith(networkFirstCalls(e.request));
+    return;
+  }
   e.respondWith(
     caches.match(e.request).then((hit) => {
       const net = fetch(e.request).then((res) => {
