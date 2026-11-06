@@ -93,7 +93,37 @@
       gap: 8px;
       margin-top: 12px;
     }
-    .tabs[hidden], .back[hidden], .zoom[hidden] { display: none !important; }
+    .tabs[hidden], .back[hidden], .zoom[hidden], .sheet[hidden], .call-meta[hidden] { display: none !important; }
+    .title-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+    .gear {
+      width: 48px; height: 48px; flex: none;
+      border-radius: 14px; border: 1px solid var(--line);
+      background: #10192b; color: var(--text); font-size: 1.4rem;
+    }
+    .analisis {
+      display: block; width: 100%; margin-top: 8px; min-height: 52px;
+      border-radius: 14px; border: 0; background: #0f766e; color: #fff;
+      font-size: 1.02rem; font-weight: 700;
+    }
+    .analisis:disabled { opacity: .65; }
+    .analisis-line, .call-meta { font-size: .78rem; line-height: 1.35; margin-top: 6px; }
+    .analisis-line { color: #99f6e4; }
+    .call-meta { color: #e2e8f0; }
+    .sheet {
+      position: fixed; inset: 0; z-index: 40; overflow: auto;
+      background: var(--bg); color: var(--text);
+      padding: calc(16px + var(--safe-t)) calc(16px + var(--safe-r)) calc(20px + var(--safe-b)) calc(16px + var(--safe-l));
+    }
+    .sheet h2 { margin: 0 0 8px; font-size: 1.2rem; }
+    .sheet label { display: block; margin-top: 14px; font-size: .85rem; font-weight: 600; }
+    .sheet input[type="url"], .sheet input[type="password"], .sheet input[type="text"] {
+      display: block; width: 100%; margin-top: 6px; min-height: 48px;
+      border-radius: 12px; border: 1px solid var(--line);
+      background: #0f172a; color: var(--text); font-size: 1rem; padding: 10px 12px;
+    }
+    .sheet .check { display: flex; align-items: center; gap: 10px; min-height: 48px; font-weight: 600; }
+    .sheet .check input { width: 22px; height: 22px; }
+    .sheet .row-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
     .tabs button {
       min-height: 52px;
       border-radius: 14px;
@@ -256,11 +286,17 @@
 </head>
 <body>
   <header>
-    <h1>Charlie · XAUUSD</h1>
+    <div class="title-row">
+      <h1>Charlie · XAUUSD</h1>
+      <button type="button" class="gear" id="gearBtn" aria-label="Tetapan">⚙</button>
+    </div>
     <div class="sub">Senarai call · data calls.json, bukan akaun broker</div>
     <button type="button" class="refresh" id="refreshBtn">Muat semula</button>
+    <button type="button" class="analisis" id="analisisBtn">Analisis Baru</button>
+    <div class="analisis-line" id="analisisLine" aria-live="polite"></div>
     <div class="live"><span class="dot off" id="liveDot"></span><span id="livePx">Harga live: —</span></div>
     <div class="updated" id="updatedLine" aria-live="polite">Dikemaskini: —</div>
+    <div class="call-meta" id="callMeta" hidden></div>
     <div class="disclaimer" id="disclaimer">anggaran (harga awam, beza ~$1 dari JustMarkets)</div>
     <div class="tabs" id="tabs" role="tablist">
       <button type="button" role="tab" id="tab-SCALP" data-type="SCALP" aria-selected="false">Scalping</button>
@@ -271,6 +307,27 @@
   </header>
   <div class="ptr" id="ptr"></div>
   <main id="app">Memuat…</main>
+  <div class="sheet" id="settings" hidden>
+    <h2>Tetapan webhook</h2>
+    <p class="hint">Disimpan dalam localStorage telefon ini sahaja. Tiada URL atau key dalam repo.</p>
+    <form id="settingsForm" autocomplete="off">
+      <label>Webhook URL
+        <input id="setUrl" name="webhook-url" type="url" inputmode="url" autocomplete="off" placeholder="https://" />
+      </label>
+      <label>Sender key
+        <input id="setKey" name="webhook-key" type="password" autocomplete="off" />
+      </label>
+      <label>Nama header
+        <input id="setHeader" name="webhook-header" type="text" autocomplete="off" value="Authorization" />
+      </label>
+      <p class="hint">Default Authorization dihantar sebagai Bearer key. X-Webhook-Key dihantar sekali lagi.</p>
+      <label class="check"><input id="setKeyInUrl" type="checkbox" /> hantar key dalam URL</label>
+      <div class="row-btns">
+        <button type="submit" class="analisis" id="setSave">Simpan</button>
+        <button type="button" class="back" id="setClose" style="margin-top:0">Tutup</button>
+      </div>
+    </form>
+  </div>
   <div class="zoom" id="zoom" hidden>
     <button type="button" class="zoom-close" id="zoomClose">Tutup</button>
     <div class="zoom-scroll"><img id="zoomImg" alt="Chart penuh" /></div>
@@ -284,6 +341,11 @@
     ];
     const MONTHS = ['Jan','Feb','Mac','Apr','Mei','Jun','Jul','Ogos','Sep','Okt','Nov','Dis'];
     const BIQUOTE = 'https://biquote.io/api/XAUUSD';
+    const LS_SETTINGS = 'charlie-gold-webhook-settings';
+    const LS_COOLDOWN = 'charlie-gold-analisis-at';
+    const COOLDOWN_MS = 30 * 60 * 1000;
+    const ANALISIS_POLL_MS = 60 * 1000;
+    const ANALISIS_POLL_FOR = 10 * 60 * 1000;
     const LS_RANGE = 'charlie-gold-spot-range-v1';
     const TF_MS = { '1m': 60000, '5m': 300000, '15m': 900000, '1h': 3600000 };
     let data = null;
@@ -506,7 +568,7 @@
     function paintChrome() {
       const btn = $('refreshBtn');
       if (btn) {
-        btn.disabled = refreshing;
+        btn.disabled = refreshing || analyzing;
         btn.textContent = refreshing ? 'Memuat…' : 'Muat semula';
       }
       if (market.mid == null) {
@@ -520,6 +582,187 @@
       else if (callsError) $('updatedLine').textContent = 'Dikemaskini: gagal';
       else $('updatedLine').textContent = 'Dikemaskini: —';
       $('disclaimer').textContent = disclaimerText();
+      const meta = [];
+      if (data && data.last_updated != null && String(data.last_updated).trim()) meta.push('last_updated: ' + data.last_updated);
+      if (data && data.status_note != null && String(data.status_note).trim()) meta.push(String(data.status_note));
+      const metaEl = $('callMeta');
+      if (metaEl) {
+        metaEl.hidden = meta.length === 0;
+        metaEl.textContent = meta.join(' · ');
+      }
+      paintAnalisis();
+    }
+    function loadSettings() {
+      try {
+        const raw = JSON.parse(localStorage.getItem(LS_SETTINGS) || '{}');
+        return {
+          url: String(raw.url || '').trim(),
+          key: String(raw.key || ''),
+          header: String(raw.header || 'Authorization').trim() || 'Authorization',
+          keyInUrl: !!raw.keyInUrl
+        };
+      } catch (e) {
+        return { url: '', key: '', header: 'Authorization', keyInUrl: false };
+      }
+    }
+    function settingsReady(s) {
+      if (!s || !s.key.trim()) return false;
+      try {
+        const u = new URL(s.url);
+        return u.protocol === 'https:' || u.protocol === 'http:';
+      } catch (e) { return false; }
+    }
+    function cooldownLeft() {
+      const at = Number(localStorage.getItem(LS_COOLDOWN) || 0);
+      if (!at) return 0;
+      return Math.max(0, COOLDOWN_MS - (Date.now() - at));
+    }
+    function fmtLeft(ms) {
+      const s = Math.ceil(ms / 1000);
+      const m = Math.floor(s / 60);
+      const r = s % 60;
+      return m + ':' + String(r).padStart(2, '0');
+    }
+    function paintAnalisis() {
+      const btn = $('analisisBtn');
+      const left = cooldownLeft();
+      if (btn) {
+        btn.disabled = analyzing || refreshing || left > 0;
+        btn.textContent = analyzing ? 'Menghantar…' : (left > 0 ? ('Analisis Baru · ' + fmtLeft(left)) : 'Analisis Baru');
+      }
+      const line = $('analisisLine');
+      if (!line) return;
+      const bits = [];
+      if (analisisNote) bits.push(analisisNote);
+      if (left > 0 && !analyzing) bits.push('Cooldown ' + fmtLeft(left));
+      line.textContent = bits.join(' · ');
+    }
+    function openSettings() {
+      const s = loadSettings();
+      $('setUrl').value = s.url;
+      $('setKey').value = s.key;
+      $('setHeader').value = s.header || 'Authorization';
+      $('setKeyInUrl').checked = !!s.keyInUrl;
+      $('settings').hidden = false;
+    }
+    function saveSettings() {
+      const url = $('setUrl').value.trim();
+      const key = $('setKey').value;
+      const header = $('setHeader').value.trim() || 'Authorization';
+      const keyInUrl = $('setKeyInUrl').checked;
+      if (url) {
+        try {
+          const u = new URL(url);
+          if (u.protocol !== 'https:' && u.protocol !== 'http:') throw new Error('protocol');
+        } catch (e) {
+          analisisNote = 'Webhook URL mesti http atau https.';
+          paintAnalisis();
+          return;
+        }
+      }
+      localStorage.setItem(LS_SETTINGS, JSON.stringify({ url, key, header, keyInUrl }));
+      $('settings').hidden = true;
+      analisisNote = settingsReady(loadSettings()) ? 'Tetapan disimpan di telefon.' : 'Tetapan disimpan. Webhook URL dan Sender Key masih diperlukan.';
+      paintAnalisis();
+    }
+    async function noCorsFallback(s, body) {
+      if (!s.keyInUrl) return;
+      let target;
+      try { target = new URL(s.url); } catch (e) { return; }
+      target.searchParams.set('key', s.key);
+      try {
+        await fetch(target.toString(), {
+          method: 'POST',
+          mode: 'no-cors',
+          cache: 'no-store',
+          headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+          body
+        });
+      } catch (e) { /* still unverified */ }
+    }
+    async function postWebhook(s) {
+      const body = JSON.stringify({ source: 'gold-calls-app', ts: new Date().toISOString() });
+      const name = (s.header || 'Authorization').trim() || 'Authorization';
+      const headers = { 'Content-Type': 'application/json' };
+      if (/^authorization$/i.test(name)) headers.Authorization = 'Bearer ' + s.key;
+      else headers[name] = s.key;
+      if (!/^x-webhook-key$/i.test(name)) headers['X-Webhook-Key'] = s.key;
+      try {
+        const res = await fetch(s.url, { method: 'POST', mode: 'cors', cache: 'no-store', headers, body });
+        if (!res || res.type === 'opaque' || res.status === 0) {
+          await noCorsFallback(s, body);
+          return { unverified: true };
+        }
+        if (!res.ok) return { ok: false, text: 'Webhook ' + res.status };
+        return { ok: true, text: 'Permintaan dihantar' };
+      } catch (e) {
+        await noCorsFallback(s, body);
+        return { unverified: true };
+      }
+    }
+    function stopAnalisisPoll() {
+      if (analisisPoll) clearInterval(analisisPoll);
+      analisisPoll = null;
+      analisisPollStarted = 0;
+    }
+    function startAnalisisPoll(previous) {
+      stopAnalisisPoll();
+      analisisPollStarted = Date.now();
+      analisisPoll = setInterval(async () => {
+        try {
+          await fetchCalls();
+          if (data) render();
+          const nowVal = data ? data.last_updated : undefined;
+          if (nowVal !== previous) {
+            analisisNote = 'Analisis dikemaskini.';
+            stopAnalisisPoll();
+            paintChrome();
+            return;
+          }
+        } catch (e) { /* keep waiting */ }
+        if (Date.now() - analisisPollStarted >= ANALISIS_POLL_FOR) {
+          stopAnalisisPoll();
+          analisisNote = 'Tamat menanti kemaskini (10 minit).';
+          paintAnalisis();
+        }
+      }, ANALISIS_POLL_MS);
+    }
+    async function sendIfConfigured() {
+      const s = loadSettings();
+      if (!settingsReady(s)) return;
+      if (cooldownLeft() > 0) { paintAnalisis(); return; }
+      analyzing = true;
+      paintChrome();
+      const previous = data ? data.last_updated : undefined;
+      const result = await postWebhook(s);
+      analyzing = false;
+      if (result.unverified) {
+        localStorage.setItem(LS_COOLDOWN, String(Date.now()));
+        analisisNote = 'Permintaan dihantar (tak dapat sahkan). Charlie tengah analisis, tunggu ~5 minit';
+        startAnalisisPoll(previous);
+      } else if (result.ok) {
+        localStorage.setItem(LS_COOLDOWN, String(Date.now()));
+        analisisNote = 'Charlie tengah analisis, tunggu ~5 minit';
+        startAnalisisPoll(previous);
+      } else {
+        analisisNote = result.text || 'Webhook gagal';
+      }
+      paintChrome();
+    }
+    async function onRefreshClick() {
+      if (refreshing || analyzing) return;
+      await refreshAll();
+      await sendIfConfigured();
+    }
+    async function analisisBaru() {
+      if (refreshing || analyzing) return;
+      if (!settingsReady(loadSettings())) {
+        analisisNote = 'Isi Webhook URL dan Sender Key dalam tetapan.';
+        paintAnalisis();
+        openSettings();
+        return;
+      }
+      await onRefreshClick();
     }
     function callsOf(type) {
       const list = (data && data.calls) || [];
@@ -807,6 +1050,10 @@
       }
     }
     let booted = false;
+    let analyzing = false;
+    let analisisNote = '';
+    let analisisPoll = null;
+    let analisisPollStarted = 0;
     async function refreshAll() {
       if (refreshing) return;
       refreshing = true;
@@ -850,7 +1097,12 @@
       $('ptr').textContent = '';
       if (h >= 48) refreshAll();
     });
-    $('refreshBtn').addEventListener('click', refreshAll);
+    $('refreshBtn').addEventListener('click', onRefreshClick);
+    $('analisisBtn').addEventListener('click', analisisBaru);
+    $('gearBtn').addEventListener('click', openSettings);
+    $('setClose').addEventListener('click', () => { $('settings').hidden = true; });
+    $('settingsForm').addEventListener('submit', (e) => { e.preventDefault(); saveSettings(); });
+    setInterval(paintAnalisis, 1000);
 
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').catch(() => {});
