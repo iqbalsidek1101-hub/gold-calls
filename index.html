@@ -174,8 +174,8 @@
     .row {
       width: 100%;
       display: grid;
-      grid-template-columns: auto auto 1fr auto;
-      grid-template-areas: "id badge . rasmi" "entry entry time time" "est est est est";
+      grid-template-columns: minmax(0, 1fr) auto auto;
+      grid-template-areas: "id badge rasmi" "entry entry time" "est est est";
       column-gap: 8px;
       row-gap: 6px;
       align-items: center;
@@ -188,7 +188,7 @@
       min-height: 68px;
       margin: 0 0 8px;
     }
-    .id { grid-area: id; font-weight: 700; font-size: 1.02rem; }
+    .id { grid-area: id; font-weight: 700; font-size: .92rem; line-height: 1.25; min-width: 0; }
     .badge { grid-area: badge; }
     .rasmi { grid-area: rasmi; justify-self: end; text-align: right; }
     .rasmi-k { display: block; color: var(--muted); font-size: .62rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
@@ -232,7 +232,8 @@
       gap: 8px;
       margin-bottom: 10px;
     }
-    .detail-head .id { font-size: 1.25rem; }
+    .detail-head .id { font-size: 1.08rem; line-height: 1.25; }
+    .raw-id { color: var(--muted); font-size: .72rem; font-weight: 500; margin-top: 2px; }
     .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .field {
       background: var(--card);
@@ -838,6 +839,27 @@
     function findCall(id) {
       return ((data && data.calls) || []).find((c) => c.id === id) || null;
     }
+    function callName(c) {
+      const id = String((c && c.id) || '').trim();
+      const up = id.toUpperCase();
+      const parsed = up.match(/^(?:([BV])-)?([SIW])?(\d+)(R)?$/);
+      const assetCode = String((c && c.asset) || '').toUpperCase();
+      const typeCode = String((c && c.type) || '').toUpperCase();
+      const assetByCode = { XAUUSD: 'Gold', BTCUSD: 'BTC', BTC: 'BTC', FXVOL80: 'Vol 80' };
+      const typeByCode = { SCALP: 'Scalping', INTRADAY: 'Intraday', SWING: 'Swing' };
+      let asset = assetByCode[assetCode] || '';
+      let type = typeByCode[typeCode] || '';
+      let n = null;
+      let refined = false;
+      if (parsed) {
+        n = String(parseInt(parsed[3], 10));
+        refined = !!parsed[4];
+        if (!asset) asset = parsed[1] === 'B' ? 'BTC' : parsed[1] === 'V' ? 'Vol 80' : 'Gold';
+        if (!type) type = parsed[2] === 'S' ? 'Scalping' : parsed[2] === 'I' ? 'Intraday' : 'Swing';
+      }
+      if (n == null) return id;
+      return asset + ' · ' + type + ' #' + n + (refined ? ' (refined)' : '');
+    }
     function esc(s) {
       return String(s ?? '').replace(/[&<>"']/g, (ch) => ({
         '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -867,7 +889,7 @@
             ? `<span class="est ${est.kind}">${est.weak ? 'Anggaran lemah' : 'Anggaran'}: ${esc(est.label)} · ${esc(est.rText)}${est.partial && !est.weak ? ' · sejarah tak penuh' : ''}</span>`
             : '';
         return `<button type="button" class="row" data-id="${esc(c.id)}">
-          <span class="id">#${esc(c.id)}</span>
+          <span class="id">${esc(callName(c))}</span>
           <span class="badge ${dir}">${esc(dir)}</span>
           <span class="rasmi"><span class="rasmi-k">rasmi</span><span class="status ${st}">${esc(est.official)}</span></span>
           <span class="entry">${esc(fmtEntry(c))}</span>
@@ -899,13 +921,16 @@
       const chart = c.chart || '';
       const chartBlock = chart
         ? `<button type="button" class="chart-btn" id="chartBtn" data-src="${esc(chart)}">
-            <img src="${esc(chart)}" alt="Chart #${esc(c.id)}" />
+            <img src="${esc(chart)}" alt="Chart ${esc(callName(c))}" />
           </button>
           <div class="hint">Ketik chart untuk skrin penuh.</div>`
         : '<div class="empty">Tiada chart.</div>';
       $('app').innerHTML = `
         <div class="detail-head">
-          <div class="id">#${esc(c.id)}</div>
+          <div>
+            <div class="id">${esc(callName(c))}</div>
+            <div class="raw-id">${esc(c.id)}</div>
+          </div>
           <div>
             <span class="badge ${dir}">${esc(dir)}</span>
             <span class="rasmi"><span class="rasmi-k">rasmi</span><span class="status ${st}">${esc(est.official)}</span></span>
