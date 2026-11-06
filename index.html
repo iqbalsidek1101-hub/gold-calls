@@ -8,8 +8,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="apple-mobile-web-app-title" content="Charlie XAU" />
-  <title>Charlie Gold Calls</title>
+  <meta name="apple-mobile-web-app-title" content="Charlie Calls" />
+  <title>Charlie Calls</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/icon-192.png" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
@@ -87,6 +87,8 @@
     }
     .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--buy); box-shadow: 0 0 8px var(--buy); flex: none; }
     .dot.off { background: var(--muted); box-shadow: none; }
+    .asset-tabs { margin-top: 10px; }
+    .asset-tabs button[aria-selected="true"] { background: #0ea5e9; color: #fff; border-color: #0ea5e9; }
     .tabs {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -287,7 +289,7 @@
 <body>
   <header>
     <div class="title-row">
-      <h1>Charlie · XAUUSD</h1>
+      <h1 id="appTitle">Charlie · XAUUSD</h1>
       <button type="button" class="gear" id="gearBtn" aria-label="Tetapan">⚙</button>
     </div>
     <div class="sub">Senarai call · data calls.json, bukan akaun broker</div>
@@ -298,6 +300,11 @@
     <div class="updated" id="updatedLine" aria-live="polite">Dikemaskini: —</div>
     <div class="call-meta" id="callMeta" hidden></div>
     <div class="disclaimer" id="disclaimer">anggaran (harga awam, beza ~$1 dari JustMarkets)</div>
+    <div class="tabs asset-tabs" id="assetTabs" role="tablist" aria-label="Asset">
+      <button type="button" role="tab" id="asset-XAUUSD" data-asset="XAUUSD" aria-selected="true">Gold</button>
+      <button type="button" role="tab" id="asset-BTCUSD" data-asset="BTCUSD" aria-selected="false">BTC</button>
+      <button type="button" role="tab" id="asset-FXVOL80" data-asset="FXVOL80" aria-selected="false">Vol 80</button>
+    </div>
     <div class="tabs" id="tabs" role="tablist">
       <button type="button" role="tab" id="tab-SCALP" data-type="SCALP" aria-selected="false">Scalping</button>
       <button type="button" role="tab" id="tab-INTRADAY" data-type="INTRADAY" aria-selected="false">Intraday</button>
@@ -349,12 +356,39 @@
     const LS_RANGE = 'charlie-gold-spot-range-v1';
     const TF_MS = { '1m': 60000, '5m': 300000, '15m': 900000, '1h': 3600000 };
     let data = null;
+    let rawData = null;
+    let currentAsset = 'XAUUSD';
+    const BINANCE_BTC = 'https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT';
+    const ASSET_META = {
+      XAUUSD: { title: 'Charlie · XAUUSD' },
+      BTCUSD: { title: 'Charlie · BTCUSD' },
+      FXVOL80: { title: 'Charlie · FX Vol 80' }
+    };
     let activeType = 'INTRADAY';
     let detailId = null;
     let refreshing = false;
     let updatedAt = null;
     let callsError = '';
     let market = { ok: false, mode: 'off', mid: null, time: null, candles: [] };
+
+
+    function applyAssetView() {
+      if (!rawData) return;
+      const bag = (rawData.by_asset && rawData.by_asset[currentAsset]) || null;
+      if (bag) {
+        data = Object.assign({}, rawData, {
+          calls: bag.calls || [],
+          latest: bag.latest || null,
+          latest_by_type: bag.latest_by_type || {},
+          main_call: bag.main_call || null,
+          scoreboard: bag.scoreboard || rawData.scoreboard
+        });
+      } else {
+        data = rawData;
+      }
+      const meta = ASSET_META[currentAsset];
+      if (meta && $('appTitle')) $('appTitle').textContent = meta.title;
+    }
 
     function money(n) {
       const x = Number(n);
@@ -560,6 +594,11 @@
       return { official, label: walked.label, rText: fmtEstR(walked.r), kind, note, weak, partial: walked.partial };
     }
     function disclaimerText() {
+      if (currentAsset === 'FXVOL80') return 'FX Vol 80: tiada public feed — status dari last scored update sahaja.';
+      if (currentAsset === 'BTCUSD') {
+        if (!market.ok) return 'BTC live offline (Binance BTCUSDT).';
+        return 'anggaran Binance BTCUSDT (boleh beza dari JustMarkets BTCUSD.m)';
+      }
       const base = 'anggaran (harga awam, beza ~$1 dari JustMarkets)';
       if (market.mode === 'ohlc') return base + '. Sumber biquote XAUUSD OHLC.';
       if (market.mode === 'spot') return base + '. Lemah: spot + high/low sejak app ini buka, bukan OHLC.';
@@ -571,11 +610,15 @@
         btn.disabled = refreshing || analyzing;
         btn.textContent = refreshing ? 'Memuat…' : 'Muat semula';
       }
-      if (market.mid == null) {
+      if (currentAsset === 'FXVOL80') {
+        $('livePx').textContent = 'Vol 80: status dari calls.json sahaja';
+        $('liveDot').classList.add('off');
+      } else if (market.mid == null) {
         $('livePx').textContent = 'Harga awam offline';
         $('liveDot').classList.add('off');
       } else {
-        $('livePx').textContent = 'Live ' + Number(market.mid).toFixed(2);
+        const label = currentAsset === 'BTCUSD' ? 'Live BTC ≈ ' : 'Live ';
+        $('livePx').textContent = label + Number(market.mid).toFixed(2);
         $('liveDot').classList.toggle('off', market.mode === 'off');
       }
       if (updatedAt) $('updatedLine').textContent = 'Dikemaskini: ' + fmtMYTDate(updatedAt);
@@ -802,6 +845,7 @@
     }
     function setTabsVisible(show) {
       $('tabs').hidden = !show;
+      if ($('assetTabs')) $('assetTabs').hidden = false;
       $('backBtn').hidden = show;
       TYPES.forEach((t) => {
         const btn = $('tab-' + t.key);
@@ -967,11 +1011,27 @@
     async function fetchCalls() {
       const res = await fetch('calls.json?t=' + Date.now(), { cache: 'no-store' });
       if (!res.ok) throw new Error('calls.json ' + res.status);
-      data = await res.json();
+      rawData = await res.json();
+      applyAssetView();
       updatedAt = new Date();
       callsError = '';
     }
     async function loadMarket() {
+      if (currentAsset === 'FXVOL80') {
+        market = { ok: false, mode: 'off', mid: null, time: null, candles: [], layers: [] };
+        return;
+      }
+      if (currentAsset === 'BTCUSD') {
+        try {
+          const q = await fetchJson(BINANCE_BTC);
+          const mid = Number(q.price);
+          if (!Number.isFinite(mid)) throw new Error('btc');
+          market = { ok: true, mode: 'spot', mid, time: null, candles: market.candles || [], layers: [] };
+        } catch (e) {
+          market = { ok: false, mode: market.candles.length ? 'ohlc' : (market.mid != null ? 'spot' : 'off'), mid: market.mid, time: market.time, candles: market.candles || [], layers: market.layers || [] };
+        }
+        return;
+      }
       try {
         const [quote, m1, m5] = await Promise.all([
           fetchJson(BIQUOTE),
@@ -1027,6 +1087,23 @@
       }
     }
     async function pollSpot() {
+      if (currentAsset === 'FXVOL80') { market.ok = false; market.mode = 'off'; paintChrome(); return; }
+      if (currentAsset === 'BTCUSD') {
+        try {
+          const q = await fetchJson(BINANCE_BTC);
+          const mid = Number(q.price);
+          if (!Number.isFinite(mid)) throw new Error('btc');
+          const snap = () => ((data && data.calls) || []).map((c) => { const e = estimateOf(c); return c.id + (e.label || '') + (e.rText || ''); }).join('|');
+          const before = snap();
+          market.mid = mid; market.ok = true; if (market.mode === 'off') market.mode = 'spot';
+          const after = snap();
+          if (data && before !== after) render(); else paintChrome();
+        } catch (e) {
+          if (market.mid == null) market.mode = 'off';
+          market.ok = false; paintChrome();
+        }
+        return;
+      }
       try {
         const quote = await fetchJson(BIQUOTE);
         const mid = Number(quote.mid ?? ((Number(quote.bid) + Number(quote.ask)) / 2));
@@ -1097,6 +1174,24 @@
       $('ptr').textContent = '';
       if (h >= 48) refreshAll();
     });
+
+    function bindAssetTabs() {
+      const root = $('assetTabs');
+      if (!root) return;
+      root.querySelectorAll('[data-asset]').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          currentAsset = btn.getAttribute('data-asset');
+          root.querySelectorAll('[data-asset]').forEach((b) => b.setAttribute('aria-selected', b === btn ? 'true' : 'false'));
+          applyAssetView();
+          detailId = null;
+          await loadMarket();
+          render({ forceList: true });
+          paintChrome();
+        });
+      });
+    }
+
+    bindAssetTabs();
     $('refreshBtn').addEventListener('click', onRefreshClick);
     $('analisisBtn').addEventListener('click', analisisBaru);
     $('gearBtn').addEventListener('click', openSettings);
