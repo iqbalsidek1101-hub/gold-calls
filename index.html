@@ -45,6 +45,10 @@
     .badge.BUY { background: rgba(34,197,94,.18); color: var(--buy); }
     .badge.SELL { background: rgba(239,68,68,.18); color: var(--sell); }
     .badge.WAIT, .badge.PENDING { background: rgba(234,179,8,.15); color: var(--wait); }
+    .badge.SWING { background: rgba(56,189,248,.15); color: #38bdf8; }
+    .badge.INTRADAY { background: rgba(168,85,247,.15); color: #c084fc; }
+    .badge.SCALP { background: rgba(251,146,60,.15); color: #fb923c; }
+    .type-label { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin: 12px 2px 6px; font-weight: 650; }
     .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
     .kv { background: #0f172a; border-radius: 10px; padding: 8px 10px; }
     .kv .l { color: var(--muted); font-size: .7rem; }
@@ -90,8 +94,8 @@
   </header>
   <main>
     <section id="tab-call" class="panel active">
-      <div class="card" id="latestCard">Memuat…</div>
-      <h2>Chart</h2>
+      <div id="typeCards">Memuat…</div>
+      <h2>Chart call dipilih</h2>
       <div class="card" style="padding:10px">
         <img class="chart" id="chartImg" alt="Chart call" />
         <div class="note" id="chartNote"></div>
@@ -101,7 +105,7 @@
       <h2>Sejarah call</h2>
       <div class="card" style="padding:8px 10px; overflow-x:auto">
         <table>
-          <thead><tr><th>ID</th><th>Arah</th><th>Entry</th><th>SL</th><th>TP</th><th>Status</th></tr></thead>
+          <thead><tr><th>ID</th><th>Jenis</th><th>Arah</th><th>Entry</th><th>SL</th><th>TP</th><th>Status</th></tr></thead>
           <tbody id="histBody"></tbody>
         </table>
       </div>
@@ -133,33 +137,57 @@
     function money(n){ return Number(n).toFixed(2); }
     function fmtEntry(c){ return money(c.entry_lo) + ' – ' + money(c.entry_hi); }
 
-    async function loadCalls(){
-      const res = await fetch('calls.json?ts=' + Date.now());
-      const data = await res.json();
-      const c = data.latest || data.main_call;
-      const main = data.main_call || c;
-      $('latestCard').innerHTML = `
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-          <div><span class="badge ${c.direction}">${c.direction}</span>
-            <span class="badge PENDING" style="margin-left:6px">${c.status || 'PENDING'}</span></div>
+    
+    const TYPE_MS = { SWING: 'Swing', INTRADAY: 'Intraday', SCALP: 'Scalping' };
+    function cardHTML(c, highlight){
+      if(!c) return `<div class="card"><div class="note">Tiada call jenis ni lagi.</div></div>`;
+      const t = c.type || 'SWING';
+      return `<div class="card" data-id="${c.id}" style="${highlight?'outline:1px solid var(--accent)':''}">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+          <div>
+            <span class="badge ${t}">${TYPE_MS[t]||t}</span>
+            <span class="badge ${c.direction}" style="margin-left:6px">${c.direction}</span>
+            <span class="badge PENDING" style="margin-left:6px">${c.status||'PENDING'}</span>
+          </div>
           <div style="color:var(--muted);font-size:.75rem">#${c.id} · conf ${c.confidence}%</div>
         </div>
         <div class="grid2">
           <div class="kv"><div class="l">Zon entry</div><div class="v">${fmtEntry(c)}</div></div>
           <div class="kv"><div class="l">SL</div><div class="v">${money(c.sl)}</div></div>
           <div class="kv"><div class="l">TP</div><div class="v">${money(c.tp)}</div></div>
-          <div class="kv"><div class="l">Sah sampai</div><div class="v" style="font-size:.78rem">${c.valid_until_myt}</div></div>
+          <div class="kv"><div class="l">Sah sampai</div><div class="v" style="font-size:.72rem">${c.valid_until_myt}</div></div>
         </div>
-        <div class="reason">${(c.reasoning||'').slice(0,280)}${(c.reasoning||'').length>280?'…':''}</div>
-        <div class="note">Call rasmi #${main.id}: ${fmtEntry(main)} · refined #${c.id} ditunjukkan sebagai terkini bila ada.</div>
-      `;
-      const chart = c.chart || main.chart || 'charts/call_001.png';
-      $('chartImg').src = chart;
-      $('chartNote').textContent = 'Chart dari live_calls · updated bila calls.json di-generate semula.';
+        <div class="reason">${(c.reasoning||'').slice(0,220)}${(c.reasoning||'').length>220?'…':''}</div>
+        <button class="btn secondary" type="button" onclick="showChart('${c.id}')" style="margin-top:8px">Tengok chart</button>
+      </div>`;
+    }
+    window.showChart = function showChart(id){
+      const data = window.__calls;
+      const c = (data.calls||[]).find(x => x.id===id) || data.latest;
+      if(!c) return;
+      const chart = c.chart || 'charts/call_001.png';
+      $('chartImg').src = chart + '?t=' + Date.now();
+      $('chartNote').textContent = `#${c.id} · ${TYPE_MS[c.type]||c.type} · ${c.direction}`;
+    }
+    async function loadCalls(){
+      const res = await fetch('calls.json?ts=' + Date.now());
+      const data = await res.json();
+      window.__calls = data;
+      const by = data.latest_by_type || {};
+      const order = ['SCALP','INTRADAY','SWING'];
+      let html = '';
+      for (const t of order){
+        html += `<div class="type-label">${TYPE_MS[t]}</div>` + cardHTML(by[t], t=== (data.latest&&data.latest.type));
+      }
+      $('typeCards').innerHTML = html;
+      // default chart = latest overall
+      const c = data.latest || by.SCALP || by.INTRADAY || by.SWING;
+      if(c) showChart(c.id);
 
       $('histBody').innerHTML = (data.calls||[]).map(r => `
         <tr>
           <td>#${r.id}</td>
+          <td><span class="badge ${r.type||'SWING'}">${TYPE_MS[r.type]||r.type||'Swing'}</span></td>
           <td><span class="badge ${r.direction}">${r.direction}</span></td>
           <td>${money(r.entry_lo)}–${money(r.entry_hi)}</td>
           <td>${money(r.sl)}</td>
@@ -175,7 +203,6 @@
         ['Total R', s.total_r ?? 0],
       ].map(([l,v]) => `<div class="kv"><div class="l">${l}</div><div class="v">${v}</div></div>`).join('');
       $('scoreNote').textContent = s.note || '';
-      window.__calls = data;
     }
 
     // Optional live quote — biquote (public, no key). Offset note in UI.

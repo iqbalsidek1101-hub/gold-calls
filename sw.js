@@ -1,5 +1,5 @@
 /* Charlie Gold PWA — cache shell + last calls.json for offline read */
-const CACHE = 'charlie-gold-v1';
+const CACHE = 'charlie-gold-v2';
 const PRECACHE = [
   './',
   './index.html',
@@ -8,7 +8,9 @@ const PRECACHE = [
   './icons/icon-192.png',
   './icons/icon-512.png',
   './charts/call_001.png',
-  './charts/call_001_refined.png'
+  './charts/call_001_refined.png',
+  './charts/call_S001.png',
+  './charts/call_I001.png'
 ];
 
 self.addEventListener('install', (e) => {
