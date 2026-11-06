@@ -1,7 +1,7 @@
 {
-  "name": "Charlie Gold Calls",
-  "short_name": "Charlie XAU",
-  "description": "Call harian XAUUSD — Charlie",
+  "name": "Charlie Calls",
+  "short_name": "Charlie Calls",
+  "description": "Call harian — Charlie Calls",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0f172a",
