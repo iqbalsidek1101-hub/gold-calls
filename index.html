@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Charlie Gold Calls</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <style>
+    :root {
+      --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --muted: #94a3b8;
+      --buy: #22c55e; --sell: #ef4444; --wait: #eab308; --line: #334155; --accent: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg); color: var(--text); min-height: 100dvh;
+      padding: 0 0 72px;
+    }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(15,23,42,.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 16px 10px;
+    }
+    header h1 { margin: 0; font-size: 1.05rem; font-weight: 700; }
+    header .sub { color: var(--muted); font-size: .75rem; margin-top: 2px; }
+    .live {
+      display: flex; align-items: center; gap: 8px; margin-top: 8px;
+      font-variant-numeric: tabular-nums; font-size: .9rem;
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--buy); box-shadow: 0 0 8px var(--buy); }
+    .dot.off { background: var(--muted); box-shadow: none; }
+    main { padding: 12px 14px 24px; max-width: 480px; margin: 0 auto; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 14px; margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: .75rem; font-weight: 700;
+    }
+    .badge.BUY { background: rgba(34,197,94,.18); color: var(--buy); }
+    .badge.SELL { background: rgba(239,68,68,.18); color: var(--sell); }
+    .badge.WAIT, .badge.PENDING { background: rgba(234,179,8,.15); color: var(--wait); }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
+    .kv { background: #0f172a; border-radius: 10px; padding: 8px 10px; }
+    .kv .l { color: var(--muted); font-size: .7rem; }
+    .kv .v { font-size: .95rem; font-weight: 650; margin-top: 2px; font-variant-numeric: tabular-nums; }
+    .reason { color: var(--muted); font-size: .8rem; line-height: 1.4; margin-top: 10px; }
+    .chart {
+      width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; margin-top: 10px;
+      background: #020617;
+    }
+    h2 { font-size: .85rem; margin: 16px 2px 8px; color: var(--muted); font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
+    table { width: 100%; border-collapse: collapse; font-size: .78rem; }
+    th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-weight: 600; }
+    .score { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .score .kv .v { font-size: 1.05rem; }
+    nav.tabs {
+      position: fixed; left: 0; right: 0; bottom: 0; height: 60px;
+      background: rgba(15,23,42,.96); border-top: 1px solid var(--line);
+      display: flex; justify-content: space-around; align-items: center;
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    nav.tabs button {
+      background: none; border: 0; color: var(--muted); font-size: .7rem;
+      display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 12px;
+    }
+    nav.tabs button.active { color: var(--accent); }
+    nav.tabs button span.ico { font-size: 1.15rem; }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .note { font-size: .72rem; color: var(--muted); margin-top: 8px; line-height: 1.35; }
+    .btn {
+      display: inline-block; margin-top: 10px; padding: 10px 14px; border-radius: 10px;
+      background: #0ea5e9; color: #fff; border: 0; font-weight: 650; font-size: .85rem; width: 100%;
+    }
+    .btn.secondary { background: #334155; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Charlie · XAUUSD Calls</h1>
+    <div class="sub">Prototype PWA · data dari calls.json (bukan akaun broker)</div>
+    <div class="live"><span class="dot off" id="liveDot"></span><span id="livePx">Harga live: —</span></div>
+  </header>
+  <main>
+    <section id="tab-call" class="panel active">
+      <div class="card" id="latestCard">Memuat…</div>
+      <h2>Chart</h2>
+      <div class="card" style="padding:10px">
+        <img class="chart" id="chartImg" alt="Chart call" />
+        <div class="note" id="chartNote"></div>
+      </div>
+    </section>
+    <section id="tab-hist" class="panel">
+      <h2>Sejarah call</h2>
+      <div class="card" style="padding:8px 10px; overflow-x:auto">
+        <table>
+          <thead><tr><th>ID</th><th>Arah</th><th>Entry</th><th>SL</th><th>TP</th><th>Status</th></tr></thead>
+          <tbody id="histBody"></tbody>
+        </table>
+      </div>
+    </section>
+    <section id="tab-score" class="panel">
+      <h2>Scoreboard</h2>
+      <div class="card">
+        <div class="score" id="scoreboard"></div>
+        <div class="note" id="scoreNote"></div>
+      </div>
+      <h2>Push (belum aktif — Phase 1)</h2>
+      <div class="card">
+        <div class="note">Phase 1: prototype je. Push belum dihantar. Cadangan: <b>MT5 SendNotification</b> (paling reliable untuk zone entry) + optional <b>ntfy.sh</b> topic private untuk call baru.</div>
+        <button class="btn secondary" id="btnInstallHint" type="button">Cara pasang di telefon</button>
+        <div class="note" id="installHint" style="display:none;margin-top:8px">
+          Android Chrome: menu → <b>Add to Home screen</b> / Install app.<br/>
+          iPhone Safari: Share → <b>Add to Home Screen</b>.
+        </div>
+      </div>
+    </section>
+  </main>
+  <nav class="tabs">
+    <button type="button" class="active" data-tab="tab-call"><span class="ico">📞</span>Call</button>
+    <button type="button" data-tab="tab-hist"><span class="ico">📜</span>Sejarah</button>
+    <button type="button" data-tab="tab-score"><span class="ico">📊</span>Score</button>
+  </nav>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    function money(n){ return Number(n).toFixed(2); }
+    function fmtEntry(c){ return money(c.entry_lo) + ' – ' + money(c.entry_hi); }
+
+    async function loadCalls(){
+      const res = await fetch('calls.json?ts=' + Date.now());
+      const data = await res.json();
+      const c = data.latest || data.main_call;
+      const main = data.main_call || c;
+      $('latestCard').innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+          <div><span class="badge ${c.direction}">${c.direction}</span>
+            <span class="badge PENDING" style="margin-left:6px">${c.status || 'PENDING'}</span></div>
+          <div style="color:var(--muted);font-size:.75rem">#${c.id} · conf ${c.confidence}%</div>
+        </div>
+        <div class="grid2">
+          <div class="kv"><div class="l">Zon entry</div><div class="v">${fmtEntry(c)}</div></div>
+          <div class="kv"><div class="l">SL</div><div class="v">${money(c.sl)}</div></div>
+          <div class="kv"><div class="l">TP</div><div class="v">${money(c.tp)}</div></div>
+          <div class="kv"><div class="l">Sah sampai</div><div class="v" style="font-size:.78rem">${c.valid_until_myt}</div></div>
+        </div>
+        <div class="reason">${(c.reasoning||'').slice(0,280)}${(c.reasoning||'').length>280?'…':''}</div>
+        <div class="note">Call rasmi #${main.id}: ${fmtEntry(main)} · refined #${c.id} ditunjukkan sebagai terkini bila ada.</div>
+      `;
+      const chart = c.chart || main.chart || 'charts/call_001.png';
+      $('chartImg').src = chart;
+      $('chartNote').textContent = 'Chart dari live_calls · updated bila calls.json di-generate semula.';
+
+      $('histBody').innerHTML = (data.calls||[]).map(r => `
+        <tr>
+          <td>#${r.id}</td>
+          <td><span class="badge ${r.direction}">${r.direction}</span></td>
+          <td>${money(r.entry_lo)}–${money(r.entry_hi)}</td>
+          <td>${money(r.sl)}</td>
+          <td>${money(r.tp)}</td>
+          <td>${r.status||'PENDING'}</td>
+        </tr>`).join('');
+
+      const s = data.scoreboard || {};
+      $('scoreboard').innerHTML = [
+        ['Call', s.calls_made ?? 0],
+        ['Filled', s.filled ?? 0],
+        ['Menang', s.wins ?? 0],
+        ['Total R', s.total_r ?? 0],
+      ].map(([l,v]) => `<div class="kv"><div class="l">${l}</div><div class="v">${v}</div></div>`).join('');
+      $('scoreNote').textContent = s.note || '';
+      window.__calls = data;
+    }
+
+    // Optional live quote — biquote (public, no key). Offset note in UI.
+    async function pollQuote(){
+      try {
+        const r = await fetch('https://biquote.io/api/XAUUSD', {cache:'no-store'});
+        const j = await r.json();
+        const mid = j.mid ?? ((j.bid+j.ask)/2);
+        $('livePx').textContent = `Live ~${Number(mid).toFixed(2)} (biquote · ≠ JM exact)`;
+        $('liveDot').classList.remove('off');
+        // zone hint vs latest
+        const c = window.__calls && (window.__calls.latest || window.__calls.main_call);
+        if (c && mid >= c.entry_lo && mid <= c.entry_hi) {
+          $('livePx').textContent += ' · dalam zon entry!';
+        }
+      } catch(e) {
+        $('livePx').textContent = 'Live quote offline / blocked';
+        $('liveDot').classList.add('off');
+      }
+    }
+
+    document.querySelectorAll('nav.tabs button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('nav.tabs button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        $(btn.dataset.tab).classList.add('active');
+      });
+    });
+    $('btnInstallHint').addEventListener('click', () => {
+      const el = $('installHint');
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    });
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').catch(()=>{});
+    }
+    loadCalls().then(() => { pollQuote(); setInterval(pollQuote, 15000); });
+  </script>
+</body>
+</html>

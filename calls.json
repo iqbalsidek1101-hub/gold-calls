@@ -1,0 +1,81 @@
+{
+  "app": "Charlie Gold Calls",
+  "generated_myt": "2026-11-06 13:53:14",
+  "latest": {
+    "id": "001R",
+    "created_myt": "2026-11-06 13:30:12",
+    "last_bar_server": "M5 2026-11-06 07:00:00 EET close 4044.40",
+    "direction": "BUY",
+    "entry_lo": 4019.64,
+    "entry_hi": 4028.83,
+    "sl": 4006.66,
+    "tp": 4082.0,
+    "valid_until_myt": "2026-11-10 06:00:00",
+    "confidence": 35,
+    "reasoning": "Thin-entry study BUILD winner=M15 base+confirm (TEST failed). Applied overlapping M15/depth thin inside 4010-4038 → 4019.6-4028.8, SL 4006.7, TP 4082, RR~3.29, mode=confirm. M15 base overlapping HTF zone (BUILD winner family)",
+    "status": "PENDING",
+    "r_result": null,
+    "chart": "charts/call_001_refined.png"
+  },
+  "main_call": {
+    "id": "001",
+    "created_myt": "2026-11-06 12:40:00",
+    "last_bar_server": "2026-11-06 06:00:00 EET H1; tick 06:37:22 EET bid4046.80",
+    "direction": "BUY",
+    "entry_lo": 4010.0,
+    "entry_hi": 4038.0,
+    "sl": 3975.0,
+    "tp": 4082.0,
+    "valid_until_myt": "2026-11-10 06:00:00",
+    "confidence": 58,
+    "reasoning": "Oct30 crash low 3870 then Nov2-5 momentum bounce to 4146; HTF map = recovery/up. Today soft H4/D1 pullback from week high into mid-week range — treat as pullback not new downtrend. Buy limit into 4010-4038 (Nov4 breakout base / demand), SL under 3971 swing, TP prev-week high 4082. Do not chase 4047. Invalid if H4 closes below 3955.",
+    "status": "PENDING",
+    "r_result": null,
+    "chart": "charts/call_001.png"
+  },
+  "calls": [
+    {
+      "id": "001R",
+      "created_myt": "2026-11-06 13:30:12",
+      "last_bar_server": "M5 2026-11-06 07:00:00 EET close 4044.40",
+      "direction": "BUY",
+      "entry_lo": 4019.64,
+      "entry_hi": 4028.83,
+      "sl": 4006.66,
+      "tp": 4082.0,
+      "valid_until_myt": "2026-11-10 06:00:00",
+      "confidence": 35,
+      "reasoning": "Thin-entry study BUILD winner=M15 base+confirm (TEST failed). Applied overlapping M15/depth thin inside 4010-4038 → 4019.6-4028.8, SL 4006.7, TP 4082, RR~3.29, mode=confirm. M15 base overlapping HTF zone (BUILD winner family)",
+      "status": "PENDING",
+      "r_result": null,
+      "chart": "charts/call_001_refined.png"
+    },
+    {
+      "id": "001",
+      "created_myt": "2026-11-06 12:40:00",
+      "last_bar_server": "2026-11-06 06:00:00 EET H1; tick 06:37:22 EET bid4046.80",
+      "direction": "BUY",
+      "entry_lo": 4010.0,
+      "entry_hi": 4038.0,
+      "sl": 3975.0,
+      "tp": 4082.0,
+      "valid_until_myt": "2026-11-10 06:00:00",
+      "confidence": 58,
+      "reasoning": "Oct30 crash low 3870 then Nov2-5 momentum bounce to 4146; HTF map = recovery/up. Today soft H4/D1 pullback from week high into mid-week range — treat as pullback not new downtrend. Buy limit into 4010-4038 (Nov4 breakout base / demand), SL under 3971 swing, TP prev-week high 4082. Do not chase 4047. Invalid if H4 closes below 3955.",
+      "status": "PENDING",
+      "r_result": null,
+      "chart": "charts/call_001.png"
+    }
+  ],
+  "scoreboard": {
+    "calls_made": 2,
+    "filled": 0,
+    "wins": 0,
+    "win_rate": null,
+    "total_r": 0.0,
+    "avg_r": null,
+    "as_of_myt": "2026-11-06 13:53:14",
+    "note": "Belum ada fill — scoreboard kosong jujur."
+  },
+  "quote_note": "Harga live (optional): biquote.io XAUUSD — biasanya ~$1 berbeza vs JustMarkets XAUUSD.m. Zone alert terbaik dari MT5 SendNotification."
+}
