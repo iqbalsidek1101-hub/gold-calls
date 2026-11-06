@@ -1,5 +1,5 @@
 /* Charlie Gold PWA — cache shell + last calls.json for offline read */
-const CACHE = 'charlie-gold-v2';
+const CACHE = 'charlie-gold-v3';
 const PRECACHE = [
   './',
   './index.html',

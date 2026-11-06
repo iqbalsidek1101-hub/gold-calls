@@ -3,244 +3,522 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#0b1220" />
+  <meta name="color-scheme" content="dark" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Charlie XAU" />
   <title>Charlie Gold Calls</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <style>
     :root {
-      --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --muted: #94a3b8;
-      --buy: #22c55e; --sell: #ef4444; --wait: #eab308; --line: #334155; --accent: #38bdf8;
+      --bg: #0b1220;
+      --card: #162033;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --buy: #22c55e;
+      --sell: #f87171;
+      --wait: #cbd5e1;
+      --line: #243044;
+      --accent: #38bdf8;
+      --safe-t: env(safe-area-inset-top, 0px);
+      --safe-b: env(safe-area-inset-bottom, 0px);
+      --safe-l: env(safe-area-inset-left, 0px);
+      --safe-r: env(safe-area-inset-right, 0px);
     }
     * { box-sizing: border-box; }
+    html, body { background: var(--bg); }
     body {
-      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: var(--bg); color: var(--text); min-height: 100dvh;
-      padding: 0 0 72px;
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--text);
+      min-height: 100dvh;
+      padding-left: var(--safe-l);
+      padding-right: var(--safe-r);
+      padding-bottom: calc(20px + var(--safe-b));
+      -webkit-tap-highlight-color: transparent;
     }
+    button { font-family: inherit; touch-action: manipulation; }
     header {
-      position: sticky; top: 0; z-index: 10;
-      background: rgba(15,23,42,.92); backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(11, 18, 32, .94);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--line);
-      padding: 12px 16px 10px;
+      padding: calc(10px + var(--safe-t)) 14px 12px;
     }
-    header h1 { margin: 0; font-size: 1.05rem; font-weight: 700; }
-    header .sub { color: var(--muted); font-size: .75rem; margin-top: 2px; }
+    header h1 { margin: 0; font-size: 1.15rem; font-weight: 700; letter-spacing: -.01em; }
+    .sub { color: var(--muted); font-size: .75rem; margin-top: 3px; }
     .live {
       display: flex; align-items: center; gap: 8px; margin-top: 8px;
-      font-variant-numeric: tabular-nums; font-size: .9rem;
+      font-variant-numeric: tabular-nums; font-size: .85rem; min-height: 1.2em;
     }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--buy); box-shadow: 0 0 8px var(--buy); }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--buy); box-shadow: 0 0 8px var(--buy); flex: none; }
     .dot.off { background: var(--muted); box-shadow: none; }
-    main { padding: 12px 14px 24px; max-width: 480px; margin: 0 auto; }
-    .card {
-      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
-      padding: 14px; margin-bottom: 12px;
+    .tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-top: 12px;
     }
+    .tabs[hidden], .back[hidden], .zoom[hidden] { display: none !important; }
+    .tabs button {
+      min-height: 52px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #10192b;
+      color: var(--muted);
+      font-size: .95rem;
+      font-weight: 700;
+      padding: 12px 4px;
+    }
+    .tabs button[aria-selected="true"] {
+      background: #0284c7;
+      border-color: #38bdf8;
+      color: #fff;
+    }
+    .back {
+      margin-top: 12px;
+      min-height: 48px;
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #10192b;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 700;
+      text-align: left;
+      padding: 12px 14px;
+    }
+    main { padding: 12px 14px 8px; max-width: 520px; margin: 0 auto; }
+    .score {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .kv {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px 6px 9px;
+      text-align: center;
+      min-height: 58px;
+    }
+    .kv .l { color: var(--muted); font-size: .65rem; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
+    .kv .v { font-size: 1.05rem; font-weight: 700; margin-top: 3px; font-variant-numeric: tabular-nums; }
+    .row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto auto 1fr auto;
+      grid-template-areas: "id badge . status" "entry entry time time";
+      column-gap: 8px;
+      row-gap: 6px;
+      align-items: center;
+      text-align: left;
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px 12px;
+      min-height: 68px;
+      margin: 0 0 8px;
+    }
+    .id { grid-area: id; font-weight: 700; font-size: 1.02rem; }
+    .badge { grid-area: badge; }
+    .status { grid-area: status; justify-self: end; }
+    .entry { grid-area: entry; font-variant-numeric: tabular-nums; font-weight: 600; font-size: .95rem; }
+    .meta { grid-area: time; justify-self: end; color: var(--muted); font-size: .78rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .status { font-size: .75rem; font-weight: 700; letter-spacing: .03em; }
+    .status.PENDING { color: #facc15; }
+    .status.TP { color: #4ade80; }
+    .status.SL { color: #f87171; }
+    .status.EXPIRED, .status.NOTFILLED { color: #94a3b8; }
     .badge {
-      display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: .75rem; font-weight: 700;
+      display: inline-block;
+      min-width: 52px;
+      text-align: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .04em;
     }
-    .badge.BUY { background: rgba(34,197,94,.18); color: var(--buy); }
-    .badge.SELL { background: rgba(239,68,68,.18); color: var(--sell); }
-    .badge.WAIT, .badge.PENDING { background: rgba(234,179,8,.15); color: var(--wait); }
-    .badge.SWING { background: rgba(56,189,248,.15); color: #38bdf8; }
-    .badge.INTRADAY { background: rgba(168,85,247,.15); color: #c084fc; }
-    .badge.SCALP { background: rgba(251,146,60,.15); color: #fb923c; }
-    .type-label { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin: 12px 2px 6px; font-weight: 650; }
-    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 10px; }
-    .kv { background: #0f172a; border-radius: 10px; padding: 8px 10px; }
-    .kv .l { color: var(--muted); font-size: .7rem; }
-    .kv .v { font-size: .95rem; font-weight: 650; margin-top: 2px; font-variant-numeric: tabular-nums; }
-    .reason { color: var(--muted); font-size: .8rem; line-height: 1.4; margin-top: 10px; }
-    .chart {
-      width: 100%; border-radius: 10px; border: 1px solid var(--line); display: block; margin-top: 10px;
+    .badge.BUY { background: rgba(34,197,94,.18); color: #4ade80; }
+    .badge.SELL { background: rgba(239,68,68,.18); color: #fca5a5; }
+    .badge.WAIT { background: #334155; color: var(--wait); }
+    .empty {
+      background: var(--card);
+      border: 1px dashed var(--line);
+      border-radius: 14px;
+      padding: 22px 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .detail-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .detail-head .id { font-size: 1.25rem; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .field {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+    .field.wide { grid-column: 1 / -1; }
+    .field .l { color: var(--muted); font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+    .field .v { margin-top: 4px; font-size: .98rem; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1.35; }
+    .field .v.prose { font-weight: 500; font-variant-numeric: normal; color: #e2e8f0; white-space: pre-wrap; }
+    .chart-btn {
+      display: block;
+      width: 100%;
+      margin-top: 10px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      border-radius: 12px;
+    }
+    .chart-btn img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      border: 1px solid var(--line);
       background: #020617;
     }
-    h2 { font-size: .85rem; margin: 16px 2px 8px; color: var(--muted); font-weight: 600; letter-spacing: .02em; text-transform: uppercase; }
-    table { width: 100%; border-collapse: collapse; font-size: .78rem; }
-    th, td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--line); }
-    th { color: var(--muted); font-weight: 600; }
-    .score { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-    .score .kv .v { font-size: 1.05rem; }
-    nav.tabs {
-      position: fixed; left: 0; right: 0; bottom: 0; height: 60px;
-      background: rgba(15,23,42,.96); border-top: 1px solid var(--line);
-      display: flex; justify-content: space-around; align-items: center;
-      padding-bottom: env(safe-area-inset-bottom);
+    .when { color: var(--muted); font-size: .78rem; margin: 0 2px 10px; }
+    .hint { color: var(--muted); font-size: .72rem; margin: 6px 2px 0; }
+    .zoom {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      padding: var(--safe-t) var(--safe-r) var(--safe-b) var(--safe-l);
     }
-    nav.tabs button {
-      background: none; border: 0; color: var(--muted); font-size: .7rem;
-      display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 12px;
+    .zoom[hidden] { display: none; }
+    .zoom-close {
+      min-height: 48px;
+      margin: 8px 12px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      background: #111827;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
     }
-    nav.tabs button.active { color: var(--accent); }
-    nav.tabs button span.ico { font-size: 1.15rem; }
-    .panel { display: none; }
-    .panel.active { display: block; }
-    .note { font-size: .72rem; color: var(--muted); margin-top: 8px; line-height: 1.35; }
-    .btn {
-      display: inline-block; margin-top: 10px; padding: 10px 14px; border-radius: 10px;
-      background: #0ea5e9; color: #fff; border: 0; font-weight: 650; font-size: .85rem; width: 100%;
-    }
-    .btn.secondary { background: #334155; }
+    .zoom-scroll { flex: 1; overflow: auto; -webkit-overflow-scrolling: touch; }
+    .zoom-scroll img { width: 100%; height: auto; display: block; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Charlie · XAUUSD Calls</h1>
-    <div class="sub">Prototype PWA · data dari calls.json (bukan akaun broker)</div>
+    <h1>Charlie · XAUUSD</h1>
+    <div class="sub">Senarai call · data calls.json, bukan akaun broker</div>
     <div class="live"><span class="dot off" id="liveDot"></span><span id="livePx">Harga live: —</span></div>
+    <div class="tabs" id="tabs" role="tablist">
+      <button type="button" role="tab" id="tab-SCALP" data-type="SCALP" aria-selected="false">Scalping</button>
+      <button type="button" role="tab" id="tab-INTRADAY" data-type="INTRADAY" aria-selected="false">Intraday</button>
+      <button type="button" role="tab" id="tab-SWING" data-type="SWING" aria-selected="false">Swing</button>
+    </div>
+    <button type="button" class="back" id="backBtn" hidden>← Senarai</button>
   </header>
-  <main>
-    <section id="tab-call" class="panel active">
-      <div id="typeCards">Memuat…</div>
-      <h2>Chart call dipilih</h2>
-      <div class="card" style="padding:10px">
-        <img class="chart" id="chartImg" alt="Chart call" />
-        <div class="note" id="chartNote"></div>
-      </div>
-    </section>
-    <section id="tab-hist" class="panel">
-      <h2>Sejarah call</h2>
-      <div class="card" style="padding:8px 10px; overflow-x:auto">
-        <table>
-          <thead><tr><th>ID</th><th>Jenis</th><th>Arah</th><th>Entry</th><th>SL</th><th>TP</th><th>Status</th></tr></thead>
-          <tbody id="histBody"></tbody>
-        </table>
-      </div>
-    </section>
-    <section id="tab-score" class="panel">
-      <h2>Scoreboard</h2>
-      <div class="card">
-        <div class="score" id="scoreboard"></div>
-        <div class="note" id="scoreNote"></div>
-      </div>
-      <h2>Push (belum aktif — Phase 1)</h2>
-      <div class="card">
-        <div class="note">Phase 1: prototype je. Push belum dihantar. Cadangan: <b>MT5 SendNotification</b> (paling reliable untuk zone entry) + optional <b>ntfy.sh</b> topic private untuk call baru.</div>
-        <button class="btn secondary" id="btnInstallHint" type="button">Cara pasang di telefon</button>
-        <div class="note" id="installHint" style="display:none;margin-top:8px">
-          Android Chrome: menu → <b>Add to Home screen</b> / Install app.<br/>
-          iPhone Safari: Share → <b>Add to Home Screen</b>.
-        </div>
-      </div>
-    </section>
-  </main>
-  <nav class="tabs">
-    <button type="button" class="active" data-tab="tab-call"><span class="ico">📞</span>Call</button>
-    <button type="button" data-tab="tab-hist"><span class="ico">📜</span>Sejarah</button>
-    <button type="button" data-tab="tab-score"><span class="ico">📊</span>Score</button>
-  </nav>
+  <main id="app">Memuat…</main>
+  <div class="zoom" id="zoom" hidden>
+    <button type="button" class="zoom-close" id="zoomClose">Tutup</button>
+    <div class="zoom-scroll"><img id="zoomImg" alt="Chart penuh" /></div>
+  </div>
   <script>
     const $ = (id) => document.getElementById(id);
-    function money(n){ return Number(n).toFixed(2); }
-    function fmtEntry(c){ return money(c.entry_lo) + ' – ' + money(c.entry_hi); }
+    const TYPES = [
+      { key: 'SCALP', label: 'Scalping' },
+      { key: 'INTRADAY', label: 'Intraday' },
+      { key: 'SWING', label: 'Swing' }
+    ];
+    const MONTHS = ['Jan','Feb','Mac','Apr','Mei','Jun','Jul','Ogos','Sep','Okt','Nov','Dis'];
+    let data = null;
+    let activeType = 'INTRADAY';
+    let detailId = null;
 
-    
-    const TYPE_MS = { SWING: 'Swing', INTRADAY: 'Intraday', SCALP: 'Scalping' };
-    function cardHTML(c, highlight){
-      if(!c) return `<div class="card"><div class="note">Tiada call jenis ni lagi.</div></div>`;
-      const t = c.type || 'SWING';
-      return `<div class="card" data-id="${c.id}" style="${highlight?'outline:1px solid var(--accent)':''}">
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
-          <div>
-            <span class="badge ${t}">${TYPE_MS[t]||t}</span>
-            <span class="badge ${c.direction}" style="margin-left:6px">${c.direction}</span>
-            <span class="badge PENDING" style="margin-left:6px">${c.status||'PENDING'}</span>
-          </div>
-          <div style="color:var(--muted);font-size:.75rem">#${c.id} · conf ${c.confidence}%</div>
-        </div>
-        <div class="grid2">
-          <div class="kv"><div class="l">Zon entry</div><div class="v">${fmtEntry(c)}</div></div>
-          <div class="kv"><div class="l">SL</div><div class="v">${money(c.sl)}</div></div>
-          <div class="kv"><div class="l">TP</div><div class="v">${money(c.tp)}</div></div>
-          <div class="kv"><div class="l">Sah sampai</div><div class="v" style="font-size:.72rem">${c.valid_until_myt}</div></div>
-        </div>
-        <div class="reason">${(c.reasoning||'').slice(0,220)}${(c.reasoning||'').length>220?'…':''}</div>
-        <button class="btn secondary" type="button" onclick="showChart('${c.id}')" style="margin-top:8px">Tengok chart</button>
-      </div>`;
+    function money(n) {
+      const x = Number(n);
+      return Number.isFinite(x) ? x.toFixed(2) : '—';
     }
-    window.showChart = function showChart(id){
-      const data = window.__calls;
-      const c = (data.calls||[]).find(x => x.id===id) || data.latest;
-      if(!c) return;
-      const chart = c.chart || 'charts/call_001.png';
-      $('chartImg').src = chart + '?t=' + Date.now();
-      $('chartNote').textContent = `#${c.id} · ${TYPE_MS[c.type]||c.type} · ${c.direction}`;
+    function fmtEntry(c) { return money(c.entry_lo) + ' – ' + money(c.entry_hi); }
+    function fmtWhen(s, withYear) {
+      const m = String(s || '').match(/(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
+      if (!m) return s || '—';
+      const day = String(Number(m[3]));
+      const mon = MONTHS[Number(m[2]) - 1] || m[2];
+      const date = withYear ? `${day} ${mon} ${m[1]}` : `${day} ${mon}`;
+      return `${date}, ${m[4]}:${m[5]}`;
     }
-    async function loadCalls(){
-      const res = await fetch('calls.json?ts=' + Date.now());
-      const data = await res.json();
-      window.__calls = data;
-      const by = data.latest_by_type || {};
-      const order = ['SCALP','INTRADAY','SWING'];
-      let html = '';
-      for (const t of order){
-        html += `<div class="type-label">${TYPE_MS[t]}</div>` + cardHTML(by[t], t=== (data.latest&&data.latest.type));
+    function dirKey(d) {
+      const u = String(d || '').toUpperCase();
+      if (u === 'BUY' || u === 'SELL') return u;
+      return 'WAIT';
+    }
+    function statusKey(s) {
+      const u = String(s || 'PENDING').toUpperCase();
+      if (u === 'NOT FILLED') return 'NOTFILLED';
+      return u;
+    }
+    function statusLabel(s) {
+      const u = String(s || 'PENDING').toUpperCase();
+      if (['PENDING','TP','SL','EXPIRED','NOT FILLED'].includes(u)) return u;
+      return u || 'PENDING';
+    }
+    function sentences(text) {
+      return String(text || '').split(/(?<=[.!?])\s+/).map((s) => s.trim()).filter(Boolean);
+    }
+    function fieldText(c, keys) {
+      for (const k of keys) {
+        if (c[k] != null && String(c[k]).trim()) return String(c[k]).trim();
       }
-      $('typeCards').innerHTML = html;
-      // default chart = latest overall
-      const c = data.latest || by.SCALP || by.INTRADAY || by.SWING;
-      if(c) showChart(c.id);
-
-      $('histBody').innerHTML = (data.calls||[]).map(r => `
-        <tr>
-          <td>#${r.id}</td>
-          <td><span class="badge ${r.type||'SWING'}">${TYPE_MS[r.type]||r.type||'Swing'}</span></td>
-          <td><span class="badge ${r.direction}">${r.direction}</span></td>
-          <td>${money(r.entry_lo)}–${money(r.entry_hi)}</td>
-          <td>${money(r.sl)}</td>
-          <td>${money(r.tp)}</td>
-          <td>${r.status||'PENDING'}</td>
-        </tr>`).join('');
-
-      const s = data.scoreboard || {};
-      $('scoreboard').innerHTML = [
-        ['Call', s.calls_made ?? 0],
-        ['Filled', s.filled ?? 0],
-        ['Menang', s.wins ?? 0],
-        ['Total R', s.total_r ?? 0],
-      ].map(([l,v]) => `<div class="kv"><div class="l">${l}</div><div class="v">${v}</div></div>`).join('');
-      $('scoreNote').textContent = s.note || '';
+      return '';
+    }
+    function pickSentences(text, re) {
+      return sentences(text).filter((s) => re.test(s)).join(' ');
+    }
+    function invalidationOf(c) {
+      return fieldText(c, ['invalidation', 'invalid_if', 'invalidation_note'])
+        || pickSentences(c.reasoning, /\binvalid\b|failed break|→\s*exit|squeeze through/i)
+        || '—';
+    }
+    function managementOf(c) {
+      return fieldText(c, ['management_note', 'management', 'manage_note'])
+        || pickSentences(c.reasoning, /\bclose before\b|\bmax \d|do not chase|jangan kejar|gap risk/i)
+        || '—';
+    }
+    function rrOf(c) {
+      if (c.rr != null && c.rr !== '') return String(c.rr);
+      const lo = Number(c.entry_lo), hi = Number(c.entry_hi);
+      const sl = Number(c.sl), tp = Number(c.tp);
+      if (![lo, hi, sl, tp].every(Number.isFinite)) return '—';
+      const mid = (lo + hi) / 2;
+      const risk = Math.abs(mid - sl);
+      const reward = Math.abs(tp - mid);
+      if (!risk) return '—';
+      return (reward / risk).toFixed(2);
+    }
+    function callsOf(type) {
+      const list = (data && data.calls) || [];
+      return list
+        .filter((c) => String(c.type || '').toUpperCase() === type)
+        .slice()
+        .sort((a, b) => String(b.created_myt || '').localeCompare(String(a.created_myt || '')));
+    }
+    function scoreOf(list) {
+      const filledOnes = list.filter((c) => {
+        const s = String(c.status || 'PENDING').toUpperCase();
+        return s === 'TP' || s === 'SL' || s === 'BE' || s === 'FILLED';
+      });
+      const wins = list.filter((c) => String(c.status || '').toUpperCase() === 'TP').length;
+      const totalR = list.reduce((sum, c) => sum + (typeof c.r_result === 'number' ? c.r_result : 0), 0);
+      const winRate = filledOnes.length ? Math.round((wins / filledOnes.length) * 100) : 0;
+      const rText = Number.isInteger(totalR) ? String(totalR) : String(Math.round(totalR * 100) / 100);
+      return { calls: list.length, filled: filledOnes.length, winRate, totalR: rText };
+    }
+    function newestType() {
+      const calls = (data && data.calls) || [];
+      if (!calls.length) return (data && data.latest && data.latest.type) || 'SCALP';
+      let maxT = '';
+      calls.forEach((c) => { if (String(c.created_myt || '') > maxT) maxT = String(c.created_myt); });
+      const newest = calls.filter((c) => String(c.created_myt || '') === maxT);
+      const latest = data.latest;
+      if (latest && newest.some((c) => c.id === latest.id && c.type)) return String(latest.type).toUpperCase();
+      return String(newest[0].type || 'SCALP').toUpperCase();
+    }
+    function findCall(id) {
+      return ((data && data.calls) || []).find((c) => c.id === id) || null;
+    }
+    function esc(s) {
+      return String(s ?? '').replace(/[&<>"']/g, (ch) => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      }[ch]));
+    }
+    function setTabsVisible(show) {
+      $('tabs').hidden = !show;
+      $('backBtn').hidden = show;
+      TYPES.forEach((t) => {
+        const btn = $('tab-' + t.key);
+        const on = show && t.key === activeType;
+        btn.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+    }
+    function renderList() {
+      setTabsVisible(true);
+      const list = callsOf(activeType);
+      const s = scoreOf(list);
+      const rows = list.map((c) => {
+        const dir = dirKey(c.direction);
+        const st = statusKey(c.status);
+        return `<button type="button" class="row" data-id="${esc(c.id)}">
+          <span class="id">#${esc(c.id)}</span>
+          <span class="badge ${dir}">${esc(dir)}</span>
+          <span class="status ${st}">${esc(statusLabel(c.status))}</span>
+          <span class="entry">${esc(fmtEntry(c))}</span>
+          <span class="meta">${esc(fmtWhen(c.created_myt, false))} MYT</span>
+        </button>`;
+      }).join('');
+      $('app').innerHTML = `
+        <div class="score">
+          <div class="kv"><div class="l">Call</div><div class="v">${s.calls}</div></div>
+          <div class="kv"><div class="l">Filled</div><div class="v">${s.filled}</div></div>
+          <div class="kv"><div class="l">Win %</div><div class="v">${s.winRate}%</div></div>
+          <div class="kv"><div class="l">Total R</div><div class="v">${esc(s.totalR)}</div></div>
+        </div>
+        ${rows || '<div class="empty">Belum ada call untuk tab ni.</div>'}
+      `;
+    }
+    function renderDetail(c) {
+      setTabsVisible(false);
+      const dir = dirKey(c.direction);
+      const st = statusKey(c.status);
+      const chart = c.chart || '';
+      const chartBlock = chart
+        ? `<button type="button" class="chart-btn" id="chartBtn" data-src="${esc(chart)}">
+            <img src="${esc(chart)}" alt="Chart #${esc(c.id)}" />
+          </button>
+          <div class="hint">Ketik chart untuk skrin penuh.</div>`
+        : '<div class="empty">Tiada chart.</div>';
+      $('app').innerHTML = `
+        <div class="detail-head">
+          <div class="id">#${esc(c.id)}</div>
+          <div>
+            <span class="badge ${dir}">${esc(dir)}</span>
+            <span class="status ${st}" style="margin-left:8px">${esc(statusLabel(c.status))}</span>
+          </div>
+        </div>
+        <div class="when">${esc(TYPES.find((t) => t.key === String(c.type || '').toUpperCase())?.label || c.type || '')} · ${esc(fmtWhen(c.created_myt, true))} MYT</div>
+        <div class="grid2">
+          <div class="field wide"><div class="l">Entry</div><div class="v">${esc(fmtEntry(c))}</div></div>
+          <div class="field"><div class="l">SL</div><div class="v">${esc(money(c.sl))}</div></div>
+          <div class="field"><div class="l">TP</div><div class="v">${esc(money(c.tp))}</div></div>
+          <div class="field"><div class="l">R:R</div><div class="v">${esc(rrOf(c))}</div></div>
+          <div class="field"><div class="l">Keyakinan</div><div class="v">${c.confidence == null ? '—' : esc(c.confidence) + '%'}</div></div>
+          <div class="field wide"><div class="l">Sah sampai</div><div class="v">${esc(fmtWhen(c.valid_until_myt, true))} MYT</div></div>
+          <div class="field wide"><div class="l">Invalidasi</div><div class="v prose">${esc(invalidationOf(c))}</div></div>
+          <div class="field wide"><div class="l">Nota urus</div><div class="v prose">${esc(managementOf(c))}</div></div>
+          <div class="field wide"><div class="l">Sebab</div><div class="v prose">${esc(c.reasoning || '—')}</div></div>
+        </div>
+        ${chartBlock}
+      `;
+      window.scrollTo(0, 0);
+    }
+    function render() {
+      if (!data) return;
+      if (detailId) {
+        const c = findCall(detailId);
+        if (c) { renderDetail(c); return; }
+        detailId = null;
+      }
+      renderList();
+    }
+    function openDetail(id) {
+      detailId = id;
+      const c = findCall(id);
+      if (c && c.type) activeType = String(c.type).toUpperCase();
+      history.pushState({ type: activeType, detailId }, '', '#/' + activeType + '/' + encodeURIComponent(id));
+      render();
+    }
+    function showList(push) {
+      detailId = null;
+      if (push) history.pushState({ type: activeType, detailId: null }, '', '#/' + activeType);
+      render();
+    }
+    function openZoom(src, alt) {
+      $('zoomImg').src = src;
+      $('zoomImg').alt = alt || 'Chart penuh';
+      $('zoom').hidden = false;
+    }
+    function closeZoom() {
+      $('zoom').hidden = true;
+      $('zoomImg').removeAttribute('src');
     }
 
-    // Optional live quote — biquote (public, no key). Offset note in UI.
-    async function pollQuote(){
+    $('tabs').addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-type]');
+      if (!btn) return;
+      activeType = btn.dataset.type;
+      detailId = null;
+      history.replaceState({ type: activeType, detailId: null }, '', '#/' + activeType);
+      render();
+    });
+    $('backBtn').addEventListener('click', () => {
+      if (!$('zoom').hidden) { closeZoom(); return; }
+      if (history.state && history.state.detailId) history.back();
+      else showList(false);
+    });
+    $('app').addEventListener('click', (e) => {
+      const row = e.target.closest('.row');
+      if (row) { openDetail(row.dataset.id); return; }
+      const chart = e.target.closest('#chartBtn');
+      if (chart) openZoom(chart.dataset.src, chart.querySelector('img')?.alt);
+    });
+    $('zoomClose').addEventListener('click', closeZoom);
+    $('zoom').addEventListener('click', (e) => {
+      if (e.target === $('zoomImg') || e.target === $('zoomClose')) return;
+      if (e.target.id === 'zoom' || e.target.classList.contains('zoom-scroll')) closeZoom();
+    });
+    window.addEventListener('popstate', (e) => {
+      closeZoom();
+      const st = e.state || {};
+      if (st.type) activeType = st.type;
+      detailId = st.detailId || null;
+      render();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (!$('zoom').hidden) closeZoom();
+        else if (detailId) $('backBtn').click();
+      }
+    });
+
+    async function loadCalls() {
+      const res = await fetch('calls.json?ts=' + Date.now());
+      if (!res.ok) throw new Error('calls.json ' + res.status);
+      data = await res.json();
+      const hash = location.hash || '';
+      const parts = hash.replace(/^#\/?/, '').split('/').filter(Boolean);
+      const typeFromHash = (parts[0] || '').toUpperCase();
+      const idFromHash = parts[1] ? decodeURIComponent(parts[1]) : '';
+      activeType = TYPES.some((t) => t.key === typeFromHash) ? typeFromHash : newestType();
+      detailId = idFromHash && findCall(idFromHash) ? idFromHash : null;
+      history.replaceState({ type: activeType, detailId }, '', detailId ? '#/' + activeType + '/' + encodeURIComponent(detailId) : '#/' + activeType);
+      render();
+    }
+
+    async function pollQuote() {
       try {
-        const r = await fetch('https://biquote.io/api/XAUUSD', {cache:'no-store'});
+        const r = await fetch('https://biquote.io/api/XAUUSD', { cache: 'no-store' });
         const j = await r.json();
-        const mid = j.mid ?? ((j.bid+j.ask)/2);
-        $('livePx').textContent = `Live ~${Number(mid).toFixed(2)} (biquote · ≠ JM exact)`;
+        const mid = j.mid ?? ((j.bid + j.ask) / 2);
+        $('livePx').textContent = 'Live ~' + Number(mid).toFixed(2) + ' (biquote · ≠ JM)';
         $('liveDot').classList.remove('off');
-        // zone hint vs latest
-        const c = window.__calls && (window.__calls.latest || window.__calls.main_call);
-        if (c && mid >= c.entry_lo && mid <= c.entry_hi) {
-          $('livePx').textContent += ' · dalam zon entry!';
-        }
-      } catch(e) {
-        $('livePx').textContent = 'Live quote offline / blocked';
+      } catch (e) {
+        $('livePx').textContent = 'Live quote offline';
         $('liveDot').classList.add('off');
       }
     }
 
-    document.querySelectorAll('nav.tabs button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('nav.tabs button').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-        btn.classList.add('active');
-        $(btn.dataset.tab).classList.add('active');
-      });
-    });
-    $('btnInstallHint').addEventListener('click', () => {
-      const el = $('installHint');
-      el.style.display = el.style.display === 'none' ? 'block' : 'none';
-    });
-
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./sw.js').catch(()=>{});
+      navigator.serviceWorker.register('./sw.js').catch(() => {});
     }
-    loadCalls().then(() => { pollQuote(); setInterval(pollQuote, 15000); });
+    loadCalls().catch((err) => {
+      $('app').innerHTML = '<div class="empty">Gagal muat calls.json.</div>';
+      console.error(err);
+    }).then(() => { pollQuote(); setInterval(pollQuote, 15000); });
   </script>
 </body>
 </html>
