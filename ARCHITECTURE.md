@@ -47,6 +47,17 @@ Host `gold_app/` on GitHub Pages / Cloudflare Pages / Netlify (free). App reads 
 - Service worker caches shell for offline **read** of last `calls.json`.
 - **No** pushes sent, **no** public deploy.
 
+## Web Push code (not deployed)
+
+The static PWA now has an opt-in Web Push panel and service-worker handlers. GitHub Pages still cannot store subscriptions or send pushes. `push-server/` is the Node process to run elsewhere, with VAPID keys and the dispatch token only on that host. See `PUSH.md`.
+
+Cadence the UI and the dispatcher assume:
+
+- Score active calls every 10 minutes, 08:00–21:50 MYT. That is what can raise entry / TP / SL after `calls.json` is published. Outside that window there is no score, so a status can wait until the next run (often 08:00 MYT).
+- Full new-call analysis stays about every 30 minutes. “Call baru” follows that publish, not the 10-minute score.
+- Not tick-real-time. Entry touched means the call simulation in `calls.json`, not a broker fill.
+- The first dispatch baselines and does not replay history to a new phone.
+
 ## What Iqbal should do (when ready)
 
 ### A. MT5 zone alerts (recommended first)
