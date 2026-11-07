@@ -1,6 +1,6 @@
 {
   "app": "Charlie Multi Calls",
-  "generated_myt": "2026-11-07 15:09:49",
+  "generated_myt": "2026-11-07 15:35:07",
   "assets": [
     "XAUUSD",
     "BTCUSD",
@@ -10,33 +10,57 @@
   "by_asset": {
     "XAUUSD": {
       "latest": {
-        "id": "I002",
-        "type": "INTRADAY",
+        "id": "S002",
+        "type": "SCALP",
         "created_myt": "2026-11-06 17:01:00",
         "last_bar_server": "2026-11-06 10:55:00 EET M5; tick 10:56:10 EET bid4073.43",
         "direction": "BUY",
-        "entry_lo": 4050.2,
-        "entry_hi": 4056.6,
-        "sl": 4044.0,
+        "entry_lo": 4068.5,
+        "entry_hi": 4071.5,
+        "sl": 4063.0,
         "tp": 4082.0,
-        "valid_until_myt": "2026-11-07 06:00:00",
-        "confidence": 53,
-        "reasoning": "H4 reclaim after dump to 4035.77; D1 still pullback-day under 4146 but bounce has legs. INTRADAY BUY thin into H1/M15 demand 4050.2-4056.6 (base of 10:00 impulse / prior resistance flip). M5 sweep-reclaim confirm preferred. SL 4044 beyond base. TP 4082 (~3.0R). Spread 0.26 in RR. CLOSE by Sat 06:00 MYT \u2014 weekend gap risk. Failed break below 4050 \u2192 exit. Separate from swing BUY still open @4036 / 001R pending.",
+        "valid_until_myt": "2026-11-06 21:01:00",
+        "confidence": 54,
+        "reasoning": "H1/M15 MOMENTUM_UP bounce from session lo 4035.77 \u2192 4074.74 after S001/I001 SL. Do not chase highs; scalp BUY limit into M5 impulse base 4068.5-4071.5 (10:25-10:40). SL under 4062.98 swing. TP 4082 (swing confluence / week mid-upper). Spread 0.26 \u2192 RR\u22481.68. Max 4h. Failed break below 4068 \u2192 exit. HTF: week still recovery (pos~72% of 3881-4146); short-term bounce not new D1 uptrend yet.",
         "status": "SL",
         "r_result": -1.0,
-        "chart": "charts/call_I002.png",
-        "fill_px": 4056.6,
-        "fill_time_server": "2026-11-06 15:15:00",
+        "chart": "charts/call_S002.png",
+        "fill_px": 4071.5,
+        "fill_time_server": "2026-11-06 12:00:00",
         "asset": "XAUUSD",
-        "name": "Gold \u00b7 Intraday #2",
-        "exit_time_server": "2026-11-06 15:30:00",
-        "diagnosis": "Friday pre-weekend dump sliced straight through the 4050-4056 demand; no reaction at the zone.",
-        "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
-        "exit_time_myt": "2026-11-06 21:30:00",
-        "fill_time_myt": "2026-11-06 21:15:00",
-        "scored_myt": "2026-11-07 15:09:49"
+        "name": "Gold \u00b7 Scalping #2",
+        "exit_time_server": "2026-11-06 13:00:00",
+        "diagnosis": "Bounce failed: price filled into the 4068.5-4071.5 base then dumped through 4063 within the hour.",
+        "diagnosis_ms": "Lantunan gagal \u2014 harga masuk zon 4068.5-4071.5 lepas tu terus jatuh tembus 4063 dalam sejam.",
+        "exit_time_myt": "2026-11-06 19:00:00",
+        "fill_time_myt": "2026-11-06 18:00:00",
+        "scored_myt": "2026-11-07 15:35:07"
       },
       "latest_by_type": {
+        "SWING": {
+          "id": "001R",
+          "type": "SWING",
+          "created_myt": "2026-11-06 13:30:12",
+          "last_bar_server": "2026-11-06 10:55:00 EET M5; tick 10:56:10 EET bid4073.43",
+          "direction": "BUY",
+          "entry_lo": 4019.64,
+          "entry_hi": 4028.83,
+          "sl": 4006.66,
+          "tp": 4082.0,
+          "valid_until_myt": "2026-11-10 06:00:00",
+          "confidence": 35,
+          "reasoning": "Thin-entry study BUILD winner=M15 base+confirm (TEST failed). Applied overlapping M15/depth thin inside 4010-4038 \u2192 4019.6-4028.8, SL 4006.7, TP 4082, RR~3.29, mode=confirm. M15 base overlapping HTF zone (BUILD winner family)",
+          "status": "FILLED",
+          "r_result": null,
+          "chart": "charts/call_001_refined.png",
+          "fill_px": 4028.83,
+          "fill_time_server": "2026-11-06 15:30:00",
+          "asset": "XAUUSD",
+          "name": "Gold \u00b7 Swing #1R",
+          "fill_time_myt": "2026-11-06 21:30:00",
+          "scored_myt": "2026-11-07 15:35:07",
+          "note": "open filled; TP/SL not hit yet"
+        },
         "SCALP": {
           "id": "S002",
           "type": "SCALP",
@@ -62,7 +86,7 @@
           "diagnosis_ms": "Lantunan gagal \u2014 harga masuk zon 4068.5-4071.5 lepas tu terus jatuh tembus 4063 dalam sejam.",
           "exit_time_myt": "2026-11-06 19:00:00",
           "fill_time_myt": "2026-11-06 18:00:00",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07"
         },
         "INTRADAY": {
           "id": "I002",
@@ -89,52 +113,32 @@
           "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
           "exit_time_myt": "2026-11-06 21:30:00",
           "fill_time_myt": "2026-11-06 21:15:00",
-          "scored_myt": "2026-11-07 15:09:49"
-        },
-        "SWING": {
-          "id": "001",
-          "type": "SWING",
-          "created_myt": "2026-11-06 12:40:00",
-          "last_bar_server": "2026-11-06 10:55:00 EET M5; tick 10:56:10 EET bid4073.43",
-          "direction": "BUY",
-          "entry_lo": 4010.0,
-          "entry_hi": 4038.0,
-          "sl": 3975.0,
-          "tp": 4082.0,
-          "valid_until_myt": "2026-11-10 06:00:00",
-          "confidence": 58,
-          "reasoning": "Oct30 crash low 3870 then Nov2-5 momentum bounce to 4146; HTF map = recovery/up. Today soft H4/D1 pullback from week high into mid-week range \u2014 treat as pullback not new downtrend. Buy limit into 4010-4038 (Nov4 breakout base / demand), SL under 3971 swing, TP prev-week high 4082. Do not chase 4047. Invalid if H4 closes below 3955.",
-          "status": "FILLED",
-          "r_result": null,
-          "chart": "charts/call_001.png",
-          "fill_px": 4036.21,
-          "fill_time_server": "2026-11-06 07:20:00",
-          "asset": "XAUUSD",
-          "name": "Gold \u00b7 Swing #1",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07"
         }
       },
       "main_call": {
-        "id": "001",
+        "id": "001R",
         "type": "SWING",
-        "created_myt": "2026-11-06 12:40:00",
+        "created_myt": "2026-11-06 13:30:12",
         "last_bar_server": "2026-11-06 10:55:00 EET M5; tick 10:56:10 EET bid4073.43",
         "direction": "BUY",
-        "entry_lo": 4010.0,
-        "entry_hi": 4038.0,
-        "sl": 3975.0,
+        "entry_lo": 4019.64,
+        "entry_hi": 4028.83,
+        "sl": 4006.66,
         "tp": 4082.0,
         "valid_until_myt": "2026-11-10 06:00:00",
-        "confidence": 58,
-        "reasoning": "Oct30 crash low 3870 then Nov2-5 momentum bounce to 4146; HTF map = recovery/up. Today soft H4/D1 pullback from week high into mid-week range \u2014 treat as pullback not new downtrend. Buy limit into 4010-4038 (Nov4 breakout base / demand), SL under 3971 swing, TP prev-week high 4082. Do not chase 4047. Invalid if H4 closes below 3955.",
+        "confidence": 35,
+        "reasoning": "Thin-entry study BUILD winner=M15 base+confirm (TEST failed). Applied overlapping M15/depth thin inside 4010-4038 \u2192 4019.6-4028.8, SL 4006.7, TP 4082, RR~3.29, mode=confirm. M15 base overlapping HTF zone (BUILD winner family)",
         "status": "FILLED",
         "r_result": null,
-        "chart": "charts/call_001.png",
-        "fill_px": 4036.21,
-        "fill_time_server": "2026-11-06 07:20:00",
+        "chart": "charts/call_001_refined.png",
+        "fill_px": 4028.83,
+        "fill_time_server": "2026-11-06 15:30:00",
         "asset": "XAUUSD",
-        "name": "Gold \u00b7 Swing #1",
-        "scored_myt": "2026-11-07 15:09:49"
+        "name": "Gold \u00b7 Swing #1R",
+        "fill_time_myt": "2026-11-06 21:30:00",
+        "scored_myt": "2026-11-07 15:35:07",
+        "note": "open filled; TP/SL not hit yet"
       },
       "calls": [
         {
@@ -157,7 +161,9 @@
           "fill_time_server": "2026-11-06 07:20:00",
           "asset": "XAUUSD",
           "name": "Gold \u00b7 Swing #1",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07",
+          "note": "open filled; TP/SL not hit yet",
+          "fill_time_myt": "2026-11-06 13:20:00"
         },
         {
           "id": "001R",
@@ -180,7 +186,8 @@
           "asset": "XAUUSD",
           "name": "Gold \u00b7 Swing #1R",
           "fill_time_myt": "2026-11-06 21:30:00",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07",
+          "note": "open filled; TP/SL not hit yet"
         },
         {
           "id": "S001",
@@ -201,7 +208,9 @@
           "fill_px": 4049.8,
           "fill_time_server": "2026-11-06 08:35:00",
           "asset": "XAUUSD",
-          "name": "Gold \u00b7 Scalping #1"
+          "name": "Gold \u00b7 Scalping #1",
+          "fill_time_myt": "2026-11-06 14:35:00",
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "I001",
@@ -222,7 +231,9 @@
           "fill_px": 4049.8,
           "fill_time_server": "2026-11-06 08:35:00",
           "asset": "XAUUSD",
-          "name": "Gold \u00b7 Intraday #1"
+          "name": "Gold \u00b7 Intraday #1",
+          "fill_time_myt": "2026-11-06 14:35:00",
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "S002",
@@ -249,7 +260,7 @@
           "diagnosis_ms": "Lantunan gagal \u2014 harga masuk zon 4068.5-4071.5 lepas tu terus jatuh tembus 4063 dalam sejam.",
           "exit_time_myt": "2026-11-06 19:00:00",
           "fill_time_myt": "2026-11-06 18:00:00",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "I002",
@@ -276,7 +287,7 @@
           "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
           "exit_time_myt": "2026-11-06 21:30:00",
           "fill_time_myt": "2026-11-06 21:15:00",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07"
         }
       ],
       "open_count": 2,
@@ -307,25 +318,27 @@
     },
     "BTCUSD": {
       "latest": {
-        "id": "B-W002",
-        "type": "SWING",
+        "id": "B-S002",
+        "type": "SCALP",
         "created_myt": "2026-11-07 15:09:49",
         "last_bar_server": "2026-11-07 09:00:00 EET M5; tick 09:03:15 EET bid75935.71 spr8.58",
-        "direction": "WAIT",
-        "entry_lo": null,
-        "entry_hi": null,
-        "sl": null,
-        "tp": null,
-        "valid_until_myt": "2026-11-08 15:09:49",
-        "confidence": 0,
-        "reasoning": "BTCUSD SWING WAIT: price in lower ~18% of week (74765-81110) after dump; H4 not clean momentum. No clean HTF pullback supply for a swing SELL, and a BUY fights week structure. Reassess after an M15/H4 base forms higher or a clear reclaim.",
-        "status": "WAIT",
+        "direction": "SELL",
+        "entry_lo": 75980,
+        "entry_hi": 76040,
+        "sl": 76120,
+        "tp": 75690,
+        "valid_until_myt": "2026-11-07 19:09:49",
+        "confidence": 48,
+        "reasoning": "BTCUSD: H4 flat/slight up after the dump (chop 75700-76050); week still low (~18% of 74765-81110). Do not chase. Scalp SELL limit into M5/M15 supply 75980-76040 (session micro-highs ~76013). SL 76120 beyond 76013 + buffer. TP 75690 prior M15 swing-low area. Spread 8.58 included -> RR\u22482.63. Max 4h (clock hours, 24/7). Failed break above entry_hi -> exit. Do not chase if already through.",
+        "status": "PENDING",
         "r_result": null,
-        "chart": "charts/call_B-W002.png",
+        "chart": "charts/call_B-S002.png",
         "fill_px": null,
         "fill_time_server": null,
         "asset": "BTCUSD",
-        "name": "BTC \u00b7 Swing #2"
+        "rr": 2.63,
+        "name": "BTC \u00b7 Scalping #2",
+        "scored_myt": "2026-11-07 15:35:07"
       },
       "latest_by_type": {
         "SCALP": {
@@ -348,7 +361,8 @@
           "fill_time_server": null,
           "asset": "BTCUSD",
           "rr": 2.63,
-          "name": "BTC \u00b7 Scalping #2"
+          "name": "BTC \u00b7 Scalping #2",
+          "scored_myt": "2026-11-07 15:35:07"
         },
         "INTRADAY": {
           "id": "B-I002",
@@ -370,7 +384,8 @@
           "fill_time_server": null,
           "asset": "BTCUSD",
           "rr": 3.13,
-          "name": "BTC \u00b7 Intraday #2"
+          "name": "BTC \u00b7 Intraday #2",
+          "scored_myt": "2026-11-07 15:35:07"
         },
         "SWING": {
           "id": "B-W002",
@@ -391,30 +406,32 @@
           "fill_px": null,
           "fill_time_server": null,
           "asset": "BTCUSD",
-          "name": "BTC \u00b7 Swing #2"
+          "name": "BTC \u00b7 Swing #2",
+          "scored_myt": "2026-11-07 15:35:07"
         }
       },
       "main_call": {
-        "id": "B-I002",
-        "type": "INTRADAY",
+        "id": "B-S002",
+        "type": "SCALP",
         "created_myt": "2026-11-07 15:09:49",
         "last_bar_server": "2026-11-07 09:00:00 EET M5; tick 09:03:15 EET bid75935.71 spr8.58",
         "direction": "SELL",
         "entry_lo": 75980,
-        "entry_hi": 76080,
-        "sl": 76220,
-        "tp": 75400,
-        "valid_until_myt": "2026-11-08 05:09:49",
-        "confidence": 46,
-        "reasoning": "BTCUSD: H4 chop after dump, week position ~18%. INTRADAY SELL thin into M15 base top / overnight highs 75980-76080; M5 sweep-reclaim confirm preferred. SL 76220 beyond base. TP 75400. Spread 8.58 in RR\u22483.13. Valid 14h by clock (no NY session on this instrument). Failed break above base -> exit.",
+        "entry_hi": 76040,
+        "sl": 76120,
+        "tp": 75690,
+        "valid_until_myt": "2026-11-07 19:09:49",
+        "confidence": 48,
+        "reasoning": "BTCUSD: H4 flat/slight up after the dump (chop 75700-76050); week still low (~18% of 74765-81110). Do not chase. Scalp SELL limit into M5/M15 supply 75980-76040 (session micro-highs ~76013). SL 76120 beyond 76013 + buffer. TP 75690 prior M15 swing-low area. Spread 8.58 included -> RR\u22482.63. Max 4h (clock hours, 24/7). Failed break above entry_hi -> exit. Do not chase if already through.",
         "status": "PENDING",
         "r_result": null,
-        "chart": "charts/call_B-I002.png",
+        "chart": "charts/call_B-S002.png",
         "fill_px": null,
         "fill_time_server": null,
         "asset": "BTCUSD",
-        "rr": 3.13,
-        "name": "BTC \u00b7 Intraday #2"
+        "rr": 2.63,
+        "name": "BTC \u00b7 Scalping #2",
+        "scored_myt": "2026-11-07 15:35:07"
       },
       "calls": [
         {
@@ -438,9 +455,9 @@
           "asset": "BTCUSD",
           "name": "BTC \u00b7 Scalping #1",
           "exit_time_server": "2026-11-06 13:50:00",
-          "exit_time_myt": "2026-11-06 23:00:00",
+          "exit_time_myt": "2026-11-06 19:50:00",
           "fill_time_myt": "2026-11-06 15:50:00",
-          "scored_myt": "2026-11-07 15:09:49",
+          "scored_myt": "2026-11-07 15:35:07",
           "exit_px": 76030.21,
           "note": "TIME_STOP at 4h (19:50 MYT) @76030.21 before TP; price later hit TP after window"
         },
@@ -467,7 +484,7 @@
           "exit_time_server": "2026-11-06 17:00:00",
           "exit_time_myt": "2026-11-06 23:00:00",
           "fill_time_myt": "2026-11-06 17:15:00",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "B-W001",
@@ -490,7 +507,7 @@
           "asset": "BTCUSD",
           "name": "BTC \u00b7 Swing #1",
           "note": "Swing WAIT superseded early; replaced by B-W002.",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "B-S002",
@@ -512,7 +529,8 @@
           "fill_time_server": null,
           "asset": "BTCUSD",
           "rr": 2.63,
-          "name": "BTC \u00b7 Scalping #2"
+          "name": "BTC \u00b7 Scalping #2",
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "B-I002",
@@ -534,7 +552,8 @@
           "fill_time_server": null,
           "asset": "BTCUSD",
           "rr": 3.13,
-          "name": "BTC \u00b7 Intraday #2"
+          "name": "BTC \u00b7 Intraday #2",
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "B-W002",
@@ -555,7 +574,8 @@
           "fill_px": null,
           "fill_time_server": null,
           "asset": "BTCUSD",
-          "name": "BTC \u00b7 Swing #2"
+          "name": "BTC \u00b7 Swing #2",
+          "scored_myt": "2026-11-07 15:35:07"
         }
       ],
       "open_count": 2,
@@ -586,25 +606,29 @@
     },
     "FXVOL80": {
       "latest": {
-        "id": "V-W002",
-        "type": "SWING",
+        "id": "V-S002",
+        "type": "SCALP",
         "created_myt": "2026-11-07 15:09:49",
         "last_bar_server": "2026-11-07 09:00:00 EET M5; tick 09:03:15 EET bid43798.06 spr12.48",
-        "direction": "WAIT",
-        "entry_lo": null,
-        "entry_hi": null,
-        "sl": null,
-        "tp": null,
-        "valid_until_myt": "2026-11-08 15:09:49",
-        "confidence": 0,
-        "reasoning": "FX Vol 80 SWING WAIT: at week extreme low after dump; no swing BUY against H4 down, and no swing SELL at the lows. Wait for a higher pullback base.",
-        "status": "WAIT",
+        "direction": "SELL",
+        "entry_lo": 44040,
+        "entry_hi": 44120,
+        "sl": 44280,
+        "tp": 43650,
+        "valid_until_myt": "2026-11-07 19:09:49",
+        "confidence": 47,
+        "reasoning": "FX Vol 80: H4 MOMENTUM_DOWN but price at week extreme low (~2% of 43622-52684) \u2014 do not chase SELL at lows. Scalp SELL limit into M5 bounce supply 44040-44120. SL 44280 beyond 44112 + ATR buffer. TP 43650 toward day low 43622 region. Spread 12.48 included -> RR\u22481.96. Max 4h (clock hours, 24/7). Failed break above entry_hi -> exit. Do not chase.",
+        "status": "FILLED",
         "r_result": null,
-        "chart": "charts/call_V-W002.png",
-        "fill_px": null,
-        "fill_time_server": null,
+        "chart": "charts/call_V-S002.png",
+        "fill_px": 44040.0,
+        "fill_time_server": "2026-11-07 09:30:00",
         "asset": "FXVOL80",
-        "name": "Vol 80 \u00b7 Swing #2"
+        "rr": 1.96,
+        "name": "Vol 80 \u00b7 Scalping #2",
+        "note": "open filled; TP/SL not hit yet",
+        "fill_time_myt": "2026-11-07 15:30:00",
+        "scored_myt": "2026-11-07 15:35:07"
       },
       "latest_by_type": {
         "SCALP": {
@@ -620,14 +644,17 @@
           "valid_until_myt": "2026-11-07 19:09:49",
           "confidence": 47,
           "reasoning": "FX Vol 80: H4 MOMENTUM_DOWN but price at week extreme low (~2% of 43622-52684) \u2014 do not chase SELL at lows. Scalp SELL limit into M5 bounce supply 44040-44120. SL 44280 beyond 44112 + ATR buffer. TP 43650 toward day low 43622 region. Spread 12.48 included -> RR\u22481.96. Max 4h (clock hours, 24/7). Failed break above entry_hi -> exit. Do not chase.",
-          "status": "PENDING",
+          "status": "FILLED",
           "r_result": null,
           "chart": "charts/call_V-S002.png",
-          "fill_px": null,
-          "fill_time_server": null,
+          "fill_px": 44040.0,
+          "fill_time_server": "2026-11-07 09:30:00",
           "asset": "FXVOL80",
           "rr": 1.96,
-          "name": "Vol 80 \u00b7 Scalping #2"
+          "name": "Vol 80 \u00b7 Scalping #2",
+          "note": "open filled; TP/SL not hit yet",
+          "fill_time_myt": "2026-11-07 15:30:00",
+          "scored_myt": "2026-11-07 15:35:07"
         },
         "INTRADAY": {
           "id": "V-I002",
@@ -642,14 +669,17 @@
           "valid_until_myt": "2026-11-08 05:09:49",
           "confidence": 45,
           "reasoning": "FX Vol 80: H4 MOMENTUM_DOWN, price at week low. INTRADAY SELL thin into M15 bounce-high base 44000-44230; M5 sweep-reclaim confirm preferred (thin fill near top improves RR). SL 44400. TP 43650. Spread 12.48 in RR\u22481.52 from mid. Valid 14h by clock. Failed break above base -> exit.",
-          "status": "PENDING",
+          "status": "FILLED",
           "r_result": null,
           "chart": "charts/call_V-I002.png",
-          "fill_px": null,
-          "fill_time_server": null,
+          "fill_px": 44000.0,
+          "fill_time_server": "2026-11-07 09:30:00",
           "asset": "FXVOL80",
           "rr": 1.52,
-          "name": "Vol 80 \u00b7 Intraday #2"
+          "name": "Vol 80 \u00b7 Intraday #2",
+          "note": "open filled; TP/SL not hit yet",
+          "fill_time_myt": "2026-11-07 15:30:00",
+          "scored_myt": "2026-11-07 15:35:07"
         },
         "SWING": {
           "id": "V-W002",
@@ -670,30 +700,34 @@
           "fill_px": null,
           "fill_time_server": null,
           "asset": "FXVOL80",
-          "name": "Vol 80 \u00b7 Swing #2"
+          "name": "Vol 80 \u00b7 Swing #2",
+          "scored_myt": "2026-11-07 15:35:07"
         }
       },
       "main_call": {
-        "id": "V-I002",
-        "type": "INTRADAY",
+        "id": "V-S002",
+        "type": "SCALP",
         "created_myt": "2026-11-07 15:09:49",
         "last_bar_server": "2026-11-07 09:00:00 EET M5; tick 09:03:15 EET bid43798.06 spr12.48",
         "direction": "SELL",
-        "entry_lo": 44000,
-        "entry_hi": 44230,
-        "sl": 44400,
+        "entry_lo": 44040,
+        "entry_hi": 44120,
+        "sl": 44280,
         "tp": 43650,
-        "valid_until_myt": "2026-11-08 05:09:49",
-        "confidence": 45,
-        "reasoning": "FX Vol 80: H4 MOMENTUM_DOWN, price at week low. INTRADAY SELL thin into M15 bounce-high base 44000-44230; M5 sweep-reclaim confirm preferred (thin fill near top improves RR). SL 44400. TP 43650. Spread 12.48 in RR\u22481.52 from mid. Valid 14h by clock. Failed break above base -> exit.",
-        "status": "PENDING",
+        "valid_until_myt": "2026-11-07 19:09:49",
+        "confidence": 47,
+        "reasoning": "FX Vol 80: H4 MOMENTUM_DOWN but price at week extreme low (~2% of 43622-52684) \u2014 do not chase SELL at lows. Scalp SELL limit into M5 bounce supply 44040-44120. SL 44280 beyond 44112 + ATR buffer. TP 43650 toward day low 43622 region. Spread 12.48 included -> RR\u22481.96. Max 4h (clock hours, 24/7). Failed break above entry_hi -> exit. Do not chase.",
+        "status": "FILLED",
         "r_result": null,
-        "chart": "charts/call_V-I002.png",
-        "fill_px": null,
-        "fill_time_server": null,
+        "chart": "charts/call_V-S002.png",
+        "fill_px": 44040.0,
+        "fill_time_server": "2026-11-07 09:30:00",
         "asset": "FXVOL80",
-        "rr": 1.52,
-        "name": "Vol 80 \u00b7 Intraday #2"
+        "rr": 1.96,
+        "name": "Vol 80 \u00b7 Scalping #2",
+        "note": "open filled; TP/SL not hit yet",
+        "fill_time_myt": "2026-11-07 15:30:00",
+        "scored_myt": "2026-11-07 15:35:07"
       },
       "calls": [
         {
@@ -721,7 +755,7 @@
           "diagnosis_ms": "SL kena masa harga lantun ke ~45880; dump sebenar ke ~43798 datang lepas kena stop.",
           "exit_time_myt": "2026-11-06 17:35:00",
           "fill_time_myt": "2026-11-06 16:55:00",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "V-I001",
@@ -748,7 +782,7 @@
           "diagnosis_ms": "Sama \u2014 lantunan atas 45923 sapu SL dulu, baru harga dump ke 43.8k.",
           "exit_time_myt": "2026-11-06 17:45:00",
           "fill_time_myt": "2026-11-06 16:00:00",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "V-W001",
@@ -771,7 +805,7 @@
           "asset": "FXVOL80",
           "name": "Vol 80 \u00b7 Swing #1",
           "note": "Swing WAIT superseded early; replaced by V-W002.",
-          "scored_myt": "2026-11-07 15:09:49"
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "V-S002",
@@ -786,14 +820,17 @@
           "valid_until_myt": "2026-11-07 19:09:49",
           "confidence": 47,
           "reasoning": "FX Vol 80: H4 MOMENTUM_DOWN but price at week extreme low (~2% of 43622-52684) \u2014 do not chase SELL at lows. Scalp SELL limit into M5 bounce supply 44040-44120. SL 44280 beyond 44112 + ATR buffer. TP 43650 toward day low 43622 region. Spread 12.48 included -> RR\u22481.96. Max 4h (clock hours, 24/7). Failed break above entry_hi -> exit. Do not chase.",
-          "status": "PENDING",
+          "status": "FILLED",
           "r_result": null,
           "chart": "charts/call_V-S002.png",
-          "fill_px": null,
-          "fill_time_server": null,
+          "fill_px": 44040.0,
+          "fill_time_server": "2026-11-07 09:30:00",
           "asset": "FXVOL80",
           "rr": 1.96,
-          "name": "Vol 80 \u00b7 Scalping #2"
+          "name": "Vol 80 \u00b7 Scalping #2",
+          "note": "open filled; TP/SL not hit yet",
+          "fill_time_myt": "2026-11-07 15:30:00",
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "V-I002",
@@ -808,14 +845,17 @@
           "valid_until_myt": "2026-11-08 05:09:49",
           "confidence": 45,
           "reasoning": "FX Vol 80: H4 MOMENTUM_DOWN, price at week low. INTRADAY SELL thin into M15 bounce-high base 44000-44230; M5 sweep-reclaim confirm preferred (thin fill near top improves RR). SL 44400. TP 43650. Spread 12.48 in RR\u22481.52 from mid. Valid 14h by clock. Failed break above base -> exit.",
-          "status": "PENDING",
+          "status": "FILLED",
           "r_result": null,
           "chart": "charts/call_V-I002.png",
-          "fill_px": null,
-          "fill_time_server": null,
+          "fill_px": 44000.0,
+          "fill_time_server": "2026-11-07 09:30:00",
           "asset": "FXVOL80",
           "rr": 1.52,
-          "name": "Vol 80 \u00b7 Intraday #2"
+          "name": "Vol 80 \u00b7 Intraday #2",
+          "note": "open filled; TP/SL not hit yet",
+          "fill_time_myt": "2026-11-07 15:30:00",
+          "scored_myt": "2026-11-07 15:35:07"
         },
         {
           "id": "V-W002",
@@ -836,7 +876,8 @@
           "fill_px": null,
           "fill_time_server": null,
           "asset": "FXVOL80",
-          "name": "Vol 80 \u00b7 Swing #2"
+          "name": "Vol 80 \u00b7 Swing #2",
+          "scored_myt": "2026-11-07 15:35:07"
         }
       ],
       "open_count": 2,
@@ -866,33 +907,57 @@
     }
   },
   "latest": {
-    "id": "I002",
-    "type": "INTRADAY",
+    "id": "S002",
+    "type": "SCALP",
     "created_myt": "2026-11-06 17:01:00",
     "last_bar_server": "2026-11-06 10:55:00 EET M5; tick 10:56:10 EET bid4073.43",
     "direction": "BUY",
-    "entry_lo": 4050.2,
-    "entry_hi": 4056.6,
-    "sl": 4044.0,
+    "entry_lo": 4068.5,
+    "entry_hi": 4071.5,
+    "sl": 4063.0,
     "tp": 4082.0,
-    "valid_until_myt": "2026-11-07 06:00:00",
-    "confidence": 53,
-    "reasoning": "H4 reclaim after dump to 4035.77; D1 still pullback-day under 4146 but bounce has legs. INTRADAY BUY thin into H1/M15 demand 4050.2-4056.6 (base of 10:00 impulse / prior resistance flip). M5 sweep-reclaim confirm preferred. SL 4044 beyond base. TP 4082 (~3.0R). Spread 0.26 in RR. CLOSE by Sat 06:00 MYT \u2014 weekend gap risk. Failed break below 4050 \u2192 exit. Separate from swing BUY still open @4036 / 001R pending.",
+    "valid_until_myt": "2026-11-06 21:01:00",
+    "confidence": 54,
+    "reasoning": "H1/M15 MOMENTUM_UP bounce from session lo 4035.77 \u2192 4074.74 after S001/I001 SL. Do not chase highs; scalp BUY limit into M5 impulse base 4068.5-4071.5 (10:25-10:40). SL under 4062.98 swing. TP 4082 (swing confluence / week mid-upper). Spread 0.26 \u2192 RR\u22481.68. Max 4h. Failed break below 4068 \u2192 exit. HTF: week still recovery (pos~72% of 3881-4146); short-term bounce not new D1 uptrend yet.",
     "status": "SL",
     "r_result": -1.0,
-    "chart": "charts/call_I002.png",
-    "fill_px": 4056.6,
-    "fill_time_server": "2026-11-06 15:15:00",
+    "chart": "charts/call_S002.png",
+    "fill_px": 4071.5,
+    "fill_time_server": "2026-11-06 12:00:00",
     "asset": "XAUUSD",
-    "name": "Gold \u00b7 Intraday #2",
-    "exit_time_server": "2026-11-06 15:30:00",
-    "diagnosis": "Friday pre-weekend dump sliced straight through the 4050-4056 demand; no reaction at the zone.",
-    "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
-    "exit_time_myt": "2026-11-06 21:30:00",
-    "fill_time_myt": "2026-11-06 21:15:00",
-    "scored_myt": "2026-11-07 15:09:49"
+    "name": "Gold \u00b7 Scalping #2",
+    "exit_time_server": "2026-11-06 13:00:00",
+    "diagnosis": "Bounce failed: price filled into the 4068.5-4071.5 base then dumped through 4063 within the hour.",
+    "diagnosis_ms": "Lantunan gagal \u2014 harga masuk zon 4068.5-4071.5 lepas tu terus jatuh tembus 4063 dalam sejam.",
+    "exit_time_myt": "2026-11-06 19:00:00",
+    "fill_time_myt": "2026-11-06 18:00:00",
+    "scored_myt": "2026-11-07 15:35:07"
   },
   "latest_by_type": {
+    "SWING": {
+      "id": "001R",
+      "type": "SWING",
+      "created_myt": "2026-11-06 13:30:12",
+      "last_bar_server": "2026-11-06 10:55:00 EET M5; tick 10:56:10 EET bid4073.43",
+      "direction": "BUY",
+      "entry_lo": 4019.64,
+      "entry_hi": 4028.83,
+      "sl": 4006.66,
+      "tp": 4082.0,
+      "valid_until_myt": "2026-11-10 06:00:00",
+      "confidence": 35,
+      "reasoning": "Thin-entry study BUILD winner=M15 base+confirm (TEST failed). Applied overlapping M15/depth thin inside 4010-4038 \u2192 4019.6-4028.8, SL 4006.7, TP 4082, RR~3.29, mode=confirm. M15 base overlapping HTF zone (BUILD winner family)",
+      "status": "FILLED",
+      "r_result": null,
+      "chart": "charts/call_001_refined.png",
+      "fill_px": 4028.83,
+      "fill_time_server": "2026-11-06 15:30:00",
+      "asset": "XAUUSD",
+      "name": "Gold \u00b7 Swing #1R",
+      "fill_time_myt": "2026-11-06 21:30:00",
+      "scored_myt": "2026-11-07 15:35:07",
+      "note": "open filled; TP/SL not hit yet"
+    },
     "SCALP": {
       "id": "S002",
       "type": "SCALP",
@@ -918,7 +983,7 @@
       "diagnosis_ms": "Lantunan gagal \u2014 harga masuk zon 4068.5-4071.5 lepas tu terus jatuh tembus 4063 dalam sejam.",
       "exit_time_myt": "2026-11-06 19:00:00",
       "fill_time_myt": "2026-11-06 18:00:00",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07"
     },
     "INTRADAY": {
       "id": "I002",
@@ -945,52 +1010,32 @@
       "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
       "exit_time_myt": "2026-11-06 21:30:00",
       "fill_time_myt": "2026-11-06 21:15:00",
-      "scored_myt": "2026-11-07 15:09:49"
-    },
-    "SWING": {
-      "id": "001",
-      "type": "SWING",
-      "created_myt": "2026-11-06 12:40:00",
-      "last_bar_server": "2026-11-06 10:55:00 EET M5; tick 10:56:10 EET bid4073.43",
-      "direction": "BUY",
-      "entry_lo": 4010.0,
-      "entry_hi": 4038.0,
-      "sl": 3975.0,
-      "tp": 4082.0,
-      "valid_until_myt": "2026-11-10 06:00:00",
-      "confidence": 58,
-      "reasoning": "Oct30 crash low 3870 then Nov2-5 momentum bounce to 4146; HTF map = recovery/up. Today soft H4/D1 pullback from week high into mid-week range \u2014 treat as pullback not new downtrend. Buy limit into 4010-4038 (Nov4 breakout base / demand), SL under 3971 swing, TP prev-week high 4082. Do not chase 4047. Invalid if H4 closes below 3955.",
-      "status": "FILLED",
-      "r_result": null,
-      "chart": "charts/call_001.png",
-      "fill_px": 4036.21,
-      "fill_time_server": "2026-11-06 07:20:00",
-      "asset": "XAUUSD",
-      "name": "Gold \u00b7 Swing #1",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07"
     }
   },
   "main_call": {
-    "id": "001",
+    "id": "001R",
     "type": "SWING",
-    "created_myt": "2026-11-06 12:40:00",
+    "created_myt": "2026-11-06 13:30:12",
     "last_bar_server": "2026-11-06 10:55:00 EET M5; tick 10:56:10 EET bid4073.43",
     "direction": "BUY",
-    "entry_lo": 4010.0,
-    "entry_hi": 4038.0,
-    "sl": 3975.0,
+    "entry_lo": 4019.64,
+    "entry_hi": 4028.83,
+    "sl": 4006.66,
     "tp": 4082.0,
     "valid_until_myt": "2026-11-10 06:00:00",
-    "confidence": 58,
-    "reasoning": "Oct30 crash low 3870 then Nov2-5 momentum bounce to 4146; HTF map = recovery/up. Today soft H4/D1 pullback from week high into mid-week range \u2014 treat as pullback not new downtrend. Buy limit into 4010-4038 (Nov4 breakout base / demand), SL under 3971 swing, TP prev-week high 4082. Do not chase 4047. Invalid if H4 closes below 3955.",
+    "confidence": 35,
+    "reasoning": "Thin-entry study BUILD winner=M15 base+confirm (TEST failed). Applied overlapping M15/depth thin inside 4010-4038 \u2192 4019.6-4028.8, SL 4006.7, TP 4082, RR~3.29, mode=confirm. M15 base overlapping HTF zone (BUILD winner family)",
     "status": "FILLED",
     "r_result": null,
-    "chart": "charts/call_001.png",
-    "fill_px": 4036.21,
-    "fill_time_server": "2026-11-06 07:20:00",
+    "chart": "charts/call_001_refined.png",
+    "fill_px": 4028.83,
+    "fill_time_server": "2026-11-06 15:30:00",
     "asset": "XAUUSD",
-    "name": "Gold \u00b7 Swing #1",
-    "scored_myt": "2026-11-07 15:09:49"
+    "name": "Gold \u00b7 Swing #1R",
+    "fill_time_myt": "2026-11-06 21:30:00",
+    "scored_myt": "2026-11-07 15:35:07",
+    "note": "open filled; TP/SL not hit yet"
   },
   "calls": [
     {
@@ -1013,7 +1058,9 @@
       "fill_time_server": "2026-11-06 07:20:00",
       "asset": "XAUUSD",
       "name": "Gold \u00b7 Swing #1",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07",
+      "note": "open filled; TP/SL not hit yet",
+      "fill_time_myt": "2026-11-06 13:20:00"
     },
     {
       "id": "001R",
@@ -1036,7 +1083,8 @@
       "asset": "XAUUSD",
       "name": "Gold \u00b7 Swing #1R",
       "fill_time_myt": "2026-11-06 21:30:00",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07",
+      "note": "open filled; TP/SL not hit yet"
     },
     {
       "id": "S001",
@@ -1057,7 +1105,9 @@
       "fill_px": 4049.8,
       "fill_time_server": "2026-11-06 08:35:00",
       "asset": "XAUUSD",
-      "name": "Gold \u00b7 Scalping #1"
+      "name": "Gold \u00b7 Scalping #1",
+      "fill_time_myt": "2026-11-06 14:35:00",
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "I001",
@@ -1078,7 +1128,9 @@
       "fill_px": 4049.8,
       "fill_time_server": "2026-11-06 08:35:00",
       "asset": "XAUUSD",
-      "name": "Gold \u00b7 Intraday #1"
+      "name": "Gold \u00b7 Intraday #1",
+      "fill_time_myt": "2026-11-06 14:35:00",
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "S002",
@@ -1105,7 +1157,7 @@
       "diagnosis_ms": "Lantunan gagal \u2014 harga masuk zon 4068.5-4071.5 lepas tu terus jatuh tembus 4063 dalam sejam.",
       "exit_time_myt": "2026-11-06 19:00:00",
       "fill_time_myt": "2026-11-06 18:00:00",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "I002",
@@ -1132,7 +1184,7 @@
       "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
       "exit_time_myt": "2026-11-06 21:30:00",
       "fill_time_myt": "2026-11-06 21:15:00",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "B-S001",
@@ -1155,9 +1207,9 @@
       "asset": "BTCUSD",
       "name": "BTC \u00b7 Scalping #1",
       "exit_time_server": "2026-11-06 13:50:00",
-      "exit_time_myt": "2026-11-06 23:00:00",
+      "exit_time_myt": "2026-11-06 19:50:00",
       "fill_time_myt": "2026-11-06 15:50:00",
-      "scored_myt": "2026-11-07 15:09:49",
+      "scored_myt": "2026-11-07 15:35:07",
       "exit_px": 76030.21,
       "note": "TIME_STOP at 4h (19:50 MYT) @76030.21 before TP; price later hit TP after window"
     },
@@ -1184,7 +1236,7 @@
       "exit_time_server": "2026-11-06 17:00:00",
       "exit_time_myt": "2026-11-06 23:00:00",
       "fill_time_myt": "2026-11-06 17:15:00",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "B-W001",
@@ -1207,7 +1259,7 @@
       "asset": "BTCUSD",
       "name": "BTC \u00b7 Swing #1",
       "note": "Swing WAIT superseded early; replaced by B-W002.",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "V-S001",
@@ -1234,7 +1286,7 @@
       "diagnosis_ms": "SL kena masa harga lantun ke ~45880; dump sebenar ke ~43798 datang lepas kena stop.",
       "exit_time_myt": "2026-11-06 17:35:00",
       "fill_time_myt": "2026-11-06 16:55:00",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "V-I001",
@@ -1261,7 +1313,7 @@
       "diagnosis_ms": "Sama \u2014 lantunan atas 45923 sapu SL dulu, baru harga dump ke 43.8k.",
       "exit_time_myt": "2026-11-06 17:45:00",
       "fill_time_myt": "2026-11-06 16:00:00",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "V-W001",
@@ -1284,7 +1336,7 @@
       "asset": "FXVOL80",
       "name": "Vol 80 \u00b7 Swing #1",
       "note": "Swing WAIT superseded early; replaced by V-W002.",
-      "scored_myt": "2026-11-07 15:09:49"
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "B-S002",
@@ -1306,7 +1358,8 @@
       "fill_time_server": null,
       "asset": "BTCUSD",
       "rr": 2.63,
-      "name": "BTC \u00b7 Scalping #2"
+      "name": "BTC \u00b7 Scalping #2",
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "B-I002",
@@ -1328,7 +1381,8 @@
       "fill_time_server": null,
       "asset": "BTCUSD",
       "rr": 3.13,
-      "name": "BTC \u00b7 Intraday #2"
+      "name": "BTC \u00b7 Intraday #2",
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "B-W002",
@@ -1349,7 +1403,8 @@
       "fill_px": null,
       "fill_time_server": null,
       "asset": "BTCUSD",
-      "name": "BTC \u00b7 Swing #2"
+      "name": "BTC \u00b7 Swing #2",
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "V-S002",
@@ -1364,14 +1419,17 @@
       "valid_until_myt": "2026-11-07 19:09:49",
       "confidence": 47,
       "reasoning": "FX Vol 80: H4 MOMENTUM_DOWN but price at week extreme low (~2% of 43622-52684) \u2014 do not chase SELL at lows. Scalp SELL limit into M5 bounce supply 44040-44120. SL 44280 beyond 44112 + ATR buffer. TP 43650 toward day low 43622 region. Spread 12.48 included -> RR\u22481.96. Max 4h (clock hours, 24/7). Failed break above entry_hi -> exit. Do not chase.",
-      "status": "PENDING",
+      "status": "FILLED",
       "r_result": null,
       "chart": "charts/call_V-S002.png",
-      "fill_px": null,
-      "fill_time_server": null,
+      "fill_px": 44040.0,
+      "fill_time_server": "2026-11-07 09:30:00",
       "asset": "FXVOL80",
       "rr": 1.96,
-      "name": "Vol 80 \u00b7 Scalping #2"
+      "name": "Vol 80 \u00b7 Scalping #2",
+      "note": "open filled; TP/SL not hit yet",
+      "fill_time_myt": "2026-11-07 15:30:00",
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "V-I002",
@@ -1386,14 +1444,17 @@
       "valid_until_myt": "2026-11-08 05:09:49",
       "confidence": 45,
       "reasoning": "FX Vol 80: H4 MOMENTUM_DOWN, price at week low. INTRADAY SELL thin into M15 bounce-high base 44000-44230; M5 sweep-reclaim confirm preferred (thin fill near top improves RR). SL 44400. TP 43650. Spread 12.48 in RR\u22481.52 from mid. Valid 14h by clock. Failed break above base -> exit.",
-      "status": "PENDING",
+      "status": "FILLED",
       "r_result": null,
       "chart": "charts/call_V-I002.png",
-      "fill_px": null,
-      "fill_time_server": null,
+      "fill_px": 44000.0,
+      "fill_time_server": "2026-11-07 09:30:00",
       "asset": "FXVOL80",
       "rr": 1.52,
-      "name": "Vol 80 \u00b7 Intraday #2"
+      "name": "Vol 80 \u00b7 Intraday #2",
+      "note": "open filled; TP/SL not hit yet",
+      "fill_time_myt": "2026-11-07 15:30:00",
+      "scored_myt": "2026-11-07 15:35:07"
     },
     {
       "id": "V-W002",
@@ -1414,24 +1475,178 @@
       "fill_px": null,
       "fill_time_server": null,
       "asset": "FXVOL80",
-      "name": "Vol 80 \u00b7 Swing #2"
+      "name": "Vol 80 \u00b7 Swing #2",
+      "scored_myt": "2026-11-07 15:35:07"
     }
   ],
-  "scoreboard": {
-    "calls_made": 18,
-    "filled": 10,
-    "closed": 8,
-    "wins": 1,
-    "win_rate": 12.5,
-    "total_r": -4.64,
-    "avg_r": -0.58,
-    "as_of_myt": "2026-11-07 15:09:49",
-    "note": "Gold S002/I002 SL. Gold 001/001R FILLED open (weekend). BTC B-S001 EXPIRED time-stop -0.58R (TP came after 4h). B-I001 TP +2.01R. New B-S002/B-I002 PENDING, B-W002 WAIT. Vol V-S001/V-I001 SL. New V-S002/V-I002 PENDING, V-W002 WAIT."
-  },
-  "quote_note": "Gold: biquote. BTC: Binance BTCUSDT. FX Vol 80: tiada public feed.",
-  "last_updated": "2026-11-07 15:09:49",
+  "scoreboard": [
+    {
+      "id": "001",
+      "name": "Gold \u00b7 Swing #1",
+      "asset": "XAUUSD",
+      "type": "SWING",
+      "status": "FILLED",
+      "r_result": null,
+      "dir": "BUY"
+    },
+    {
+      "id": "001R",
+      "name": "Gold \u00b7 Swing #1R",
+      "asset": "XAUUSD",
+      "type": "SWING",
+      "status": "FILLED",
+      "r_result": null,
+      "dir": "BUY"
+    },
+    {
+      "id": "S001",
+      "name": "Gold \u00b7 Scalping #1",
+      "asset": "XAUUSD",
+      "type": "SCALP",
+      "status": "SL",
+      "r_result": -1.04,
+      "dir": "SELL"
+    },
+    {
+      "id": "I001",
+      "name": "Gold \u00b7 Intraday #1",
+      "asset": "XAUUSD",
+      "type": "INTRADAY",
+      "status": "SL",
+      "r_result": -1.03,
+      "dir": "SELL"
+    },
+    {
+      "id": "S002",
+      "name": "Gold \u00b7 Scalping #2",
+      "asset": "XAUUSD",
+      "type": "SCALP",
+      "status": "SL",
+      "r_result": -1.0,
+      "dir": "BUY"
+    },
+    {
+      "id": "I002",
+      "name": "Gold \u00b7 Intraday #2",
+      "asset": "XAUUSD",
+      "type": "INTRADAY",
+      "status": "SL",
+      "r_result": -1.0,
+      "dir": "BUY"
+    },
+    {
+      "id": "B-S001",
+      "name": "BTC \u00b7 Scalping #1",
+      "asset": "BTCUSD",
+      "type": "SCALP",
+      "status": "EXPIRED",
+      "r_result": -0.58,
+      "dir": "SELL"
+    },
+    {
+      "id": "B-I001",
+      "name": "BTC \u00b7 Intraday #1",
+      "asset": "BTCUSD",
+      "type": "INTRADAY",
+      "status": "TP",
+      "r_result": 2.01,
+      "dir": "SELL"
+    },
+    {
+      "id": "B-W001",
+      "name": "BTC \u00b7 Swing #1",
+      "asset": "BTCUSD",
+      "type": "SWING",
+      "status": "REPLACED",
+      "r_result": null,
+      "dir": "WAIT"
+    },
+    {
+      "id": "V-S001",
+      "name": "Vol 80 \u00b7 Scalping #1",
+      "asset": "FXVOL80",
+      "type": "SCALP",
+      "status": "SL",
+      "r_result": -1.0,
+      "dir": "SELL"
+    },
+    {
+      "id": "V-I001",
+      "name": "Vol 80 \u00b7 Intraday #1",
+      "asset": "FXVOL80",
+      "type": "INTRADAY",
+      "status": "SL",
+      "r_result": -1.0,
+      "dir": "SELL"
+    },
+    {
+      "id": "V-W001",
+      "name": "Vol 80 \u00b7 Swing #1",
+      "asset": "FXVOL80",
+      "type": "SWING",
+      "status": "REPLACED",
+      "r_result": null,
+      "dir": "WAIT"
+    },
+    {
+      "id": "B-S002",
+      "name": "BTC \u00b7 Scalping #2",
+      "asset": "BTCUSD",
+      "type": "SCALP",
+      "status": "PENDING",
+      "r_result": null,
+      "dir": "SELL"
+    },
+    {
+      "id": "B-I002",
+      "name": "BTC \u00b7 Intraday #2",
+      "asset": "BTCUSD",
+      "type": "INTRADAY",
+      "status": "PENDING",
+      "r_result": null,
+      "dir": "SELL"
+    },
+    {
+      "id": "B-W002",
+      "name": "BTC \u00b7 Swing #2",
+      "asset": "BTCUSD",
+      "type": "SWING",
+      "status": "WAIT",
+      "r_result": null,
+      "dir": "WAIT"
+    },
+    {
+      "id": "V-S002",
+      "name": "Vol 80 \u00b7 Scalping #2",
+      "asset": "FXVOL80",
+      "type": "SCALP",
+      "status": "FILLED",
+      "r_result": null,
+      "dir": "SELL"
+    },
+    {
+      "id": "V-I002",
+      "name": "Vol 80 \u00b7 Intraday #2",
+      "asset": "FXVOL80",
+      "type": "INTRADAY",
+      "status": "FILLED",
+      "r_result": null,
+      "dir": "SELL"
+    },
+    {
+      "id": "V-W002",
+      "name": "Vol 80 \u00b7 Swing #2",
+      "asset": "FXVOL80",
+      "type": "SWING",
+      "status": "WAIT",
+      "r_result": null,
+      "dir": "WAIT"
+    }
+  ],
+  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
+  "last_updated": "2026-11-07 15:35:07",
   "fxvol80_server_time": "EET (MYT = EET + 6)",
-  "status_note": "Gold S002/I002 SL. Gold 001/001R FILLED open (weekend). BTC B-S001 EXPIRED time-stop -0.58R (TP came after 4h). B-I001 TP +2.01R. New B-S002/B-I002 PENDING, B-W002 WAIT. Vol V-S001/V-I001 SL. New V-S002/V-I002 PENDING, V-W002 WAIT.",
+  "status_note": "Gold weekend closed (last Fri bar). BTC+Vol80 live. V-S002 & V-I002 filled @15:30 MYT, open.",
   "ticks": {
     "XAUUSD": {
       "bid": 4071.42,
@@ -1441,39 +1656,56 @@
       "time_msc": 1794009419691
     },
     "BTCUSD": {
-      "bid": 75935.71,
-      "ask": 75944.29,
+      "bid": 75929.21,
+      "ask": 75937.79,
       "spread": 8.579999999987194,
-      "time": "2026-11-07T09:03:15Z",
-      "time_msc": 1794042195207
+      "time": "2026-11-07T09:34:21Z",
+      "time_msc": 1794044061250
     },
     "FXVOL80": {
-      "bid": 43798.06,
-      "ask": 43810.54,
-      "spread": 12.480000000003201,
-      "time": "2026-11-07T09:03:15Z",
-      "time_msc": 1794042195155
+      "bid": 44011.91,
+      "ask": 44024.45,
+      "spread": 12.539999999993597,
+      "time": "2026-11-07T09:34:23Z",
+      "time_msc": 1794044063162
     }
   },
   "freshness": {
     "XAUUSD": {
-      "status": "weekend_closed",
-      "ok": false,
-      "last_tick_myt": "2026-11-07 05:56:59",
-      "last_bar_myt": "2026-11-07 05:55:00",
-      "note": "Gold market closed for the weekend; last valid tick Fri 23:56:59 EET (Sat 05:56:59 MYT). No new gold calls until the Monday open."
+      "last_m5_eet": "2026-11-06 23:55:00",
+      "last_m5_myt": "2026-11-07 05:55:00",
+      "tick_bid": 4071.42,
+      "tick_ask": 4071.68,
+      "spread": 0.25999999999976353,
+      "tick_eet": "2026-11-06T23:56:59",
+      "tick_myt": "2026-11-07 05:56:59",
+      "age_min": 579.7,
+      "ok": true,
+      "note": "weekend_closed"
     },
     "BTCUSD": {
-      "status": "ok",
+      "last_m5_eet": "2026-11-07 09:30:00",
+      "last_m5_myt": "2026-11-07 15:30:00",
+      "tick_bid": 75929.21,
+      "tick_ask": 75937.79,
+      "spread": 8.579999999987194,
+      "tick_eet": "2026-11-07T09:34:21",
+      "tick_myt": "2026-11-07 15:34:21",
+      "age_min": 4.7,
       "ok": true,
-      "last_tick_myt": "2026-11-07 15:03:15",
-      "last_bar_myt": "2026-11-07 15:00:00"
+      "note": "ok"
     },
     "FXVOL80": {
-      "status": "ok",
+      "last_m5_eet": "2026-11-07 09:30:00",
+      "last_m5_myt": "2026-11-07 15:30:00",
+      "tick_bid": 44011.91,
+      "tick_ask": 44024.45,
+      "spread": 12.539999999993597,
+      "tick_eet": "2026-11-07T09:34:23",
+      "tick_myt": "2026-11-07 15:34:23",
+      "age_min": 4.7,
       "ok": true,
-      "last_tick_myt": "2026-11-07 15:03:15",
-      "last_bar_myt": "2026-11-07 15:00:00"
+      "note": "ok"
     }
   }
 }
