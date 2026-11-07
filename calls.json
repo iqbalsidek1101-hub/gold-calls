@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-07 17:35:19",
+ "generated_myt": "2026-11-07 18:12:30",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -34,7 +34,7 @@
     "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
     "exit_time_myt": "2026-11-06 21:30:00",
     "fill_time_myt": "2026-11-06 21:15:00",
-    "scored_myt": "2026-11-07 16:08:07"
+    "scored_myt": "2026-11-07 18:12:30"
    },
    "latest_by_type": {
     "SCALP": {
@@ -62,7 +62,7 @@
      "diagnosis_ms": "Lantunan gagal — harga masuk zon 4068.5-4071.5 lepas tu terus jatuh tembus 4063 dalam sejam.",
      "exit_time_myt": "2026-11-06 19:00:00",
      "fill_time_myt": "2026-11-06 18:00:00",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     },
     "INTRADAY": {
      "id": "I002",
@@ -89,7 +89,7 @@
      "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
      "exit_time_myt": "2026-11-06 21:30:00",
      "fill_time_myt": "2026-11-06 21:15:00",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     },
     "SWING": {
      "id": "001",
@@ -111,7 +111,7 @@
      "fill_time_server": "2026-11-06 07:20:00",
      "asset": "XAUUSD",
      "name": "Gold · Swing #1",
-     "scored_myt": "2026-11-07 17:35:19",
+     "scored_myt": "2026-11-07 18:12:30",
      "note": "open filled; weekend-closed, no new bars since Fri close",
      "fill_time_myt": "2026-11-06 13:20:00"
     }
@@ -136,7 +136,7 @@
     "fill_time_server": "2026-11-06 07:20:00",
     "asset": "XAUUSD",
     "name": "Gold · Swing #1",
-    "scored_myt": "2026-11-07 17:35:19",
+    "scored_myt": "2026-11-07 18:12:30",
     "note": "open filled; weekend-closed, no new bars since Fri close",
     "fill_time_myt": "2026-11-06 13:20:00"
    },
@@ -161,7 +161,7 @@
      "fill_time_server": "2026-11-06 07:20:00",
      "asset": "XAUUSD",
      "name": "Gold · Swing #1",
-     "scored_myt": "2026-11-07 17:35:19",
+     "scored_myt": "2026-11-07 18:12:30",
      "note": "open filled; weekend-closed, no new bars since Fri close",
      "fill_time_myt": "2026-11-06 13:20:00"
     },
@@ -186,7 +186,7 @@
      "asset": "XAUUSD",
      "name": "Gold · Swing #1R",
      "fill_time_myt": "2026-11-06 21:30:00",
-     "scored_myt": "2026-11-07 17:35:19",
+     "scored_myt": "2026-11-07 18:12:30",
      "note": "open filled; weekend-closed, no new bars since Fri close"
     },
     {
@@ -210,7 +210,7 @@
      "asset": "XAUUSD",
      "name": "Gold · Scalping #1",
      "fill_time_myt": "2026-11-06 14:35:00",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     },
     {
      "id": "I001",
@@ -233,7 +233,7 @@
      "asset": "XAUUSD",
      "name": "Gold · Intraday #1",
      "fill_time_myt": "2026-11-06 14:35:00",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     },
     {
      "id": "S002",
@@ -260,7 +260,7 @@
      "diagnosis_ms": "Lantunan gagal — harga masuk zon 4068.5-4071.5 lepas tu terus jatuh tembus 4063 dalam sejam.",
      "exit_time_myt": "2026-11-06 19:00:00",
      "fill_time_myt": "2026-11-06 18:00:00",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     },
     {
      "id": "I002",
@@ -287,7 +287,7 @@
      "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
      "exit_time_myt": "2026-11-06 21:30:00",
      "fill_time_myt": "2026-11-06 21:15:00",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     }
    ],
    "open_count": 2,
@@ -299,7 +299,7 @@
     "win_rate": 0.0,
     "total_r": -4.07,
     "avg_r": -1.02,
-    "as_of_myt": "2026-11-07 17:35:19"
+    "as_of_myt": "2026-11-07 18:12:30"
    },
    "freshness": {
     "last_tick_myt": "2026-11-07 05:56:59",
@@ -311,7 +311,7 @@
     "spread": 0.25999999999976353,
     "tick_eet": "2026-11-06 23:56:59",
     "tick_myt": "2026-11-07 05:56:59",
-    "age_min": 698.3,
+    "age_min": 735.5,
     "status": "weekend_closed",
     "ok": true,
     "note": "weekend_closed",
@@ -346,7 +346,8 @@
     "fill_time_server": null,
     "asset": "BTCUSD",
     "name": "BTC · Swing #2",
-    "scored_myt": "2026-11-07 17:35:19"
+    "scored_myt": "2026-11-07 18:12:30",
+    "note": "WAIT kept — no clean HTF/zone setup this refresh"
    },
    "latest_by_type": {
     "SCALP": {
@@ -370,7 +371,7 @@
      "asset": "BTCUSD",
      "rr": 2.63,
      "name": "BTC · Scalping #2",
-     "scored_myt": "2026-11-07 17:35:19",
+     "scored_myt": "2026-11-07 18:12:30",
      "note": "SL @ 2026-11-07 11:00:00 EET (bar high 76149.21 >= 76120); fill 75980 spr 8.58",
      "fill_time_myt": "2026-11-07 15:50:00",
      "exit_time_server": "2026-11-07 11:00:00",
@@ -399,8 +400,8 @@
      "asset": "BTCUSD",
      "rr": 3.13,
      "name": "BTC · Intraday #2",
-     "scored_myt": "2026-11-07 17:35:19",
-     "note": "open filled; TP 75400 / SL 76220 not hit (high so far 76149.21, ask ~76158)",
+     "scored_myt": "2026-11-07 18:12:30",
+     "note": "open filled; TP 75400 / SL 76220 not hit (high so far 76149.21, bid ~75973)",
      "fill_time_myt": "2026-11-07 15:50:00"
     },
     "SWING": {
@@ -423,7 +424,8 @@
      "fill_time_server": null,
      "asset": "BTCUSD",
      "name": "BTC · Swing #2",
-     "scored_myt": "2026-11-07 17:35:19"
+     "scored_myt": "2026-11-07 18:12:30",
+     "note": "WAIT kept — no clean HTF/zone setup this refresh"
     }
    },
    "main_call": {
@@ -447,8 +449,8 @@
     "asset": "BTCUSD",
     "rr": 3.13,
     "name": "BTC · Intraday #2",
-    "scored_myt": "2026-11-07 17:35:19",
-    "note": "open filled; TP 75400 / SL 76220 not hit (high so far 76149.21, ask ~76158)",
+    "scored_myt": "2026-11-07 18:12:30",
+    "note": "open filled; TP 75400 / SL 76220 not hit (high so far 76149.21, bid ~75973)",
     "fill_time_myt": "2026-11-07 15:50:00"
    },
    "calls": [
@@ -475,7 +477,7 @@
      "exit_time_server": "2026-11-06 13:50:00",
      "exit_time_myt": "2026-11-06 19:50:00",
      "fill_time_myt": "2026-11-06 15:50:00",
-     "scored_myt": "2026-11-07 16:08:07",
+     "scored_myt": "2026-11-07 18:12:30",
      "exit_px": 76030.21,
      "note": "TIME_STOP at 4h (19:50 MYT) @76030.21 before TP; price later hit TP after window"
     },
@@ -502,7 +504,7 @@
      "exit_time_server": "2026-11-06 17:00:00",
      "exit_time_myt": "2026-11-06 23:00:00",
      "fill_time_myt": "2026-11-06 17:15:00",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     },
     {
      "id": "B-W001",
@@ -525,7 +527,7 @@
      "asset": "BTCUSD",
      "name": "BTC · Swing #1",
      "note": "Swing WAIT superseded early; replaced by B-W002.",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     },
     {
      "id": "B-S002",
@@ -548,7 +550,7 @@
      "asset": "BTCUSD",
      "rr": 2.63,
      "name": "BTC · Scalping #2",
-     "scored_myt": "2026-11-07 17:35:19",
+     "scored_myt": "2026-11-07 18:12:30",
      "note": "SL @ 2026-11-07 11:00:00 EET (bar high 76149.21 >= 76120); fill 75980 spr 8.58",
      "fill_time_myt": "2026-11-07 15:50:00",
      "exit_time_server": "2026-11-07 11:00:00",
@@ -577,8 +579,8 @@
      "asset": "BTCUSD",
      "rr": 3.13,
      "name": "BTC · Intraday #2",
-     "scored_myt": "2026-11-07 17:35:19",
-     "note": "open filled; TP 75400 / SL 76220 not hit (high so far 76149.21, ask ~76158)",
+     "scored_myt": "2026-11-07 18:12:30",
+     "note": "open filled; TP 75400 / SL 76220 not hit (high so far 76149.21, bid ~75973)",
      "fill_time_myt": "2026-11-07 15:50:00"
     },
     {
@@ -601,7 +603,8 @@
      "fill_time_server": null,
      "asset": "BTCUSD",
      "name": "BTC · Swing #2",
-     "scored_myt": "2026-11-07 17:35:19"
+     "scored_myt": "2026-11-07 18:12:30",
+     "note": "WAIT kept — no clean HTF/zone setup this refresh"
     }
    ],
    "open_count": 1,
@@ -613,29 +616,29 @@
     "win_rate": 50.0,
     "total_r": 1.01,
     "avg_r": 0.51,
-    "as_of_myt": "2026-11-07 17:35:19"
+    "as_of_myt": "2026-11-07 18:12:30"
    },
    "freshness": {
-    "last_tick_myt": "2026-11-07 17:32:29",
-    "last_bar_myt": "2026-11-07 17:30:00",
-    "last_m5_eet": "2026-11-07 11:30:00",
-    "last_m5_myt": "2026-11-07 17:30:00",
-    "tick_bid": 75981.21,
-    "tick_ask": 75989.79,
+    "last_tick_myt": "2026-11-07 18:10:58",
+    "last_bar_myt": "2026-11-07 18:10:00",
+    "last_m5_eet": "2026-11-07 12:10:00",
+    "last_m5_myt": "2026-11-07 18:10:00",
+    "tick_bid": 75973.21,
+    "tick_ask": 75981.79,
     "spread": 8.579999999987194,
-    "tick_eet": "2026-11-07 11:32:29",
-    "tick_myt": "2026-11-07 17:32:29",
-    "age_min": 2.8,
+    "tick_eet": "2026-11-07 12:10:58",
+    "tick_myt": "2026-11-07 18:10:58",
+    "age_min": 1.5,
     "status": "ok",
     "ok": true,
     "note": "ok"
    },
    "tick": {
-    "bid": 75981.21,
-    "ask": 75989.79,
+    "bid": 75973.21,
+    "ask": 75981.79,
     "spread": 8.579999999987194,
-    "time": "2026-11-07T11:32:29Z",
-    "time_msc": 1794051149281
+    "time": "2026-11-07T12:10:58Z",
+    "time_msc": 1794053458358
    }
   },
   "FXVOL80": {
@@ -659,7 +662,9 @@
     "fill_time_server": null,
     "asset": "FXVOL80",
     "rr": 2.26,
-    "name": "Vol 80 · Intraday #3"
+    "name": "Vol 80 · Intraday #3",
+    "scored_myt": "2026-11-07 18:12:30",
+    "note": "PENDING — market dumped to 43001 then ~43397; entry zone not touched since create"
    },
    "latest_by_type": {
     "SCALP": {
@@ -682,7 +687,9 @@
      "fill_time_server": null,
      "asset": "FXVOL80",
      "rr": 1.91,
-     "name": "Vol 80 · Scalping #3"
+     "name": "Vol 80 · Scalping #3",
+     "scored_myt": "2026-11-07 18:12:30",
+     "note": "PENDING — market dumped to 43001 then ~43397; entry zone not touched since create"
     },
     "INTRADAY": {
      "id": "V-I003",
@@ -704,7 +711,9 @@
      "fill_time_server": null,
      "asset": "FXVOL80",
      "rr": 2.26,
-     "name": "Vol 80 · Intraday #3"
+     "name": "Vol 80 · Intraday #3",
+     "scored_myt": "2026-11-07 18:12:30",
+     "note": "PENDING — market dumped to 43001 then ~43397; entry zone not touched since create"
     },
     "SWING": {
      "id": "V-W002",
@@ -726,7 +735,8 @@
      "fill_time_server": null,
      "asset": "FXVOL80",
      "name": "Vol 80 · Swing #2",
-     "scored_myt": "2026-11-07 17:35:19"
+     "scored_myt": "2026-11-07 18:12:30",
+     "note": "WAIT kept — no clean HTF/zone setup this refresh"
     }
    },
    "main_call": {
@@ -749,7 +759,9 @@
     "fill_time_server": null,
     "asset": "FXVOL80",
     "rr": 2.26,
-    "name": "Vol 80 · Intraday #3"
+    "name": "Vol 80 · Intraday #3",
+    "scored_myt": "2026-11-07 18:12:30",
+    "note": "PENDING — market dumped to 43001 then ~43397; entry zone not touched since create"
    },
    "calls": [
     {
@@ -777,7 +789,7 @@
      "diagnosis_ms": "SL kena masa harga lantun ke ~45880; dump sebenar ke ~43798 datang lepas kena stop.",
      "exit_time_myt": "2026-11-06 17:35:00",
      "fill_time_myt": "2026-11-06 16:55:00",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     },
     {
      "id": "V-I001",
@@ -804,7 +816,7 @@
      "diagnosis_ms": "Sama — lantunan atas 45923 sapu SL dulu, baru harga dump ke 43.8k.",
      "exit_time_myt": "2026-11-06 17:45:00",
      "fill_time_myt": "2026-11-06 16:00:00",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     },
     {
      "id": "V-W001",
@@ -827,7 +839,7 @@
      "asset": "FXVOL80",
      "name": "Vol 80 · Swing #1",
      "note": "Swing WAIT superseded early; replaced by V-W002.",
-     "scored_myt": "2026-11-07 16:08:07"
+     "scored_myt": "2026-11-07 18:12:30"
     },
     {
      "id": "V-S002",
@@ -852,7 +864,7 @@
      "name": "Vol 80 · Scalping #2",
      "note": "TP @ 2026-11-07 10:15:00 EET; fill=44040.0 spr=12.44",
      "fill_time_myt": "2026-11-07 15:30:00",
-     "scored_myt": "2026-11-07 16:39:57",
+     "scored_myt": "2026-11-07 18:12:30",
      "exit_time_server": "2026-11-07 10:15:00",
      "exit_time_myt": "2026-11-07 16:15:00"
     },
@@ -879,7 +891,7 @@
      "name": "Vol 80 · Intraday #2",
      "note": "TP @ 2026-11-07 10:15:00 EET; fill=44000.0 spr=12.44",
      "fill_time_myt": "2026-11-07 15:30:00",
-     "scored_myt": "2026-11-07 16:39:57",
+     "scored_myt": "2026-11-07 18:12:30",
      "exit_time_server": "2026-11-07 10:15:00",
      "exit_time_myt": "2026-11-07 16:15:00"
     },
@@ -903,7 +915,8 @@
      "fill_time_server": null,
      "asset": "FXVOL80",
      "name": "Vol 80 · Swing #2",
-     "scored_myt": "2026-11-07 17:35:19"
+     "scored_myt": "2026-11-07 18:12:30",
+     "note": "WAIT kept — no clean HTF/zone setup this refresh"
     },
     {
      "id": "V-S003",
@@ -925,7 +938,9 @@
      "fill_time_server": null,
      "asset": "FXVOL80",
      "rr": 1.91,
-     "name": "Vol 80 · Scalping #3"
+     "name": "Vol 80 · Scalping #3",
+     "scored_myt": "2026-11-07 18:12:30",
+     "note": "PENDING — market dumped to 43001 then ~43397; entry zone not touched since create"
     },
     {
      "id": "V-I003",
@@ -947,7 +962,9 @@
      "fill_time_server": null,
      "asset": "FXVOL80",
      "rr": 2.26,
-     "name": "Vol 80 · Intraday #3"
+     "name": "Vol 80 · Intraday #3",
+     "scored_myt": "2026-11-07 18:12:30",
+     "note": "PENDING — market dumped to 43001 then ~43397; entry zone not touched since create"
     }
    ],
    "open_count": 2,
@@ -959,29 +976,29 @@
     "win_rate": 50.0,
     "total_r": 0.32,
     "avg_r": 0.08,
-    "as_of_myt": "2026-11-07 17:35:19"
+    "as_of_myt": "2026-11-07 18:12:30"
    },
    "freshness": {
-    "last_tick_myt": "2026-11-07 17:32:29",
-    "last_bar_myt": "2026-11-07 17:30:00",
-    "last_m5_eet": "2026-11-07 11:30:00",
-    "last_m5_myt": "2026-11-07 17:30:00",
-    "tick_bid": 43334.95,
-    "tick_ask": 43347.29,
-    "spread": 12.340000000003783,
-    "tick_eet": "2026-11-07 11:32:29",
-    "tick_myt": "2026-11-07 17:32:29",
-    "age_min": 2.8,
+    "last_tick_myt": "2026-11-07 18:10:59",
+    "last_bar_myt": "2026-11-07 18:10:00",
+    "last_m5_eet": "2026-11-07 12:10:00",
+    "last_m5_myt": "2026-11-07 18:10:00",
+    "tick_bid": 43396.69,
+    "tick_ask": 43409.06,
+    "spread": 12.369999999995343,
+    "tick_eet": "2026-11-07 12:10:59",
+    "tick_myt": "2026-11-07 18:10:59",
+    "age_min": 1.5,
     "status": "ok",
     "ok": true,
     "note": "ok"
    },
    "tick": {
-    "bid": 43334.95,
-    "ask": 43347.29,
-    "spread": 12.340000000003783,
-    "time": "2026-11-07T11:32:29Z",
-    "time_msc": 1794051149202
+    "bid": 43396.69,
+    "ask": 43409.06,
+    "spread": 12.369999999995343,
+    "time": "2026-11-07T12:10:59Z",
+    "time_msc": 1794053459216
    }
   }
  },
@@ -1010,7 +1027,7 @@
   "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
   "exit_time_myt": "2026-11-06 21:30:00",
   "fill_time_myt": "2026-11-06 21:15:00",
-  "scored_myt": "2026-11-07 16:08:07"
+  "scored_myt": "2026-11-07 18:12:30"
  },
  "latest_by_type": {
   "SCALP": {
@@ -1038,7 +1055,7 @@
    "diagnosis_ms": "Lantunan gagal — harga masuk zon 4068.5-4071.5 lepas tu terus jatuh tembus 4063 dalam sejam.",
    "exit_time_myt": "2026-11-06 19:00:00",
    "fill_time_myt": "2026-11-06 18:00:00",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   "INTRADAY": {
    "id": "I002",
@@ -1065,7 +1082,7 @@
    "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
    "exit_time_myt": "2026-11-06 21:30:00",
    "fill_time_myt": "2026-11-06 21:15:00",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   "SWING": {
    "id": "001",
@@ -1087,7 +1104,7 @@
    "fill_time_server": "2026-11-06 07:20:00",
    "asset": "XAUUSD",
    "name": "Gold · Swing #1",
-   "scored_myt": "2026-11-07 17:35:19",
+   "scored_myt": "2026-11-07 18:12:30",
    "note": "open filled; weekend-closed, no new bars since Fri close",
    "fill_time_myt": "2026-11-06 13:20:00"
   }
@@ -1112,7 +1129,7 @@
   "fill_time_server": "2026-11-06 07:20:00",
   "asset": "XAUUSD",
   "name": "Gold · Swing #1",
-  "scored_myt": "2026-11-07 17:35:19",
+  "scored_myt": "2026-11-07 18:12:30",
   "note": "open filled; weekend-closed, no new bars since Fri close",
   "fill_time_myt": "2026-11-06 13:20:00"
  },
@@ -1137,7 +1154,7 @@
    "fill_time_server": "2026-11-06 07:20:00",
    "asset": "XAUUSD",
    "name": "Gold · Swing #1",
-   "scored_myt": "2026-11-07 17:35:19",
+   "scored_myt": "2026-11-07 18:12:30",
    "note": "open filled; weekend-closed, no new bars since Fri close",
    "fill_time_myt": "2026-11-06 13:20:00"
   },
@@ -1162,7 +1179,7 @@
    "asset": "XAUUSD",
    "name": "Gold · Swing #1R",
    "fill_time_myt": "2026-11-06 21:30:00",
-   "scored_myt": "2026-11-07 17:35:19",
+   "scored_myt": "2026-11-07 18:12:30",
    "note": "open filled; weekend-closed, no new bars since Fri close"
   },
   {
@@ -1186,7 +1203,7 @@
    "asset": "XAUUSD",
    "name": "Gold · Scalping #1",
    "fill_time_myt": "2026-11-06 14:35:00",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   {
    "id": "I001",
@@ -1209,7 +1226,7 @@
    "asset": "XAUUSD",
    "name": "Gold · Intraday #1",
    "fill_time_myt": "2026-11-06 14:35:00",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   {
    "id": "S002",
@@ -1236,7 +1253,7 @@
    "diagnosis_ms": "Lantunan gagal — harga masuk zon 4068.5-4071.5 lepas tu terus jatuh tembus 4063 dalam sejam.",
    "exit_time_myt": "2026-11-06 19:00:00",
    "fill_time_myt": "2026-11-06 18:00:00",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   {
    "id": "I002",
@@ -1263,7 +1280,7 @@
    "diagnosis_ms": "Dump hari Jumaat sebelum weekend potong terus demand 4050-4056, zon langsung tak bertindak balas.",
    "exit_time_myt": "2026-11-06 21:30:00",
    "fill_time_myt": "2026-11-06 21:15:00",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   {
    "id": "B-S001",
@@ -1288,7 +1305,7 @@
    "exit_time_server": "2026-11-06 13:50:00",
    "exit_time_myt": "2026-11-06 19:50:00",
    "fill_time_myt": "2026-11-06 15:50:00",
-   "scored_myt": "2026-11-07 16:08:07",
+   "scored_myt": "2026-11-07 18:12:30",
    "exit_px": 76030.21,
    "note": "TIME_STOP at 4h (19:50 MYT) @76030.21 before TP; price later hit TP after window"
   },
@@ -1315,7 +1332,7 @@
    "exit_time_server": "2026-11-06 17:00:00",
    "exit_time_myt": "2026-11-06 23:00:00",
    "fill_time_myt": "2026-11-06 17:15:00",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   {
    "id": "B-W001",
@@ -1338,7 +1355,7 @@
    "asset": "BTCUSD",
    "name": "BTC · Swing #1",
    "note": "Swing WAIT superseded early; replaced by B-W002.",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   {
    "id": "B-S002",
@@ -1361,7 +1378,7 @@
    "asset": "BTCUSD",
    "rr": 2.63,
    "name": "BTC · Scalping #2",
-   "scored_myt": "2026-11-07 17:35:19",
+   "scored_myt": "2026-11-07 18:12:30",
    "note": "SL @ 2026-11-07 11:00:00 EET (bar high 76149.21 >= 76120); fill 75980 spr 8.58",
    "fill_time_myt": "2026-11-07 15:50:00",
    "exit_time_server": "2026-11-07 11:00:00",
@@ -1390,8 +1407,8 @@
    "asset": "BTCUSD",
    "rr": 3.13,
    "name": "BTC · Intraday #2",
-   "scored_myt": "2026-11-07 17:35:19",
-   "note": "open filled; TP 75400 / SL 76220 not hit (high so far 76149.21, ask ~76158)",
+   "scored_myt": "2026-11-07 18:12:30",
+   "note": "open filled; TP 75400 / SL 76220 not hit (high so far 76149.21, bid ~75973)",
    "fill_time_myt": "2026-11-07 15:50:00"
   },
   {
@@ -1414,7 +1431,8 @@
    "fill_time_server": null,
    "asset": "BTCUSD",
    "name": "BTC · Swing #2",
-   "scored_myt": "2026-11-07 17:35:19"
+   "scored_myt": "2026-11-07 18:12:30",
+   "note": "WAIT kept — no clean HTF/zone setup this refresh"
   },
   {
    "id": "V-S001",
@@ -1441,7 +1459,7 @@
    "diagnosis_ms": "SL kena masa harga lantun ke ~45880; dump sebenar ke ~43798 datang lepas kena stop.",
    "exit_time_myt": "2026-11-06 17:35:00",
    "fill_time_myt": "2026-11-06 16:55:00",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   {
    "id": "V-I001",
@@ -1468,7 +1486,7 @@
    "diagnosis_ms": "Sama — lantunan atas 45923 sapu SL dulu, baru harga dump ke 43.8k.",
    "exit_time_myt": "2026-11-06 17:45:00",
    "fill_time_myt": "2026-11-06 16:00:00",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   {
    "id": "V-W001",
@@ -1491,7 +1509,7 @@
    "asset": "FXVOL80",
    "name": "Vol 80 · Swing #1",
    "note": "Swing WAIT superseded early; replaced by V-W002.",
-   "scored_myt": "2026-11-07 16:08:07"
+   "scored_myt": "2026-11-07 18:12:30"
   },
   {
    "id": "V-S002",
@@ -1516,7 +1534,7 @@
    "name": "Vol 80 · Scalping #2",
    "note": "TP @ 2026-11-07 10:15:00 EET; fill=44040.0 spr=12.44",
    "fill_time_myt": "2026-11-07 15:30:00",
-   "scored_myt": "2026-11-07 16:39:57",
+   "scored_myt": "2026-11-07 18:12:30",
    "exit_time_server": "2026-11-07 10:15:00",
    "exit_time_myt": "2026-11-07 16:15:00"
   },
@@ -1543,7 +1561,7 @@
    "name": "Vol 80 · Intraday #2",
    "note": "TP @ 2026-11-07 10:15:00 EET; fill=44000.0 spr=12.44",
    "fill_time_myt": "2026-11-07 15:30:00",
-   "scored_myt": "2026-11-07 16:39:57",
+   "scored_myt": "2026-11-07 18:12:30",
    "exit_time_server": "2026-11-07 10:15:00",
    "exit_time_myt": "2026-11-07 16:15:00"
   },
@@ -1567,7 +1585,8 @@
    "fill_time_server": null,
    "asset": "FXVOL80",
    "name": "Vol 80 · Swing #2",
-   "scored_myt": "2026-11-07 17:35:19"
+   "scored_myt": "2026-11-07 18:12:30",
+   "note": "WAIT kept — no clean HTF/zone setup this refresh"
   },
   {
    "id": "V-S003",
@@ -1589,7 +1608,9 @@
    "fill_time_server": null,
    "asset": "FXVOL80",
    "rr": 1.91,
-   "name": "Vol 80 · Scalping #3"
+   "name": "Vol 80 · Scalping #3",
+   "scored_myt": "2026-11-07 18:12:30",
+   "note": "PENDING — market dumped to 43001 then ~43397; entry zone not touched since create"
   },
   {
    "id": "V-I003",
@@ -1611,7 +1632,9 @@
    "fill_time_server": null,
    "asset": "FXVOL80",
    "rr": 2.26,
-   "name": "Vol 80 · Intraday #3"
+   "name": "Vol 80 · Intraday #3",
+   "scored_myt": "2026-11-07 18:12:30",
+   "note": "PENDING — market dumped to 43001 then ~43397; entry zone not touched since create"
   }
  ],
  "scoreboard": {
@@ -1622,13 +1645,13 @@
   "win_rate": 30.0,
   "total_r": -2.74,
   "avg_r": -0.27,
-  "as_of_myt": "2026-11-07 17:35:19",
-  "note": "Refresh 7 Nov 17:35 MYT. Closed: BTC Scalping #2 SL (-1.0R) at 17:00 MYT. Still open: Gold Swing #1/#1R (weekend), BTC Intraday #2 FILLED. New pending SELLs: Vol 80 Scalping #3 (43680-43740) and Vol 80 Intraday #3 (43880-44040). BTC scalp WAIT (chop). BTC/Vol Swing #2 WAIT. Gold weekend-closed."
+  "as_of_myt": "2026-11-07 18:12:30",
+  "note": "Refresh 7 Nov 18:12 MYT. No scoring changes. Still open: Gold Swing #1/#1R (weekend), BTC Intraday #2 FILLED, Vol 80 Scalping #3 & Intraday #3 PENDING (entry zones above market after dump to 43001). BTC scalp WAIT (chop). BTC/Vol Swing #2 WAIT. Gold weekend-closed. No new calls."
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-07 17:35:19",
- "fxvol80_server_time": "2026-11-07 11:30:00",
- "status_note": "BTC Scalping #2 kena SL. Vol 80 Scalping #3 & Intraday #3 SELL pending baru. BTC Intraday #2 masih FILLED. Gold weekend tutup.",
+ "last_updated": "2026-11-07 18:12:30",
+ "fxvol80_server_time": "2026-11-07 12:10:00",
+ "status_note": "Tiada perubahan status. BTC Intraday #2 masih FILLED. Vol 80 Scalping #3 & Intraday #3 masih PENDING (harga jatuh dulu ke 43001). Gold weekend tutup. Scalp/Swing WAIT.",
  "ticks": {
   "XAUUSD": {
    "bid": 4071.42,
@@ -1638,18 +1661,18 @@
    "time_msc": 1794009419691
   },
   "BTCUSD": {
-   "bid": 75981.21,
-   "ask": 75989.79,
+   "bid": 75973.21,
+   "ask": 75981.79,
    "spread": 8.579999999987194,
-   "time": "2026-11-07T11:32:29Z",
-   "time_msc": 1794051149281
+   "time": "2026-11-07T12:10:58Z",
+   "time_msc": 1794053458358
   },
   "FXVOL80": {
-   "bid": 43334.95,
-   "ask": 43347.29,
-   "spread": 12.340000000003783,
-   "time": "2026-11-07T11:32:29Z",
-   "time_msc": 1794051149202
+   "bid": 43396.69,
+   "ask": 43409.06,
+   "spread": 12.369999999995343,
+   "time": "2026-11-07T12:10:59Z",
+   "time_msc": 1794053459216
   }
  },
  "freshness": {
@@ -1663,38 +1686,38 @@
    "spread": 0.25999999999976353,
    "tick_eet": "2026-11-06 23:56:59",
    "tick_myt": "2026-11-07 05:56:59",
-   "age_min": 698.3,
+   "age_min": 735.5,
    "status": "weekend_closed",
    "ok": true,
    "note": "weekend_closed",
    "note_long": "Gold market closed for the weekend; last valid tick Fri 23:56:59 EET (Sat 05:56:59 MYT). No new gold calls until the Monday open."
   },
   "BTCUSD": {
-   "last_tick_myt": "2026-11-07 17:32:29",
-   "last_bar_myt": "2026-11-07 17:30:00",
-   "last_m5_eet": "2026-11-07 11:30:00",
-   "last_m5_myt": "2026-11-07 17:30:00",
-   "tick_bid": 75981.21,
-   "tick_ask": 75989.79,
+   "last_tick_myt": "2026-11-07 18:10:58",
+   "last_bar_myt": "2026-11-07 18:10:00",
+   "last_m5_eet": "2026-11-07 12:10:00",
+   "last_m5_myt": "2026-11-07 18:10:00",
+   "tick_bid": 75973.21,
+   "tick_ask": 75981.79,
    "spread": 8.579999999987194,
-   "tick_eet": "2026-11-07 11:32:29",
-   "tick_myt": "2026-11-07 17:32:29",
-   "age_min": 2.8,
+   "tick_eet": "2026-11-07 12:10:58",
+   "tick_myt": "2026-11-07 18:10:58",
+   "age_min": 1.5,
    "status": "ok",
    "ok": true,
    "note": "ok"
   },
   "FXVOL80": {
-   "last_tick_myt": "2026-11-07 17:32:29",
-   "last_bar_myt": "2026-11-07 17:30:00",
-   "last_m5_eet": "2026-11-07 11:30:00",
-   "last_m5_myt": "2026-11-07 17:30:00",
-   "tick_bid": 43334.95,
-   "tick_ask": 43347.29,
-   "spread": 12.340000000003783,
-   "tick_eet": "2026-11-07 11:32:29",
-   "tick_myt": "2026-11-07 17:32:29",
-   "age_min": 2.8,
+   "last_tick_myt": "2026-11-07 18:10:59",
+   "last_bar_myt": "2026-11-07 18:10:00",
+   "last_m5_eet": "2026-11-07 12:10:00",
+   "last_m5_myt": "2026-11-07 18:10:00",
+   "tick_bid": 43396.69,
+   "tick_ask": 43409.06,
+   "spread": 12.369999999995343,
+   "tick_eet": "2026-11-07 12:10:59",
+   "tick_myt": "2026-11-07 18:10:59",
+   "age_min": 1.5,
    "status": "ok",
    "ok": true,
    "note": "ok"
