@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-09 09:10:00",
+ "generated_myt": "2026-11-09 13:21:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -22,15 +22,15 @@
     "valid_until_myt": "2026-11-09 13:10:00",
     "confidence": 0,
     "reasoning": "H1 MOMENTUM_UP: 02:00 EET H1 impulse 4055->4106 broke Fri high 4106.88 area and Swing #1 TP 4082; prev-week pos ~85% of 3881-4146. Do not chase 4103. Scalp BUY limit into M5 post-breakout base 4090.8-4094.8 (02:40-02:50 EET pullback lows). SL 4085.5 under 02:35 low 4086.99. TP 4109.5 just under session high 4110.13. Spread 0.26 in RR~2.2 (mid). Max 4h clock. Failed break below 4090 (M5 close) -> exit. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "NO_FILL",
     "r_result": null,
     "chart": "charts/call_S003.png",
     "fill_px": null,
     "fill_time_server": null,
     "asset": "XAUUSD",
     "name": "Gold · Scalping #3",
-    "scored_myt": "2026-11-09 09:10:00",
-    "note": "pending; entry not touched yet"
+    "scored_myt": "2026-11-09 13:21:00",
+    "note": "no fill by 2026-11-09 13:10:00 MYT (low since 09:10 was 4102.80, above entry 4094.8)"
    },
    "latest_by_type": {
     "SCALP": {
@@ -46,15 +46,15 @@
      "valid_until_myt": "2026-11-09 13:10:00",
      "confidence": 0,
      "reasoning": "H1 MOMENTUM_UP: 02:00 EET H1 impulse 4055->4106 broke Fri high 4106.88 area and Swing #1 TP 4082; prev-week pos ~85% of 3881-4146. Do not chase 4103. Scalp BUY limit into M5 post-breakout base 4090.8-4094.8 (02:40-02:50 EET pullback lows). SL 4085.5 under 02:35 low 4086.99. TP 4109.5 just under session high 4110.13. Spread 0.26 in RR~2.2 (mid). Max 4h clock. Failed break below 4090 (M5 close) -> exit. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "NO_FILL",
      "r_result": null,
      "chart": "charts/call_S003.png",
      "fill_px": null,
      "fill_time_server": null,
      "asset": "XAUUSD",
      "name": "Gold · Scalping #3",
-     "scored_myt": "2026-11-09 09:10:00",
-     "note": "pending; entry not touched yet"
+     "scored_myt": "2026-11-09 13:21:00",
+     "note": "no fill by 2026-11-09 13:10:00 MYT (low since 09:10 was 4102.80, above entry 4094.8)"
     },
     "INTRADAY": {
      "id": "I003",
@@ -121,15 +121,15 @@
     "valid_until_myt": "2026-11-09 13:10:00",
     "confidence": 0,
     "reasoning": "H1 MOMENTUM_UP: 02:00 EET H1 impulse 4055->4106 broke Fri high 4106.88 area and Swing #1 TP 4082; prev-week pos ~85% of 3881-4146. Do not chase 4103. Scalp BUY limit into M5 post-breakout base 4090.8-4094.8 (02:40-02:50 EET pullback lows). SL 4085.5 under 02:35 low 4086.99. TP 4109.5 just under session high 4110.13. Spread 0.26 in RR~2.2 (mid). Max 4h clock. Failed break below 4090 (M5 close) -> exit. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "NO_FILL",
     "r_result": null,
     "chart": "charts/call_S003.png",
     "fill_px": null,
     "fill_time_server": null,
     "asset": "XAUUSD",
     "name": "Gold · Scalping #3",
-    "scored_myt": "2026-11-09 09:10:00",
-    "note": "pending; entry not touched yet"
+    "scored_myt": "2026-11-09 13:21:00",
+    "note": "no fill by 2026-11-09 13:10:00 MYT (low since 09:10 was 4102.80, above entry 4094.8)"
    },
    "calls": [
     {
@@ -145,15 +145,15 @@
      "valid_until_myt": "2026-11-09 13:10:00",
      "confidence": 0,
      "reasoning": "H1 MOMENTUM_UP: 02:00 EET H1 impulse 4055->4106 broke Fri high 4106.88 area and Swing #1 TP 4082; prev-week pos ~85% of 3881-4146. Do not chase 4103. Scalp BUY limit into M5 post-breakout base 4090.8-4094.8 (02:40-02:50 EET pullback lows). SL 4085.5 under 02:35 low 4086.99. TP 4109.5 just under session high 4110.13. Spread 0.26 in RR~2.2 (mid). Max 4h clock. Failed break below 4090 (M5 close) -> exit. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "NO_FILL",
      "r_result": null,
      "chart": "charts/call_S003.png",
      "fill_px": null,
      "fill_time_server": null,
      "asset": "XAUUSD",
      "name": "Gold · Scalping #3",
-     "scored_myt": "2026-11-09 09:10:00",
-     "note": "pending; entry not touched yet"
+     "scored_myt": "2026-11-09 13:21:00",
+     "note": "no fill by 2026-11-09 13:10:00 MYT (low since 09:10 was 4102.80, above entry 4094.8)"
     },
     {
      "id": "I003",
@@ -1096,15 +1096,15 @@
   "valid_until_myt": "2026-11-09 13:10:00",
   "confidence": 0,
   "reasoning": "H1 MOMENTUM_UP: 02:00 EET H1 impulse 4055->4106 broke Fri high 4106.88 area and Swing #1 TP 4082; prev-week pos ~85% of 3881-4146. Do not chase 4103. Scalp BUY limit into M5 post-breakout base 4090.8-4094.8 (02:40-02:50 EET pullback lows). SL 4085.5 under 02:35 low 4086.99. TP 4109.5 just under session high 4110.13. Spread 0.26 in RR~2.2 (mid). Max 4h clock. Failed break below 4090 (M5 close) -> exit. Unvalidated setup; no calibrated probability.",
-  "status": "PENDING",
+  "status": "NO_FILL",
   "r_result": null,
   "chart": "charts/call_S003.png",
   "fill_px": null,
   "fill_time_server": null,
   "asset": "XAUUSD",
   "name": "Gold · Scalping #3",
-  "scored_myt": "2026-11-09 09:10:00",
-  "note": "pending; entry not touched yet"
+  "scored_myt": "2026-11-09 13:21:00",
+  "note": "no fill by 2026-11-09 13:10:00 MYT (low since 09:10 was 4102.80, above entry 4094.8)"
  },
  "latest_by_type": {
   "SCALP": {
@@ -1120,15 +1120,15 @@
    "valid_until_myt": "2026-11-09 13:10:00",
    "confidence": 0,
    "reasoning": "H1 MOMENTUM_UP: 02:00 EET H1 impulse 4055->4106 broke Fri high 4106.88 area and Swing #1 TP 4082; prev-week pos ~85% of 3881-4146. Do not chase 4103. Scalp BUY limit into M5 post-breakout base 4090.8-4094.8 (02:40-02:50 EET pullback lows). SL 4085.5 under 02:35 low 4086.99. TP 4109.5 just under session high 4110.13. Spread 0.26 in RR~2.2 (mid). Max 4h clock. Failed break below 4090 (M5 close) -> exit. Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "NO_FILL",
    "r_result": null,
    "chart": "charts/call_S003.png",
    "fill_px": null,
    "fill_time_server": null,
    "asset": "XAUUSD",
    "name": "Gold · Scalping #3",
-   "scored_myt": "2026-11-09 09:10:00",
-   "note": "pending; entry not touched yet"
+   "scored_myt": "2026-11-09 13:21:00",
+   "note": "no fill by 2026-11-09 13:10:00 MYT (low since 09:10 was 4102.80, above entry 4094.8)"
   },
   "INTRADAY": {
    "id": "I003",
@@ -1195,15 +1195,15 @@
   "valid_until_myt": "2026-11-09 13:10:00",
   "confidence": 0,
   "reasoning": "H1 MOMENTUM_UP: 02:00 EET H1 impulse 4055->4106 broke Fri high 4106.88 area and Swing #1 TP 4082; prev-week pos ~85% of 3881-4146. Do not chase 4103. Scalp BUY limit into M5 post-breakout base 4090.8-4094.8 (02:40-02:50 EET pullback lows). SL 4085.5 under 02:35 low 4086.99. TP 4109.5 just under session high 4110.13. Spread 0.26 in RR~2.2 (mid). Max 4h clock. Failed break below 4090 (M5 close) -> exit. Unvalidated setup; no calibrated probability.",
-  "status": "PENDING",
+  "status": "NO_FILL",
   "r_result": null,
   "chart": "charts/call_S003.png",
   "fill_px": null,
   "fill_time_server": null,
   "asset": "XAUUSD",
   "name": "Gold · Scalping #3",
-  "scored_myt": "2026-11-09 09:10:00",
-  "note": "pending; entry not touched yet"
+  "scored_myt": "2026-11-09 13:21:00",
+  "note": "no fill by 2026-11-09 13:10:00 MYT (low since 09:10 was 4102.80, above entry 4094.8)"
  },
  "calls": [
   {
@@ -1219,15 +1219,15 @@
    "valid_until_myt": "2026-11-09 13:10:00",
    "confidence": 0,
    "reasoning": "H1 MOMENTUM_UP: 02:00 EET H1 impulse 4055->4106 broke Fri high 4106.88 area and Swing #1 TP 4082; prev-week pos ~85% of 3881-4146. Do not chase 4103. Scalp BUY limit into M5 post-breakout base 4090.8-4094.8 (02:40-02:50 EET pullback lows). SL 4085.5 under 02:35 low 4086.99. TP 4109.5 just under session high 4110.13. Spread 0.26 in RR~2.2 (mid). Max 4h clock. Failed break below 4090 (M5 close) -> exit. Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "NO_FILL",
    "r_result": null,
    "chart": "charts/call_S003.png",
    "fill_px": null,
    "fill_time_server": null,
    "asset": "XAUUSD",
    "name": "Gold · Scalping #3",
-   "scored_myt": "2026-11-09 09:10:00",
-   "note": "pending; entry not touched yet"
+   "scored_myt": "2026-11-09 13:21:00",
+   "note": "no fill by 2026-11-09 13:10:00 MYT (low since 09:10 was 4102.80, above entry 4094.8)"
   },
   {
    "id": "I003",
@@ -1413,74 +1413,74 @@
   "n": 16,
   "wins": 6,
   "sum_r": -0.05,
-  "open": 2
+  "open": 1
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-09 09:10:00",
+ "last_updated": "2026-11-09 13:21:00",
  "fxvol80_server_time": "2026-11-07 13:55:00",
- "status_note": "BARU: Gold · Scalping #3 BUY 4090.8-4094.8 & Gold · Intraday #3 BUY 4071-4077. Gold · Swing #1/#1R TP 4082 @08:30 MYT. BTC/Vol 80 WAIT.",
+ "status_note": "Gold · Scalping #3 tamat tanpa fill (13:10 MYT, harga tak turun ke 4090.8-4094.8). Gold · Intraday #3 BUY 4071-4077 masih pending. BTC/Vol 80 WAIT.",
  "ticks": {
   "XAUUSD.m": {
-   "bid": 4071.42,
-   "ask": 4071.68,
-   "spread": 0.25999999999976353,
-   "time": "2026-11-06T23:56:59Z",
-   "time_msc": 1794009419691
+   "bid": 4124.18,
+   "ask": 4124.44,
+   "spread": 0.2599999999993088,
+   "time": "2026-11-09T07:21:27Z",
+   "time_msc": 1794208887148
   },
   "BTCUSD": {
-   "bid": 75974.71,
-   "ask": 75983.29,
+   "bid": 74525.21,
+   "ask": 74533.79,
    "spread": 8.579999999987194,
-   "time": "2026-11-08T15:25:47Z",
-   "time_msc": 1794151547635
+   "time": "2026-11-09T07:21:27Z",
+   "time_msc": 1794208887906
   },
   "FXVOL80": {
-   "bid": 43585.43,
-   "ask": 43597.85,
-   "spread": 12.419999999998254,
-   "time": "2026-11-08T15:25:48Z",
-   "time_msc": 1794151548704
+   "bid": 45195.14,
+   "ask": 45208.02,
+   "spread": 12.87999999999738,
+   "time": "2026-11-09T07:21:26Z",
+   "time_msc": 1794208886985
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-09 03:05:00",
-   "last_m5_myt": "2026-11-09 09:05:00",
-   "tick_bid": 4071.42,
-   "tick_ask": 4071.68,
-   "spread": 0.25999999999976353,
-   "tick_eet": "2026-11-06T23:56:59",
-   "tick_myt": "2026-11-07 05:56:59",
-   "age_min": 6.1,
+   "last_m5_eet": "2026-11-09 07:20:00",
+   "last_m5_myt": "2026-11-09 13:20:00",
+   "tick_bid": 4124.18,
+   "tick_ask": 4124.44,
+   "spread": 0.2599999999993088,
+   "tick_eet": "2026-11-09T07:21:27",
+   "tick_myt": "2026-11-09 13:21:27",
+   "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-09 09:10:00"
+   "scored_myt": "2026-11-09 13:21:00"
   },
   "BTCUSD": {
-   "last_m5_eet": "2026-11-09 03:05:00",
-   "last_m5_myt": "2026-11-09 09:05:00",
-   "tick_bid": 75974.71,
-   "tick_ask": 75983.29,
+   "last_m5_eet": "2026-11-09 07:20:00",
+   "last_m5_myt": "2026-11-09 13:20:00",
+   "tick_bid": 74525.21,
+   "tick_ask": 74533.79,
    "spread": 8.579999999987194,
-   "tick_eet": "2026-11-08T15:25:47",
-   "tick_myt": "2026-11-08 21:25:47",
-   "age_min": 6.1,
+   "tick_eet": "2026-11-09T07:21:27",
+   "tick_myt": "2026-11-09 13:21:27",
+   "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-09 09:10:00"
+   "scored_myt": "2026-11-09 13:21:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-09 03:05:00",
-   "last_m5_myt": "2026-11-09 09:05:00",
-   "tick_bid": 43585.43,
-   "tick_ask": 43597.85,
-   "spread": 12.419999999998254,
-   "tick_eet": "2026-11-08T15:25:48",
-   "tick_myt": "2026-11-08 21:25:48",
-   "age_min": 6.1,
+   "last_m5_eet": "2026-11-09 07:20:00",
+   "last_m5_myt": "2026-11-09 13:20:00",
+   "tick_bid": 45195.14,
+   "tick_ask": 45208.02,
+   "spread": 12.87999999999738,
+   "tick_eet": "2026-11-09T07:21:26",
+   "tick_myt": "2026-11-09 13:21:26",
+   "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-09 09:10:00"
+   "scored_myt": "2026-11-09 13:21:00"
   }
  }
 }
