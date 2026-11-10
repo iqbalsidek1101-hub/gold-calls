@@ -1,6 +1,6 @@
 {
   "app": "Charlie Multi Calls",
-  "generated_myt": "2026-11-10 17:15:00",
+  "generated_myt": "2026-11-10 17:28:00",
   "assets": [
     "XAUUSD",
     "BTCUSD",
@@ -390,24 +390,24 @@
         "open": 0
       },
       "freshness": {
-        "last_m5_eet": "2026-11-10 11:10:00",
-        "last_m5_myt": "2026-11-10 17:10:00",
-        "tick_bid": 4095.17,
-        "tick_ask": 4095.43,
+        "last_m5_eet": "2026-11-10 11:25:00",
+        "last_m5_myt": "2026-11-10 17:25:00",
+        "tick_bid": 4092.07,
+        "tick_ask": 4092.33,
         "spread": 0.25999999999976353,
-        "tick_eet": "2026-11-10T11:13:21",
-        "tick_myt": "2026-11-10 17:13:21",
-        "age_min": 3.6,
+        "tick_eet": "2026-11-10T11:27:58",
+        "tick_myt": "2026-11-10 17:27:58",
+        "age_min": 3.2,
         "ok": true,
         "note": "ok",
-        "scored_myt": "2026-11-10 17:15:00"
+        "scored_myt": "2026-11-10 17:28:00"
       },
       "tick": {
-        "bid": 4095.17,
-        "ask": 4095.43,
+        "bid": 4092.07,
+        "ask": 4092.33,
         "spread": 0.25999999999976353,
-        "time": "2026-11-10T11:13:21Z",
-        "time_msc": 1794309201516
+        "time": "2026-11-10T11:27:58Z",
+        "time_msc": 1794310078394
       }
     },
     "BTCUSD": {
@@ -766,24 +766,24 @@
         "open": 0
       },
       "freshness": {
-        "last_m5_eet": "2026-11-10 11:10:00",
-        "last_m5_myt": "2026-11-10 17:10:00",
-        "tick_bid": 74229.21,
-        "tick_ask": 74237.79,
+        "last_m5_eet": "2026-11-10 11:25:00",
+        "last_m5_myt": "2026-11-10 17:25:00",
+        "tick_bid": 74339.21,
+        "tick_ask": 74347.79,
         "spread": 8.579999999987194,
-        "tick_eet": "2026-11-10T11:13:21",
-        "tick_myt": "2026-11-10 17:13:21",
-        "age_min": 3.6,
+        "tick_eet": "2026-11-10T11:27:58",
+        "tick_myt": "2026-11-10 17:27:58",
+        "age_min": 3.2,
         "ok": true,
         "note": "ok",
-        "scored_myt": "2026-11-10 17:15:00"
+        "scored_myt": "2026-11-10 17:28:00"
       },
       "tick": {
-        "bid": 74229.21,
-        "ask": 74237.79,
+        "bid": 74339.21,
+        "ask": 74347.79,
         "spread": 8.579999999987194,
-        "time": "2026-11-10T11:13:21Z",
-        "time_msc": 1794309201689
+        "time": "2026-11-10T11:27:58Z",
+        "time_msc": 1794310078498
       }
     },
     "FXVOL80": {
@@ -800,14 +800,16 @@
         "valid_until_myt": "2026-11-10 21:15:00",
         "confidence": 0,
         "reasoning": "FX Vol 80: D1 reversal continuation (42438 week low -> 47957), H1 MOMENTUM_UP; 16:00 MYT H1 broke and held above the 46940-46961 range highs, ran to 47957, now pulling back (47309). Scalp BUY limit on retest of the breakout flip 46980-47080 (old range highs = SnR flip; M5 base/sweep-reclaim there preferred). SL 46760 below the 46812-46914 breakout base. TP 47780 under the 47905-47957 high (next resistance; watch failed break). Spread 13.5 in RR~2.1 (at 47080). ATR M5 ~160 / H1 645. Max 4h clock. Exit early if M5 closes below 46900 (failed flip). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-        "status": "PENDING",
+        "status": "FILLED",
         "r_result": null,
         "chart": "charts/call_V-S006.png",
-        "fill_px": null,
-        "fill_time_server": null,
+        "fill_px": 47080.0,
+        "fill_time_server": "2026-11-10 11:20:00",
         "asset": "FXVOL80",
         "name": "Vol 80 · Scalping #6",
-        "scored_myt": "2026-11-10 17:15:00"
+        "scored_myt": "2026-11-10 17:28:00",
+        "fill_time_myt": "2026-11-10 17:20:00",
+        "note": "entry touched 17:20-17:25 MYT M5 bar (bid low 47031.36 + spread 13.4 -> ask ~47045 <= zone top 47080); analytical fill at 47080.0, not a broker order. SL 46760 / TP 47780 / max 4h to 21:15 MYT; exit if M5 closes below 46900."
       },
       "latest_by_type": {
         "SCALP": {
@@ -823,14 +825,16 @@
           "valid_until_myt": "2026-11-10 21:15:00",
           "confidence": 0,
           "reasoning": "FX Vol 80: D1 reversal continuation (42438 week low -> 47957), H1 MOMENTUM_UP; 16:00 MYT H1 broke and held above the 46940-46961 range highs, ran to 47957, now pulling back (47309). Scalp BUY limit on retest of the breakout flip 46980-47080 (old range highs = SnR flip; M5 base/sweep-reclaim there preferred). SL 46760 below the 46812-46914 breakout base. TP 47780 under the 47905-47957 high (next resistance; watch failed break). Spread 13.5 in RR~2.1 (at 47080). ATR M5 ~160 / H1 645. Max 4h clock. Exit early if M5 closes below 46900 (failed flip). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-          "status": "PENDING",
+          "status": "FILLED",
           "r_result": null,
           "chart": "charts/call_V-S006.png",
-          "fill_px": null,
-          "fill_time_server": null,
+          "fill_px": 47080.0,
+          "fill_time_server": "2026-11-10 11:20:00",
           "asset": "FXVOL80",
           "name": "Vol 80 · Scalping #6",
-          "scored_myt": "2026-11-10 17:15:00"
+          "scored_myt": "2026-11-10 17:28:00",
+          "fill_time_myt": "2026-11-10 17:20:00",
+          "note": "entry touched 17:20-17:25 MYT M5 bar (bid low 47031.36 + spread 13.4 -> ask ~47045 <= zone top 47080); analytical fill at 47080.0, not a broker order. SL 46760 / TP 47780 / max 4h to 21:15 MYT; exit if M5 closes below 46900."
         },
         "INTRADAY": {
           "id": "V-I004",
@@ -890,14 +894,16 @@
         "valid_until_myt": "2026-11-10 21:15:00",
         "confidence": 0,
         "reasoning": "FX Vol 80: D1 reversal continuation (42438 week low -> 47957), H1 MOMENTUM_UP; 16:00 MYT H1 broke and held above the 46940-46961 range highs, ran to 47957, now pulling back (47309). Scalp BUY limit on retest of the breakout flip 46980-47080 (old range highs = SnR flip; M5 base/sweep-reclaim there preferred). SL 46760 below the 46812-46914 breakout base. TP 47780 under the 47905-47957 high (next resistance; watch failed break). Spread 13.5 in RR~2.1 (at 47080). ATR M5 ~160 / H1 645. Max 4h clock. Exit early if M5 closes below 46900 (failed flip). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-        "status": "PENDING",
+        "status": "FILLED",
         "r_result": null,
         "chart": "charts/call_V-S006.png",
-        "fill_px": null,
-        "fill_time_server": null,
+        "fill_px": 47080.0,
+        "fill_time_server": "2026-11-10 11:20:00",
         "asset": "FXVOL80",
         "name": "Vol 80 · Scalping #6",
-        "scored_myt": "2026-11-10 17:15:00"
+        "scored_myt": "2026-11-10 17:28:00",
+        "fill_time_myt": "2026-11-10 17:20:00",
+        "note": "entry touched 17:20-17:25 MYT M5 bar (bid low 47031.36 + spread 13.4 -> ask ~47045 <= zone top 47080); analytical fill at 47080.0, not a broker order. SL 46760 / TP 47780 / max 4h to 21:15 MYT; exit if M5 closes below 46900."
       },
       "calls": [
         {
@@ -1216,14 +1222,16 @@
           "valid_until_myt": "2026-11-10 21:15:00",
           "confidence": 0,
           "reasoning": "FX Vol 80: D1 reversal continuation (42438 week low -> 47957), H1 MOMENTUM_UP; 16:00 MYT H1 broke and held above the 46940-46961 range highs, ran to 47957, now pulling back (47309). Scalp BUY limit on retest of the breakout flip 46980-47080 (old range highs = SnR flip; M5 base/sweep-reclaim there preferred). SL 46760 below the 46812-46914 breakout base. TP 47780 under the 47905-47957 high (next resistance; watch failed break). Spread 13.5 in RR~2.1 (at 47080). ATR M5 ~160 / H1 645. Max 4h clock. Exit early if M5 closes below 46900 (failed flip). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-          "status": "PENDING",
+          "status": "FILLED",
           "r_result": null,
           "chart": "charts/call_V-S006.png",
-          "fill_px": null,
-          "fill_time_server": null,
+          "fill_px": 47080.0,
+          "fill_time_server": "2026-11-10 11:20:00",
           "asset": "FXVOL80",
           "name": "Vol 80 · Scalping #6",
-          "scored_myt": "2026-11-10 17:15:00"
+          "scored_myt": "2026-11-10 17:28:00",
+          "fill_time_myt": "2026-11-10 17:20:00",
+          "note": "entry touched 17:20-17:25 MYT M5 bar (bid low 47031.36 + spread 13.4 -> ask ~47045 <= zone top 47080); analytical fill at 47080.0, not a broker order. SL 46760 / TP 47780 / max 4h to 21:15 MYT; exit if M5 closes below 46900."
         }
       ],
       "open_count": 2,
@@ -1234,24 +1242,24 @@
         "open": 2
       },
       "freshness": {
-        "last_m5_eet": "2026-11-10 11:10:00",
-        "last_m5_myt": "2026-11-10 17:10:00",
-        "tick_bid": 47324.63,
-        "tick_ask": 47338.11,
-        "spread": 13.480000000003201,
-        "tick_eet": "2026-11-10T11:13:21",
-        "tick_myt": "2026-11-10 17:13:21",
-        "age_min": 3.6,
+        "last_m5_eet": "2026-11-10 11:25:00",
+        "last_m5_myt": "2026-11-10 17:25:00",
+        "tick_bid": 47057.65,
+        "tick_ask": 47071.06,
+        "spread": 13.409999999996217,
+        "tick_eet": "2026-11-10T11:27:58",
+        "tick_myt": "2026-11-10 17:27:58",
+        "age_min": 3.2,
         "ok": true,
         "note": "ok",
-        "scored_myt": "2026-11-10 17:15:00"
+        "scored_myt": "2026-11-10 17:28:00"
       },
       "tick": {
-        "bid": 47324.63,
-        "ask": 47338.11,
-        "spread": 13.480000000003201,
-        "time": "2026-11-10T11:13:21Z",
-        "time_msc": 1794309201503
+        "bid": 47057.65,
+        "ask": 47071.06,
+        "spread": 13.409999999996217,
+        "time": "2026-11-10T11:27:58Z",
+        "time_msc": 1794310078501
       }
     }
   },
@@ -1635,71 +1643,71 @@
     "open": 0
   },
   "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
-  "last_updated": "2026-11-10 17:15:00",
+  "last_updated": "2026-11-10 17:28:00",
   "fxvol80_server_time": "2026-11-07 13:55:00",
-  "status_note": "Call baru: Gold · Intraday #5 SELL 4103-4107 (SL 4116.5, TP 4073) dan Vol 80 · Scalping #6 BUY 46980-47080 (SL 46760, TP 47780). Tadi 17:00: BTC · Scalping #3 TP (+1.82R), Gold · Intraday #4 SL (-1R). Vol 80 · Intraday #4 masih pending.",
+  "status_note": "Vol 80 · Scalping #6 kena entry (fill analitik BUY 47080, 17:20 MYT); SL 46760, TP 47780, max sampai 21:15 MYT. Gold · Intraday #5 SELL 4103-4107 masih pending. Vol 80 · Intraday #4 masih pending.",
   "ticks": {
     "XAUUSD.m": {
-      "bid": 4095.17,
-      "ask": 4095.43,
+      "bid": 4092.07,
+      "ask": 4092.33,
       "spread": 0.25999999999976353,
-      "time": "2026-11-10T11:13:21Z",
-      "time_msc": 1794309201516
+      "time": "2026-11-10T11:27:58Z",
+      "time_msc": 1794310078394
     },
     "BTCUSD": {
-      "bid": 74229.21,
-      "ask": 74237.79,
+      "bid": 74339.21,
+      "ask": 74347.79,
       "spread": 8.579999999987194,
-      "time": "2026-11-10T11:13:21Z",
-      "time_msc": 1794309201689
+      "time": "2026-11-10T11:27:58Z",
+      "time_msc": 1794310078498
     },
     "FXVOL80": {
-      "bid": 47324.63,
-      "ask": 47338.11,
-      "spread": 13.480000000003201,
-      "time": "2026-11-10T11:13:21Z",
-      "time_msc": 1794309201503
+      "bid": 47057.65,
+      "ask": 47071.06,
+      "spread": 13.409999999996217,
+      "time": "2026-11-10T11:27:58Z",
+      "time_msc": 1794310078501
     }
   },
   "freshness": {
     "XAUUSD": {
-      "last_m5_eet": "2026-11-10 11:10:00",
-      "last_m5_myt": "2026-11-10 17:10:00",
-      "tick_bid": 4095.17,
-      "tick_ask": 4095.43,
+      "last_m5_eet": "2026-11-10 11:25:00",
+      "last_m5_myt": "2026-11-10 17:25:00",
+      "tick_bid": 4092.07,
+      "tick_ask": 4092.33,
       "spread": 0.25999999999976353,
-      "tick_eet": "2026-11-10T11:13:21",
-      "tick_myt": "2026-11-10 17:13:21",
-      "age_min": 3.6,
+      "tick_eet": "2026-11-10T11:27:58",
+      "tick_myt": "2026-11-10 17:27:58",
+      "age_min": 3.2,
       "ok": true,
       "note": "ok",
-      "scored_myt": "2026-11-10 17:15:00"
+      "scored_myt": "2026-11-10 17:28:00"
     },
     "BTCUSD": {
-      "last_m5_eet": "2026-11-10 11:10:00",
-      "last_m5_myt": "2026-11-10 17:10:00",
-      "tick_bid": 74229.21,
-      "tick_ask": 74237.79,
+      "last_m5_eet": "2026-11-10 11:25:00",
+      "last_m5_myt": "2026-11-10 17:25:00",
+      "tick_bid": 74339.21,
+      "tick_ask": 74347.79,
       "spread": 8.579999999987194,
-      "tick_eet": "2026-11-10T11:13:21",
-      "tick_myt": "2026-11-10 17:13:21",
-      "age_min": 3.6,
+      "tick_eet": "2026-11-10T11:27:58",
+      "tick_myt": "2026-11-10 17:27:58",
+      "age_min": 3.2,
       "ok": true,
       "note": "ok",
-      "scored_myt": "2026-11-10 17:15:00"
+      "scored_myt": "2026-11-10 17:28:00"
     },
     "FXVOL80": {
-      "last_m5_eet": "2026-11-10 11:10:00",
-      "last_m5_myt": "2026-11-10 17:10:00",
-      "tick_bid": 47324.63,
-      "tick_ask": 47338.11,
-      "spread": 13.480000000003201,
-      "tick_eet": "2026-11-10T11:13:21",
-      "tick_myt": "2026-11-10 17:13:21",
-      "age_min": 3.6,
+      "last_m5_eet": "2026-11-10 11:25:00",
+      "last_m5_myt": "2026-11-10 17:25:00",
+      "tick_bid": 47057.65,
+      "tick_ask": 47071.06,
+      "spread": 13.409999999996217,
+      "tick_eet": "2026-11-10T11:27:58",
+      "tick_myt": "2026-11-10 17:27:58",
+      "age_min": 3.2,
       "ok": true,
       "note": "ok",
-      "scored_myt": "2026-11-10 17:15:00"
+      "scored_myt": "2026-11-10 17:28:00"
     }
   }
 }
