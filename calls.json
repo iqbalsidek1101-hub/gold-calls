@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-10 08:20:00",
+ "generated_myt": "2026-11-10 11:59:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -22,14 +22,15 @@
     "valid_until_myt": "2026-11-11 06:00:00",
     "confidence": 0,
     "reasoning": "Weekly: price tapped prior-week high 4146.80 (new high 4148.47 by only ~1.7) and is stalling 4134-4148 = weekly resistance not cleanly broken; Iqbal rule: rejection at weekly resistance usually retests support. H1 still MOMENTUM_UP (NY impulse 4101->4148). INTRADAY BUY thin into M15/H1 launch base 4103-4109 (H1 19:00-21:00 EET lows 4100.4-4101.2 = NY launch base, SnR flip of 4106-4110). Prefer M5 sweep-reclaim confirm. SL 4097.5 under 4100.43 low. TP 4133.5 under the 4134 consolidation floor (H1 level). Spread 0.26 in RR~3.1 (mid). Close by end NY (Wed 06:00 MYT). Failed break below 4103 (M5 close) -> exit. No scalp/swing: buying 4136 under weekly high has no room, selling fights H1 momentum. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_I004.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 4109.0,
+    "fill_time_server": "2026-11-10 05:40:00",
     "asset": "XAUUSD",
     "name": "Gold · Intraday #4",
-    "scored_myt": "2026-11-10 08:20:00"
+    "scored_myt": "2026-11-10 11:59:00",
+    "note": "entry touched 11:40-11:45 MYT M5 bar (bid low 4108.05 <= zone top 4109); analytical fill at 4109.0, not a broker order. SL 4097.5 / TP 4133.5 / close by Wed 06:00 MYT; exit if M5 closes below 4103."
    },
    "latest_by_type": {
     "SCALP": {
@@ -68,14 +69,15 @@
      "valid_until_myt": "2026-11-11 06:00:00",
      "confidence": 0,
      "reasoning": "Weekly: price tapped prior-week high 4146.80 (new high 4148.47 by only ~1.7) and is stalling 4134-4148 = weekly resistance not cleanly broken; Iqbal rule: rejection at weekly resistance usually retests support. H1 still MOMENTUM_UP (NY impulse 4101->4148). INTRADAY BUY thin into M15/H1 launch base 4103-4109 (H1 19:00-21:00 EET lows 4100.4-4101.2 = NY launch base, SnR flip of 4106-4110). Prefer M5 sweep-reclaim confirm. SL 4097.5 under 4100.43 low. TP 4133.5 under the 4134 consolidation floor (H1 level). Spread 0.26 in RR~3.1 (mid). Close by end NY (Wed 06:00 MYT). Failed break below 4103 (M5 close) -> exit. No scalp/swing: buying 4136 under weekly high has no room, selling fights H1 momentum. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_I004.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 4109.0,
+     "fill_time_server": "2026-11-10 05:40:00",
      "asset": "XAUUSD",
      "name": "Gold · Intraday #4",
-     "scored_myt": "2026-11-10 08:20:00"
+     "scored_myt": "2026-11-10 11:59:00",
+     "note": "entry touched 11:40-11:45 MYT M5 bar (bid low 4108.05 <= zone top 4109); analytical fill at 4109.0, not a broker order. SL 4097.5 / TP 4133.5 / close by Wed 06:00 MYT; exit if M5 closes below 4103."
     },
     "SWING": {
      "id": "001R",
@@ -119,14 +121,15 @@
     "valid_until_myt": "2026-11-11 06:00:00",
     "confidence": 0,
     "reasoning": "Weekly: price tapped prior-week high 4146.80 (new high 4148.47 by only ~1.7) and is stalling 4134-4148 = weekly resistance not cleanly broken; Iqbal rule: rejection at weekly resistance usually retests support. H1 still MOMENTUM_UP (NY impulse 4101->4148). INTRADAY BUY thin into M15/H1 launch base 4103-4109 (H1 19:00-21:00 EET lows 4100.4-4101.2 = NY launch base, SnR flip of 4106-4110). Prefer M5 sweep-reclaim confirm. SL 4097.5 under 4100.43 low. TP 4133.5 under the 4134 consolidation floor (H1 level). Spread 0.26 in RR~3.1 (mid). Close by end NY (Wed 06:00 MYT). Failed break below 4103 (M5 close) -> exit. No scalp/swing: buying 4136 under weekly high has no room, selling fights H1 momentum. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_I004.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 4109.0,
+    "fill_time_server": "2026-11-10 05:40:00",
     "asset": "XAUUSD",
     "name": "Gold · Intraday #4",
-    "scored_myt": "2026-11-10 08:20:00"
+    "scored_myt": "2026-11-10 11:59:00",
+    "note": "entry touched 11:40-11:45 MYT M5 bar (bid low 4108.05 <= zone top 4109); analytical fill at 4109.0, not a broker order. SL 4097.5 / TP 4133.5 / close by Wed 06:00 MYT; exit if M5 closes below 4103."
    },
    "calls": [
     {
@@ -142,14 +145,15 @@
      "valid_until_myt": "2026-11-11 06:00:00",
      "confidence": 0,
      "reasoning": "Weekly: price tapped prior-week high 4146.80 (new high 4148.47 by only ~1.7) and is stalling 4134-4148 = weekly resistance not cleanly broken; Iqbal rule: rejection at weekly resistance usually retests support. H1 still MOMENTUM_UP (NY impulse 4101->4148). INTRADAY BUY thin into M15/H1 launch base 4103-4109 (H1 19:00-21:00 EET lows 4100.4-4101.2 = NY launch base, SnR flip of 4106-4110). Prefer M5 sweep-reclaim confirm. SL 4097.5 under 4100.43 low. TP 4133.5 under the 4134 consolidation floor (H1 level). Spread 0.26 in RR~3.1 (mid). Close by end NY (Wed 06:00 MYT). Failed break below 4103 (M5 close) -> exit. No scalp/swing: buying 4136 under weekly high has no room, selling fights H1 momentum. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_I004.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 4109.0,
+     "fill_time_server": "2026-11-10 05:40:00",
      "asset": "XAUUSD",
      "name": "Gold · Intraday #4",
-     "scored_myt": "2026-11-10 08:20:00"
+     "scored_myt": "2026-11-10 11:59:00",
+     "note": "entry touched 11:40-11:45 MYT M5 bar (bid low 4108.05 <= zone top 4109); analytical fill at 4109.0, not a broker order. SL 4097.5 / TP 4133.5 / close by Wed 06:00 MYT; exit if M5 closes below 4103."
     },
     {
      "id": "S003",
@@ -362,8 +366,8 @@
     "open": 1
    },
    "freshness": {
-    "last_m5_eet": "2026-11-10 02:05:00",
-    "last_m5_myt": "2026-11-10 08:05:00",
+    "last_m5_eet": "2026-11-10 05:55:00",
+    "last_m5_myt": "2026-11-10 11:55:00",
     "tick_bid": 4071.42,
     "tick_ask": 4071.68,
     "spread": 0.25999999999976353,
@@ -372,7 +376,7 @@
     "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-10 08:20:00"
+    "scored_myt": "2026-11-10 11:59:00"
    },
    "tick": {
     "bid": 4071.42,
@@ -699,8 +703,8 @@
     "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-10 02:05:00",
-    "last_m5_myt": "2026-11-10 08:05:00",
+    "last_m5_eet": "2026-11-10 05:55:00",
+    "last_m5_myt": "2026-11-10 11:55:00",
     "tick_bid": 75974.71,
     "tick_ask": 75983.29,
     "spread": 8.579999999987194,
@@ -709,7 +713,7 @@
     "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-10 08:20:00"
+    "scored_myt": "2026-11-10 11:59:00"
    },
    "tick": {
     "bid": 75974.71,
@@ -1144,8 +1148,8 @@
     "open": 2
    },
    "freshness": {
-    "last_m5_eet": "2026-11-10 02:05:00",
-    "last_m5_myt": "2026-11-10 08:05:00",
+    "last_m5_eet": "2026-11-10 05:55:00",
+    "last_m5_myt": "2026-11-10 11:55:00",
     "tick_bid": 43585.43,
     "tick_ask": 43597.85,
     "spread": 12.419999999998254,
@@ -1154,7 +1158,7 @@
     "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-10 08:20:00"
+    "scored_myt": "2026-11-10 11:59:00"
    },
    "tick": {
     "bid": 43585.43,
@@ -1178,14 +1182,15 @@
   "valid_until_myt": "2026-11-11 06:00:00",
   "confidence": 0,
   "reasoning": "Weekly: price tapped prior-week high 4146.80 (new high 4148.47 by only ~1.7) and is stalling 4134-4148 = weekly resistance not cleanly broken; Iqbal rule: rejection at weekly resistance usually retests support. H1 still MOMENTUM_UP (NY impulse 4101->4148). INTRADAY BUY thin into M15/H1 launch base 4103-4109 (H1 19:00-21:00 EET lows 4100.4-4101.2 = NY launch base, SnR flip of 4106-4110). Prefer M5 sweep-reclaim confirm. SL 4097.5 under 4100.43 low. TP 4133.5 under the 4134 consolidation floor (H1 level). Spread 0.26 in RR~3.1 (mid). Close by end NY (Wed 06:00 MYT). Failed break below 4103 (M5 close) -> exit. No scalp/swing: buying 4136 under weekly high has no room, selling fights H1 momentum. Unvalidated setup; no calibrated probability.",
-  "status": "PENDING",
+  "status": "FILLED",
   "r_result": null,
   "chart": "charts/call_I004.png",
-  "fill_px": null,
-  "fill_time_server": null,
+  "fill_px": 4109.0,
+  "fill_time_server": "2026-11-10 05:40:00",
   "asset": "XAUUSD",
   "name": "Gold · Intraday #4",
-  "scored_myt": "2026-11-10 08:20:00"
+  "scored_myt": "2026-11-10 11:59:00",
+  "note": "entry touched 11:40-11:45 MYT M5 bar (bid low 4108.05 <= zone top 4109); analytical fill at 4109.0, not a broker order. SL 4097.5 / TP 4133.5 / close by Wed 06:00 MYT; exit if M5 closes below 4103."
  },
  "latest_by_type": {
   "SCALP": {
@@ -1224,14 +1229,15 @@
    "valid_until_myt": "2026-11-11 06:00:00",
    "confidence": 0,
    "reasoning": "Weekly: price tapped prior-week high 4146.80 (new high 4148.47 by only ~1.7) and is stalling 4134-4148 = weekly resistance not cleanly broken; Iqbal rule: rejection at weekly resistance usually retests support. H1 still MOMENTUM_UP (NY impulse 4101->4148). INTRADAY BUY thin into M15/H1 launch base 4103-4109 (H1 19:00-21:00 EET lows 4100.4-4101.2 = NY launch base, SnR flip of 4106-4110). Prefer M5 sweep-reclaim confirm. SL 4097.5 under 4100.43 low. TP 4133.5 under the 4134 consolidation floor (H1 level). Spread 0.26 in RR~3.1 (mid). Close by end NY (Wed 06:00 MYT). Failed break below 4103 (M5 close) -> exit. No scalp/swing: buying 4136 under weekly high has no room, selling fights H1 momentum. Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "FILLED",
    "r_result": null,
    "chart": "charts/call_I004.png",
-   "fill_px": null,
-   "fill_time_server": null,
+   "fill_px": 4109.0,
+   "fill_time_server": "2026-11-10 05:40:00",
    "asset": "XAUUSD",
    "name": "Gold · Intraday #4",
-   "scored_myt": "2026-11-10 08:20:00"
+   "scored_myt": "2026-11-10 11:59:00",
+   "note": "entry touched 11:40-11:45 MYT M5 bar (bid low 4108.05 <= zone top 4109); analytical fill at 4109.0, not a broker order. SL 4097.5 / TP 4133.5 / close by Wed 06:00 MYT; exit if M5 closes below 4103."
   },
   "SWING": {
    "id": "001R",
@@ -1275,14 +1281,15 @@
   "valid_until_myt": "2026-11-11 06:00:00",
   "confidence": 0,
   "reasoning": "Weekly: price tapped prior-week high 4146.80 (new high 4148.47 by only ~1.7) and is stalling 4134-4148 = weekly resistance not cleanly broken; Iqbal rule: rejection at weekly resistance usually retests support. H1 still MOMENTUM_UP (NY impulse 4101->4148). INTRADAY BUY thin into M15/H1 launch base 4103-4109 (H1 19:00-21:00 EET lows 4100.4-4101.2 = NY launch base, SnR flip of 4106-4110). Prefer M5 sweep-reclaim confirm. SL 4097.5 under 4100.43 low. TP 4133.5 under the 4134 consolidation floor (H1 level). Spread 0.26 in RR~3.1 (mid). Close by end NY (Wed 06:00 MYT). Failed break below 4103 (M5 close) -> exit. No scalp/swing: buying 4136 under weekly high has no room, selling fights H1 momentum. Unvalidated setup; no calibrated probability.",
-  "status": "PENDING",
+  "status": "FILLED",
   "r_result": null,
   "chart": "charts/call_I004.png",
-  "fill_px": null,
-  "fill_time_server": null,
+  "fill_px": 4109.0,
+  "fill_time_server": "2026-11-10 05:40:00",
   "asset": "XAUUSD",
   "name": "Gold · Intraday #4",
-  "scored_myt": "2026-11-10 08:20:00"
+  "scored_myt": "2026-11-10 11:59:00",
+  "note": "entry touched 11:40-11:45 MYT M5 bar (bid low 4108.05 <= zone top 4109); analytical fill at 4109.0, not a broker order. SL 4097.5 / TP 4133.5 / close by Wed 06:00 MYT; exit if M5 closes below 4103."
  },
  "calls": [
   {
@@ -1298,14 +1305,15 @@
    "valid_until_myt": "2026-11-11 06:00:00",
    "confidence": 0,
    "reasoning": "Weekly: price tapped prior-week high 4146.80 (new high 4148.47 by only ~1.7) and is stalling 4134-4148 = weekly resistance not cleanly broken; Iqbal rule: rejection at weekly resistance usually retests support. H1 still MOMENTUM_UP (NY impulse 4101->4148). INTRADAY BUY thin into M15/H1 launch base 4103-4109 (H1 19:00-21:00 EET lows 4100.4-4101.2 = NY launch base, SnR flip of 4106-4110). Prefer M5 sweep-reclaim confirm. SL 4097.5 under 4100.43 low. TP 4133.5 under the 4134 consolidation floor (H1 level). Spread 0.26 in RR~3.1 (mid). Close by end NY (Wed 06:00 MYT). Failed break below 4103 (M5 close) -> exit. No scalp/swing: buying 4136 under weekly high has no room, selling fights H1 momentum. Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "FILLED",
    "r_result": null,
    "chart": "charts/call_I004.png",
-   "fill_px": null,
-   "fill_time_server": null,
+   "fill_px": 4109.0,
+   "fill_time_server": "2026-11-10 05:40:00",
    "asset": "XAUUSD",
    "name": "Gold · Intraday #4",
-   "scored_myt": "2026-11-10 08:20:00"
+   "scored_myt": "2026-11-10 11:59:00",
+   "note": "entry touched 11:40-11:45 MYT M5 bar (bid low 4108.05 <= zone top 4109); analytical fill at 4109.0, not a broker order. SL 4097.5 / TP 4133.5 / close by Wed 06:00 MYT; exit if M5 closes below 4103."
   },
   {
    "id": "S003",
@@ -1517,9 +1525,9 @@
   "open": 3
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-10 08:20:00",
+ "last_updated": "2026-11-10 11:59:00",
  "fxvol80_server_time": "2026-11-07 13:55:00",
- "status_note": "Gold · Intraday #3 tamat tanpa fill (06:00 MYT, low 4084.45 tak sampai 4077). Call baru: Gold · Intraday #4 BUY 4103-4109, Vol 80 · Scalping #5 BUY 45940-46020, Vol 80 · Intraday #4 BUY 45540-45680. BTC WAIT.",
+ "status_note": "Gold · Intraday #4 masuk zone (fill analitik 4109.0, ~11:40-11:45 MYT). SL 4097.5, TP 4133.5. Vol 80 · Scalping #5 & Intraday #4 masih pending. BTC WAIT.",
  "ticks": {
   "XAUUSD.m": {
    "bid": 4071.42,
@@ -1545,8 +1553,8 @@
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-10 02:05:00",
-   "last_m5_myt": "2026-11-10 08:05:00",
+   "last_m5_eet": "2026-11-10 05:55:00",
+   "last_m5_myt": "2026-11-10 11:55:00",
    "tick_bid": 4071.42,
    "tick_ask": 4071.68,
    "spread": 0.25999999999976353,
@@ -1555,11 +1563,11 @@
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-10 08:20:00"
+   "scored_myt": "2026-11-10 11:59:00"
   },
   "BTCUSD": {
-   "last_m5_eet": "2026-11-10 02:05:00",
-   "last_m5_myt": "2026-11-10 08:05:00",
+   "last_m5_eet": "2026-11-10 05:55:00",
+   "last_m5_myt": "2026-11-10 11:55:00",
    "tick_bid": 75974.71,
    "tick_ask": 75983.29,
    "spread": 8.579999999987194,
@@ -1568,11 +1576,11 @@
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-10 08:20:00"
+   "scored_myt": "2026-11-10 11:59:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-10 02:05:00",
-   "last_m5_myt": "2026-11-10 08:05:00",
+   "last_m5_eet": "2026-11-10 05:55:00",
+   "last_m5_myt": "2026-11-10 11:55:00",
    "tick_bid": 43585.43,
    "tick_ask": 43597.85,
    "spread": 12.419999999998254,
@@ -1581,7 +1589,7 @@
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-10 08:20:00"
+   "scored_myt": "2026-11-10 11:59:00"
   }
  }
 }
