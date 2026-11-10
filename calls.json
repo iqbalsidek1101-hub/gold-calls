@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-10 14:20:00",
+ "generated_myt": "2026-11-10 15:40:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -366,12 +366,12 @@
     "open": 1
    },
    "freshness": {
-    "last_m5_eet": "2026-11-10 08:15:00",
-    "last_m5_myt": "2026-11-10 14:15:00",
-    "age_min": 2.0,
+    "last_m5_eet": "2026-11-10 09:35:00",
+    "last_m5_myt": "2026-11-10 15:35:00",
+    "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-10 14:20:00",
+    "scored_myt": "2026-11-10 15:40:00",
     "tick_bid": 4071.42,
     "tick_ask": 4071.68,
     "spread": 0.25999999999976353,
@@ -400,14 +400,15 @@
     "valid_until_myt": "2026-11-10 18:20:00",
     "confidence": 0,
     "reasoning": "BTCUSD: D1 lower highs (76300->76149->75626) intact and H1 lower high 75340; today's bounce 74263->74907 tapped the 74780-75010 M15/H1 supply and failed (07:45 EET M15 wick 74907 closed back at 74715 below the zone, then follow-through to 74476 = rejection/failed break, the trigger earlier runs waited for). Do not chase 74520. Scalp SELL limit on retest of the zone bottom 74780-74860 (07:00-07:45 EET breakdown origin). SL 75030 above zone top 75010 and the obvious liquidity above 74907 (lesson from BTC Scalping #2: SL must not sit just under liquidity). TP 74300 just above day low 74262 (next support). Spread 8.58 incl. RR~2.34 (mid). ATR M5 88/H1 397. Max 4h clock. Failed break above 74860 with M5 close above 74907 -> exit. No-fill if price never retests. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_B-S003.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 74780.0,
+    "fill_time_server": "2026-11-10 09:35:00",
     "asset": "BTCUSD",
     "name": "BTC · Scalping #3",
-    "scored_myt": "2026-11-10 14:20:00"
+    "scored_myt": "2026-11-10 15:40:00",
+    "note": "entry touched 15:35-15:40 MYT M5 bar (bid high 74788.71 >= zone bottom 74780); analytical fill at 74780.0, not a broker order. SL 75030 / TP 74300 / max 4h to 18:20 MYT; exit if M5 closes above 74907."
    },
    "latest_by_type": {
     "SCALP": {
@@ -423,14 +424,15 @@
      "valid_until_myt": "2026-11-10 18:20:00",
      "confidence": 0,
      "reasoning": "BTCUSD: D1 lower highs (76300->76149->75626) intact and H1 lower high 75340; today's bounce 74263->74907 tapped the 74780-75010 M15/H1 supply and failed (07:45 EET M15 wick 74907 closed back at 74715 below the zone, then follow-through to 74476 = rejection/failed break, the trigger earlier runs waited for). Do not chase 74520. Scalp SELL limit on retest of the zone bottom 74780-74860 (07:00-07:45 EET breakdown origin). SL 75030 above zone top 75010 and the obvious liquidity above 74907 (lesson from BTC Scalping #2: SL must not sit just under liquidity). TP 74300 just above day low 74262 (next support). Spread 8.58 incl. RR~2.34 (mid). ATR M5 88/H1 397. Max 4h clock. Failed break above 74860 with M5 close above 74907 -> exit. No-fill if price never retests. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_B-S003.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 74780.0,
+     "fill_time_server": "2026-11-10 09:35:00",
      "asset": "BTCUSD",
      "name": "BTC · Scalping #3",
-     "scored_myt": "2026-11-10 14:20:00"
+     "scored_myt": "2026-11-10 15:40:00",
+     "note": "entry touched 15:35-15:40 MYT M5 bar (bid high 74788.71 >= zone bottom 74780); analytical fill at 74780.0, not a broker order. SL 75030 / TP 74300 / max 4h to 18:20 MYT; exit if M5 closes above 74907."
     },
     "INTRADAY": {
      "id": "B-I002",
@@ -498,14 +500,15 @@
     "valid_until_myt": "2026-11-10 18:20:00",
     "confidence": 0,
     "reasoning": "BTCUSD: D1 lower highs (76300->76149->75626) intact and H1 lower high 75340; today's bounce 74263->74907 tapped the 74780-75010 M15/H1 supply and failed (07:45 EET M15 wick 74907 closed back at 74715 below the zone, then follow-through to 74476 = rejection/failed break, the trigger earlier runs waited for). Do not chase 74520. Scalp SELL limit on retest of the zone bottom 74780-74860 (07:00-07:45 EET breakdown origin). SL 75030 above zone top 75010 and the obvious liquidity above 74907 (lesson from BTC Scalping #2: SL must not sit just under liquidity). TP 74300 just above day low 74262 (next support). Spread 8.58 incl. RR~2.34 (mid). ATR M5 88/H1 397. Max 4h clock. Failed break above 74860 with M5 close above 74907 -> exit. No-fill if price never retests. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_B-S003.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 74780.0,
+    "fill_time_server": "2026-11-10 09:35:00",
     "asset": "BTCUSD",
     "name": "BTC · Scalping #3",
-    "scored_myt": "2026-11-10 14:20:00"
+    "scored_myt": "2026-11-10 15:40:00",
+    "note": "entry touched 15:35-15:40 MYT M5 bar (bid high 74788.71 >= zone bottom 74780); analytical fill at 74780.0, not a broker order. SL 75030 / TP 74300 / max 4h to 18:20 MYT; exit if M5 closes above 74907."
    },
    "calls": [
     {
@@ -521,14 +524,15 @@
      "valid_until_myt": "2026-11-10 18:20:00",
      "confidence": 0,
      "reasoning": "BTCUSD: D1 lower highs (76300->76149->75626) intact and H1 lower high 75340; today's bounce 74263->74907 tapped the 74780-75010 M15/H1 supply and failed (07:45 EET M15 wick 74907 closed back at 74715 below the zone, then follow-through to 74476 = rejection/failed break, the trigger earlier runs waited for). Do not chase 74520. Scalp SELL limit on retest of the zone bottom 74780-74860 (07:00-07:45 EET breakdown origin). SL 75030 above zone top 75010 and the obvious liquidity above 74907 (lesson from BTC Scalping #2: SL must not sit just under liquidity). TP 74300 just above day low 74262 (next support). Spread 8.58 incl. RR~2.34 (mid). ATR M5 88/H1 397. Max 4h clock. Failed break above 74860 with M5 close above 74907 -> exit. No-fill if price never retests. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_B-S003.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 74780.0,
+     "fill_time_server": "2026-11-10 09:35:00",
      "asset": "BTCUSD",
      "name": "BTC · Scalping #3",
-     "scored_myt": "2026-11-10 14:20:00"
+     "scored_myt": "2026-11-10 15:40:00",
+     "note": "entry touched 15:35-15:40 MYT M5 bar (bid high 74788.71 >= zone bottom 74780); analytical fill at 74780.0, not a broker order. SL 75030 / TP 74300 / max 4h to 18:20 MYT; exit if M5 closes above 74907."
     },
     {
      "id": "B-W004",
@@ -718,12 +722,12 @@
     "open": 1
    },
    "freshness": {
-    "last_m5_eet": "2026-11-10 08:15:00",
-    "last_m5_myt": "2026-11-10 14:15:00",
-    "age_min": 2.0,
+    "last_m5_eet": "2026-11-10 09:35:00",
+    "last_m5_myt": "2026-11-10 15:35:00",
+    "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-10 14:20:00",
+    "scored_myt": "2026-11-10 15:40:00",
     "tick_bid": 75974.71,
     "tick_ask": 75983.29,
     "spread": 8.579999999987194,
@@ -1165,12 +1169,12 @@
     "open": 2
    },
    "freshness": {
-    "last_m5_eet": "2026-11-10 08:15:00",
-    "last_m5_myt": "2026-11-10 14:15:00",
-    "age_min": 2.0,
+    "last_m5_eet": "2026-11-10 09:35:00",
+    "last_m5_myt": "2026-11-10 15:35:00",
+    "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-10 14:20:00",
+    "scored_myt": "2026-11-10 15:40:00",
     "tick_bid": 43585.43,
     "tick_ask": 43597.85,
     "spread": 12.419999999998254,
@@ -1542,9 +1546,9 @@
   "open": 2
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-10 14:20:00",
+ "last_updated": "2026-11-10 15:40:00",
  "fxvol80_server_time": "2026-11-07 13:55:00",
- "status_note": "Call baru: BTC · Scalping #3 SELL 74780-74860, SL 75030, TP 74300 (sah sampai 18:20 MYT). Gold · Intraday #4 masih aktif (fill analitik 4109.0, SL 4097.5, TP 4133.5). Vol 80 · Intraday #4 masih pending.",
+ "status_note": "BTC · Scalping #3 kena entry (fill analitik SELL 74780, 15:35 MYT); SL 75030, TP 74300, max sampai 18:20 MYT. Gold · Intraday #4 masih aktif (fill 4109, TP 4133.5, SL 4097.5). Vol 80 · Intraday #4 masih pending.",
  "ticks": {
   "XAUUSD.m": {
    "bid": 4071.42,
@@ -1570,12 +1574,12 @@
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-10 08:15:00",
-   "last_m5_myt": "2026-11-10 14:15:00",
-   "age_min": 2.0,
+   "last_m5_eet": "2026-11-10 09:35:00",
+   "last_m5_myt": "2026-11-10 15:35:00",
+   "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-10 14:20:00",
+   "scored_myt": "2026-11-10 15:40:00",
    "tick_bid": 4071.42,
    "tick_ask": 4071.68,
    "spread": 0.25999999999976353,
@@ -1583,12 +1587,12 @@
    "tick_myt": "2026-11-07 05:56:59"
   },
   "BTCUSD": {
-   "last_m5_eet": "2026-11-10 08:15:00",
-   "last_m5_myt": "2026-11-10 14:15:00",
-   "age_min": 2.0,
+   "last_m5_eet": "2026-11-10 09:35:00",
+   "last_m5_myt": "2026-11-10 15:35:00",
+   "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-10 14:20:00",
+   "scored_myt": "2026-11-10 15:40:00",
    "tick_bid": 75974.71,
    "tick_ask": 75983.29,
    "spread": 8.579999999987194,
@@ -1596,12 +1600,12 @@
    "tick_myt": "2026-11-08 21:25:47"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-10 08:15:00",
-   "last_m5_myt": "2026-11-10 14:15:00",
-   "age_min": 2.0,
+   "last_m5_eet": "2026-11-10 09:35:00",
+   "last_m5_myt": "2026-11-10 15:35:00",
+   "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-10 14:20:00",
+   "scored_myt": "2026-11-10 15:40:00",
    "tick_bid": 43585.43,
    "tick_ask": 43597.85,
    "spread": 12.419999999998254,
