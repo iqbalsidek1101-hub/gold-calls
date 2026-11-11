@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-10 19:28:00",
+ "generated_myt": "2026-11-11 08:08:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -22,14 +22,15 @@
     "valid_until_myt": "2026-11-11 06:00:00",
     "confidence": 0,
     "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high (Iqbal rule: rejecting weekly resistance usually means a retest of support). H1 structure shift: 17:00 MYT displacement candle 4113->4088 broke the 4100.4-4103 NY launch base / 5h 4108-4127 range floor (Gold Intraday #4 base) = support flipped to resistance. INTRADAY SELL limit on retest of the broken base 4103-4107 (M15 base + M5 failed reclaim preferred). SL 4116.5 above the 4113.3 breakdown origin. TP 4073 just above the 4071 Fri close / before 4054-4060 week-low demand. Spread 0.26 in RR~2.2 (at 4103). Close by end NY (Wed 06:00 MYT). Exit early if M15 closes back above 4113.3 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "NO_FILL",
     "r_result": null,
     "chart": "charts/call_I005.png",
     "fill_px": null,
     "fill_time_server": null,
     "asset": "XAUUSD",
     "name": "Gold · Intraday #5",
-    "scored_myt": "2026-11-10 17:15:00"
+    "scored_myt": "2026-11-11 08:08:00",
+    "note": "no fill by 2026-11-11 06:00 MYT (high since 17:15 MYT 10 Nov was 4098.53, below entry 4103.0; TP area traded without retest)"
    },
    "latest_by_type": {
     "SCALP": {
@@ -68,14 +69,15 @@
      "valid_until_myt": "2026-11-11 06:00:00",
      "confidence": 0,
      "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high (Iqbal rule: rejecting weekly resistance usually means a retest of support). H1 structure shift: 17:00 MYT displacement candle 4113->4088 broke the 4100.4-4103 NY launch base / 5h 4108-4127 range floor (Gold Intraday #4 base) = support flipped to resistance. INTRADAY SELL limit on retest of the broken base 4103-4107 (M15 base + M5 failed reclaim preferred). SL 4116.5 above the 4113.3 breakdown origin. TP 4073 just above the 4071 Fri close / before 4054-4060 week-low demand. Spread 0.26 in RR~2.2 (at 4103). Close by end NY (Wed 06:00 MYT). Exit early if M15 closes back above 4113.3 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "NO_FILL",
      "r_result": null,
      "chart": "charts/call_I005.png",
      "fill_px": null,
      "fill_time_server": null,
      "asset": "XAUUSD",
      "name": "Gold · Intraday #5",
-     "scored_myt": "2026-11-10 17:15:00"
+     "scored_myt": "2026-11-11 08:08:00",
+     "note": "no fill by 2026-11-11 06:00 MYT (high since 17:15 MYT 10 Nov was 4098.53, below entry 4103.0; TP area traded without retest)"
     },
     "SWING": {
      "id": "001R",
@@ -119,14 +121,15 @@
     "valid_until_myt": "2026-11-11 06:00:00",
     "confidence": 0,
     "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high (Iqbal rule: rejecting weekly resistance usually means a retest of support). H1 structure shift: 17:00 MYT displacement candle 4113->4088 broke the 4100.4-4103 NY launch base / 5h 4108-4127 range floor (Gold Intraday #4 base) = support flipped to resistance. INTRADAY SELL limit on retest of the broken base 4103-4107 (M15 base + M5 failed reclaim preferred). SL 4116.5 above the 4113.3 breakdown origin. TP 4073 just above the 4071 Fri close / before 4054-4060 week-low demand. Spread 0.26 in RR~2.2 (at 4103). Close by end NY (Wed 06:00 MYT). Exit early if M15 closes back above 4113.3 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "NO_FILL",
     "r_result": null,
     "chart": "charts/call_I005.png",
     "fill_px": null,
     "fill_time_server": null,
     "asset": "XAUUSD",
     "name": "Gold · Intraday #5",
-    "scored_myt": "2026-11-10 17:15:00"
+    "scored_myt": "2026-11-11 08:08:00",
+    "note": "no fill by 2026-11-11 06:00 MYT (high since 17:15 MYT 10 Nov was 4098.53, below entry 4103.0; TP area traded without retest)"
    },
    "calls": [
     {
@@ -372,14 +375,15 @@
      "valid_until_myt": "2026-11-11 06:00:00",
      "confidence": 0,
      "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high (Iqbal rule: rejecting weekly resistance usually means a retest of support). H1 structure shift: 17:00 MYT displacement candle 4113->4088 broke the 4100.4-4103 NY launch base / 5h 4108-4127 range floor (Gold Intraday #4 base) = support flipped to resistance. INTRADAY SELL limit on retest of the broken base 4103-4107 (M15 base + M5 failed reclaim preferred). SL 4116.5 above the 4113.3 breakdown origin. TP 4073 just above the 4071 Fri close / before 4054-4060 week-low demand. Spread 0.26 in RR~2.2 (at 4103). Close by end NY (Wed 06:00 MYT). Exit early if M15 closes back above 4113.3 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "NO_FILL",
      "r_result": null,
      "chart": "charts/call_I005.png",
      "fill_px": null,
      "fill_time_server": null,
      "asset": "XAUUSD",
      "name": "Gold · Intraday #5",
-     "scored_myt": "2026-11-10 17:15:00"
+     "scored_myt": "2026-11-11 08:08:00",
+     "note": "no fill by 2026-11-11 06:00 MYT (high since 17:15 MYT 10 Nov was 4098.53, below entry 4103.0; TP area traded without retest)"
     }
    ],
    "open_count": 1,
@@ -859,14 +863,15 @@
      "valid_until_myt": "2026-11-10 22:20:00",
      "confidence": 0,
      "reasoning": "FX Vol 80: H4 MOMENTUM_UP after D1 reversal (42718->46940), pullback held above broken D1 LH flip 45330-45390. INTRADAY BUY thin into M15 sweep-reclaim base 45540-45680 (01:00-01:15 EET: dip 45605 swept to 45538 and reclaimed, launch to 46339). SL 45380 under sweep low + buffer, above-flip invalidation. TP 46780 under 46818/46940 highs (next resistance; watch failed break there). Spread 13.2 in RR~4.7 (mid). Valid 14h clock. Failed break below 45540 (M5 close) -> exit. Does not overlap Scalping #5. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "NO_FILL",
      "r_result": null,
      "chart": "charts/call_V-I004.png",
      "fill_px": null,
      "fill_time_server": null,
      "asset": "FXVOL80",
      "name": "Vol 80 · Intraday #4",
-     "scored_myt": "2026-11-10 08:20:00"
+     "scored_myt": "2026-11-11 08:08:00",
+     "note": "no fill by 2026-11-10 22:20 MYT (low since 08:20 MYT 10 Nov was 45977.56, above entry 45680.0)"
     },
     "SWING": {
      "id": "V-W004",
@@ -956,14 +961,15 @@
      "valid_until_myt": "2026-11-10 22:20:00",
      "confidence": 0,
      "reasoning": "FX Vol 80: H4 MOMENTUM_UP after D1 reversal (42718->46940), pullback held above broken D1 LH flip 45330-45390. INTRADAY BUY thin into M15 sweep-reclaim base 45540-45680 (01:00-01:15 EET: dip 45605 swept to 45538 and reclaimed, launch to 46339). SL 45380 under sweep low + buffer, above-flip invalidation. TP 46780 under 46818/46940 highs (next resistance; watch failed break there). Spread 13.2 in RR~4.7 (mid). Valid 14h clock. Failed break below 45540 (M5 close) -> exit. Does not overlap Scalping #5. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "NO_FILL",
      "r_result": null,
      "chart": "charts/call_V-I004.png",
      "fill_px": null,
      "fill_time_server": null,
      "asset": "FXVOL80",
      "name": "Vol 80 · Intraday #4",
-     "scored_myt": "2026-11-10 08:20:00"
+     "scored_myt": "2026-11-11 08:08:00",
+     "note": "no fill by 2026-11-10 22:20 MYT (low since 08:20 MYT 10 Nov was 45977.56, above entry 45680.0)"
     },
     {
      "id": "V-S005",
@@ -1296,14 +1302,15 @@
   "valid_until_myt": "2026-11-11 06:00:00",
   "confidence": 0,
   "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high (Iqbal rule: rejecting weekly resistance usually means a retest of support). H1 structure shift: 17:00 MYT displacement candle 4113->4088 broke the 4100.4-4103 NY launch base / 5h 4108-4127 range floor (Gold Intraday #4 base) = support flipped to resistance. INTRADAY SELL limit on retest of the broken base 4103-4107 (M15 base + M5 failed reclaim preferred). SL 4116.5 above the 4113.3 breakdown origin. TP 4073 just above the 4071 Fri close / before 4054-4060 week-low demand. Spread 0.26 in RR~2.2 (at 4103). Close by end NY (Wed 06:00 MYT). Exit early if M15 closes back above 4113.3 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-  "status": "PENDING",
+  "status": "NO_FILL",
   "r_result": null,
   "chart": "charts/call_I005.png",
   "fill_px": null,
   "fill_time_server": null,
   "asset": "XAUUSD",
   "name": "Gold · Intraday #5",
-  "scored_myt": "2026-11-10 17:15:00"
+  "scored_myt": "2026-11-11 08:08:00",
+  "note": "no fill by 2026-11-11 06:00 MYT (high since 17:15 MYT 10 Nov was 4098.53, below entry 4103.0; TP area traded without retest)"
  },
  "latest_by_type": {
   "SCALP": {
@@ -1342,14 +1349,15 @@
    "valid_until_myt": "2026-11-11 06:00:00",
    "confidence": 0,
    "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high (Iqbal rule: rejecting weekly resistance usually means a retest of support). H1 structure shift: 17:00 MYT displacement candle 4113->4088 broke the 4100.4-4103 NY launch base / 5h 4108-4127 range floor (Gold Intraday #4 base) = support flipped to resistance. INTRADAY SELL limit on retest of the broken base 4103-4107 (M15 base + M5 failed reclaim preferred). SL 4116.5 above the 4113.3 breakdown origin. TP 4073 just above the 4071 Fri close / before 4054-4060 week-low demand. Spread 0.26 in RR~2.2 (at 4103). Close by end NY (Wed 06:00 MYT). Exit early if M15 closes back above 4113.3 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "NO_FILL",
    "r_result": null,
    "chart": "charts/call_I005.png",
    "fill_px": null,
    "fill_time_server": null,
    "asset": "XAUUSD",
    "name": "Gold · Intraday #5",
-   "scored_myt": "2026-11-10 17:15:00"
+   "scored_myt": "2026-11-11 08:08:00",
+   "note": "no fill by 2026-11-11 06:00 MYT (high since 17:15 MYT 10 Nov was 4098.53, below entry 4103.0; TP area traded without retest)"
   },
   "SWING": {
    "id": "001R",
@@ -1393,14 +1401,15 @@
   "valid_until_myt": "2026-11-11 06:00:00",
   "confidence": 0,
   "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high (Iqbal rule: rejecting weekly resistance usually means a retest of support). H1 structure shift: 17:00 MYT displacement candle 4113->4088 broke the 4100.4-4103 NY launch base / 5h 4108-4127 range floor (Gold Intraday #4 base) = support flipped to resistance. INTRADAY SELL limit on retest of the broken base 4103-4107 (M15 base + M5 failed reclaim preferred). SL 4116.5 above the 4113.3 breakdown origin. TP 4073 just above the 4071 Fri close / before 4054-4060 week-low demand. Spread 0.26 in RR~2.2 (at 4103). Close by end NY (Wed 06:00 MYT). Exit early if M15 closes back above 4113.3 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-  "status": "PENDING",
+  "status": "NO_FILL",
   "r_result": null,
   "chart": "charts/call_I005.png",
   "fill_px": null,
   "fill_time_server": null,
   "asset": "XAUUSD",
   "name": "Gold · Intraday #5",
-  "scored_myt": "2026-11-10 17:15:00"
+  "scored_myt": "2026-11-11 08:08:00",
+  "note": "no fill by 2026-11-11 06:00 MYT (high since 17:15 MYT 10 Nov was 4098.53, below entry 4103.0; TP area traded without retest)"
  },
  "calls": [
   {
@@ -1646,14 +1655,15 @@
    "valid_until_myt": "2026-11-11 06:00:00",
    "confidence": 0,
    "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high (Iqbal rule: rejecting weekly resistance usually means a retest of support). H1 structure shift: 17:00 MYT displacement candle 4113->4088 broke the 4100.4-4103 NY launch base / 5h 4108-4127 range floor (Gold Intraday #4 base) = support flipped to resistance. INTRADAY SELL limit on retest of the broken base 4103-4107 (M15 base + M5 failed reclaim preferred). SL 4116.5 above the 4113.3 breakdown origin. TP 4073 just above the 4071 Fri close / before 4054-4060 week-low demand. Spread 0.26 in RR~2.2 (at 4103). Close by end NY (Wed 06:00 MYT). Exit early if M15 closes back above 4113.3 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "NO_FILL",
    "r_result": null,
    "chart": "charts/call_I005.png",
    "fill_px": null,
    "fill_time_server": null,
    "asset": "XAUUSD",
    "name": "Gold · Intraday #5",
-   "scored_myt": "2026-11-10 17:15:00"
+   "scored_myt": "2026-11-11 08:08:00",
+   "note": "no fill by 2026-11-11 06:00 MYT (high since 17:15 MYT 10 Nov was 4098.53, below entry 4103.0; TP area traded without retest)"
   }
  ],
  "scoreboard": {
@@ -1663,71 +1673,71 @@
   "open": 0
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-10 19:28:00",
+ "last_updated": "2026-11-11 08:08:00",
  "fxvol80_server_time": "2026-11-07 13:55:00",
- "status_note": "Vol 80 · Scalping #6 kena TP 47780 (19:10 MYT), +2.06R (analitik, termasuk spread). Gold · Intraday #5 SELL 4103-4107 masih pending. Vol 80 · Intraday #4 masih pending.",
+ "status_note": "Gold · Intraday #5 SELL 4103-4107 tamat tanpa fill (harga tak retest, high 4098.53). Vol 80 · Intraday #4 BUY 45540-45680 tamat tanpa fill (low 45977.56). Tiada call terbuka; Charlie tengah tunggu setup baru.",
  "ticks": {
   "XAUUSD.m": {
-   "bid": 4073.63,
-   "ask": 4073.89,
+   "bid": 4039.28,
+   "ask": 4039.54,
    "spread": 0.25999999999976353,
-   "time": "2026-11-10T13:25:51Z",
-   "time_msc": 1794317151217
+   "time": "2026-11-11T02:06:23Z",
+   "time_msc": 1794362783312
   },
   "BTCUSD": {
-   "bid": 74155.71,
-   "ask": 74164.29,
+   "bid": 73651.21,
+   "ask": 73659.79,
    "spread": 8.579999999987194,
-   "time": "2026-11-10T13:25:52Z",
-   "time_msc": 1794317152393
+   "time": "2026-11-11T02:06:26Z",
+   "time_msc": 1794362786212
   },
   "FXVOL80": {
-   "bid": 47799.14,
-   "ask": 47812.76,
-   "spread": 13.62000000000262,
-   "time": "2026-11-10T13:25:52Z",
-   "time_msc": 1794317152538
+   "bid": 46902.07,
+   "ask": 46915.43,
+   "spread": 13.360000000000582,
+   "time": "2026-11-11T02:06:28Z",
+   "time_msc": 1794362788768
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-10 13:25:00",
-   "last_m5_myt": "2026-11-10 19:25:00",
-   "tick_bid": 4073.63,
-   "tick_ask": 4073.89,
+   "last_m5_eet": "2026-11-11 02:05:00",
+   "last_m5_myt": "2026-11-11 08:05:00",
+   "tick_bid": 4039.28,
+   "tick_ask": 4039.54,
    "spread": 0.25999999999976353,
-   "tick_eet": "2026-11-10T13:25:51",
-   "tick_myt": "2026-11-10 19:25:51",
-   "age_min": 2.1,
+   "tick_eet": "2026-11-11T02:06:23",
+   "tick_myt": "2026-11-11 08:06:23",
+   "age_min": 2.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-10 19:28:00"
+   "scored_myt": "2026-11-11 08:08:00"
   },
   "BTCUSD": {
-   "last_m5_eet": "2026-11-10 13:25:00",
-   "last_m5_myt": "2026-11-10 19:25:00",
-   "tick_bid": 74155.71,
-   "tick_ask": 74164.29,
+   "last_m5_eet": "2026-11-11 02:05:00",
+   "last_m5_myt": "2026-11-11 08:05:00",
+   "tick_bid": 73651.21,
+   "tick_ask": 73659.79,
    "spread": 8.579999999987194,
-   "tick_eet": "2026-11-10T13:25:52",
-   "tick_myt": "2026-11-10 19:25:52",
-   "age_min": 2.1,
+   "tick_eet": "2026-11-11T02:06:26",
+   "tick_myt": "2026-11-11 08:06:26",
+   "age_min": 2.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-10 19:28:00"
+   "scored_myt": "2026-11-11 08:08:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-10 13:25:00",
-   "last_m5_myt": "2026-11-10 19:25:00",
-   "tick_bid": 47799.14,
-   "tick_ask": 47812.76,
-   "spread": 13.62000000000262,
-   "tick_eet": "2026-11-10T13:25:52",
-   "tick_myt": "2026-11-10 19:25:52",
-   "age_min": 2.1,
+   "last_m5_eet": "2026-11-11 02:05:00",
+   "last_m5_myt": "2026-11-11 08:05:00",
+   "tick_bid": 46902.07,
+   "tick_ask": 46915.43,
+   "spread": 13.360000000000582,
+   "tick_eet": "2026-11-11T02:06:28",
+   "tick_myt": "2026-11-11 08:06:28",
+   "age_min": 2.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-10 19:28:00"
+   "scored_myt": "2026-11-11 08:08:00"
   }
  }
 }
