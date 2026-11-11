@@ -1,0 +1,16 @@
+{
+  "name": "charlie-calls-push",
+  "private": true,
+  "description": "Deployment-ready Web Push server for Charlie Calls. Secrets stay in the environment.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test",
+    "baseline": "node src/cli.js baseline"
+  },
+  "dependencies": {
+    "web-push": "3.6.7"
+  }
+}
