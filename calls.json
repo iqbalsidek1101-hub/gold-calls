@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-12 08:15:00",
+ "generated_myt": "2026-11-12 08:28:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -22,14 +22,15 @@
     "valid_until_myt": "2026-11-13 06:00:00",
     "confidence": 0,
     "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high followed by 3-day D1 selloff 4148->3972 (Iqbal rule: rejecting weekly resistance usually retests support; prior-week lows 3870-3882 below). D1/H4 MOMENTUM_DOWN, lower highs 4066->3995. Asia just broke the overnight 3982.6-3988.7 NY/late range floor and the Oct 23-26 D1 lows 3975.5-3978 (support flipped to resistance). Do not chase 3972. INTRADAY SELL limit on retest of the broken range 3983-3987 (M15 base + M5 failed reclaim preferred). SL 3996.5 above the 3995.04 Asia high. TP 3952 above the 3942-3950 Nov 3 H4 ledge. ATR H1 ~11.6. Spread 0.26 in RR~2.2 (at 3983) / ~2.8 (mid). Close by end NY (Fri 06:00 MYT). Exit early if M15 closes back above 3995 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_I006.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 3983.0,
+    "fill_time_server": "2026-11-12 02:20:15 EET",
     "asset": "XAUUSD",
     "name": "Gold · Intraday #6",
-    "scored_myt": "2026-11-12 08:15:00"
+    "scored_myt": "2026-11-12 08:28:00",
+    "note": "entry touched 08:20:15 MYT (bid 3983.03); since fill max ask 3985.80 < SL 3996.5, no M15 close >3995; analytical fill, not a broker order"
    },
    "latest_by_type": {
     "SCALP": {
@@ -68,14 +69,15 @@
      "valid_until_myt": "2026-11-13 06:00:00",
      "confidence": 0,
      "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high followed by 3-day D1 selloff 4148->3972 (Iqbal rule: rejecting weekly resistance usually retests support; prior-week lows 3870-3882 below). D1/H4 MOMENTUM_DOWN, lower highs 4066->3995. Asia just broke the overnight 3982.6-3988.7 NY/late range floor and the Oct 23-26 D1 lows 3975.5-3978 (support flipped to resistance). Do not chase 3972. INTRADAY SELL limit on retest of the broken range 3983-3987 (M15 base + M5 failed reclaim preferred). SL 3996.5 above the 3995.04 Asia high. TP 3952 above the 3942-3950 Nov 3 H4 ledge. ATR H1 ~11.6. Spread 0.26 in RR~2.2 (at 3983) / ~2.8 (mid). Close by end NY (Fri 06:00 MYT). Exit early if M15 closes back above 3995 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_I006.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 3983.0,
+     "fill_time_server": "2026-11-12 02:20:15 EET",
      "asset": "XAUUSD",
      "name": "Gold · Intraday #6",
-     "scored_myt": "2026-11-12 08:15:00"
+     "scored_myt": "2026-11-12 08:28:00",
+     "note": "entry touched 08:20:15 MYT (bid 3983.03); since fill max ask 3985.80 < SL 3996.5, no M15 close >3995; analytical fill, not a broker order"
     },
     "SWING": {
      "id": "001R",
@@ -119,14 +121,15 @@
     "valid_until_myt": "2026-11-13 06:00:00",
     "confidence": 0,
     "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high followed by 3-day D1 selloff 4148->3972 (Iqbal rule: rejecting weekly resistance usually retests support; prior-week lows 3870-3882 below). D1/H4 MOMENTUM_DOWN, lower highs 4066->3995. Asia just broke the overnight 3982.6-3988.7 NY/late range floor and the Oct 23-26 D1 lows 3975.5-3978 (support flipped to resistance). Do not chase 3972. INTRADAY SELL limit on retest of the broken range 3983-3987 (M15 base + M5 failed reclaim preferred). SL 3996.5 above the 3995.04 Asia high. TP 3952 above the 3942-3950 Nov 3 H4 ledge. ATR H1 ~11.6. Spread 0.26 in RR~2.2 (at 3983) / ~2.8 (mid). Close by end NY (Fri 06:00 MYT). Exit early if M15 closes back above 3995 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_I006.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 3983.0,
+    "fill_time_server": "2026-11-12 02:20:15 EET",
     "asset": "XAUUSD",
     "name": "Gold · Intraday #6",
-    "scored_myt": "2026-11-12 08:15:00"
+    "scored_myt": "2026-11-12 08:28:00",
+    "note": "entry touched 08:20:15 MYT (bid 3983.03); since fill max ask 3985.80 < SL 3996.5, no M15 close >3995; analytical fill, not a broker order"
    },
    "calls": [
     {
@@ -395,14 +398,15 @@
      "valid_until_myt": "2026-11-13 06:00:00",
      "confidence": 0,
      "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high followed by 3-day D1 selloff 4148->3972 (Iqbal rule: rejecting weekly resistance usually retests support; prior-week lows 3870-3882 below). D1/H4 MOMENTUM_DOWN, lower highs 4066->3995. Asia just broke the overnight 3982.6-3988.7 NY/late range floor and the Oct 23-26 D1 lows 3975.5-3978 (support flipped to resistance). Do not chase 3972. INTRADAY SELL limit on retest of the broken range 3983-3987 (M15 base + M5 failed reclaim preferred). SL 3996.5 above the 3995.04 Asia high. TP 3952 above the 3942-3950 Nov 3 H4 ledge. ATR H1 ~11.6. Spread 0.26 in RR~2.2 (at 3983) / ~2.8 (mid). Close by end NY (Fri 06:00 MYT). Exit early if M15 closes back above 3995 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_I006.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 3983.0,
+     "fill_time_server": "2026-11-12 02:20:15 EET",
      "asset": "XAUUSD",
      "name": "Gold · Intraday #6",
-     "scored_myt": "2026-11-12 08:15:00"
+     "scored_myt": "2026-11-12 08:28:00",
+     "note": "entry touched 08:20:15 MYT (bid 3983.03); since fill max ask 3985.80 < SL 3996.5, no M15 close >3995; analytical fill, not a broker order"
     }
    ],
    "open_count": 1,
@@ -413,25 +417,25 @@
     "open": 1
    },
    "freshness": {
-    "last_m5_eet": "2026-11-12 02:05:00",
-    "last_m5_myt": "2026-11-12 08:05:00",
-    "tick_bid": 3972.7,
-    "tick_ask": 3972.96,
-    "spread": 0.2600000000002183,
-    "tick_eet": "2026-11-12T02:08:46",
-    "tick_myt": "2026-11-12 08:08:46",
-    "age_min": 6.0,
+    "last_m5_eet": "2026-11-12 02:25:00",
+    "last_m5_myt": "2026-11-12 08:25:00",
+    "tick_bid": 3984.15,
+    "tick_ask": 3984.41,
+    "spread": 0.25999999999976353,
+    "tick_eet": "2026-11-12T02:27:24",
+    "tick_myt": "2026-11-12 08:27:24",
+    "age_min": 1.0,
     "ok": true,
-    "note": "ok (PC back online after outage since 11 Nov ~15:06 MYT)",
-    "scored_myt": "2026-11-12 08:15:00"
+    "note": "ok",
+    "scored_myt": "2026-11-12 08:28:00"
    },
    "tick": {
     "symbol": "XAUUSD.m",
-    "bid": 3972.7,
-    "ask": 3972.96,
-    "spread": 0.2600000000002183,
-    "time": "2026-11-12T02:08:46Z",
-    "time_msc": 1794449326009
+    "bid": 3984.15,
+    "ask": 3984.41,
+    "spread": 0.25999999999976353,
+    "time": "2026-11-12T02:27:24Z",
+    "time_msc": 1794450444411
    }
   },
   "BTCUSD": {
@@ -1295,25 +1299,25 @@
     "open": 1
    },
    "freshness": {
-    "last_m5_eet": "2026-11-12 02:05:00",
-    "last_m5_myt": "2026-11-12 08:05:00",
-    "tick_bid": 43122.54,
-    "tick_ask": 43134.83,
-    "spread": 12.290000000000873,
-    "tick_eet": "2026-11-12T02:08:48",
-    "tick_myt": "2026-11-12 08:08:48",
-    "age_min": 6.0,
+    "last_m5_eet": "2026-11-12 02:25:00",
+    "last_m5_myt": "2026-11-12 08:25:00",
+    "tick_bid": 43228.15,
+    "tick_ask": 43240.46,
+    "spread": 12.309999999997672,
+    "tick_eet": "2026-11-12T02:27:24",
+    "tick_myt": "2026-11-12 08:27:24",
+    "age_min": 1.0,
     "ok": true,
-    "note": "ok (PC back online after outage since 11 Nov ~15:06 MYT)",
-    "scored_myt": "2026-11-12 08:15:00"
+    "note": "ok",
+    "scored_myt": "2026-11-12 08:28:00"
    },
    "tick": {
     "symbol": "FX Vol 80",
-    "bid": 43122.54,
-    "ask": 43134.83,
-    "spread": 12.290000000000873,
-    "time": "2026-11-12T02:08:48Z",
-    "time_msc": 1794449328203
+    "bid": 43228.15,
+    "ask": 43240.46,
+    "spread": 12.309999999997672,
+    "time": "2026-11-12T02:27:24Z",
+    "time_msc": 1794450444211
    }
   }
  },
@@ -1330,14 +1334,15 @@
   "valid_until_myt": "2026-11-13 06:00:00",
   "confidence": 0,
   "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high followed by 3-day D1 selloff 4148->3972 (Iqbal rule: rejecting weekly resistance usually retests support; prior-week lows 3870-3882 below). D1/H4 MOMENTUM_DOWN, lower highs 4066->3995. Asia just broke the overnight 3982.6-3988.7 NY/late range floor and the Oct 23-26 D1 lows 3975.5-3978 (support flipped to resistance). Do not chase 3972. INTRADAY SELL limit on retest of the broken range 3983-3987 (M15 base + M5 failed reclaim preferred). SL 3996.5 above the 3995.04 Asia high. TP 3952 above the 3942-3950 Nov 3 H4 ledge. ATR H1 ~11.6. Spread 0.26 in RR~2.2 (at 3983) / ~2.8 (mid). Close by end NY (Fri 06:00 MYT). Exit early if M15 closes back above 3995 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-  "status": "PENDING",
+  "status": "FILLED",
   "r_result": null,
   "chart": "charts/call_I006.png",
-  "fill_px": null,
-  "fill_time_server": null,
+  "fill_px": 3983.0,
+  "fill_time_server": "2026-11-12 02:20:15 EET",
   "asset": "XAUUSD",
   "name": "Gold · Intraday #6",
-  "scored_myt": "2026-11-12 08:15:00"
+  "scored_myt": "2026-11-12 08:28:00",
+  "note": "entry touched 08:20:15 MYT (bid 3983.03); since fill max ask 3985.80 < SL 3996.5, no M15 close >3995; analytical fill, not a broker order"
  },
  "latest_by_type": {
   "SCALP": {
@@ -1376,14 +1381,15 @@
    "valid_until_myt": "2026-11-13 06:00:00",
    "confidence": 0,
    "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high followed by 3-day D1 selloff 4148->3972 (Iqbal rule: rejecting weekly resistance usually retests support; prior-week lows 3870-3882 below). D1/H4 MOMENTUM_DOWN, lower highs 4066->3995. Asia just broke the overnight 3982.6-3988.7 NY/late range floor and the Oct 23-26 D1 lows 3975.5-3978 (support flipped to resistance). Do not chase 3972. INTRADAY SELL limit on retest of the broken range 3983-3987 (M15 base + M5 failed reclaim preferred). SL 3996.5 above the 3995.04 Asia high. TP 3952 above the 3942-3950 Nov 3 H4 ledge. ATR H1 ~11.6. Spread 0.26 in RR~2.2 (at 3983) / ~2.8 (mid). Close by end NY (Fri 06:00 MYT). Exit early if M15 closes back above 3995 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "FILLED",
    "r_result": null,
    "chart": "charts/call_I006.png",
-   "fill_px": null,
-   "fill_time_server": null,
+   "fill_px": 3983.0,
+   "fill_time_server": "2026-11-12 02:20:15 EET",
    "asset": "XAUUSD",
    "name": "Gold · Intraday #6",
-   "scored_myt": "2026-11-12 08:15:00"
+   "scored_myt": "2026-11-12 08:28:00",
+   "note": "entry touched 08:20:15 MYT (bid 3983.03); since fill max ask 3985.80 < SL 3996.5, no M15 close >3995; analytical fill, not a broker order"
   },
   "SWING": {
    "id": "001R",
@@ -1427,14 +1433,15 @@
   "valid_until_myt": "2026-11-13 06:00:00",
   "confidence": 0,
   "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high followed by 3-day D1 selloff 4148->3972 (Iqbal rule: rejecting weekly resistance usually retests support; prior-week lows 3870-3882 below). D1/H4 MOMENTUM_DOWN, lower highs 4066->3995. Asia just broke the overnight 3982.6-3988.7 NY/late range floor and the Oct 23-26 D1 lows 3975.5-3978 (support flipped to resistance). Do not chase 3972. INTRADAY SELL limit on retest of the broken range 3983-3987 (M15 base + M5 failed reclaim preferred). SL 3996.5 above the 3995.04 Asia high. TP 3952 above the 3942-3950 Nov 3 H4 ledge. ATR H1 ~11.6. Spread 0.26 in RR~2.2 (at 3983) / ~2.8 (mid). Close by end NY (Fri 06:00 MYT). Exit early if M15 closes back above 3995 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-  "status": "PENDING",
+  "status": "FILLED",
   "r_result": null,
   "chart": "charts/call_I006.png",
-  "fill_px": null,
-  "fill_time_server": null,
+  "fill_px": 3983.0,
+  "fill_time_server": "2026-11-12 02:20:15 EET",
   "asset": "XAUUSD",
   "name": "Gold · Intraday #6",
-  "scored_myt": "2026-11-12 08:15:00"
+  "scored_myt": "2026-11-12 08:28:00",
+  "note": "entry touched 08:20:15 MYT (bid 3983.03); since fill max ask 3985.80 < SL 3996.5, no M15 close >3995; analytical fill, not a broker order"
  },
  "calls": [
   {
@@ -1703,14 +1710,15 @@
    "valid_until_myt": "2026-11-13 06:00:00",
    "confidence": 0,
    "reasoning": "Weekly: rejection at 4146.8-4148.5 weekly high followed by 3-day D1 selloff 4148->3972 (Iqbal rule: rejecting weekly resistance usually retests support; prior-week lows 3870-3882 below). D1/H4 MOMENTUM_DOWN, lower highs 4066->3995. Asia just broke the overnight 3982.6-3988.7 NY/late range floor and the Oct 23-26 D1 lows 3975.5-3978 (support flipped to resistance). Do not chase 3972. INTRADAY SELL limit on retest of the broken range 3983-3987 (M15 base + M5 failed reclaim preferred). SL 3996.5 above the 3995.04 Asia high. TP 3952 above the 3942-3950 Nov 3 H4 ledge. ATR H1 ~11.6. Spread 0.26 in RR~2.2 (at 3983) / ~2.8 (mid). Close by end NY (Fri 06:00 MYT). Exit early if M15 closes back above 3995 (reclaim). No-fill if no retest. Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "FILLED",
    "r_result": null,
    "chart": "charts/call_I006.png",
-   "fill_px": null,
-   "fill_time_server": null,
+   "fill_px": 3983.0,
+   "fill_time_server": "2026-11-12 02:20:15 EET",
    "asset": "XAUUSD",
    "name": "Gold · Intraday #6",
-   "scored_myt": "2026-11-12 08:15:00"
+   "scored_myt": "2026-11-12 08:28:00",
+   "note": "entry touched 08:20:15 MYT (bid 3983.03); since fill max ask 3985.80 < SL 3996.5, no M15 close >3995; analytical fill, not a broker order"
   }
  ],
  "scoreboard": {
@@ -1720,17 +1728,17 @@
   "open": 1
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-12 08:15:00",
+ "last_updated": "2026-11-12 08:28:00",
  "fxvol80_server_time": "2026-11-07 13:55:00",
- "status_note": "PC online semula (data terhenti sejak 11 Nov ~15:06). Call baru: Gold · Intraday #6 SELL 3983-3987 (SL 3996.5, TP 3952) dan Vol 80 · Intraday #5 SELL 43680-43850 (SL 44080, TP 42780). Kedua-dua tunggu retest; jangan kejar harga.",
+ "status_note": "Gold · Intraday #6 SELL dah kena entry 3983 (08:20 MYT), SL 3996.5, TP 3952. Vol 80 · Intraday #5 SELL 43680-43850 masih tunggu retest.",
  "ticks": {
   "XAUUSD.m": {
    "symbol": "XAUUSD.m",
-   "bid": 3972.7,
-   "ask": 3972.96,
-   "spread": 0.2600000000002183,
-   "time": "2026-11-12T02:08:46Z",
-   "time_msc": 1794449326009
+   "bid": 3984.15,
+   "ask": 3984.41,
+   "spread": 0.25999999999976353,
+   "time": "2026-11-12T02:27:24Z",
+   "time_msc": 1794450444411
   },
   "BTCUSD": {
    "bid": 73651.21,
@@ -1741,26 +1749,26 @@
   },
   "FXVOL80": {
    "symbol": "FX Vol 80",
-   "bid": 43122.54,
-   "ask": 43134.83,
-   "spread": 12.290000000000873,
-   "time": "2026-11-12T02:08:48Z",
-   "time_msc": 1794449328203
+   "bid": 43228.15,
+   "ask": 43240.46,
+   "spread": 12.309999999997672,
+   "time": "2026-11-12T02:27:24Z",
+   "time_msc": 1794450444211
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-12 02:05:00",
-   "last_m5_myt": "2026-11-12 08:05:00",
-   "tick_bid": 3972.7,
-   "tick_ask": 3972.96,
-   "spread": 0.2600000000002183,
-   "tick_eet": "2026-11-12T02:08:46",
-   "tick_myt": "2026-11-12 08:08:46",
-   "age_min": 6.0,
+   "last_m5_eet": "2026-11-12 02:25:00",
+   "last_m5_myt": "2026-11-12 08:25:00",
+   "tick_bid": 3984.15,
+   "tick_ask": 3984.41,
+   "spread": 0.25999999999976353,
+   "tick_eet": "2026-11-12T02:27:24",
+   "tick_myt": "2026-11-12 08:27:24",
+   "age_min": 1.0,
    "ok": true,
-   "note": "ok (PC back online after outage since 11 Nov ~15:06 MYT)",
-   "scored_myt": "2026-11-12 08:15:00"
+   "note": "ok",
+   "scored_myt": "2026-11-12 08:28:00"
   },
   "BTCUSD": {
    "last_m5_eet": "2026-11-11 02:05:00",
@@ -1776,17 +1784,17 @@
    "scored_myt": "2026-11-11 08:08:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-12 02:05:00",
-   "last_m5_myt": "2026-11-12 08:05:00",
-   "tick_bid": 43122.54,
-   "tick_ask": 43134.83,
-   "spread": 12.290000000000873,
-   "tick_eet": "2026-11-12T02:08:48",
-   "tick_myt": "2026-11-12 08:08:48",
-   "age_min": 6.0,
+   "last_m5_eet": "2026-11-12 02:25:00",
+   "last_m5_myt": "2026-11-12 08:25:00",
+   "tick_bid": 43228.15,
+   "tick_ask": 43240.46,
+   "spread": 12.309999999997672,
+   "tick_eet": "2026-11-12T02:27:24",
+   "tick_myt": "2026-11-12 08:27:24",
+   "age_min": 1.0,
    "ok": true,
-   "note": "ok (PC back online after outage since 11 Nov ~15:06 MYT)",
-   "scored_myt": "2026-11-12 08:15:00"
+   "note": "ok",
+   "scored_myt": "2026-11-12 08:28:00"
   }
  }
 }
