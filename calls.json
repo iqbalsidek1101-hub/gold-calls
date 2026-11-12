@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-12 09:26:00",
+ "generated_myt": "2026-11-12 12:57:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -425,17 +425,17 @@
     "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-12 03:20:00",
-    "last_m5_myt": "2026-11-12 09:20:00",
-    "tick_bid": 3995.05,
-    "tick_ask": 3995.31,
-    "spread": 0.25999999999976353,
-    "tick_eet": "2026-11-12T03:24:59",
-    "tick_myt": "2026-11-12 09:24:59",
+    "last_m5_eet": "2026-11-12 06:55:00",
+    "last_m5_myt": "2026-11-12 12:55:00",
+    "tick_bid": 3974.43,
+    "tick_ask": 3974.69,
+    "spread": 0.2600000000002183,
+    "tick_eet": "2026-11-12T06:56:16",
+    "tick_myt": "2026-11-12 12:56:16",
     "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-12 09:26:00"
+    "scored_myt": "2026-11-12 12:57:00"
    },
    "tick": {
     "symbol": "XAUUSD.m",
@@ -836,15 +836,17 @@
     "valid_until_myt": "2026-11-12 22:15:00",
     "confidence": 0,
     "reasoning": "FX Vol 80: failed break at 48078-48097 (triple top) then full retrace 48097->43063 in ~24h; H1/H4 MOMENTUM_DOWN (Iqbal rule: failure at next resistance means price returns and breaks the entry zone). Asia 00:00-01:45 EET M15 base 43640-43850 broke down at 01:50 EET = flip to resistance. Do not chase 43115 (sell now has little room before demand). INTRADAY SELL limit on retest of 43680-43850 (M5 failed reclaim preferred). SL 44080 above the 44046 base highs. TP 42780 just above the 42438-42723 Nov 8-9 D1 demand (strong past reaction, watch for bounce). ATR H1 ~635 / M5 ~150. Spread 12.3 in RR~2.2 (at 43680) / ~3.0 (mid). Valid 14h clock. Exit early if M15 closes above 44060. No-fill if no retest. Unvalidated setup; no calibrated probability.",
-    "status": "FILLED",
-    "r_result": null,
+    "status": "TP",
+    "r_result": 2.25,
     "chart": "charts/call_V-I005.png",
     "fill_px": 43680.0,
     "fill_time_server": "2026-11-12 03:22:18 EET",
     "asset": "FXVOL80",
     "name": "Vol 80 · Intraday #5",
-    "scored_myt": "2026-11-12 09:26:00",
-    "note": "entry touched 09:22:18 MYT (bid 43681.81); since fill max ask 43780.29 < SL 44080; analytical fill, not a broker order"
+    "scored_myt": "2026-11-12 12:57:00",
+    "note": "entry touched 09:22:18 MYT (bid 43681.81); TP 42780 hit 12:49:32 MYT (ask 42778.43); max ask after fill 43780.29 < SL 44080; no M15 close >44060. +2.25R (exit on ask, spread included). Analytical result, not a broker order.",
+    "exit_px": 42780.0,
+    "exit_time_myt": "2026-11-12 12:49:32"
    },
    "latest_by_type": {
     "SCALP": {
@@ -889,15 +891,17 @@
      "valid_until_myt": "2026-11-12 22:15:00",
      "confidence": 0,
      "reasoning": "FX Vol 80: failed break at 48078-48097 (triple top) then full retrace 48097->43063 in ~24h; H1/H4 MOMENTUM_DOWN (Iqbal rule: failure at next resistance means price returns and breaks the entry zone). Asia 00:00-01:45 EET M15 base 43640-43850 broke down at 01:50 EET = flip to resistance. Do not chase 43115 (sell now has little room before demand). INTRADAY SELL limit on retest of 43680-43850 (M5 failed reclaim preferred). SL 44080 above the 44046 base highs. TP 42780 just above the 42438-42723 Nov 8-9 D1 demand (strong past reaction, watch for bounce). ATR H1 ~635 / M5 ~150. Spread 12.3 in RR~2.2 (at 43680) / ~3.0 (mid). Valid 14h clock. Exit early if M15 closes above 44060. No-fill if no retest. Unvalidated setup; no calibrated probability.",
-     "status": "FILLED",
-     "r_result": null,
+     "status": "TP",
+     "r_result": 2.25,
      "chart": "charts/call_V-I005.png",
      "fill_px": 43680.0,
      "fill_time_server": "2026-11-12 03:22:18 EET",
      "asset": "FXVOL80",
      "name": "Vol 80 · Intraday #5",
-     "scored_myt": "2026-11-12 09:26:00",
-     "note": "entry touched 09:22:18 MYT (bid 43681.81); since fill max ask 43780.29 < SL 44080; analytical fill, not a broker order"
+     "scored_myt": "2026-11-12 12:57:00",
+     "note": "entry touched 09:22:18 MYT (bid 43681.81); TP 42780 hit 12:49:32 MYT (ask 42778.43); max ask after fill 43780.29 < SL 44080; no M15 close >44060. +2.25R (exit on ask, spread included). Analytical result, not a broker order.",
+     "exit_px": 42780.0,
+     "exit_time_myt": "2026-11-12 12:49:32"
     },
     "SWING": {
      "id": "V-W004",
@@ -935,15 +939,17 @@
     "valid_until_myt": "2026-11-12 22:15:00",
     "confidence": 0,
     "reasoning": "FX Vol 80: failed break at 48078-48097 (triple top) then full retrace 48097->43063 in ~24h; H1/H4 MOMENTUM_DOWN (Iqbal rule: failure at next resistance means price returns and breaks the entry zone). Asia 00:00-01:45 EET M15 base 43640-43850 broke down at 01:50 EET = flip to resistance. Do not chase 43115 (sell now has little room before demand). INTRADAY SELL limit on retest of 43680-43850 (M5 failed reclaim preferred). SL 44080 above the 44046 base highs. TP 42780 just above the 42438-42723 Nov 8-9 D1 demand (strong past reaction, watch for bounce). ATR H1 ~635 / M5 ~150. Spread 12.3 in RR~2.2 (at 43680) / ~3.0 (mid). Valid 14h clock. Exit early if M15 closes above 44060. No-fill if no retest. Unvalidated setup; no calibrated probability.",
-    "status": "FILLED",
-    "r_result": null,
+    "status": "TP",
+    "r_result": 2.25,
     "chart": "charts/call_V-I005.png",
     "fill_px": 43680.0,
     "fill_time_server": "2026-11-12 03:22:18 EET",
     "asset": "FXVOL80",
     "name": "Vol 80 · Intraday #5",
-    "scored_myt": "2026-11-12 09:26:00",
-    "note": "entry touched 09:22:18 MYT (bid 43681.81); since fill max ask 43780.29 < SL 44080; analytical fill, not a broker order"
+    "scored_myt": "2026-11-12 12:57:00",
+    "note": "entry touched 09:22:18 MYT (bid 43681.81); TP 42780 hit 12:49:32 MYT (ask 42778.43); max ask after fill 43780.29 < SL 44080; no M15 close >44060. +2.25R (exit on ask, spread included). Analytical result, not a broker order.",
+    "exit_px": 42780.0,
+    "exit_time_myt": "2026-11-12 12:49:32"
    },
    "calls": [
     {
@@ -1292,36 +1298,38 @@
      "valid_until_myt": "2026-11-12 22:15:00",
      "confidence": 0,
      "reasoning": "FX Vol 80: failed break at 48078-48097 (triple top) then full retrace 48097->43063 in ~24h; H1/H4 MOMENTUM_DOWN (Iqbal rule: failure at next resistance means price returns and breaks the entry zone). Asia 00:00-01:45 EET M15 base 43640-43850 broke down at 01:50 EET = flip to resistance. Do not chase 43115 (sell now has little room before demand). INTRADAY SELL limit on retest of 43680-43850 (M5 failed reclaim preferred). SL 44080 above the 44046 base highs. TP 42780 just above the 42438-42723 Nov 8-9 D1 demand (strong past reaction, watch for bounce). ATR H1 ~635 / M5 ~150. Spread 12.3 in RR~2.2 (at 43680) / ~3.0 (mid). Valid 14h clock. Exit early if M15 closes above 44060. No-fill if no retest. Unvalidated setup; no calibrated probability.",
-     "status": "FILLED",
-     "r_result": null,
+     "status": "TP",
+     "r_result": 2.25,
      "chart": "charts/call_V-I005.png",
      "fill_px": 43680.0,
      "fill_time_server": "2026-11-12 03:22:18 EET",
      "asset": "FXVOL80",
      "name": "Vol 80 · Intraday #5",
-     "scored_myt": "2026-11-12 09:26:00",
-     "note": "entry touched 09:22:18 MYT (bid 43681.81); since fill max ask 43780.29 < SL 44080; analytical fill, not a broker order"
+     "scored_myt": "2026-11-12 12:57:00",
+     "note": "entry touched 09:22:18 MYT (bid 43681.81); TP 42780 hit 12:49:32 MYT (ask 42778.43); max ask after fill 43780.29 < SL 44080; no M15 close >44060. +2.25R (exit on ask, spread included). Analytical result, not a broker order.",
+     "exit_px": 42780.0,
+     "exit_time_myt": "2026-11-12 12:49:32"
     }
    ],
-   "open_count": 1,
+   "open_count": 0,
    "scoreboard": {
-    "n": 7,
-    "wins": 4,
-    "sum_r": 3.08,
-    "open": 1
+    "n": 8,
+    "wins": 5,
+    "sum_r": 5.33,
+    "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-12 03:20:00",
-    "last_m5_myt": "2026-11-12 09:20:00",
-    "tick_bid": 43758.66,
-    "tick_ask": 43771.13,
-    "spread": 12.469999999993888,
-    "tick_eet": "2026-11-12T03:24:59",
-    "tick_myt": "2026-11-12 09:24:59",
+    "last_m5_eet": "2026-11-12 06:55:00",
+    "last_m5_myt": "2026-11-12 12:55:00",
+    "tick_bid": 42629.62,
+    "tick_ask": 42641.77,
+    "spread": 12.14999999999418,
+    "tick_eet": "2026-11-12T06:56:16",
+    "tick_myt": "2026-11-12 12:56:16",
     "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-12 09:26:00"
+    "scored_myt": "2026-11-12 12:57:00"
    },
    "tick": {
     "symbol": "FX Vol 80",
@@ -1742,23 +1750,23 @@
   }
  ],
  "scoreboard": {
-  "n": 20,
-  "wins": 8,
-  "sum_r": 1.83,
+  "n": 21,
+  "wins": 9,
+  "sum_r": 4.08,
   "open": 0
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-12 09:26:00",
+ "last_updated": "2026-11-12 12:57:00",
  "fxvol80_server_time": "2026-11-07 13:55:00",
- "status_note": "Vol 80 · Intraday #5 SELL dah kena entry 43680 (09:22 MYT), SL 44080, TP 42780. Gold · Intraday #6 tutup SL -1R tadi.",
+ "status_note": "Vol 80 · Intraday #5 SELL kena TP 42780 (12:49 MYT), +2.25R. Takde call terbuka sekarang; Gold & Vol 80 WAIT.",
  "ticks": {
   "XAUUSD.m": {
    "symbol": "XAUUSD.m",
-   "bid": 3995.05,
-   "ask": 3995.31,
-   "spread": 0.25999999999976353,
-   "time": "2026-11-12T03:24:59Z",
-   "time_msc": 1794453899366
+   "bid": 3974.43,
+   "ask": 3974.69,
+   "spread": 0.2600000000002183,
+   "time": "2026-11-12T06:56:16Z",
+   "time_msc": 1794466576915
   },
   "BTCUSD": {
    "bid": 73651.21,
@@ -1769,26 +1777,26 @@
   },
   "FXVOL80": {
    "symbol": "FX Vol 80",
-   "bid": 43758.66,
-   "ask": 43771.13,
-   "spread": 12.469999999993888,
-   "time": "2026-11-12T03:24:59Z",
-   "time_msc": 1794453899230
+   "bid": 42629.62,
+   "ask": 42641.77,
+   "spread": 12.14999999999418,
+   "time": "2026-11-12T06:56:16Z",
+   "time_msc": 1794466576292
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-12 03:20:00",
-   "last_m5_myt": "2026-11-12 09:20:00",
-   "tick_bid": 3995.05,
-   "tick_ask": 3995.31,
-   "spread": 0.25999999999976353,
-   "tick_eet": "2026-11-12T03:24:59",
-   "tick_myt": "2026-11-12 09:24:59",
+   "last_m5_eet": "2026-11-12 06:55:00",
+   "last_m5_myt": "2026-11-12 12:55:00",
+   "tick_bid": 3974.43,
+   "tick_ask": 3974.69,
+   "spread": 0.2600000000002183,
+   "tick_eet": "2026-11-12T06:56:16",
+   "tick_myt": "2026-11-12 12:56:16",
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-12 09:26:00"
+   "scored_myt": "2026-11-12 12:57:00"
   },
   "BTCUSD": {
    "last_m5_eet": "2026-11-11 02:05:00",
@@ -1804,17 +1812,17 @@
    "scored_myt": "2026-11-11 08:08:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-12 03:20:00",
-   "last_m5_myt": "2026-11-12 09:20:00",
-   "tick_bid": 43758.66,
-   "tick_ask": 43771.13,
-   "spread": 12.469999999993888,
-   "tick_eet": "2026-11-12T03:24:59",
-   "tick_myt": "2026-11-12 09:24:59",
+   "last_m5_eet": "2026-11-12 06:55:00",
+   "last_m5_myt": "2026-11-12 12:55:00",
+   "tick_bid": 42629.62,
+   "tick_ask": 42641.77,
+   "spread": 12.14999999999418,
+   "tick_eet": "2026-11-12T06:56:16",
+   "tick_myt": "2026-11-12 12:56:16",
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-12 09:26:00"
+   "scored_myt": "2026-11-12 12:57:00"
   }
  }
 }
