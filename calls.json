@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-23 18:43:00",
+ "generated_myt": "2026-11-23 18:57:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -29,7 +29,7 @@
     "fill_time_server": null,
     "asset": "XAUUSD",
     "name": "Gold · Intraday #7",
-    "scored_myt": "2026-11-23 18:43:00"
+    "scored_myt": "2026-11-23 18:57:00"
    },
    "latest_by_type": {
     "SCALP": {
@@ -74,7 +74,7 @@
      "fill_time_server": null,
      "asset": "XAUUSD",
      "name": "Gold · Intraday #7",
-     "scored_myt": "2026-11-23 18:43:00"
+     "scored_myt": "2026-11-23 18:57:00"
     },
     "SWING": {
      "id": "002",
@@ -119,7 +119,7 @@
     "fill_time_server": null,
     "asset": "XAUUSD",
     "name": "Gold · Intraday #7",
-    "scored_myt": "2026-11-23 18:43:00"
+    "scored_myt": "2026-11-23 18:57:00"
    },
    "calls": [
     {
@@ -420,7 +420,7 @@
      "fill_time_server": null,
      "asset": "XAUUSD",
      "name": "Gold · Intraday #7",
-     "scored_myt": "2026-11-23 18:43:00"
+     "scored_myt": "2026-11-23 18:57:00"
     },
     {
      "id": "S004",
@@ -475,25 +475,24 @@
     "open": 1
    },
    "freshness": {
-    "last_m5_eet": "2026-11-23 12:35:00",
-    "last_m5_myt": "2026-11-23 18:35:00",
-    "tick_bid": 3617.72,
-    "tick_ask": 3617.98,
+    "last_m5_eet": "2026-11-23 12:55:00",
+    "last_m5_myt": "2026-11-23 18:55:00",
+    "tick_bid": 3626.02,
+    "tick_ask": 3626.28,
     "spread": 0.26,
-    "tick_eet": "2026-11-23T12:36:11",
-    "tick_myt": "2026-11-23 18:36:11",
-    "age_min": 1.0,
+    "tick_eet": "2026-11-23T12:55:14",
+    "tick_myt": "2026-11-23 18:55:14",
+    "age_min": 2.0,
     "ok": true,
-    "note": "ok — recovered after PC outage 12 Nov ~19:05 to 23 Nov 18:35 MYT",
-    "scored_myt": "2026-11-23 18:43:00"
+    "note": "ok",
+    "scored_myt": "2026-11-23 18:57:00"
    },
    "tick": {
     "symbol": "XAUUSD.m",
-    "bid": 3617.72,
-    "ask": 3617.98,
-    "spread": 0.2600000000002183,
-    "time": "2026-11-23T12:36:11Z",
-    "time_msc": 1795437371513
+    "bid": 3626.02,
+    "ask": 3626.28,
+    "spread": 0.26,
+    "time": "2026-11-23T12:55:14Z"
    }
   },
   "BTCUSD": {
@@ -887,14 +886,15 @@
     "valid_until_myt": "2026-11-24 08:43:00",
     "confidence": 0,
     "reasoning": "Outage recovery call. FX Vol 80: W1 crash 66159->37785 ended 13 Nov; since then a 37.8k-46k recovery with D1 higher lows (37785/40984/41771/43185). Today D1 +2340 broke the 45624-45830 ceiling (21 Nov / 17 Nov / 19 Nov highs) to 46088.95 = H1/H4 MOMENTUM_UP breakout. Do not chase 45890. INTRADAY BUY limit on retest of the flip 45580-45680 (21 Nov H4 high 45624.77 + 10:40-11:00 EET M15 launch base) with M5 sweep-reclaim confirm. SL 45330 below the 45375 10:30 EET pullback low. TP 46230 under the 46231-46285 H4 resistance (9 Nov 12:00 / 11 Nov 16:00 highs) = next resistance; failed break there means price likely returns to the entry zone. ATR H1 ~550 / M15 ~248 / M5 ~152. Spread 13.1 in RR ~1.48 (at 45680) / ~1.87 (mid 45630) / ~2.42 (at 45580). Valid 14h clock. Exit early if M15 closes below 45500 after fill. No-fill if no retest. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_V-I006.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 45680.0,
+    "fill_time_server": "2026-11-23 12:53:15 EET (ask 45671.53; M5 12:50 sweep-reclaim close 45729.31)",
     "asset": "FXVOL80",
     "name": "Vol 80 · Intraday #6",
-    "scored_myt": "2026-11-23 18:43:00"
+    "scored_myt": "2026-11-23 18:57:00",
+    "status_note": "Entry diisi 18:53 MYT: ask sentuh 45671.53 dalam zon 45580-45680 (low 45612.03), M5 tutup semula 45729.31 di atas zon = sweep-reclaim confirm. SL 45330 / TP 46230 kekal. Keluar awal jika M15 tutup bawah 45500."
    },
    "latest_by_type": {
     "SCALP": {
@@ -932,14 +932,15 @@
      "valid_until_myt": "2026-11-24 08:43:00",
      "confidence": 0,
      "reasoning": "Outage recovery call. FX Vol 80: W1 crash 66159->37785 ended 13 Nov; since then a 37.8k-46k recovery with D1 higher lows (37785/40984/41771/43185). Today D1 +2340 broke the 45624-45830 ceiling (21 Nov / 17 Nov / 19 Nov highs) to 46088.95 = H1/H4 MOMENTUM_UP breakout. Do not chase 45890. INTRADAY BUY limit on retest of the flip 45580-45680 (21 Nov H4 high 45624.77 + 10:40-11:00 EET M15 launch base) with M5 sweep-reclaim confirm. SL 45330 below the 45375 10:30 EET pullback low. TP 46230 under the 46231-46285 H4 resistance (9 Nov 12:00 / 11 Nov 16:00 highs) = next resistance; failed break there means price likely returns to the entry zone. ATR H1 ~550 / M15 ~248 / M5 ~152. Spread 13.1 in RR ~1.48 (at 45680) / ~1.87 (mid 45630) / ~2.42 (at 45580). Valid 14h clock. Exit early if M15 closes below 45500 after fill. No-fill if no retest. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_V-I006.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 45680.0,
+     "fill_time_server": "2026-11-23 12:53:15 EET (ask 45671.53; M5 12:50 sweep-reclaim close 45729.31)",
      "asset": "FXVOL80",
      "name": "Vol 80 · Intraday #6",
-     "scored_myt": "2026-11-23 18:43:00"
+     "scored_myt": "2026-11-23 18:57:00",
+     "status_note": "Entry diisi 18:53 MYT: ask sentuh 45671.53 dalam zon 45580-45680 (low 45612.03), M5 tutup semula 45729.31 di atas zon = sweep-reclaim confirm. SL 45330 / TP 46230 kekal. Keluar awal jika M15 tutup bawah 45500."
     },
     "SWING": {
      "id": "V-W005",
@@ -977,14 +978,15 @@
     "valid_until_myt": "2026-11-24 08:43:00",
     "confidence": 0,
     "reasoning": "Outage recovery call. FX Vol 80: W1 crash 66159->37785 ended 13 Nov; since then a 37.8k-46k recovery with D1 higher lows (37785/40984/41771/43185). Today D1 +2340 broke the 45624-45830 ceiling (21 Nov / 17 Nov / 19 Nov highs) to 46088.95 = H1/H4 MOMENTUM_UP breakout. Do not chase 45890. INTRADAY BUY limit on retest of the flip 45580-45680 (21 Nov H4 high 45624.77 + 10:40-11:00 EET M15 launch base) with M5 sweep-reclaim confirm. SL 45330 below the 45375 10:30 EET pullback low. TP 46230 under the 46231-46285 H4 resistance (9 Nov 12:00 / 11 Nov 16:00 highs) = next resistance; failed break there means price likely returns to the entry zone. ATR H1 ~550 / M15 ~248 / M5 ~152. Spread 13.1 in RR ~1.48 (at 45680) / ~1.87 (mid 45630) / ~2.42 (at 45580). Valid 14h clock. Exit early if M15 closes below 45500 after fill. No-fill if no retest. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_V-I006.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 45680.0,
+    "fill_time_server": "2026-11-23 12:53:15 EET (ask 45671.53; M5 12:50 sweep-reclaim close 45729.31)",
     "asset": "FXVOL80",
     "name": "Vol 80 · Intraday #6",
-    "scored_myt": "2026-11-23 18:43:00"
+    "scored_myt": "2026-11-23 18:57:00",
+    "status_note": "Entry diisi 18:53 MYT: ask sentuh 45671.53 dalam zon 45580-45680 (low 45612.03), M5 tutup semula 45729.31 di atas zon = sweep-reclaim confirm. SL 45330 / TP 46230 kekal. Keluar awal jika M15 tutup bawah 45500."
    },
    "calls": [
     {
@@ -1358,14 +1360,15 @@
      "valid_until_myt": "2026-11-24 08:43:00",
      "confidence": 0,
      "reasoning": "Outage recovery call. FX Vol 80: W1 crash 66159->37785 ended 13 Nov; since then a 37.8k-46k recovery with D1 higher lows (37785/40984/41771/43185). Today D1 +2340 broke the 45624-45830 ceiling (21 Nov / 17 Nov / 19 Nov highs) to 46088.95 = H1/H4 MOMENTUM_UP breakout. Do not chase 45890. INTRADAY BUY limit on retest of the flip 45580-45680 (21 Nov H4 high 45624.77 + 10:40-11:00 EET M15 launch base) with M5 sweep-reclaim confirm. SL 45330 below the 45375 10:30 EET pullback low. TP 46230 under the 46231-46285 H4 resistance (9 Nov 12:00 / 11 Nov 16:00 highs) = next resistance; failed break there means price likely returns to the entry zone. ATR H1 ~550 / M15 ~248 / M5 ~152. Spread 13.1 in RR ~1.48 (at 45680) / ~1.87 (mid 45630) / ~2.42 (at 45580). Valid 14h clock. Exit early if M15 closes below 45500 after fill. No-fill if no retest. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_V-I006.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 45680.0,
+     "fill_time_server": "2026-11-23 12:53:15 EET (ask 45671.53; M5 12:50 sweep-reclaim close 45729.31)",
      "asset": "FXVOL80",
      "name": "Vol 80 · Intraday #6",
-     "scored_myt": "2026-11-23 18:43:00"
+     "scored_myt": "2026-11-23 18:57:00",
+     "status_note": "Entry diisi 18:53 MYT: ask sentuh 45671.53 dalam zon 45580-45680 (low 45612.03), M5 tutup semula 45729.31 di atas zon = sweep-reclaim confirm. SL 45330 / TP 46230 kekal. Keluar awal jika M15 tutup bawah 45500."
     },
     {
      "id": "V-S007",
@@ -1420,25 +1423,24 @@
     "open": 1
    },
    "freshness": {
-    "last_m5_eet": "2026-11-23 12:40:00",
-    "last_m5_myt": "2026-11-23 18:40:00",
-    "tick_bid": 45997.54,
-    "tick_ask": 46010.65,
-    "spread": 13.11,
-    "tick_eet": "2026-11-23T12:36:29",
-    "tick_myt": "2026-11-23 18:36:29",
-    "age_min": 1.0,
+    "last_m5_eet": "2026-11-23 12:55:00",
+    "last_m5_myt": "2026-11-23 18:55:00",
+    "tick_bid": 45713.65,
+    "tick_ask": 45726.67,
+    "spread": 13.02,
+    "tick_eet": "2026-11-23T12:55:15",
+    "tick_myt": "2026-11-23 18:55:15",
+    "age_min": 2.0,
     "ok": true,
-    "note": "ok — recovered after PC outage 12 Nov ~19:05 to 23 Nov 18:35 MYT",
-    "scored_myt": "2026-11-23 18:43:00"
+    "note": "ok",
+    "scored_myt": "2026-11-23 18:57:00"
    },
    "tick": {
     "symbol": "FX Vol 80",
-    "bid": 45997.54,
-    "ask": 46010.65,
-    "spread": 13.110000000000582,
-    "time": "2026-11-23T12:36:29Z",
-    "time_msc": 1795437389861
+    "bid": 45713.65,
+    "ask": 45726.67,
+    "spread": 13.02,
+    "time": "2026-11-23T12:55:15Z"
    }
   }
  },
@@ -1462,7 +1464,7 @@
   "fill_time_server": null,
   "asset": "XAUUSD",
   "name": "Gold · Intraday #7",
-  "scored_myt": "2026-11-23 18:43:00"
+  "scored_myt": "2026-11-23 18:57:00"
  },
  "latest_by_type": {
   "SCALP": {
@@ -1507,7 +1509,7 @@
    "fill_time_server": null,
    "asset": "XAUUSD",
    "name": "Gold · Intraday #7",
-   "scored_myt": "2026-11-23 18:43:00"
+   "scored_myt": "2026-11-23 18:57:00"
   },
   "SWING": {
    "id": "002",
@@ -1552,7 +1554,7 @@
   "fill_time_server": null,
   "asset": "XAUUSD",
   "name": "Gold · Intraday #7",
-  "scored_myt": "2026-11-23 18:43:00"
+  "scored_myt": "2026-11-23 18:57:00"
  },
  "calls": [
   {
@@ -1853,7 +1855,7 @@
    "fill_time_server": null,
    "asset": "XAUUSD",
    "name": "Gold · Intraday #7",
-   "scored_myt": "2026-11-23 18:43:00"
+   "scored_myt": "2026-11-23 18:57:00"
   },
   {
    "id": "S004",
@@ -1907,17 +1909,16 @@
   "open": 2
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-23 18:43:00",
- "fxvol80_server_time": "2026-11-23 12:40:00",
- "status_note": "PC online semula selepas offline sejak 12 Nov ~19:05 MYT (data dikemas kini 23 Nov 18:35 MYT). BTC paused. Call baru: Gold · Intraday #7 SELL 3631-3635 (SL 3648, TP 3601.5) dan Vol 80 · Intraday #6 BUY 45580-45680 (SL 45330, TP 46230). Kedua-dua tunggu retest + M5 sweep-reclaim; jangan kejar harga. Scalping & Swing: WAIT.",
+ "last_updated": "2026-11-23 18:57:00",
+ "fxvol80_server_time": "2026-11-23 12:55:00",
+ "status_note": "Kemas kini 18:57 MYT. Vol 80 · Intraday #6 BUY kini FILLED @45680 (18:53 MYT, sweep-reclaim M5 disahkan); SL 45330, TP 46230; keluar awal jika M15 tutup bawah 45500. Gold · Intraday #7 SELL 3631-3635 masih PENDING (harga 3626, belum sentuh zon). Scalping & Swing: WAIT. BTC paused.",
  "ticks": {
   "XAUUSD.m": {
    "symbol": "XAUUSD.m",
-   "bid": 3617.72,
-   "ask": 3617.98,
-   "spread": 0.2600000000002183,
-   "time": "2026-11-23T12:36:11Z",
-   "time_msc": 1795437371513
+   "bid": 3626.02,
+   "ask": 3626.28,
+   "spread": 0.26,
+   "time": "2026-11-23T12:55:14Z"
   },
   "BTCUSD": {
    "bid": 73651.21,
@@ -1928,26 +1929,25 @@
   },
   "FXVOL80": {
    "symbol": "FX Vol 80",
-   "bid": 45997.54,
-   "ask": 46010.65,
-   "spread": 13.110000000000582,
-   "time": "2026-11-23T12:36:29Z",
-   "time_msc": 1795437389861
+   "bid": 45713.65,
+   "ask": 45726.67,
+   "spread": 13.02,
+   "time": "2026-11-23T12:55:15Z"
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-23 12:35:00",
-   "last_m5_myt": "2026-11-23 18:35:00",
-   "tick_bid": 3617.72,
-   "tick_ask": 3617.98,
+   "last_m5_eet": "2026-11-23 12:55:00",
+   "last_m5_myt": "2026-11-23 18:55:00",
+   "tick_bid": 3626.02,
+   "tick_ask": 3626.28,
    "spread": 0.26,
-   "tick_eet": "2026-11-23T12:36:11",
-   "tick_myt": "2026-11-23 18:36:11",
-   "age_min": 1.0,
+   "tick_eet": "2026-11-23T12:55:14",
+   "tick_myt": "2026-11-23 18:55:14",
+   "age_min": 2.0,
    "ok": true,
-   "note": "ok — recovered after PC outage 12 Nov ~19:05 to 23 Nov 18:35 MYT",
-   "scored_myt": "2026-11-23 18:43:00"
+   "note": "ok",
+   "scored_myt": "2026-11-23 18:57:00"
   },
   "BTCUSD": {
    "last_m5_eet": "2026-11-11 02:05:00",
@@ -1963,17 +1963,17 @@
    "scored_myt": "2026-11-11 08:08:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-23 12:40:00",
-   "last_m5_myt": "2026-11-23 18:40:00",
-   "tick_bid": 45997.54,
-   "tick_ask": 46010.65,
-   "spread": 13.11,
-   "tick_eet": "2026-11-23T12:36:29",
-   "tick_myt": "2026-11-23 18:36:29",
-   "age_min": 1.0,
+   "last_m5_eet": "2026-11-23 12:55:00",
+   "last_m5_myt": "2026-11-23 18:55:00",
+   "tick_bid": 45713.65,
+   "tick_ask": 45726.67,
+   "spread": 13.02,
+   "tick_eet": "2026-11-23T12:55:15",
+   "tick_myt": "2026-11-23 18:55:15",
+   "age_min": 2.0,
    "ok": true,
-   "note": "ok — recovered after PC outage 12 Nov ~19:05 to 23 Nov 18:35 MYT",
-   "scored_myt": "2026-11-23 18:43:00"
+   "note": "ok",
+   "scored_myt": "2026-11-23 18:57:00"
   }
  },
  "outage": {
