@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-24 10:01:00",
+ "generated_myt": "2026-11-24 10:08:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -914,14 +914,14 @@
     "valid_until_myt": "2026-11-25 00:01:00",
     "confidence": 0,
     "reasoning": "FX Vol 80 breakout-retest. D1 recovery since the 13 Nov crash low 37785 with higher lows (40984/41771/43185) and D1 MOMENTUM_UP. Yesterday's 46089 high was tested three times (46088.95/46090.49/46075.81), then 03:15 EET today broke through the 46231-46285 H4 resistance with M15 closes 46255/46364/46414 and a high 46464.39. Do not chase 46413. INTRADAY BUY limit on retest of the broken ceiling 46230-46300 (fill = ask touches 46300 or lower). SL 46040 below the 46103 03:41 EET pullback low and the 46090 triple top (back inside the old range = breakout failed). TP 46900 under the 46940-46955 H4 highs of 9-10 Nov (next resistance); failed break there means exit. ATR H1 ~570 / M15 ~300 / M5 ~155. Spread 13.2 in RR ~2.1 (at 46300) / ~2.6 (mid) / ~3.2 (at 46230). Valid 14h clock (00:01 MYT 25 Nov). Exit early if M15 closes below 46050 after fill. No-fill if 46900 is reached before a retest. Note: Vol 80 · Intraday #6 lost on a similar breakout retest (the retest broke the base), hence SL below the whole old range top. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_V-I007.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 46300.0,
+    "fill_time_server": "2026-11-24 04:04:34 EET (ask 46293.88; retest of broken 46231-46285 ceiling, low bid 46272)",
     "asset": "FXVOL80",
     "name": "Vol 80 · Intraday #7",
-    "scored_myt": "2026-11-24 10:01:00"
+    "scored_myt": "2026-11-24 10:08:00"
    },
    "latest_by_type": {
     "SCALP": {
@@ -959,14 +959,14 @@
      "valid_until_myt": "2026-11-25 00:01:00",
      "confidence": 0,
      "reasoning": "FX Vol 80 breakout-retest. D1 recovery since the 13 Nov crash low 37785 with higher lows (40984/41771/43185) and D1 MOMENTUM_UP. Yesterday's 46089 high was tested three times (46088.95/46090.49/46075.81), then 03:15 EET today broke through the 46231-46285 H4 resistance with M15 closes 46255/46364/46414 and a high 46464.39. Do not chase 46413. INTRADAY BUY limit on retest of the broken ceiling 46230-46300 (fill = ask touches 46300 or lower). SL 46040 below the 46103 03:41 EET pullback low and the 46090 triple top (back inside the old range = breakout failed). TP 46900 under the 46940-46955 H4 highs of 9-10 Nov (next resistance); failed break there means exit. ATR H1 ~570 / M15 ~300 / M5 ~155. Spread 13.2 in RR ~2.1 (at 46300) / ~2.6 (mid) / ~3.2 (at 46230). Valid 14h clock (00:01 MYT 25 Nov). Exit early if M15 closes below 46050 after fill. No-fill if 46900 is reached before a retest. Note: Vol 80 · Intraday #6 lost on a similar breakout retest (the retest broke the base), hence SL below the whole old range top. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_V-I007.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 46300.0,
+     "fill_time_server": "2026-11-24 04:04:34 EET (ask 46293.88; retest of broken 46231-46285 ceiling, low bid 46272)",
      "asset": "FXVOL80",
      "name": "Vol 80 · Intraday #7",
-     "scored_myt": "2026-11-24 10:01:00"
+     "scored_myt": "2026-11-24 10:08:00"
     },
     "SWING": {
      "id": "V-W005",
@@ -1004,14 +1004,14 @@
     "valid_until_myt": "2026-11-25 00:01:00",
     "confidence": 0,
     "reasoning": "FX Vol 80 breakout-retest. D1 recovery since the 13 Nov crash low 37785 with higher lows (40984/41771/43185) and D1 MOMENTUM_UP. Yesterday's 46089 high was tested three times (46088.95/46090.49/46075.81), then 03:15 EET today broke through the 46231-46285 H4 resistance with M15 closes 46255/46364/46414 and a high 46464.39. Do not chase 46413. INTRADAY BUY limit on retest of the broken ceiling 46230-46300 (fill = ask touches 46300 or lower). SL 46040 below the 46103 03:41 EET pullback low and the 46090 triple top (back inside the old range = breakout failed). TP 46900 under the 46940-46955 H4 highs of 9-10 Nov (next resistance); failed break there means exit. ATR H1 ~570 / M15 ~300 / M5 ~155. Spread 13.2 in RR ~2.1 (at 46300) / ~2.6 (mid) / ~3.2 (at 46230). Valid 14h clock (00:01 MYT 25 Nov). Exit early if M15 closes below 46050 after fill. No-fill if 46900 is reached before a retest. Note: Vol 80 · Intraday #6 lost on a similar breakout retest (the retest broke the base), hence SL below the whole old range top. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_V-I007.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 46300.0,
+    "fill_time_server": "2026-11-24 04:04:34 EET (ask 46293.88; retest of broken 46231-46285 ceiling, low bid 46272)",
     "asset": "FXVOL80",
     "name": "Vol 80 · Intraday #7",
-    "scored_myt": "2026-11-24 10:01:00"
+    "scored_myt": "2026-11-24 10:08:00"
    },
    "calls": [
     {
@@ -1457,14 +1457,14 @@
      "valid_until_myt": "2026-11-25 00:01:00",
      "confidence": 0,
      "reasoning": "FX Vol 80 breakout-retest. D1 recovery since the 13 Nov crash low 37785 with higher lows (40984/41771/43185) and D1 MOMENTUM_UP. Yesterday's 46089 high was tested three times (46088.95/46090.49/46075.81), then 03:15 EET today broke through the 46231-46285 H4 resistance with M15 closes 46255/46364/46414 and a high 46464.39. Do not chase 46413. INTRADAY BUY limit on retest of the broken ceiling 46230-46300 (fill = ask touches 46300 or lower). SL 46040 below the 46103 03:41 EET pullback low and the 46090 triple top (back inside the old range = breakout failed). TP 46900 under the 46940-46955 H4 highs of 9-10 Nov (next resistance); failed break there means exit. ATR H1 ~570 / M15 ~300 / M5 ~155. Spread 13.2 in RR ~2.1 (at 46300) / ~2.6 (mid) / ~3.2 (at 46230). Valid 14h clock (00:01 MYT 25 Nov). Exit early if M15 closes below 46050 after fill. No-fill if 46900 is reached before a retest. Note: Vol 80 · Intraday #6 lost on a similar breakout retest (the retest broke the base), hence SL below the whole old range top. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_V-I007.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 46300.0,
+     "fill_time_server": "2026-11-24 04:04:34 EET (ask 46293.88; retest of broken 46231-46285 ceiling, low bid 46272)",
      "asset": "FXVOL80",
      "name": "Vol 80 · Intraday #7",
-     "scored_myt": "2026-11-24 10:01:00"
+     "scored_myt": "2026-11-24 10:08:00"
     }
    ],
    "open_count": 1,
@@ -1989,16 +1989,16 @@
   "open": 1
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-24 10:01:00",
+ "last_updated": "2026-11-24 10:08:00",
  "fxvol80_server_time": "2026-11-24 03:59:00",
- "status_note": "Kemas kini 10:01 MYT. Gold · Scalping #5 BUY tamat NO_FILL: harga sampai 3678 (09:45 MYT) dulu sebelum retest. Call baru: Vol 80 · Intraday #7 BUY 46230-46300 (SL 46040, TP 46900), tunggu retest breakout. Gold semua jenis: WAIT. BTC paused.",
+ "status_note": "Kemas kini 10:08 MYT. Vol 80 · Intraday #7 BUY kena entry 46300 (10:04 MYT, retest breakout), SL 46040, TP 46900. Gold semua jenis: WAIT. BTC paused.",
  "ticks": {
   "XAUUSD.m": {
    "symbol": "XAUUSD.m",
-   "bid": 3656.01,
-   "ask": 3656.27,
+   "bid": 3648.89,
+   "ask": 3649.15,
    "spread": 0.26,
-   "time": "2026-11-24T03:59:13Z"
+   "time": "2026-11-24T04:07:39Z"
   },
   "BTCUSD": {
    "bid": 73651.21,
@@ -2009,25 +2009,25 @@
   },
   "FXVOL80": {
    "symbol": "FX Vol 80",
-   "bid": 46413.5,
-   "ask": 46426.73,
-   "spread": 13.23,
-   "time": "2026-11-24T03:59:13Z"
+   "bid": 46328.53,
+   "ask": 46341.74,
+   "spread": 13.21,
+   "time": "2026-11-24T04:07:39Z"
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-24 03:55:00",
-   "last_m5_myt": "2026-11-24 09:55:00",
-   "tick_bid": 3656.01,
-   "tick_ask": 3656.27,
+   "last_m5_eet": "2026-11-24 04:05:00",
+   "last_m5_myt": "2026-11-24 10:05:00",
+   "tick_bid": 3648.89,
+   "tick_ask": 3649.15,
    "spread": 0.26,
-   "tick_eet": "2026-11-24T03:59:13",
-   "tick_myt": "2026-11-24 09:59:13",
+   "tick_eet": "2026-11-24T04:07:39",
+   "tick_myt": "2026-11-24 10:07:39",
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-24 10:01:00"
+   "scored_myt": "2026-11-24 10:08:00"
   },
   "BTCUSD": {
    "last_m5_eet": "2026-11-11 02:05:00",
@@ -2043,17 +2043,17 @@
    "scored_myt": "2026-11-11 08:08:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-24 03:55:00",
-   "last_m5_myt": "2026-11-24 09:55:00",
-   "tick_bid": 46413.5,
-   "tick_ask": 46426.73,
-   "spread": 13.23,
-   "tick_eet": "2026-11-24T03:59:13",
-   "tick_myt": "2026-11-24 09:59:13",
+   "last_m5_eet": "2026-11-24 04:05:00",
+   "last_m5_myt": "2026-11-24 10:05:00",
+   "tick_bid": 46328.53,
+   "tick_ask": 46341.74,
+   "spread": 13.21,
+   "tick_eet": "2026-11-24T04:07:39",
+   "tick_myt": "2026-11-24 10:07:39",
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-24 10:01:00"
+   "scored_myt": "2026-11-24 10:08:00"
   }
  },
  "outage": {
