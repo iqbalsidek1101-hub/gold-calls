@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-23 20:25:00",
+ "generated_myt": "2026-11-24 08:05:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -22,14 +22,15 @@
     "valid_until_myt": "2026-11-24 06:00:00",
     "confidence": 0,
     "reasoning": "Outage recovery call (PC offline 12-23 Nov). Weekly: two strong down weeks 4148->3502 (W1 15 Nov closed at the low 3537); this week opened with a gap-up pullback 3563->3637 = PULLBACK inside HTF MOMENTUM_DOWN, price still in the bottom ~15% of last week's 3502-3901 range. H4 supply 3626-3637 = origin of the 20 Nov 00:00 EET drop candle (open 3630, high 3636.72). Today it reacted twice: 09:15 EET high 3636.94 -> drop to 3600.45, then lower high 3626.75 at 11:15 = failed break at the next resistance. H1 still has higher lows (3558/3575/3600), so no chasing at 3618: INTRADAY SELL limit 3631-3635 only with M5 sweep-reclaim confirm (wick into/above 3637 then M5 close back below 3631). SL 3648 (~11 above 3636.94 sweep high; wider than I006 whose tight SL was swept). TP 3601.5 above today's 3600.45 H1 low. ATR H1 ~24 / M15 ~8 / D1 ~105. Spread 0.26 in RR ~1.69 (at 3631) / ~2.05 (mid 3633) / ~2.51 (at 3635). Close by end NY (Tue 06:00 MYT). Exit early if M15 closes above 3640 after fill; cancel if price breaks 3601 first (no fill). Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "NO_FILL",
     "r_result": null,
     "chart": "charts/call_I007.png",
     "fill_px": null,
     "fill_time_server": null,
     "asset": "XAUUSD",
     "name": "Gold · Intraday #7",
-    "scored_myt": "2026-11-23 18:57:00"
+    "scored_myt": "2026-11-24 08:05:00",
+    "result_note": "NO_FILL (expired 06:00 MYT 24 Nov). Spike 21:55 MYT 23 Nov swept above 3637 and SL 3648 (high 3689.66 @22:29 MYT) but no M5 close back below 3631 before expiry (lowest M5 close 3631.98 @04:50 MYT) -> registered sweep-reclaim confirm never met; no analytical entry. H4 spike filter: 20:00 MYT H4 range 48.3 < 2x ATR(14) ~104, not a spike by definition."
    },
    "latest_by_type": {
     "SCALP": {
@@ -67,14 +68,15 @@
      "valid_until_myt": "2026-11-24 06:00:00",
      "confidence": 0,
      "reasoning": "Outage recovery call (PC offline 12-23 Nov). Weekly: two strong down weeks 4148->3502 (W1 15 Nov closed at the low 3537); this week opened with a gap-up pullback 3563->3637 = PULLBACK inside HTF MOMENTUM_DOWN, price still in the bottom ~15% of last week's 3502-3901 range. H4 supply 3626-3637 = origin of the 20 Nov 00:00 EET drop candle (open 3630, high 3636.72). Today it reacted twice: 09:15 EET high 3636.94 -> drop to 3600.45, then lower high 3626.75 at 11:15 = failed break at the next resistance. H1 still has higher lows (3558/3575/3600), so no chasing at 3618: INTRADAY SELL limit 3631-3635 only with M5 sweep-reclaim confirm (wick into/above 3637 then M5 close back below 3631). SL 3648 (~11 above 3636.94 sweep high; wider than I006 whose tight SL was swept). TP 3601.5 above today's 3600.45 H1 low. ATR H1 ~24 / M15 ~8 / D1 ~105. Spread 0.26 in RR ~1.69 (at 3631) / ~2.05 (mid 3633) / ~2.51 (at 3635). Close by end NY (Tue 06:00 MYT). Exit early if M15 closes above 3640 after fill; cancel if price breaks 3601 first (no fill). Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "NO_FILL",
      "r_result": null,
      "chart": "charts/call_I007.png",
      "fill_px": null,
      "fill_time_server": null,
      "asset": "XAUUSD",
      "name": "Gold · Intraday #7",
-     "scored_myt": "2026-11-23 18:57:00"
+     "scored_myt": "2026-11-24 08:05:00",
+     "result_note": "NO_FILL (expired 06:00 MYT 24 Nov). Spike 21:55 MYT 23 Nov swept above 3637 and SL 3648 (high 3689.66 @22:29 MYT) but no M5 close back below 3631 before expiry (lowest M5 close 3631.98 @04:50 MYT) -> registered sweep-reclaim confirm never met; no analytical entry. H4 spike filter: 20:00 MYT H4 range 48.3 < 2x ATR(14) ~104, not a spike by definition."
     },
     "SWING": {
      "id": "002",
@@ -112,14 +114,15 @@
     "valid_until_myt": "2026-11-24 06:00:00",
     "confidence": 0,
     "reasoning": "Outage recovery call (PC offline 12-23 Nov). Weekly: two strong down weeks 4148->3502 (W1 15 Nov closed at the low 3537); this week opened with a gap-up pullback 3563->3637 = PULLBACK inside HTF MOMENTUM_DOWN, price still in the bottom ~15% of last week's 3502-3901 range. H4 supply 3626-3637 = origin of the 20 Nov 00:00 EET drop candle (open 3630, high 3636.72). Today it reacted twice: 09:15 EET high 3636.94 -> drop to 3600.45, then lower high 3626.75 at 11:15 = failed break at the next resistance. H1 still has higher lows (3558/3575/3600), so no chasing at 3618: INTRADAY SELL limit 3631-3635 only with M5 sweep-reclaim confirm (wick into/above 3637 then M5 close back below 3631). SL 3648 (~11 above 3636.94 sweep high; wider than I006 whose tight SL was swept). TP 3601.5 above today's 3600.45 H1 low. ATR H1 ~24 / M15 ~8 / D1 ~105. Spread 0.26 in RR ~1.69 (at 3631) / ~2.05 (mid 3633) / ~2.51 (at 3635). Close by end NY (Tue 06:00 MYT). Exit early if M15 closes above 3640 after fill; cancel if price breaks 3601 first (no fill). Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "NO_FILL",
     "r_result": null,
     "chart": "charts/call_I007.png",
     "fill_px": null,
     "fill_time_server": null,
     "asset": "XAUUSD",
     "name": "Gold · Intraday #7",
-    "scored_myt": "2026-11-23 18:57:00"
+    "scored_myt": "2026-11-24 08:05:00",
+    "result_note": "NO_FILL (expired 06:00 MYT 24 Nov). Spike 21:55 MYT 23 Nov swept above 3637 and SL 3648 (high 3689.66 @22:29 MYT) but no M5 close back below 3631 before expiry (lowest M5 close 3631.98 @04:50 MYT) -> registered sweep-reclaim confirm never met; no analytical entry. H4 spike filter: 20:00 MYT H4 range 48.3 < 2x ATR(14) ~104, not a spike by definition."
    },
    "calls": [
     {
@@ -413,14 +416,15 @@
      "valid_until_myt": "2026-11-24 06:00:00",
      "confidence": 0,
      "reasoning": "Outage recovery call (PC offline 12-23 Nov). Weekly: two strong down weeks 4148->3502 (W1 15 Nov closed at the low 3537); this week opened with a gap-up pullback 3563->3637 = PULLBACK inside HTF MOMENTUM_DOWN, price still in the bottom ~15% of last week's 3502-3901 range. H4 supply 3626-3637 = origin of the 20 Nov 00:00 EET drop candle (open 3630, high 3636.72). Today it reacted twice: 09:15 EET high 3636.94 -> drop to 3600.45, then lower high 3626.75 at 11:15 = failed break at the next resistance. H1 still has higher lows (3558/3575/3600), so no chasing at 3618: INTRADAY SELL limit 3631-3635 only with M5 sweep-reclaim confirm (wick into/above 3637 then M5 close back below 3631). SL 3648 (~11 above 3636.94 sweep high; wider than I006 whose tight SL was swept). TP 3601.5 above today's 3600.45 H1 low. ATR H1 ~24 / M15 ~8 / D1 ~105. Spread 0.26 in RR ~1.69 (at 3631) / ~2.05 (mid 3633) / ~2.51 (at 3635). Close by end NY (Tue 06:00 MYT). Exit early if M15 closes above 3640 after fill; cancel if price breaks 3601 first (no fill). Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "NO_FILL",
      "r_result": null,
      "chart": "charts/call_I007.png",
      "fill_px": null,
      "fill_time_server": null,
      "asset": "XAUUSD",
      "name": "Gold · Intraday #7",
-     "scored_myt": "2026-11-23 18:57:00"
+     "scored_myt": "2026-11-24 08:05:00",
+     "result_note": "NO_FILL (expired 06:00 MYT 24 Nov). Spike 21:55 MYT 23 Nov swept above 3637 and SL 3648 (high 3689.66 @22:29 MYT) but no M5 close back below 3631 before expiry (lowest M5 close 3631.98 @04:50 MYT) -> registered sweep-reclaim confirm never met; no analytical entry. H4 spike filter: 20:00 MYT H4 range 48.3 < 2x ATR(14) ~104, not a spike by definition."
     },
     {
      "id": "S004",
@@ -467,32 +471,32 @@
      "scored_myt": "2026-11-23 18:43:00"
     }
    ],
-   "open_count": 1,
+   "open_count": 0,
    "scoreboard": {
     "n": 8,
     "wins": 2,
     "sum_r": -2.97,
-    "open": 1
+    "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-23 12:55:00",
-    "last_m5_myt": "2026-11-23 18:55:00",
-    "tick_bid": 3626.02,
-    "tick_ask": 3626.28,
+    "last_m5_eet": "2026-11-24 02:00:00",
+    "last_m5_myt": "2026-11-24 08:00:00",
+    "tick_bid": 3637.01,
+    "tick_ask": 3637.27,
     "spread": 0.26,
-    "tick_eet": "2026-11-23T12:55:14",
-    "tick_myt": "2026-11-23 18:55:14",
-    "age_min": 2.0,
+    "tick_eet": "2026-11-24T02:03:02",
+    "tick_myt": "2026-11-24 08:03:02",
+    "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-23 18:57:00"
+    "scored_myt": "2026-11-24 08:05:00"
    },
    "tick": {
     "symbol": "XAUUSD.m",
-    "bid": 3626.02,
-    "ask": 3626.28,
+    "bid": 3637.01,
+    "ask": 3637.27,
     "spread": 0.26,
-    "time": "2026-11-23T12:55:14Z"
+    "time": "2026-11-24T02:03:02Z"
    }
   },
   "BTCUSD": {
@@ -1435,32 +1439,32 @@
      "scored_myt": "2026-11-23 18:43:00"
     }
    ],
-   "open_count": 1,
+   "open_count": 0,
    "scoreboard": {
     "n": 8,
     "wins": 5,
     "sum_r": 5.33,
-    "open": 1
+    "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-23 12:55:00",
-    "last_m5_myt": "2026-11-23 18:55:00",
-    "tick_bid": 45713.65,
-    "tick_ask": 45726.67,
-    "spread": 13.02,
-    "tick_eet": "2026-11-23T12:55:15",
-    "tick_myt": "2026-11-23 18:55:15",
-    "age_min": 2.0,
+    "last_m5_eet": "2026-11-24 02:00:00",
+    "last_m5_myt": "2026-11-24 08:00:00",
+    "tick_bid": 45623.99,
+    "tick_ask": 45636.99,
+    "spread": 13.0,
+    "tick_eet": "2026-11-24T02:03:02",
+    "tick_myt": "2026-11-24 08:03:02",
+    "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-23 18:57:00"
+    "scored_myt": "2026-11-24 08:05:00"
    },
    "tick": {
     "symbol": "FX Vol 80",
-    "bid": 45713.65,
-    "ask": 45726.67,
-    "spread": 13.02,
-    "time": "2026-11-23T12:55:15Z"
+    "bid": 45623.99,
+    "ask": 45636.99,
+    "spread": 13.0,
+    "time": "2026-11-24T02:03:02Z"
    }
   }
  },
@@ -1477,14 +1481,15 @@
   "valid_until_myt": "2026-11-24 06:00:00",
   "confidence": 0,
   "reasoning": "Outage recovery call (PC offline 12-23 Nov). Weekly: two strong down weeks 4148->3502 (W1 15 Nov closed at the low 3537); this week opened with a gap-up pullback 3563->3637 = PULLBACK inside HTF MOMENTUM_DOWN, price still in the bottom ~15% of last week's 3502-3901 range. H4 supply 3626-3637 = origin of the 20 Nov 00:00 EET drop candle (open 3630, high 3636.72). Today it reacted twice: 09:15 EET high 3636.94 -> drop to 3600.45, then lower high 3626.75 at 11:15 = failed break at the next resistance. H1 still has higher lows (3558/3575/3600), so no chasing at 3618: INTRADAY SELL limit 3631-3635 only with M5 sweep-reclaim confirm (wick into/above 3637 then M5 close back below 3631). SL 3648 (~11 above 3636.94 sweep high; wider than I006 whose tight SL was swept). TP 3601.5 above today's 3600.45 H1 low. ATR H1 ~24 / M15 ~8 / D1 ~105. Spread 0.26 in RR ~1.69 (at 3631) / ~2.05 (mid 3633) / ~2.51 (at 3635). Close by end NY (Tue 06:00 MYT). Exit early if M15 closes above 3640 after fill; cancel if price breaks 3601 first (no fill). Unvalidated setup; no calibrated probability.",
-  "status": "PENDING",
+  "status": "NO_FILL",
   "r_result": null,
   "chart": "charts/call_I007.png",
   "fill_px": null,
   "fill_time_server": null,
   "asset": "XAUUSD",
   "name": "Gold · Intraday #7",
-  "scored_myt": "2026-11-23 18:57:00"
+  "scored_myt": "2026-11-24 08:05:00",
+  "result_note": "NO_FILL (expired 06:00 MYT 24 Nov). Spike 21:55 MYT 23 Nov swept above 3637 and SL 3648 (high 3689.66 @22:29 MYT) but no M5 close back below 3631 before expiry (lowest M5 close 3631.98 @04:50 MYT) -> registered sweep-reclaim confirm never met; no analytical entry. H4 spike filter: 20:00 MYT H4 range 48.3 < 2x ATR(14) ~104, not a spike by definition."
  },
  "latest_by_type": {
   "SCALP": {
@@ -1522,14 +1527,15 @@
    "valid_until_myt": "2026-11-24 06:00:00",
    "confidence": 0,
    "reasoning": "Outage recovery call (PC offline 12-23 Nov). Weekly: two strong down weeks 4148->3502 (W1 15 Nov closed at the low 3537); this week opened with a gap-up pullback 3563->3637 = PULLBACK inside HTF MOMENTUM_DOWN, price still in the bottom ~15% of last week's 3502-3901 range. H4 supply 3626-3637 = origin of the 20 Nov 00:00 EET drop candle (open 3630, high 3636.72). Today it reacted twice: 09:15 EET high 3636.94 -> drop to 3600.45, then lower high 3626.75 at 11:15 = failed break at the next resistance. H1 still has higher lows (3558/3575/3600), so no chasing at 3618: INTRADAY SELL limit 3631-3635 only with M5 sweep-reclaim confirm (wick into/above 3637 then M5 close back below 3631). SL 3648 (~11 above 3636.94 sweep high; wider than I006 whose tight SL was swept). TP 3601.5 above today's 3600.45 H1 low. ATR H1 ~24 / M15 ~8 / D1 ~105. Spread 0.26 in RR ~1.69 (at 3631) / ~2.05 (mid 3633) / ~2.51 (at 3635). Close by end NY (Tue 06:00 MYT). Exit early if M15 closes above 3640 after fill; cancel if price breaks 3601 first (no fill). Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "NO_FILL",
    "r_result": null,
    "chart": "charts/call_I007.png",
    "fill_px": null,
    "fill_time_server": null,
    "asset": "XAUUSD",
    "name": "Gold · Intraday #7",
-   "scored_myt": "2026-11-23 18:57:00"
+   "scored_myt": "2026-11-24 08:05:00",
+   "result_note": "NO_FILL (expired 06:00 MYT 24 Nov). Spike 21:55 MYT 23 Nov swept above 3637 and SL 3648 (high 3689.66 @22:29 MYT) but no M5 close back below 3631 before expiry (lowest M5 close 3631.98 @04:50 MYT) -> registered sweep-reclaim confirm never met; no analytical entry. H4 spike filter: 20:00 MYT H4 range 48.3 < 2x ATR(14) ~104, not a spike by definition."
   },
   "SWING": {
    "id": "002",
@@ -1567,14 +1573,15 @@
   "valid_until_myt": "2026-11-24 06:00:00",
   "confidence": 0,
   "reasoning": "Outage recovery call (PC offline 12-23 Nov). Weekly: two strong down weeks 4148->3502 (W1 15 Nov closed at the low 3537); this week opened with a gap-up pullback 3563->3637 = PULLBACK inside HTF MOMENTUM_DOWN, price still in the bottom ~15% of last week's 3502-3901 range. H4 supply 3626-3637 = origin of the 20 Nov 00:00 EET drop candle (open 3630, high 3636.72). Today it reacted twice: 09:15 EET high 3636.94 -> drop to 3600.45, then lower high 3626.75 at 11:15 = failed break at the next resistance. H1 still has higher lows (3558/3575/3600), so no chasing at 3618: INTRADAY SELL limit 3631-3635 only with M5 sweep-reclaim confirm (wick into/above 3637 then M5 close back below 3631). SL 3648 (~11 above 3636.94 sweep high; wider than I006 whose tight SL was swept). TP 3601.5 above today's 3600.45 H1 low. ATR H1 ~24 / M15 ~8 / D1 ~105. Spread 0.26 in RR ~1.69 (at 3631) / ~2.05 (mid 3633) / ~2.51 (at 3635). Close by end NY (Tue 06:00 MYT). Exit early if M15 closes above 3640 after fill; cancel if price breaks 3601 first (no fill). Unvalidated setup; no calibrated probability.",
-  "status": "PENDING",
+  "status": "NO_FILL",
   "r_result": null,
   "chart": "charts/call_I007.png",
   "fill_px": null,
   "fill_time_server": null,
   "asset": "XAUUSD",
   "name": "Gold · Intraday #7",
-  "scored_myt": "2026-11-23 18:57:00"
+  "scored_myt": "2026-11-24 08:05:00",
+  "result_note": "NO_FILL (expired 06:00 MYT 24 Nov). Spike 21:55 MYT 23 Nov swept above 3637 and SL 3648 (high 3689.66 @22:29 MYT) but no M5 close back below 3631 before expiry (lowest M5 close 3631.98 @04:50 MYT) -> registered sweep-reclaim confirm never met; no analytical entry. H4 spike filter: 20:00 MYT H4 range 48.3 < 2x ATR(14) ~104, not a spike by definition."
  },
  "calls": [
   {
@@ -1868,14 +1875,15 @@
    "valid_until_myt": "2026-11-24 06:00:00",
    "confidence": 0,
    "reasoning": "Outage recovery call (PC offline 12-23 Nov). Weekly: two strong down weeks 4148->3502 (W1 15 Nov closed at the low 3537); this week opened with a gap-up pullback 3563->3637 = PULLBACK inside HTF MOMENTUM_DOWN, price still in the bottom ~15% of last week's 3502-3901 range. H4 supply 3626-3637 = origin of the 20 Nov 00:00 EET drop candle (open 3630, high 3636.72). Today it reacted twice: 09:15 EET high 3636.94 -> drop to 3600.45, then lower high 3626.75 at 11:15 = failed break at the next resistance. H1 still has higher lows (3558/3575/3600), so no chasing at 3618: INTRADAY SELL limit 3631-3635 only with M5 sweep-reclaim confirm (wick into/above 3637 then M5 close back below 3631). SL 3648 (~11 above 3636.94 sweep high; wider than I006 whose tight SL was swept). TP 3601.5 above today's 3600.45 H1 low. ATR H1 ~24 / M15 ~8 / D1 ~105. Spread 0.26 in RR ~1.69 (at 3631) / ~2.05 (mid 3633) / ~2.51 (at 3635). Close by end NY (Tue 06:00 MYT). Exit early if M15 closes above 3640 after fill; cancel if price breaks 3601 first (no fill). Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "NO_FILL",
    "r_result": null,
    "chart": "charts/call_I007.png",
    "fill_px": null,
    "fill_time_server": null,
    "asset": "XAUUSD",
    "name": "Gold · Intraday #7",
-   "scored_myt": "2026-11-23 18:57:00"
+   "scored_myt": "2026-11-24 08:05:00",
+   "result_note": "NO_FILL (expired 06:00 MYT 24 Nov). Spike 21:55 MYT 23 Nov swept above 3637 and SL 3648 (high 3689.66 @22:29 MYT) but no M5 close back below 3631 before expiry (lowest M5 close 3631.98 @04:50 MYT) -> registered sweep-reclaim confirm never met; no analytical entry. H4 spike filter: 20:00 MYT H4 range 48.3 < 2x ATR(14) ~104, not a spike by definition."
   },
   {
    "id": "S004",
@@ -1926,19 +1934,19 @@
   "n": 22,
   "wins": 9,
   "sum_r": 3.07,
-  "open": 1
+  "open": 0
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-23 20:25:00",
- "fxvol80_server_time": "2026-11-23 12:55:00",
- "status_note": "Kemas kini 20:25 MYT. Vol 80 · Intraday #6 BUY kena SL 45330 pada 20:11 MYT (-1.01R analitik): retest breakout gagal, harga pecah low 45375. Gold · Intraday #7 SELL 3631-3635 masih PENDING (harga 3613, belum sentuh zon). Scalping & Swing: WAIT. BTC paused.",
+ "last_updated": "2026-11-24 08:05:00",
+ "fxvol80_server_time": "2026-11-24 02:03:00",
+ "status_note": "Kemas kini 08:05 MYT. Gold · Intraday #7 SELL 3631-3635 TAMAT tanpa entry (NO_FILL): spike 21:55 MYT tembus zon & SL, tapi tiada M5 close balik bawah 3631 sebelum 06:00 MYT. Tiada call terbuka. Gold & Vol 80 semua jenis: WAIT (harga tengah range). BTC paused.",
  "ticks": {
   "XAUUSD.m": {
    "symbol": "XAUUSD.m",
-   "bid": 3626.02,
-   "ask": 3626.28,
+   "bid": 3637.01,
+   "ask": 3637.27,
    "spread": 0.26,
-   "time": "2026-11-23T12:55:14Z"
+   "time": "2026-11-24T02:03:02Z"
   },
   "BTCUSD": {
    "bid": 73651.21,
@@ -1949,25 +1957,25 @@
   },
   "FXVOL80": {
    "symbol": "FX Vol 80",
-   "bid": 45713.65,
-   "ask": 45726.67,
-   "spread": 13.02,
-   "time": "2026-11-23T12:55:15Z"
+   "bid": 45623.99,
+   "ask": 45636.99,
+   "spread": 13.0,
+   "time": "2026-11-24T02:03:02Z"
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-23 14:20:00",
-   "last_m5_myt": "2026-11-23 20:20:00",
-   "tick_bid": 3612.92,
-   "tick_ask": 3613.18,
+   "last_m5_eet": "2026-11-24 02:00:00",
+   "last_m5_myt": "2026-11-24 08:00:00",
+   "tick_bid": 3637.01,
+   "tick_ask": 3637.27,
    "spread": 0.26,
-   "tick_eet": "2026-11-23T14:23:52",
-   "tick_myt": "2026-11-23 20:23:52",
+   "tick_eet": "2026-11-24T02:03:02",
+   "tick_myt": "2026-11-24 08:03:02",
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-23 20:25:00"
+   "scored_myt": "2026-11-24 08:05:00"
   },
   "BTCUSD": {
    "last_m5_eet": "2026-11-11 02:05:00",
@@ -1983,17 +1991,17 @@
    "scored_myt": "2026-11-11 08:08:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-23 14:20:00",
-   "last_m5_myt": "2026-11-23 20:20:00",
-   "tick_bid": 44925.79,
-   "tick_ask": 44938.6,
-   "spread": 13.02,
-   "tick_eet": "2026-11-23T14:23:51",
-   "tick_myt": "2026-11-23 20:23:51",
+   "last_m5_eet": "2026-11-24 02:00:00",
+   "last_m5_myt": "2026-11-24 08:00:00",
+   "tick_bid": 45623.99,
+   "tick_ask": 45636.99,
+   "spread": 13.0,
+   "tick_eet": "2026-11-24T02:03:02",
+   "tick_myt": "2026-11-24 08:03:02",
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-23 20:25:00"
+   "scored_myt": "2026-11-24 08:05:00"
   }
  },
  "outage": {
