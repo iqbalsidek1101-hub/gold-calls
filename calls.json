@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-24 12:07:00",
+ "generated_myt": "2026-11-24 14:13:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -22,14 +22,15 @@
     "valid_until_myt": "2026-11-24 15:05:00",
     "confidence": 0,
     "reasoning": "Lost-flip retest scalp. W1/D1 MOMENTUM_DOWN; this week's D1 pullback stalled: today's push failed at 3678.19 (03:45 EET), a lower high under Monday's 3689.66, then dropped back through the 3646-3659 H1 flip that Gold Scalping #5 was bought from. M15 closed 3640.54 at 04:45 EET below the flip (support -> resistance), low 3636.52. Do not chase 3640. SCALP SELL limit 3647-3651 on a retest of the lost flip from below (fill = bid touches 3647 or higher). SL 3661 above the 3660.64 04:15 EET lower high. TP 3623 above today's 3619.66 Asia low. ATR M15 ~13 / H1 ~24 / H4 ~50. Spread 0.26 in RR ~1.7 (at 3647) / ~2.2 (mid) / ~2.8 (at 3651). Valid 4h (15:05 MYT); close by then if open. Exit early if M15 closes above 3656 after fill (flip reclaimed). No-fill if price reaches 3623 before the retest. Not an H4-zone entry (H1 flip), so the H4 spike filter does not apply. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "NO_FILL",
     "r_result": null,
     "chart": "charts/call_S006.png",
     "fill_px": null,
     "fill_time_server": null,
     "asset": "XAUUSD",
     "name": "Gold · Scalping #6",
-    "scored_myt": "2026-11-24 11:05:00"
+    "scored_myt": "2026-11-24 14:13:00",
+    "result_note": "NO_FILL: price reached the 3623 no-fill level (bid 3623 or lower from 08:05:09 EET = 14:05 MYT, low 3618.79) before any retest fill; highest bid since creation stayed below the 3647 entry (max ~3640.6). The sell idea was right in direction, but the lost-flip retest never came, so it was cancelled by its registered rule."
    },
    "latest_by_type": {
     "SCALP": {
@@ -45,14 +46,15 @@
      "valid_until_myt": "2026-11-24 15:05:00",
      "confidence": 0,
      "reasoning": "Lost-flip retest scalp. W1/D1 MOMENTUM_DOWN; this week's D1 pullback stalled: today's push failed at 3678.19 (03:45 EET), a lower high under Monday's 3689.66, then dropped back through the 3646-3659 H1 flip that Gold Scalping #5 was bought from. M15 closed 3640.54 at 04:45 EET below the flip (support -> resistance), low 3636.52. Do not chase 3640. SCALP SELL limit 3647-3651 on a retest of the lost flip from below (fill = bid touches 3647 or higher). SL 3661 above the 3660.64 04:15 EET lower high. TP 3623 above today's 3619.66 Asia low. ATR M15 ~13 / H1 ~24 / H4 ~50. Spread 0.26 in RR ~1.7 (at 3647) / ~2.2 (mid) / ~2.8 (at 3651). Valid 4h (15:05 MYT); close by then if open. Exit early if M15 closes above 3656 after fill (flip reclaimed). No-fill if price reaches 3623 before the retest. Not an H4-zone entry (H1 flip), so the H4 spike filter does not apply. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "NO_FILL",
      "r_result": null,
      "chart": "charts/call_S006.png",
      "fill_px": null,
      "fill_time_server": null,
      "asset": "XAUUSD",
      "name": "Gold · Scalping #6",
-     "scored_myt": "2026-11-24 11:05:00"
+     "scored_myt": "2026-11-24 14:13:00",
+     "result_note": "NO_FILL: price reached the 3623 no-fill level (bid 3623 or lower from 08:05:09 EET = 14:05 MYT, low 3618.79) before any retest fill; highest bid since creation stayed below the 3647 entry (max ~3640.6). The sell idea was right in direction, but the lost-flip retest never came, so it was cancelled by its registered rule."
     },
     "INTRADAY": {
      "id": "I007",
@@ -113,14 +115,15 @@
     "valid_until_myt": "2026-11-24 15:05:00",
     "confidence": 0,
     "reasoning": "Lost-flip retest scalp. W1/D1 MOMENTUM_DOWN; this week's D1 pullback stalled: today's push failed at 3678.19 (03:45 EET), a lower high under Monday's 3689.66, then dropped back through the 3646-3659 H1 flip that Gold Scalping #5 was bought from. M15 closed 3640.54 at 04:45 EET below the flip (support -> resistance), low 3636.52. Do not chase 3640. SCALP SELL limit 3647-3651 on a retest of the lost flip from below (fill = bid touches 3647 or higher). SL 3661 above the 3660.64 04:15 EET lower high. TP 3623 above today's 3619.66 Asia low. ATR M15 ~13 / H1 ~24 / H4 ~50. Spread 0.26 in RR ~1.7 (at 3647) / ~2.2 (mid) / ~2.8 (at 3651). Valid 4h (15:05 MYT); close by then if open. Exit early if M15 closes above 3656 after fill (flip reclaimed). No-fill if price reaches 3623 before the retest. Not an H4-zone entry (H1 flip), so the H4 spike filter does not apply. Unvalidated setup; no calibrated probability.",
-    "status": "PENDING",
+    "status": "NO_FILL",
     "r_result": null,
     "chart": "charts/call_S006.png",
     "fill_px": null,
     "fill_time_server": null,
     "asset": "XAUUSD",
     "name": "Gold · Scalping #6",
-    "scored_myt": "2026-11-24 11:05:00"
+    "scored_myt": "2026-11-24 14:13:00",
+    "result_note": "NO_FILL: price reached the 3623 no-fill level (bid 3623 or lower from 08:05:09 EET = 14:05 MYT, low 3618.79) before any retest fill; highest bid since creation stayed below the 3647 entry (max ~3640.6). The sell idea was right in direction, but the lost-flip retest never came, so it was cancelled by its registered rule."
    },
    "calls": [
     {
@@ -504,35 +507,36 @@
      "valid_until_myt": "2026-11-24 15:05:00",
      "confidence": 0,
      "reasoning": "Lost-flip retest scalp. W1/D1 MOMENTUM_DOWN; this week's D1 pullback stalled: today's push failed at 3678.19 (03:45 EET), a lower high under Monday's 3689.66, then dropped back through the 3646-3659 H1 flip that Gold Scalping #5 was bought from. M15 closed 3640.54 at 04:45 EET below the flip (support -> resistance), low 3636.52. Do not chase 3640. SCALP SELL limit 3647-3651 on a retest of the lost flip from below (fill = bid touches 3647 or higher). SL 3661 above the 3660.64 04:15 EET lower high. TP 3623 above today's 3619.66 Asia low. ATR M15 ~13 / H1 ~24 / H4 ~50. Spread 0.26 in RR ~1.7 (at 3647) / ~2.2 (mid) / ~2.8 (at 3651). Valid 4h (15:05 MYT); close by then if open. Exit early if M15 closes above 3656 after fill (flip reclaimed). No-fill if price reaches 3623 before the retest. Not an H4-zone entry (H1 flip), so the H4 spike filter does not apply. Unvalidated setup; no calibrated probability.",
-     "status": "PENDING",
+     "status": "NO_FILL",
      "r_result": null,
      "chart": "charts/call_S006.png",
      "fill_px": null,
      "fill_time_server": null,
      "asset": "XAUUSD",
      "name": "Gold · Scalping #6",
-     "scored_myt": "2026-11-24 11:05:00"
+     "scored_myt": "2026-11-24 14:13:00",
+     "result_note": "NO_FILL: price reached the 3623 no-fill level (bid 3623 or lower from 08:05:09 EET = 14:05 MYT, low 3618.79) before any retest fill; highest bid since creation stayed below the 3647 entry (max ~3640.6). The sell idea was right in direction, but the lost-flip retest never came, so it was cancelled by its registered rule."
     }
    ],
-   "open_count": 1,
+   "open_count": 0,
    "scoreboard": {
     "n": 8,
     "wins": 2,
     "sum_r": -2.97,
-    "open": 1
+    "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-24 05:45:00",
-    "last_m5_myt": "2026-11-24 11:45:00",
-    "tick_bid": 3629.98,
-    "tick_ask": 3630.24,
+    "last_m5_eet": "2026-11-24 08:10:00",
+    "last_m5_myt": "2026-11-24 14:10:00",
+    "tick_bid": 3629.48,
+    "tick_ask": 3629.74,
     "spread": 0.26,
-    "tick_eet": "2026-11-24T05:46:01",
-    "tick_myt": "2026-11-24 11:46:01",
-    "age_min": 1.0,
+    "tick_eet": "2026-11-24T08:12:48",
+    "tick_myt": "2026-11-24 14:12:48",
+    "age_min": 0.5,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-24 11:47:00"
+    "scored_myt": "2026-11-24 14:13:00"
    },
    "tick": {
     "symbol": "XAUUSD.m",
@@ -1575,14 +1579,15 @@
    "valid_until_myt": "2026-11-24 15:05:00",
    "confidence": 0,
    "reasoning": "Lost-flip retest scalp. W1/D1 MOMENTUM_DOWN; this week's D1 pullback stalled: today's push failed at 3678.19 (03:45 EET), a lower high under Monday's 3689.66, then dropped back through the 3646-3659 H1 flip that Gold Scalping #5 was bought from. M15 closed 3640.54 at 04:45 EET below the flip (support -> resistance), low 3636.52. Do not chase 3640. SCALP SELL limit 3647-3651 on a retest of the lost flip from below (fill = bid touches 3647 or higher). SL 3661 above the 3660.64 04:15 EET lower high. TP 3623 above today's 3619.66 Asia low. ATR M15 ~13 / H1 ~24 / H4 ~50. Spread 0.26 in RR ~1.7 (at 3647) / ~2.2 (mid) / ~2.8 (at 3651). Valid 4h (15:05 MYT); close by then if open. Exit early if M15 closes above 3656 after fill (flip reclaimed). No-fill if price reaches 3623 before the retest. Not an H4-zone entry (H1 flip), so the H4 spike filter does not apply. Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "NO_FILL",
    "r_result": null,
    "chart": "charts/call_S006.png",
    "fill_px": null,
    "fill_time_server": null,
    "asset": "XAUUSD",
    "name": "Gold · Scalping #6",
-   "scored_myt": "2026-11-24 11:05:00"
+   "scored_myt": "2026-11-24 14:13:00",
+   "result_note": "NO_FILL: price reached the 3623 no-fill level (bid 3623 or lower from 08:05:09 EET = 14:05 MYT, low 3618.79) before any retest fill; highest bid since creation stayed below the 3647 entry (max ~3640.6). The sell idea was right in direction, but the lost-flip retest never came, so it was cancelled by its registered rule."
   },
   "INTRADAY": {
    "id": "V-I008",
@@ -2033,14 +2038,15 @@
    "valid_until_myt": "2026-11-24 15:05:00",
    "confidence": 0,
    "reasoning": "Lost-flip retest scalp. W1/D1 MOMENTUM_DOWN; this week's D1 pullback stalled: today's push failed at 3678.19 (03:45 EET), a lower high under Monday's 3689.66, then dropped back through the 3646-3659 H1 flip that Gold Scalping #5 was bought from. M15 closed 3640.54 at 04:45 EET below the flip (support -> resistance), low 3636.52. Do not chase 3640. SCALP SELL limit 3647-3651 on a retest of the lost flip from below (fill = bid touches 3647 or higher). SL 3661 above the 3660.64 04:15 EET lower high. TP 3623 above today's 3619.66 Asia low. ATR M15 ~13 / H1 ~24 / H4 ~50. Spread 0.26 in RR ~1.7 (at 3647) / ~2.2 (mid) / ~2.8 (at 3651). Valid 4h (15:05 MYT); close by then if open. Exit early if M15 closes above 3656 after fill (flip reclaimed). No-fill if price reaches 3623 before the retest. Not an H4-zone entry (H1 flip), so the H4 spike filter does not apply. Unvalidated setup; no calibrated probability.",
-   "status": "PENDING",
+   "status": "NO_FILL",
    "r_result": null,
    "chart": "charts/call_S006.png",
    "fill_px": null,
    "fill_time_server": null,
    "asset": "XAUUSD",
    "name": "Gold · Scalping #6",
-   "scored_myt": "2026-11-24 11:05:00"
+   "scored_myt": "2026-11-24 14:13:00",
+   "result_note": "NO_FILL: price reached the 3623 no-fill level (bid 3623 or lower from 08:05:09 EET = 14:05 MYT, low 3618.79) before any retest fill; highest bid since creation stayed below the 3647 entry (max ~3640.6). The sell idea was right in direction, but the lost-flip retest never came, so it was cancelled by its registered rule."
   },
   {
    "id": "V-I008",
@@ -2069,19 +2075,19 @@
   "n": 23,
   "wins": 10,
   "sum_r": 5.38,
-  "open": 2
+  "open": 1
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-24 12:07:00",
- "fxvol80_server_time": "2026-11-24 06:05:00",
- "status_note": "Kemas kini 12:07 MYT. Vol 80 · Intraday #8 BUY FILLED (analitik) 46980 pada 11:50 MYT; SL 46600, TP 47850, harga ~47167. Gold · Scalping #6 SELL 3647-3651 masih tunggu retest (harga ~3630). Gold Intraday/Swing, Vol 80 Scalp/Swing: WAIT. BTC paused.",
+ "last_updated": "2026-11-24 14:13:00",
+ "fxvol80_server_time": "2026-11-24 07:55:00",
+ "status_note": "Kemas kini 14:13 MYT. Gold · Scalping #6 SELL: NO FILL (harga turun ke 3623 pada 14:05 MYT sebelum retest 3647). Vol 80 · Intraday #8 BUY FILLED (analitik) 46980, masih open; SL 46600, TP 47850, harga ~46943. Gold Scalp/Intraday/Swing, Vol 80 Scalp/Swing: WAIT. BTC paused.",
  "ticks": {
   "XAUUSD.m": {
    "symbol": "XAUUSD.m",
-   "bid": 3630.54,
-   "ask": 3630.8,
+   "bid": 3634.41,
+   "ask": 3634.67,
    "spread": 0.26,
-   "time": "2026-11-24T06:05:58Z"
+   "time": "2026-11-24T07:59:21Z"
   },
   "BTCUSD": {
    "bid": 73651.21,
@@ -2092,25 +2098,25 @@
   },
   "FXVOL80": {
    "symbol": "FX Vol 80",
-   "bid": 47167.48,
-   "ask": 47180.92,
-   "spread": 13.44,
-   "time": "2026-11-24T06:05:58Z"
+   "bid": 47041.62,
+   "ask": 47055.02,
+   "spread": 13.4,
+   "time": "2026-11-24T07:59:21Z"
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-24 06:05:00",
-   "last_m5_myt": "2026-11-24 12:05:00",
-   "tick_bid": 3630.54,
-   "tick_ask": 3630.8,
+   "last_m5_eet": "2026-11-24 08:10:00",
+   "last_m5_myt": "2026-11-24 14:10:00",
+   "tick_bid": 3629.48,
+   "tick_ask": 3629.74,
    "spread": 0.26,
-   "tick_eet": "2026-11-24T06:05:58",
-   "tick_myt": "2026-11-24 12:05:58",
-   "age_min": 1.0,
+   "tick_eet": "2026-11-24T08:12:48",
+   "tick_myt": "2026-11-24 14:12:48",
+   "age_min": 0.5,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-24 12:07:00"
+   "scored_myt": "2026-11-24 14:13:00"
   },
   "BTCUSD": {
    "last_m5_eet": "2026-11-11 02:05:00",
@@ -2126,17 +2132,17 @@
    "scored_myt": "2026-11-11 08:08:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-24 06:05:00",
-   "last_m5_myt": "2026-11-24 12:05:00",
-   "tick_bid": 47167.48,
-   "tick_ask": 47180.92,
-   "spread": 13.44,
-   "tick_eet": "2026-11-24T06:05:58",
-   "tick_myt": "2026-11-24 12:05:58",
-   "age_min": 1.0,
+   "last_m5_eet": "2026-11-24 08:10:00",
+   "last_m5_myt": "2026-11-24 14:10:00",
+   "tick_bid": 46942.76,
+   "tick_ask": 46956.13,
+   "spread": 13.37,
+   "tick_eet": "2026-11-24T08:12:48",
+   "tick_myt": "2026-11-24 14:12:48",
+   "age_min": 0.5,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-24 12:07:00"
+   "scored_myt": "2026-11-24 14:13:00"
   }
  },
  "outage": {
