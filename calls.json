@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-25 16:28:00",
+ "generated_myt": "2026-11-25 16:42:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -22,15 +22,16 @@
     "valid_until_myt": "2026-11-25 20:12:00",
     "confidence": 0,
     "reasoning": "Lower-high retest scalp. W1/D1/H4/H1 all MOMENTUM_DOWN (D1 4148->3512 in 2.5 weeks; price under M15 e20 3532/H1 e20 3556/H4 e20 3604). Today's low 3512.48 (08:57 EET) only gave a small M15 base; the bounce failed at 3531.83 (09:45 EET) under the 3530-3534 broken flip and M15 e20, then M5 closed 3519.86 at 10:00 EET back below 3520 = lower high confirmed. Do not chase 3520 into the 3512 low. SCALP SELL limit 3525-3528 on a retest of the 3526-3532 rejection area (fill = bid touches 3525 or higher). SL 3535 above the 3531.83 lower high and the 3533.7 flip. TP 3507 below today's 3512.48 low, above last week's 3502.71 W1 low (support). ATR M15 ~9 / H1 ~17 / H4 ~40. Spread 0.26 in RR ~1.7 (at 3525) / ~2.2 (mid) / ~2.8 (at 3528). Valid 4h (20:12 MYT); close by then if open. Exit early if M15 closes above 3533 after fill (flip reclaimed). No-fill if bid reaches 3510 before a retest. Risk: price has chopped 3512-3532 for ~1.5h and sits 10 above W1 support, so a double bottom at 3512 can stop the move. Not an H4-zone entry (H4 spike filter n/a: H4 08:00 range 19 < 2x ATR 80). Unvalidated setup; no calibrated probability.",
-    "status": "FILLED",
-    "r_result": null,
+    "status": "SL",
+    "r_result": -1.0,
     "chart": "charts/call_S007.png",
     "fill_px": 3525.0,
     "fill_time_server": "2026-11-25 10:18:36",
     "asset": "XAUUSD",
     "name": "Gold · Scalping #7",
-    "scored_myt": "2026-11-25 16:28:00",
-    "result_note": "FILLED (analytical): bid touched 3525 at 10:18:36 EET (16:18 MYT). Since fill: high bid 3530.63 / ask 3530.89 < SL 3535, low bid 3522.93; no M15 close >3533. Open, last bid 3527.49 (~-0.3R floating)."
+    "scored_myt": "2026-11-25 16:42:00",
+    "result_note": "SL (analytical): ask touched 3535 at 10:34:11 EET (16:34 MYT) after fill 3525 at 16:18 MYT; no M15 close >3533 before SL (M15 10:15 closed 3531.90). -1.0R (spread included). Why it lost: the 3531.8 'lower high' was not a confirmed lower high - the 1.5h 3512-3516 base with higher lows (3516.26/3516.19) above W1 support 3502.7 was a double bottom, and buyers pushed through the 3530-3534 flip to 3536.6. The sell was placed in the middle of a base, not after a failed reclaim of the flip.",
+    "closed_myt": "2026-11-25 16:34:11"
    },
    "latest_by_type": {
     "SCALP": {
@@ -46,15 +47,16 @@
      "valid_until_myt": "2026-11-25 20:12:00",
      "confidence": 0,
      "reasoning": "Lower-high retest scalp. W1/D1/H4/H1 all MOMENTUM_DOWN (D1 4148->3512 in 2.5 weeks; price under M15 e20 3532/H1 e20 3556/H4 e20 3604). Today's low 3512.48 (08:57 EET) only gave a small M15 base; the bounce failed at 3531.83 (09:45 EET) under the 3530-3534 broken flip and M15 e20, then M5 closed 3519.86 at 10:00 EET back below 3520 = lower high confirmed. Do not chase 3520 into the 3512 low. SCALP SELL limit 3525-3528 on a retest of the 3526-3532 rejection area (fill = bid touches 3525 or higher). SL 3535 above the 3531.83 lower high and the 3533.7 flip. TP 3507 below today's 3512.48 low, above last week's 3502.71 W1 low (support). ATR M15 ~9 / H1 ~17 / H4 ~40. Spread 0.26 in RR ~1.7 (at 3525) / ~2.2 (mid) / ~2.8 (at 3528). Valid 4h (20:12 MYT); close by then if open. Exit early if M15 closes above 3533 after fill (flip reclaimed). No-fill if bid reaches 3510 before a retest. Risk: price has chopped 3512-3532 for ~1.5h and sits 10 above W1 support, so a double bottom at 3512 can stop the move. Not an H4-zone entry (H4 spike filter n/a: H4 08:00 range 19 < 2x ATR 80). Unvalidated setup; no calibrated probability.",
-     "status": "FILLED",
-     "r_result": null,
+     "status": "SL",
+     "r_result": -1.0,
      "chart": "charts/call_S007.png",
      "fill_px": 3525.0,
      "fill_time_server": "2026-11-25 10:18:36",
      "asset": "XAUUSD",
      "name": "Gold · Scalping #7",
-     "scored_myt": "2026-11-25 16:28:00",
-     "result_note": "FILLED (analytical): bid touched 3525 at 10:18:36 EET (16:18 MYT). Since fill: high bid 3530.63 / ask 3530.89 < SL 3535, low bid 3522.93; no M15 close >3533. Open, last bid 3527.49 (~-0.3R floating)."
+     "scored_myt": "2026-11-25 16:42:00",
+     "result_note": "SL (analytical): ask touched 3535 at 10:34:11 EET (16:34 MYT) after fill 3525 at 16:18 MYT; no M15 close >3533 before SL (M15 10:15 closed 3531.90). -1.0R (spread included). Why it lost: the 3531.8 'lower high' was not a confirmed lower high - the 1.5h 3512-3516 base with higher lows (3516.26/3516.19) above W1 support 3502.7 was a double bottom, and buyers pushed through the 3530-3534 flip to 3536.6. The sell was placed in the middle of a base, not after a failed reclaim of the flip.",
+     "closed_myt": "2026-11-25 16:34:11"
     },
     "INTRADAY": {
      "id": "I007",
@@ -115,15 +117,16 @@
     "valid_until_myt": "2026-11-25 20:12:00",
     "confidence": 0,
     "reasoning": "Lower-high retest scalp. W1/D1/H4/H1 all MOMENTUM_DOWN (D1 4148->3512 in 2.5 weeks; price under M15 e20 3532/H1 e20 3556/H4 e20 3604). Today's low 3512.48 (08:57 EET) only gave a small M15 base; the bounce failed at 3531.83 (09:45 EET) under the 3530-3534 broken flip and M15 e20, then M5 closed 3519.86 at 10:00 EET back below 3520 = lower high confirmed. Do not chase 3520 into the 3512 low. SCALP SELL limit 3525-3528 on a retest of the 3526-3532 rejection area (fill = bid touches 3525 or higher). SL 3535 above the 3531.83 lower high and the 3533.7 flip. TP 3507 below today's 3512.48 low, above last week's 3502.71 W1 low (support). ATR M15 ~9 / H1 ~17 / H4 ~40. Spread 0.26 in RR ~1.7 (at 3525) / ~2.2 (mid) / ~2.8 (at 3528). Valid 4h (20:12 MYT); close by then if open. Exit early if M15 closes above 3533 after fill (flip reclaimed). No-fill if bid reaches 3510 before a retest. Risk: price has chopped 3512-3532 for ~1.5h and sits 10 above W1 support, so a double bottom at 3512 can stop the move. Not an H4-zone entry (H4 spike filter n/a: H4 08:00 range 19 < 2x ATR 80). Unvalidated setup; no calibrated probability.",
-    "status": "FILLED",
-    "r_result": null,
+    "status": "SL",
+    "r_result": -1.0,
     "chart": "charts/call_S007.png",
     "fill_px": 3525.0,
     "fill_time_server": "2026-11-25 10:18:36",
     "asset": "XAUUSD",
     "name": "Gold · Scalping #7",
-    "scored_myt": "2026-11-25 16:28:00",
-    "result_note": "FILLED (analytical): bid touched 3525 at 10:18:36 EET (16:18 MYT). Since fill: high bid 3530.63 / ask 3530.89 < SL 3535, low bid 3522.93; no M15 close >3533. Open, last bid 3527.49 (~-0.3R floating)."
+    "scored_myt": "2026-11-25 16:42:00",
+    "result_note": "SL (analytical): ask touched 3535 at 10:34:11 EET (16:34 MYT) after fill 3525 at 16:18 MYT; no M15 close >3533 before SL (M15 10:15 closed 3531.90). -1.0R (spread included). Why it lost: the 3531.8 'lower high' was not a confirmed lower high - the 1.5h 3512-3516 base with higher lows (3516.26/3516.19) above W1 support 3502.7 was a double bottom, and buyers pushed through the 3530-3534 flip to 3536.6. The sell was placed in the middle of a base, not after a failed reclaim of the flip.",
+    "closed_myt": "2026-11-25 16:34:11"
    },
    "calls": [
     {
@@ -530,43 +533,44 @@
      "valid_until_myt": "2026-11-25 20:12:00",
      "confidence": 0,
      "reasoning": "Lower-high retest scalp. W1/D1/H4/H1 all MOMENTUM_DOWN (D1 4148->3512 in 2.5 weeks; price under M15 e20 3532/H1 e20 3556/H4 e20 3604). Today's low 3512.48 (08:57 EET) only gave a small M15 base; the bounce failed at 3531.83 (09:45 EET) under the 3530-3534 broken flip and M15 e20, then M5 closed 3519.86 at 10:00 EET back below 3520 = lower high confirmed. Do not chase 3520 into the 3512 low. SCALP SELL limit 3525-3528 on a retest of the 3526-3532 rejection area (fill = bid touches 3525 or higher). SL 3535 above the 3531.83 lower high and the 3533.7 flip. TP 3507 below today's 3512.48 low, above last week's 3502.71 W1 low (support). ATR M15 ~9 / H1 ~17 / H4 ~40. Spread 0.26 in RR ~1.7 (at 3525) / ~2.2 (mid) / ~2.8 (at 3528). Valid 4h (20:12 MYT); close by then if open. Exit early if M15 closes above 3533 after fill (flip reclaimed). No-fill if bid reaches 3510 before a retest. Risk: price has chopped 3512-3532 for ~1.5h and sits 10 above W1 support, so a double bottom at 3512 can stop the move. Not an H4-zone entry (H4 spike filter n/a: H4 08:00 range 19 < 2x ATR 80). Unvalidated setup; no calibrated probability.",
-     "status": "FILLED",
-     "r_result": null,
+     "status": "SL",
+     "r_result": -1.0,
      "chart": "charts/call_S007.png",
      "fill_px": 3525.0,
      "fill_time_server": "2026-11-25 10:18:36",
      "asset": "XAUUSD",
      "name": "Gold · Scalping #7",
-     "scored_myt": "2026-11-25 16:28:00",
-     "result_note": "FILLED (analytical): bid touched 3525 at 10:18:36 EET (16:18 MYT). Since fill: high bid 3530.63 / ask 3530.89 < SL 3535, low bid 3522.93; no M15 close >3533. Open, last bid 3527.49 (~-0.3R floating)."
+     "scored_myt": "2026-11-25 16:42:00",
+     "result_note": "SL (analytical): ask touched 3535 at 10:34:11 EET (16:34 MYT) after fill 3525 at 16:18 MYT; no M15 close >3533 before SL (M15 10:15 closed 3531.90). -1.0R (spread included). Why it lost: the 3531.8 'lower high' was not a confirmed lower high - the 1.5h 3512-3516 base with higher lows (3516.26/3516.19) above W1 support 3502.7 was a double bottom, and buyers pushed through the 3530-3534 flip to 3536.6. The sell was placed in the middle of a base, not after a failed reclaim of the flip.",
+     "closed_myt": "2026-11-25 16:34:11"
     }
    ],
-   "open_count": 1,
+   "open_count": 0,
    "scoreboard": {
-    "n": 8,
+    "n": 9,
     "wins": 2,
-    "sum_r": -2.97,
-    "open": 1
+    "sum_r": -3.97,
+    "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-25 10:25:00",
-    "last_m5_myt": "2026-11-25 16:25:00",
-    "tick_bid": 3527.49,
-    "tick_ask": 3527.75,
+    "last_m5_eet": "2026-11-25 10:40:00",
+    "last_m5_myt": "2026-11-25 16:40:00",
+    "tick_bid": 3533.6,
+    "tick_ask": 3533.86,
     "spread": 0.26,
-    "tick_eet": "2026-11-25T10:26:28",
-    "tick_myt": "2026-11-25 16:26:28",
-    "age_min": 1.5,
+    "tick_eet": "2026-11-25T10:40:54",
+    "tick_myt": "2026-11-25 16:40:54",
+    "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-25 16:28:00"
+    "scored_myt": "2026-11-25 16:42:00"
    },
    "tick": {
     "symbol": "XAUUSD.m",
-    "bid": 3527.49,
-    "ask": 3527.75,
+    "bid": 3533.6,
+    "ask": 3533.86,
     "spread": 0.26,
-    "time": "2026-11-25T08:26:28Z"
+    "time": "2026-11-25T08:40:54Z"
    }
   },
   "BTCUSD": {
@@ -1582,24 +1586,24 @@
     "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-25 10:25:00",
-    "last_m5_myt": "2026-11-25 16:25:00",
-    "tick_bid": 45367.66,
-    "tick_ask": 45380.59,
-    "spread": 12.93,
-    "tick_eet": "2026-11-25T10:26:28",
-    "tick_myt": "2026-11-25 16:26:28",
-    "age_min": 1.5,
+    "last_m5_eet": "2026-11-25 10:40:00",
+    "last_m5_myt": "2026-11-25 16:40:00",
+    "tick_bid": 45141.66,
+    "tick_ask": 45154.52,
+    "spread": 12.86,
+    "tick_eet": "2026-11-25T10:40:54",
+    "tick_myt": "2026-11-25 16:40:54",
+    "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-25 16:28:00"
+    "scored_myt": "2026-11-25 16:42:00"
    },
    "tick": {
     "symbol": "FX Vol 80",
-    "bid": 45367.66,
-    "ask": 45380.59,
-    "spread": 12.93,
-    "time": "2026-11-25T08:26:28Z"
+    "bid": 45141.66,
+    "ask": 45154.52,
+    "spread": 12.86,
+    "time": "2026-11-25T08:40:54Z"
    }
   }
  },
@@ -1616,15 +1620,16 @@
   "valid_until_myt": "2026-11-25 20:12:00",
   "confidence": 0,
   "reasoning": "Lower-high retest scalp. W1/D1/H4/H1 all MOMENTUM_DOWN (D1 4148->3512 in 2.5 weeks; price under M15 e20 3532/H1 e20 3556/H4 e20 3604). Today's low 3512.48 (08:57 EET) only gave a small M15 base; the bounce failed at 3531.83 (09:45 EET) under the 3530-3534 broken flip and M15 e20, then M5 closed 3519.86 at 10:00 EET back below 3520 = lower high confirmed. Do not chase 3520 into the 3512 low. SCALP SELL limit 3525-3528 on a retest of the 3526-3532 rejection area (fill = bid touches 3525 or higher). SL 3535 above the 3531.83 lower high and the 3533.7 flip. TP 3507 below today's 3512.48 low, above last week's 3502.71 W1 low (support). ATR M15 ~9 / H1 ~17 / H4 ~40. Spread 0.26 in RR ~1.7 (at 3525) / ~2.2 (mid) / ~2.8 (at 3528). Valid 4h (20:12 MYT); close by then if open. Exit early if M15 closes above 3533 after fill (flip reclaimed). No-fill if bid reaches 3510 before a retest. Risk: price has chopped 3512-3532 for ~1.5h and sits 10 above W1 support, so a double bottom at 3512 can stop the move. Not an H4-zone entry (H4 spike filter n/a: H4 08:00 range 19 < 2x ATR 80). Unvalidated setup; no calibrated probability.",
-  "status": "FILLED",
-  "r_result": null,
+  "status": "SL",
+  "r_result": -1.0,
   "chart": "charts/call_S007.png",
   "fill_px": 3525.0,
   "fill_time_server": "2026-11-25 10:18:36",
   "asset": "XAUUSD",
   "name": "Gold · Scalping #7",
-  "scored_myt": "2026-11-25 16:28:00",
-  "result_note": "FILLED (analytical): bid touched 3525 at 10:18:36 EET (16:18 MYT). Since fill: high bid 3530.63 / ask 3530.89 < SL 3535, low bid 3522.93; no M15 close >3533. Open, last bid 3527.49 (~-0.3R floating)."
+  "scored_myt": "2026-11-25 16:42:00",
+  "result_note": "SL (analytical): ask touched 3535 at 10:34:11 EET (16:34 MYT) after fill 3525 at 16:18 MYT; no M15 close >3533 before SL (M15 10:15 closed 3531.90). -1.0R (spread included). Why it lost: the 3531.8 'lower high' was not a confirmed lower high - the 1.5h 3512-3516 base with higher lows (3516.26/3516.19) above W1 support 3502.7 was a double bottom, and buyers pushed through the 3530-3534 flip to 3536.6. The sell was placed in the middle of a base, not after a failed reclaim of the flip.",
+  "closed_myt": "2026-11-25 16:34:11"
  },
  "latest_by_type": {
   "SCALP": {
@@ -1640,15 +1645,16 @@
    "valid_until_myt": "2026-11-25 20:12:00",
    "confidence": 0,
    "reasoning": "Lower-high retest scalp. W1/D1/H4/H1 all MOMENTUM_DOWN (D1 4148->3512 in 2.5 weeks; price under M15 e20 3532/H1 e20 3556/H4 e20 3604). Today's low 3512.48 (08:57 EET) only gave a small M15 base; the bounce failed at 3531.83 (09:45 EET) under the 3530-3534 broken flip and M15 e20, then M5 closed 3519.86 at 10:00 EET back below 3520 = lower high confirmed. Do not chase 3520 into the 3512 low. SCALP SELL limit 3525-3528 on a retest of the 3526-3532 rejection area (fill = bid touches 3525 or higher). SL 3535 above the 3531.83 lower high and the 3533.7 flip. TP 3507 below today's 3512.48 low, above last week's 3502.71 W1 low (support). ATR M15 ~9 / H1 ~17 / H4 ~40. Spread 0.26 in RR ~1.7 (at 3525) / ~2.2 (mid) / ~2.8 (at 3528). Valid 4h (20:12 MYT); close by then if open. Exit early if M15 closes above 3533 after fill (flip reclaimed). No-fill if bid reaches 3510 before a retest. Risk: price has chopped 3512-3532 for ~1.5h and sits 10 above W1 support, so a double bottom at 3512 can stop the move. Not an H4-zone entry (H4 spike filter n/a: H4 08:00 range 19 < 2x ATR 80). Unvalidated setup; no calibrated probability.",
-   "status": "FILLED",
-   "r_result": null,
+   "status": "SL",
+   "r_result": -1.0,
    "chart": "charts/call_S007.png",
    "fill_px": 3525.0,
    "fill_time_server": "2026-11-25 10:18:36",
    "asset": "XAUUSD",
    "name": "Gold · Scalping #7",
-   "scored_myt": "2026-11-25 16:28:00",
-   "result_note": "FILLED (analytical): bid touched 3525 at 10:18:36 EET (16:18 MYT). Since fill: high bid 3530.63 / ask 3530.89 < SL 3535, low bid 3522.93; no M15 close >3533. Open, last bid 3527.49 (~-0.3R floating)."
+   "scored_myt": "2026-11-25 16:42:00",
+   "result_note": "SL (analytical): ask touched 3535 at 10:34:11 EET (16:34 MYT) after fill 3525 at 16:18 MYT; no M15 close >3533 before SL (M15 10:15 closed 3531.90). -1.0R (spread included). Why it lost: the 3531.8 'lower high' was not a confirmed lower high - the 1.5h 3512-3516 base with higher lows (3516.26/3516.19) above W1 support 3502.7 was a double bottom, and buyers pushed through the 3530-3534 flip to 3536.6. The sell was placed in the middle of a base, not after a failed reclaim of the flip.",
+   "closed_myt": "2026-11-25 16:34:11"
   },
   "INTRADAY": {
    "id": "V-I009",
@@ -1711,15 +1717,16 @@
   "valid_until_myt": "2026-11-25 20:12:00",
   "confidence": 0,
   "reasoning": "Lower-high retest scalp. W1/D1/H4/H1 all MOMENTUM_DOWN (D1 4148->3512 in 2.5 weeks; price under M15 e20 3532/H1 e20 3556/H4 e20 3604). Today's low 3512.48 (08:57 EET) only gave a small M15 base; the bounce failed at 3531.83 (09:45 EET) under the 3530-3534 broken flip and M15 e20, then M5 closed 3519.86 at 10:00 EET back below 3520 = lower high confirmed. Do not chase 3520 into the 3512 low. SCALP SELL limit 3525-3528 on a retest of the 3526-3532 rejection area (fill = bid touches 3525 or higher). SL 3535 above the 3531.83 lower high and the 3533.7 flip. TP 3507 below today's 3512.48 low, above last week's 3502.71 W1 low (support). ATR M15 ~9 / H1 ~17 / H4 ~40. Spread 0.26 in RR ~1.7 (at 3525) / ~2.2 (mid) / ~2.8 (at 3528). Valid 4h (20:12 MYT); close by then if open. Exit early if M15 closes above 3533 after fill (flip reclaimed). No-fill if bid reaches 3510 before a retest. Risk: price has chopped 3512-3532 for ~1.5h and sits 10 above W1 support, so a double bottom at 3512 can stop the move. Not an H4-zone entry (H4 spike filter n/a: H4 08:00 range 19 < 2x ATR 80). Unvalidated setup; no calibrated probability.",
-  "status": "FILLED",
-  "r_result": null,
+  "status": "SL",
+  "r_result": -1.0,
   "chart": "charts/call_S007.png",
   "fill_px": 3525.0,
   "fill_time_server": "2026-11-25 10:18:36",
   "asset": "XAUUSD",
   "name": "Gold · Scalping #7",
-  "scored_myt": "2026-11-25 16:28:00",
-  "result_note": "FILLED (analytical): bid touched 3525 at 10:18:36 EET (16:18 MYT). Since fill: high bid 3530.63 / ask 3530.89 < SL 3535, low bid 3522.93; no M15 close >3533. Open, last bid 3527.49 (~-0.3R floating)."
+  "scored_myt": "2026-11-25 16:42:00",
+  "result_note": "SL (analytical): ask touched 3535 at 10:34:11 EET (16:34 MYT) after fill 3525 at 16:18 MYT; no M15 close >3533 before SL (M15 10:15 closed 3531.90). -1.0R (spread included). Why it lost: the 3531.8 'lower high' was not a confirmed lower high - the 1.5h 3512-3516 base with higher lows (3516.26/3516.19) above W1 support 3502.7 was a double bottom, and buyers pushed through the 3530-3534 flip to 3536.6. The sell was placed in the middle of a base, not after a failed reclaim of the flip.",
+  "closed_myt": "2026-11-25 16:34:11"
  },
  "calls": [
   {
@@ -2176,34 +2183,35 @@
    "valid_until_myt": "2026-11-25 20:12:00",
    "confidence": 0,
    "reasoning": "Lower-high retest scalp. W1/D1/H4/H1 all MOMENTUM_DOWN (D1 4148->3512 in 2.5 weeks; price under M15 e20 3532/H1 e20 3556/H4 e20 3604). Today's low 3512.48 (08:57 EET) only gave a small M15 base; the bounce failed at 3531.83 (09:45 EET) under the 3530-3534 broken flip and M15 e20, then M5 closed 3519.86 at 10:00 EET back below 3520 = lower high confirmed. Do not chase 3520 into the 3512 low. SCALP SELL limit 3525-3528 on a retest of the 3526-3532 rejection area (fill = bid touches 3525 or higher). SL 3535 above the 3531.83 lower high and the 3533.7 flip. TP 3507 below today's 3512.48 low, above last week's 3502.71 W1 low (support). ATR M15 ~9 / H1 ~17 / H4 ~40. Spread 0.26 in RR ~1.7 (at 3525) / ~2.2 (mid) / ~2.8 (at 3528). Valid 4h (20:12 MYT); close by then if open. Exit early if M15 closes above 3533 after fill (flip reclaimed). No-fill if bid reaches 3510 before a retest. Risk: price has chopped 3512-3532 for ~1.5h and sits 10 above W1 support, so a double bottom at 3512 can stop the move. Not an H4-zone entry (H4 spike filter n/a: H4 08:00 range 19 < 2x ATR 80). Unvalidated setup; no calibrated probability.",
-   "status": "FILLED",
-   "r_result": null,
+   "status": "SL",
+   "r_result": -1.0,
    "chart": "charts/call_S007.png",
    "fill_px": 3525.0,
    "fill_time_server": "2026-11-25 10:18:36",
    "asset": "XAUUSD",
    "name": "Gold · Scalping #7",
-   "scored_myt": "2026-11-25 16:28:00",
-   "result_note": "FILLED (analytical): bid touched 3525 at 10:18:36 EET (16:18 MYT). Since fill: high bid 3530.63 / ask 3530.89 < SL 3535, low bid 3522.93; no M15 close >3533. Open, last bid 3527.49 (~-0.3R floating)."
+   "scored_myt": "2026-11-25 16:42:00",
+   "result_note": "SL (analytical): ask touched 3535 at 10:34:11 EET (16:34 MYT) after fill 3525 at 16:18 MYT; no M15 close >3533 before SL (M15 10:15 closed 3531.90). -1.0R (spread included). Why it lost: the 3531.8 'lower high' was not a confirmed lower high - the 1.5h 3512-3516 base with higher lows (3516.26/3516.19) above W1 support 3502.7 was a double bottom, and buyers pushed through the 3530-3534 flip to 3536.6. The sell was placed in the middle of a base, not after a failed reclaim of the flip.",
+   "closed_myt": "2026-11-25 16:34:11"
   }
  ],
  "scoreboard": {
-  "n": 25,
+  "n": 26,
   "wins": 11,
-  "sum_r": 6.67,
-  "open": 1
+  "sum_r": 5.67,
+  "open": 0
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-25 16:28:00",
- "fxvol80_server_time": "2026-11-25 10:26:28",
- "status_note": "Kemas kini 16:28 MYT. Gold · Scalping #7 SELL FILLED 3525 pada 16:18 MYT (analitikal), sedang terbuka: SL 3535, TP 3507. Vol 80: WAIT. BTC paused.",
+ "last_updated": "2026-11-25 16:42:00",
+ "fxvol80_server_time": "2026-11-25 10:40:54",
+ "status_note": "Kemas kini 16:42 MYT. Gold · Scalping #7 kena SL 3535 pada 16:34 MYT (-1.0R): base 3512-3516 jadi double bottom, harga tembus flip 3530-3534. Gold: WAIT. Vol 80: WAIT (uji low 45120). Tiada call terbuka. BTC paused.",
  "ticks": {
   "XAUUSD.m": {
    "symbol": "XAUUSD.m",
-   "bid": 3527.49,
-   "ask": 3527.75,
+   "bid": 3533.6,
+   "ask": 3533.86,
    "spread": 0.26,
-   "time": "2026-11-25T08:26:28Z"
+   "time": "2026-11-25T08:40:54Z"
   },
   "BTCUSD": {
    "bid": 73651.21,
@@ -2214,25 +2222,25 @@
   },
   "FXVOL80": {
    "symbol": "FX Vol 80",
-   "bid": 45367.66,
-   "ask": 45380.59,
-   "spread": 12.93,
-   "time": "2026-11-25T08:26:28Z"
+   "bid": 45141.66,
+   "ask": 45154.52,
+   "spread": 12.86,
+   "time": "2026-11-25T08:40:54Z"
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-25 10:25:00",
-   "last_m5_myt": "2026-11-25 16:25:00",
-   "tick_bid": 3527.49,
-   "tick_ask": 3527.75,
+   "last_m5_eet": "2026-11-25 10:40:00",
+   "last_m5_myt": "2026-11-25 16:40:00",
+   "tick_bid": 3533.6,
+   "tick_ask": 3533.86,
    "spread": 0.26,
-   "tick_eet": "2026-11-25T10:26:28",
-   "tick_myt": "2026-11-25 16:26:28",
-   "age_min": 1.5,
+   "tick_eet": "2026-11-25T10:40:54",
+   "tick_myt": "2026-11-25 16:40:54",
+   "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-25 16:28:00"
+   "scored_myt": "2026-11-25 16:42:00"
   },
   "BTCUSD": {
    "last_m5_eet": "2026-11-11 02:05:00",
@@ -2248,17 +2256,17 @@
    "scored_myt": "2026-11-11 08:08:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-25 10:25:00",
-   "last_m5_myt": "2026-11-25 16:25:00",
-   "tick_bid": 45367.66,
-   "tick_ask": 45380.59,
-   "spread": 12.93,
-   "tick_eet": "2026-11-25T10:26:28",
-   "tick_myt": "2026-11-25 16:26:28",
-   "age_min": 1.5,
+   "last_m5_eet": "2026-11-25 10:40:00",
+   "last_m5_myt": "2026-11-25 16:40:00",
+   "tick_bid": 45141.66,
+   "tick_ask": 45154.52,
+   "spread": 12.86,
+   "tick_eet": "2026-11-25T10:40:54",
+   "tick_myt": "2026-11-25 16:40:54",
+   "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-25 16:28:00"
+   "scored_myt": "2026-11-25 16:42:00"
   }
  },
  "outage": {
