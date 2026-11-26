@@ -126,6 +126,10 @@
     .sheet .check { display: flex; align-items: center; gap: 10px; min-height: 48px; font-weight: 600; }
     .sheet .check input { width: 22px; height: 22px; }
     .sheet .row-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+    .sheet h2.later { margin-top: 28px; }
+    .sheet .push-note { white-space: pre-wrap; }
+    details.push-help { margin-top: 12px; }
+    details.push-help summary { min-height: 44px; display: flex; align-items: center; font-weight: 700; }
     .tabs button {
       min-height: 52px;
       border-radius: 14px;
@@ -335,11 +339,47 @@
         <button type="button" class="back" id="setClose" style="margin-top:0">Tutup</button>
       </div>
     </form>
+    <section id="pushPanel" aria-label="Notifikasi">
+      <h2 class="later">Notifikasi</h2>
+      <p class="hint push-note" id="pushCadence">Bukan notifikasi masa nyata, dan bukan amaran dalam halaman.
+
+Call baru: lepas analisis penuh diterbitkan dalam calls.json, lebih kurang setiap 30 minit. Boleh lambat ~30 minit + masa hantar.
+
+Entry tersentuh, TP dan SL: lepas semakan call aktif setiap 10 minit, 08:00–21:50 MYT. Boleh lambat sampai 10 minit + masa proses. Luar waktu 08:00–21:50 MYT semakan berhenti. Status yang berubah waktu tu baru diberitahu pada semakan seterusnya, biasanya 08:00 MYT, jadi lambat boleh lebih daripada 10 minit.
+
+Entry tersentuh ialah simulasi call dalam calls.json, bukan order broker.</p>
+      <p class="hint" id="pushStatus" aria-live="polite">Menyemak push…</p>
+      <p class="hint" id="pushGuide"></p>
+      <details class="push-help">
+        <summary>Cara pasang di iPhone</summary>
+        <p class="hint">Perlukan iOS 16.4 atau lebih baru. Dalam Safari: Kongsi → Tambah ke Skrin Utama. Buka Charlie Calls dari ikon skrin utama, bukan dari tab Safari. Lepas tu tekan Benarkan notifikasi dan pilih Allow. Push latar pada iPhone hanya hidup untuk app yang dipasang ke Skrin Utama.</p>
+      </details>
+      <label class="check"><input id="pref-new_call" type="checkbox" checked /> Call baru</label>
+      <p class="hint">BUY atau SELL yang baru diterbitkan. Call WAIT (no-fit) tak dihantar.</p>
+      <label class="check"><input id="pref-entry" type="checkbox" checked /> Entry tersentuh</label>
+      <p class="hint">Simulasi call: zon entry dalam data. Bukan order broker.</p>
+      <label class="check"><input id="pref-tp" type="checkbox" checked /> TP</label>
+      <p class="hint">Status TP. Angka R diambil dari calls.json sahaja.</p>
+      <label class="check"><input id="pref-sl" type="checkbox" checked /> SL</label>
+      <p class="hint">Status SL. Angka R diambil dari calls.json sahaja.</p>
+      <button type="button" class="analisis" id="pushEnable">Benarkan notifikasi</button>
+      <div class="row-btns">
+        <button type="button" class="back" id="pushTest" style="margin-top:0">Hantar ujian</button>
+        <button type="button" class="back" id="pushStop" style="margin-top:0">Berhenti</button>
+      </div>
+      <label>Server push (opsyen)
+        <input id="pushApi" name="push-api" type="url" inputmode="url" autocomplete="off" placeholder="https://server-push" />
+      </label>
+      <p class="hint">Kosongkan kalau push-config.js dah ada URL. URL disimpan di telefon ni sahaja. Key webhook tak dihantar ke server push.</p>
+    </section>
   </div>
   <div class="zoom" id="zoom" hidden>
     <button type="button" class="zoom-close" id="zoomClose">Tutup</button>
     <div class="zoom-scroll"><img id="zoomImg" alt="Chart penuh" /></div>
   </div>
+  <script src="push-config.js"></script>
+  <script src="push-shared.js"></script>
+  <script src="push-client.js"></script>
   <script>
     const $ = (id) => document.getElementById(id);
     const TYPES = [
@@ -688,6 +728,7 @@
       $('setHeader').value = s.header || 'Authorization';
       $('setKeyInUrl').checked = !!s.keyInUrl;
       $('settings').hidden = false;
+      if (pushUi) pushUi.refresh();
     }
     function saveSettings() {
       const url = $('setUrl').value.trim();
@@ -1152,6 +1193,7 @@
       }
     }
     let booted = false;
+    let pushUi = null;
     let analyzing = false;
     let analisisNote = '';
     let analisisPoll = null;
@@ -1172,8 +1214,40 @@
         paintChrome();
         return;
       }
-      if (!booted) { applyHash(); booted = true; }
+      if (!booted) {
+        const pushQuery = new URLSearchParams(location.search);
+        const pushAsset = String(pushQuery.get('asset') || '').toUpperCase();
+        const pushCall = pushQuery.get('call') || '';
+        if (ASSET_META[pushAsset]) selectAsset(pushAsset, { keepDetail: true });
+        applyHash();
+        if (pushCall && findCall(pushCall)) {
+          detailId = pushCall;
+          const found = findCall(pushCall);
+          if (found && found.type) activeType = String(found.type).toUpperCase();
+          history.replaceState({ type: activeType, detailId: detailId }, '', '#/' + activeType + '/' + encodeURIComponent(detailId));
+        }
+        booted = true;
+      }
       render();
+    }
+
+    function selectAsset(asset, opts) {
+      if (!ASSET_META[asset]) return;
+      currentAsset = asset;
+      const root = $('assetTabs');
+      if (root) {
+        root.querySelectorAll('[data-asset]').forEach((b) => {
+          b.setAttribute('aria-selected', b.getAttribute('data-asset') === asset ? 'true' : 'false');
+        });
+      }
+      applyAssetView();
+      if (!opts || !opts.keepDetail) detailId = null;
+    }
+    function openFromPush(asset, callId) {
+      if (asset) selectAsset(String(asset || '').toUpperCase(), { keepDetail: true });
+      if (!data) return;
+      if (callId && findCall(callId)) openDetail(callId);
+      else render();
     }
 
     let pullY = null;
@@ -1205,10 +1279,7 @@
       if (!root) return;
       root.querySelectorAll('[data-asset]').forEach((btn) => {
         btn.addEventListener('click', async () => {
-          currentAsset = btn.getAttribute('data-asset');
-          root.querySelectorAll('[data-asset]').forEach((b) => b.setAttribute('aria-selected', b === btn ? 'true' : 'false'));
-          applyAssetView();
-          detailId = null;
+          selectAsset(btn.getAttribute('data-asset'));
           await loadMarket();
           render({ forceList: true });
           paintChrome();
@@ -1225,8 +1296,13 @@
     setInterval(paintAnalisis, 1000);
 
     if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.addEventListener('message', (event) => {
+        const payload = event.data || {};
+        if (payload.type === 'charlie-push-open') openFromPush(payload.asset, payload.callId);
+      });
       navigator.serviceWorker.register('./sw.js').catch(() => {});
     }
+    if (window.CharliePush) pushUi = CharliePush.mount(document);
     refreshAll().then(() => { setInterval(pollSpot, 20000); });
   </script>
 </body>

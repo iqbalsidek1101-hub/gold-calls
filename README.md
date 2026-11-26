@@ -11,6 +11,7 @@ PY
 python3 -m http.server 8765 -d /workspace/gold_app
 ```
 
-See `ARCHITECTURE.md` for push/hosting research.  
+See `ARCHITECTURE.md` for the original hosting notes.  
 Preview: `preview_phone.png`.  
-**Not published.** No pushes sent.
+
+The static app is published on GitHub Pages. Opt-in Web Push code lives in this repo (`PUSH.md`) but **no push server is deployed and no notifications are sent** until that server is set up separately. Status checks are every 10 minutes, 08:00–21:50 MYT. New-call analysis stays about every 30 minutes. Neither is live price.
