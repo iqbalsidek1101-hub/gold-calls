@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-26 09:41:00",
+ "generated_myt": "2026-11-26 09:48:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -553,24 +553,24 @@
     "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-26 03:35:00",
-    "last_m5_myt": "2026-11-26 09:35:00",
-    "tick_bid": 3557.57,
-    "tick_ask": 3557.83,
+    "last_m5_eet": "2026-11-26 03:45:00",
+    "last_m5_myt": "2026-11-26 09:45:00",
+    "tick_bid": 3565.95,
+    "tick_ask": 3566.21,
     "spread": 0.26,
-    "tick_eet": "2026-11-26T03:38:59",
-    "tick_myt": "2026-11-26 09:38:59",
-    "age_min": 2.0,
+    "tick_eet": "2026-11-26T03:48:23",
+    "tick_myt": "2026-11-26 09:48:23",
+    "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-26 09:41:00"
+    "scored_myt": "2026-11-26 09:48:00"
    },
    "tick": {
     "symbol": "XAUUSD.m",
-    "bid": 3557.57,
-    "ask": 3557.83,
+    "bid": 3565.95,
+    "ask": 3566.21,
     "spread": 0.26,
-    "time": "2026-11-26T01:38:59Z"
+    "time": "2026-11-26T01:48:23Z"
    }
   },
   "BTCUSD": {
@@ -964,14 +964,15 @@
     "valid_until_myt": "2026-11-26 13:41:00",
     "confidence": 0,
     "reasoning": "FX Vol 80 range-breakdown retest scalp. Context: 25 Nov crash 47276->41857, then an overnight bounce box 43122-43666 (00:00-03:10 EET) that stayed under H1 e20 (now 43835) and the old 43800-44070 support-now-resistance; D1 under e20 44874. M15 03:15 EET closed 42940 below the 43122 box low (break of the bounce = continuation), low 42858.59. Do not chase at 42950-43050: sell only on a retest of the broken box low 43100-43160 (limit). SL 43420 above the 03:10-03:15 breakdown origin (43401) so a full reclaim back into the box invalidates. TP 42450 just above the 42376-42390 H1 lows from 25 Nov 21:00-22:00 EET. Risk ~290 + spread ~12, reward ~680 -> ~2.2R after spread. Scalp validity 4 clock hours. Entry counts only on bid >= 43100 after creation; conservative SL-first if same-bar order unknown. Analytical call, not an order.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_V-S008.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 43100.0,
+    "fill_time_server": "2026-11-26 03:41:28",
     "asset": "FXVOL80",
     "name": "Vol 80 · Scalping #8",
-    "scored_myt": "2026-11-26 09:41:00"
+    "scored_myt": "2026-11-26 09:48:00",
+    "result_note": "FILLED (analytical): bid touched 43100 at 03:41:28 EET (09:41 MYT), first touch after creation. Since fill: high ask 43251.47 < SL 43420, low bid 43104.38. Open, last bid 43173.41 / ask 43185.72 (~-0.27R floating)."
    },
    "latest_by_type": {
     "SCALP": {
@@ -987,14 +988,15 @@
      "valid_until_myt": "2026-11-26 13:41:00",
      "confidence": 0,
      "reasoning": "FX Vol 80 range-breakdown retest scalp. Context: 25 Nov crash 47276->41857, then an overnight bounce box 43122-43666 (00:00-03:10 EET) that stayed under H1 e20 (now 43835) and the old 43800-44070 support-now-resistance; D1 under e20 44874. M15 03:15 EET closed 42940 below the 43122 box low (break of the bounce = continuation), low 42858.59. Do not chase at 42950-43050: sell only on a retest of the broken box low 43100-43160 (limit). SL 43420 above the 03:10-03:15 breakdown origin (43401) so a full reclaim back into the box invalidates. TP 42450 just above the 42376-42390 H1 lows from 25 Nov 21:00-22:00 EET. Risk ~290 + spread ~12, reward ~680 -> ~2.2R after spread. Scalp validity 4 clock hours. Entry counts only on bid >= 43100 after creation; conservative SL-first if same-bar order unknown. Analytical call, not an order.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_V-S008.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 43100.0,
+     "fill_time_server": "2026-11-26 03:41:28",
      "asset": "FXVOL80",
      "name": "Vol 80 · Scalping #8",
-     "scored_myt": "2026-11-26 09:41:00"
+     "scored_myt": "2026-11-26 09:48:00",
+     "result_note": "FILLED (analytical): bid touched 43100 at 03:41:28 EET (09:41 MYT), first touch after creation. Since fill: high ask 43251.47 < SL 43420, low bid 43104.38. Open, last bid 43173.41 / ask 43185.72 (~-0.27R floating)."
     },
     "INTRADAY": {
      "id": "V-I009",
@@ -1057,14 +1059,15 @@
     "valid_until_myt": "2026-11-26 13:41:00",
     "confidence": 0,
     "reasoning": "FX Vol 80 range-breakdown retest scalp. Context: 25 Nov crash 47276->41857, then an overnight bounce box 43122-43666 (00:00-03:10 EET) that stayed under H1 e20 (now 43835) and the old 43800-44070 support-now-resistance; D1 under e20 44874. M15 03:15 EET closed 42940 below the 43122 box low (break of the bounce = continuation), low 42858.59. Do not chase at 42950-43050: sell only on a retest of the broken box low 43100-43160 (limit). SL 43420 above the 03:10-03:15 breakdown origin (43401) so a full reclaim back into the box invalidates. TP 42450 just above the 42376-42390 H1 lows from 25 Nov 21:00-22:00 EET. Risk ~290 + spread ~12, reward ~680 -> ~2.2R after spread. Scalp validity 4 clock hours. Entry counts only on bid >= 43100 after creation; conservative SL-first if same-bar order unknown. Analytical call, not an order.",
-    "status": "PENDING",
+    "status": "FILLED",
     "r_result": null,
     "chart": "charts/call_V-S008.png",
-    "fill_px": null,
-    "fill_time_server": null,
+    "fill_px": 43100.0,
+    "fill_time_server": "2026-11-26 03:41:28",
     "asset": "FXVOL80",
     "name": "Vol 80 · Scalping #8",
-    "scored_myt": "2026-11-26 09:41:00"
+    "scored_myt": "2026-11-26 09:48:00",
+    "result_note": "FILLED (analytical): bid touched 43100 at 03:41:28 EET (09:41 MYT), first touch after creation. Since fill: high ask 43251.47 < SL 43420, low bid 43104.38. Open, last bid 43173.41 / ask 43185.72 (~-0.27R floating)."
    },
    "calls": [
     {
@@ -1584,14 +1587,15 @@
      "valid_until_myt": "2026-11-26 13:41:00",
      "confidence": 0,
      "reasoning": "FX Vol 80 range-breakdown retest scalp. Context: 25 Nov crash 47276->41857, then an overnight bounce box 43122-43666 (00:00-03:10 EET) that stayed under H1 e20 (now 43835) and the old 43800-44070 support-now-resistance; D1 under e20 44874. M15 03:15 EET closed 42940 below the 43122 box low (break of the bounce = continuation), low 42858.59. Do not chase at 42950-43050: sell only on a retest of the broken box low 43100-43160 (limit). SL 43420 above the 03:10-03:15 breakdown origin (43401) so a full reclaim back into the box invalidates. TP 42450 just above the 42376-42390 H1 lows from 25 Nov 21:00-22:00 EET. Risk ~290 + spread ~12, reward ~680 -> ~2.2R after spread. Scalp validity 4 clock hours. Entry counts only on bid >= 43100 after creation; conservative SL-first if same-bar order unknown. Analytical call, not an order.",
-     "status": "PENDING",
+     "status": "FILLED",
      "r_result": null,
      "chart": "charts/call_V-S008.png",
-     "fill_px": null,
-     "fill_time_server": null,
+     "fill_px": 43100.0,
+     "fill_time_server": "2026-11-26 03:41:28",
      "asset": "FXVOL80",
      "name": "Vol 80 · Scalping #8",
-     "scored_myt": "2026-11-26 09:41:00"
+     "scored_myt": "2026-11-26 09:48:00",
+     "result_note": "FILLED (analytical): bid touched 43100 at 03:41:28 EET (09:41 MYT), first touch after creation. Since fill: high ask 43251.47 < SL 43420, low bid 43104.38. Open, last bid 43173.41 / ask 43185.72 (~-0.27R floating)."
     }
    ],
    "open_count": 1,
@@ -1602,24 +1606,24 @@
     "open": 1
    },
    "freshness": {
-    "last_m5_eet": "2026-11-26 03:35:00",
-    "last_m5_myt": "2026-11-26 09:35:00",
-    "tick_bid": 43048.43,
-    "tick_ask": 43060.7,
-    "spread": 12.27,
-    "tick_eet": "2026-11-26T03:39:00",
-    "tick_myt": "2026-11-26 09:39:00",
-    "age_min": 2.0,
+    "last_m5_eet": "2026-11-26 03:45:00",
+    "last_m5_myt": "2026-11-26 09:45:00",
+    "tick_bid": 43173.41,
+    "tick_ask": 43185.72,
+    "spread": 12.31,
+    "tick_eet": "2026-11-26T03:48:24",
+    "tick_myt": "2026-11-26 09:48:24",
+    "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-26 09:41:00"
+    "scored_myt": "2026-11-26 09:48:00"
    },
    "tick": {
     "symbol": "FX Vol 80",
-    "bid": 43048.43,
-    "ask": 43060.7,
-    "spread": 12.27,
-    "time": "2026-11-26T01:39:00Z"
+    "bid": 43173.41,
+    "ask": 43185.72,
+    "spread": 12.31,
+    "time": "2026-11-26T01:48:24Z"
    }
   }
  },
@@ -1636,14 +1640,15 @@
   "valid_until_myt": "2026-11-26 13:41:00",
   "confidence": 0,
   "reasoning": "FX Vol 80 range-breakdown retest scalp. Context: 25 Nov crash 47276->41857, then an overnight bounce box 43122-43666 (00:00-03:10 EET) that stayed under H1 e20 (now 43835) and the old 43800-44070 support-now-resistance; D1 under e20 44874. M15 03:15 EET closed 42940 below the 43122 box low (break of the bounce = continuation), low 42858.59. Do not chase at 42950-43050: sell only on a retest of the broken box low 43100-43160 (limit). SL 43420 above the 03:10-03:15 breakdown origin (43401) so a full reclaim back into the box invalidates. TP 42450 just above the 42376-42390 H1 lows from 25 Nov 21:00-22:00 EET. Risk ~290 + spread ~12, reward ~680 -> ~2.2R after spread. Scalp validity 4 clock hours. Entry counts only on bid >= 43100 after creation; conservative SL-first if same-bar order unknown. Analytical call, not an order.",
-  "status": "PENDING",
+  "status": "FILLED",
   "r_result": null,
   "chart": "charts/call_V-S008.png",
-  "fill_px": null,
-  "fill_time_server": null,
+  "fill_px": 43100.0,
+  "fill_time_server": "2026-11-26 03:41:28",
   "asset": "FXVOL80",
   "name": "Vol 80 · Scalping #8",
-  "scored_myt": "2026-11-26 09:41:00"
+  "scored_myt": "2026-11-26 09:48:00",
+  "result_note": "FILLED (analytical): bid touched 43100 at 03:41:28 EET (09:41 MYT), first touch after creation. Since fill: high ask 43251.47 < SL 43420, low bid 43104.38. Open, last bid 43173.41 / ask 43185.72 (~-0.27R floating)."
  },
  "latest_by_type": {
   "SCALP": {
@@ -1659,14 +1664,15 @@
    "valid_until_myt": "2026-11-26 13:41:00",
    "confidence": 0,
    "reasoning": "FX Vol 80 range-breakdown retest scalp. Context: 25 Nov crash 47276->41857, then an overnight bounce box 43122-43666 (00:00-03:10 EET) that stayed under H1 e20 (now 43835) and the old 43800-44070 support-now-resistance; D1 under e20 44874. M15 03:15 EET closed 42940 below the 43122 box low (break of the bounce = continuation), low 42858.59. Do not chase at 42950-43050: sell only on a retest of the broken box low 43100-43160 (limit). SL 43420 above the 03:10-03:15 breakdown origin (43401) so a full reclaim back into the box invalidates. TP 42450 just above the 42376-42390 H1 lows from 25 Nov 21:00-22:00 EET. Risk ~290 + spread ~12, reward ~680 -> ~2.2R after spread. Scalp validity 4 clock hours. Entry counts only on bid >= 43100 after creation; conservative SL-first if same-bar order unknown. Analytical call, not an order.",
-   "status": "PENDING",
+   "status": "FILLED",
    "r_result": null,
    "chart": "charts/call_V-S008.png",
-   "fill_px": null,
-   "fill_time_server": null,
+   "fill_px": 43100.0,
+   "fill_time_server": "2026-11-26 03:41:28",
    "asset": "FXVOL80",
    "name": "Vol 80 · Scalping #8",
-   "scored_myt": "2026-11-26 09:41:00"
+   "scored_myt": "2026-11-26 09:48:00",
+   "result_note": "FILLED (analytical): bid touched 43100 at 03:41:28 EET (09:41 MYT), first touch after creation. Since fill: high ask 43251.47 < SL 43420, low bid 43104.38. Open, last bid 43173.41 / ask 43185.72 (~-0.27R floating)."
   },
   "INTRADAY": {
    "id": "V-I009",
@@ -1729,14 +1735,15 @@
   "valid_until_myt": "2026-11-26 13:41:00",
   "confidence": 0,
   "reasoning": "FX Vol 80 range-breakdown retest scalp. Context: 25 Nov crash 47276->41857, then an overnight bounce box 43122-43666 (00:00-03:10 EET) that stayed under H1 e20 (now 43835) and the old 43800-44070 support-now-resistance; D1 under e20 44874. M15 03:15 EET closed 42940 below the 43122 box low (break of the bounce = continuation), low 42858.59. Do not chase at 42950-43050: sell only on a retest of the broken box low 43100-43160 (limit). SL 43420 above the 03:10-03:15 breakdown origin (43401) so a full reclaim back into the box invalidates. TP 42450 just above the 42376-42390 H1 lows from 25 Nov 21:00-22:00 EET. Risk ~290 + spread ~12, reward ~680 -> ~2.2R after spread. Scalp validity 4 clock hours. Entry counts only on bid >= 43100 after creation; conservative SL-first if same-bar order unknown. Analytical call, not an order.",
-  "status": "PENDING",
+  "status": "FILLED",
   "r_result": null,
   "chart": "charts/call_V-S008.png",
-  "fill_px": null,
-  "fill_time_server": null,
+  "fill_px": 43100.0,
+  "fill_time_server": "2026-11-26 03:41:28",
   "asset": "FXVOL80",
   "name": "Vol 80 · Scalping #8",
-  "scored_myt": "2026-11-26 09:41:00"
+  "scored_myt": "2026-11-26 09:48:00",
+  "result_note": "FILLED (analytical): bid touched 43100 at 03:41:28 EET (09:41 MYT), first touch after creation. Since fill: high ask 43251.47 < SL 43420, low bid 43104.38. Open, last bid 43173.41 / ask 43185.72 (~-0.27R floating)."
  },
  "calls": [
   {
@@ -2217,14 +2224,15 @@
    "valid_until_myt": "2026-11-26 13:41:00",
    "confidence": 0,
    "reasoning": "FX Vol 80 range-breakdown retest scalp. Context: 25 Nov crash 47276->41857, then an overnight bounce box 43122-43666 (00:00-03:10 EET) that stayed under H1 e20 (now 43835) and the old 43800-44070 support-now-resistance; D1 under e20 44874. M15 03:15 EET closed 42940 below the 43122 box low (break of the bounce = continuation), low 42858.59. Do not chase at 42950-43050: sell only on a retest of the broken box low 43100-43160 (limit). SL 43420 above the 03:10-03:15 breakdown origin (43401) so a full reclaim back into the box invalidates. TP 42450 just above the 42376-42390 H1 lows from 25 Nov 21:00-22:00 EET. Risk ~290 + spread ~12, reward ~680 -> ~2.2R after spread. Scalp validity 4 clock hours. Entry counts only on bid >= 43100 after creation; conservative SL-first if same-bar order unknown. Analytical call, not an order.",
-   "status": "PENDING",
+   "status": "FILLED",
    "r_result": null,
    "chart": "charts/call_V-S008.png",
-   "fill_px": null,
-   "fill_time_server": null,
+   "fill_px": 43100.0,
+   "fill_time_server": "2026-11-26 03:41:28",
    "asset": "FXVOL80",
    "name": "Vol 80 · Scalping #8",
-   "scored_myt": "2026-11-26 09:41:00"
+   "scored_myt": "2026-11-26 09:48:00",
+   "result_note": "FILLED (analytical): bid touched 43100 at 03:41:28 EET (09:41 MYT), first touch after creation. Since fill: high ask 43251.47 < SL 43420, low bid 43104.38. Open, last bid 43173.41 / ask 43185.72 (~-0.27R floating)."
   }
  ],
  "scoreboard": {
@@ -2234,16 +2242,16 @@
   "open": 1
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-26 09:41:00",
- "fxvol80_server_time": "2026-11-26 03:39:00",
- "status_note": "Kemas kini 09:41 MYT. Call baru: Vol 80 · Scalping #8 SELL limit 43100-43160 (SL 43420, TP 42450), tunggu retest box low 43122 yang dah pecah. Vol 80 Intraday/Swing: WAIT. Gold: WAIT (range 3551-3589, lower high 3584). BTC paused.",
+ "last_updated": "2026-11-26 09:48:00",
+ "fxvol80_server_time": "2026-11-26 03:48:24",
+ "status_note": "Kemas kini 09:48 MYT. Vol 80 · Scalping #8 SELL FILLED 43100 pada 09:41 MYT (analitikal), sedang terbuka: SL 43420, TP 42450, sah sampai 13:41 MYT. Gold: WAIT. BTC paused.",
  "ticks": {
   "XAUUSD.m": {
    "symbol": "XAUUSD.m",
-   "bid": 3557.57,
-   "ask": 3557.83,
+   "bid": 3565.95,
+   "ask": 3566.21,
    "spread": 0.26,
-   "time": "2026-11-26T01:38:59Z"
+   "time": "2026-11-26T01:48:23Z"
   },
   "BTCUSD": {
    "bid": 73651.21,
@@ -2254,25 +2262,25 @@
   },
   "FXVOL80": {
    "symbol": "FX Vol 80",
-   "bid": 43048.43,
-   "ask": 43060.7,
-   "spread": 12.27,
-   "time": "2026-11-26T01:39:00Z"
+   "bid": 43173.41,
+   "ask": 43185.72,
+   "spread": 12.31,
+   "time": "2026-11-26T01:48:24Z"
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-26 03:35:00",
-   "last_m5_myt": "2026-11-26 09:35:00",
-   "tick_bid": 3557.57,
-   "tick_ask": 3557.83,
+   "last_m5_eet": "2026-11-26 03:45:00",
+   "last_m5_myt": "2026-11-26 09:45:00",
+   "tick_bid": 3565.95,
+   "tick_ask": 3566.21,
    "spread": 0.26,
-   "tick_eet": "2026-11-26T03:38:59",
-   "tick_myt": "2026-11-26 09:38:59",
-   "age_min": 2.0,
+   "tick_eet": "2026-11-26T03:48:23",
+   "tick_myt": "2026-11-26 09:48:23",
+   "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-26 09:41:00"
+   "scored_myt": "2026-11-26 09:48:00"
   },
   "BTCUSD": {
    "last_m5_eet": "2026-11-11 02:05:00",
@@ -2288,17 +2296,17 @@
    "scored_myt": "2026-11-11 08:08:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-26 03:35:00",
-   "last_m5_myt": "2026-11-26 09:35:00",
-   "tick_bid": 43048.43,
-   "tick_ask": 43060.7,
-   "spread": 12.27,
-   "tick_eet": "2026-11-26T03:39:00",
-   "tick_myt": "2026-11-26 09:39:00",
-   "age_min": 2.0,
+   "last_m5_eet": "2026-11-26 03:45:00",
+   "last_m5_myt": "2026-11-26 09:45:00",
+   "tick_bid": 43173.41,
+   "tick_ask": 43185.72,
+   "spread": 12.31,
+   "tick_eet": "2026-11-26T03:48:24",
+   "tick_myt": "2026-11-26 09:48:24",
+   "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-26 09:41:00"
+   "scored_myt": "2026-11-26 09:48:00"
   }
  },
  "outage": {
