@@ -1,6 +1,6 @@
 {
  "app": "Charlie Multi Calls",
- "generated_myt": "2026-11-26 12:17:00",
+ "generated_myt": "2026-11-26 12:58:00",
  "assets": [
   "XAUUSD",
   "BTCUSD",
@@ -22,15 +22,17 @@
     "valid_until_myt": "2026-11-26 15:19:00",
     "confidence": 0,
     "reasoning": "Gold failed-breakout retest scalp. Context: W1/D1 down (D1 e20 3799), 25 Nov crash to 3426.63 then V-bounce into an Asia box 3551-3589 at H4 e20 (~3583). M15 04:30 EET broke the box top to 3607.1 (just under the 3607-3623 24 Nov H1 support-now-resistance band) but M15 04:45 closed back inside at 3588.7 and 05:00 at 3583.8 = failed break at the next resistance; now 3576.7. Do not chase at 3577 (mid-box, M15 e20 3574.5): sell only on a retest of the lost box top 3586-3590 from below (failed reclaim of the flip, not a sell in the middle of a base, unlike Gold Scalping #7). SL 3600 above the 3596.5 04:50 EET M5 retest high (~1 M15 ATR 15.5 from entry); a reclaim above 3600 means the breakout is back on. TP 3558 just above the 3551-3555 box-low sweeps. Spread 0.26 in RR ~2.0 (at 3586) / ~2.4 (mid 3588) / ~3.0 (at 3590). Validity 4 clock hours. Fill = bid touches 3586 or higher after creation. Exit early if M15 closes above 3595 after fill. No-fill if 3558 is reached before a retest. Not an H4-zone entry; H4 spike filter n/a (H4 04:00 range 39 < 2x ATR 98). Unvalidated setup; no calibrated probability. Analytical call, not an order.",
-    "status": "FILLED",
-    "r_result": null,
+    "status": "SL",
+    "r_result": -1.0,
     "chart": "charts/call_S008.png",
     "fill_px": 3586.0,
     "fill_time_server": "2026-11-26 06:14:39 EET (bid 3586.04)",
     "asset": "XAUUSD",
     "name": "Gold · Scalping #8",
-    "scored_myt": "2026-11-26 12:17:00",
-    "result_note": "FILLED: bid touched the 3586 sell limit at 06:14:39 EET (12:14 MYT). Since fill: ask high 3586.82, far from SL 3600; TP 3558 not reached. Early exit if M15 closes above 3595; scalp closes at 15:19 MYT time stop. Analytical fill, not a broker execution."
+    "scored_myt": "2026-11-26 12:58:00",
+    "result_note": "SL: ask reached 3600 at 06:41:30 EET (12:41 MYT) after the 06:14:39 EET fill at 3586; lowest bid while open 3581.87, never near TP 3558. The early-exit rule (M15 close >3595) had not fired yet: the 06:30 M15 bar only closed at 06:45. Why it lost: the failed-breakout read was premature. After the 25 Nov V-bounce from 3426, buyers kept making higher lows (3551, 3555, 3575, 3582) and price came back into the box top with momentum instead of rejecting it, then pushed toward the 3607 high again. R = -1.0 (bid fill, ask exit). Analytical result, not a broker execution.",
+    "exit_px": 3600.0,
+    "exit_time_server": "2026-11-26 06:41:30 EET (ask 3600.02)"
    },
    "latest_by_type": {
     "SCALP": {
@@ -46,15 +48,17 @@
      "valid_until_myt": "2026-11-26 15:19:00",
      "confidence": 0,
      "reasoning": "Gold failed-breakout retest scalp. Context: W1/D1 down (D1 e20 3799), 25 Nov crash to 3426.63 then V-bounce into an Asia box 3551-3589 at H4 e20 (~3583). M15 04:30 EET broke the box top to 3607.1 (just under the 3607-3623 24 Nov H1 support-now-resistance band) but M15 04:45 closed back inside at 3588.7 and 05:00 at 3583.8 = failed break at the next resistance; now 3576.7. Do not chase at 3577 (mid-box, M15 e20 3574.5): sell only on a retest of the lost box top 3586-3590 from below (failed reclaim of the flip, not a sell in the middle of a base, unlike Gold Scalping #7). SL 3600 above the 3596.5 04:50 EET M5 retest high (~1 M15 ATR 15.5 from entry); a reclaim above 3600 means the breakout is back on. TP 3558 just above the 3551-3555 box-low sweeps. Spread 0.26 in RR ~2.0 (at 3586) / ~2.4 (mid 3588) / ~3.0 (at 3590). Validity 4 clock hours. Fill = bid touches 3586 or higher after creation. Exit early if M15 closes above 3595 after fill. No-fill if 3558 is reached before a retest. Not an H4-zone entry; H4 spike filter n/a (H4 04:00 range 39 < 2x ATR 98). Unvalidated setup; no calibrated probability. Analytical call, not an order.",
-     "status": "FILLED",
-     "r_result": null,
+     "status": "SL",
+     "r_result": -1.0,
      "chart": "charts/call_S008.png",
      "fill_px": 3586.0,
      "fill_time_server": "2026-11-26 06:14:39 EET (bid 3586.04)",
      "asset": "XAUUSD",
      "name": "Gold · Scalping #8",
-     "scored_myt": "2026-11-26 12:17:00",
-     "result_note": "FILLED: bid touched the 3586 sell limit at 06:14:39 EET (12:14 MYT). Since fill: ask high 3586.82, far from SL 3600; TP 3558 not reached. Early exit if M15 closes above 3595; scalp closes at 15:19 MYT time stop. Analytical fill, not a broker execution."
+     "scored_myt": "2026-11-26 12:58:00",
+     "result_note": "SL: ask reached 3600 at 06:41:30 EET (12:41 MYT) after the 06:14:39 EET fill at 3586; lowest bid while open 3581.87, never near TP 3558. The early-exit rule (M15 close >3595) had not fired yet: the 06:30 M15 bar only closed at 06:45. Why it lost: the failed-breakout read was premature. After the 25 Nov V-bounce from 3426, buyers kept making higher lows (3551, 3555, 3575, 3582) and price came back into the box top with momentum instead of rejecting it, then pushed toward the 3607 high again. R = -1.0 (bid fill, ask exit). Analytical result, not a broker execution.",
+     "exit_px": 3600.0,
+     "exit_time_server": "2026-11-26 06:41:30 EET (ask 3600.02)"
     },
     "INTRADAY": {
      "id": "I007",
@@ -115,15 +119,17 @@
     "valid_until_myt": "2026-11-26 15:19:00",
     "confidence": 0,
     "reasoning": "Gold failed-breakout retest scalp. Context: W1/D1 down (D1 e20 3799), 25 Nov crash to 3426.63 then V-bounce into an Asia box 3551-3589 at H4 e20 (~3583). M15 04:30 EET broke the box top to 3607.1 (just under the 3607-3623 24 Nov H1 support-now-resistance band) but M15 04:45 closed back inside at 3588.7 and 05:00 at 3583.8 = failed break at the next resistance; now 3576.7. Do not chase at 3577 (mid-box, M15 e20 3574.5): sell only on a retest of the lost box top 3586-3590 from below (failed reclaim of the flip, not a sell in the middle of a base, unlike Gold Scalping #7). SL 3600 above the 3596.5 04:50 EET M5 retest high (~1 M15 ATR 15.5 from entry); a reclaim above 3600 means the breakout is back on. TP 3558 just above the 3551-3555 box-low sweeps. Spread 0.26 in RR ~2.0 (at 3586) / ~2.4 (mid 3588) / ~3.0 (at 3590). Validity 4 clock hours. Fill = bid touches 3586 or higher after creation. Exit early if M15 closes above 3595 after fill. No-fill if 3558 is reached before a retest. Not an H4-zone entry; H4 spike filter n/a (H4 04:00 range 39 < 2x ATR 98). Unvalidated setup; no calibrated probability. Analytical call, not an order.",
-    "status": "FILLED",
-    "r_result": null,
+    "status": "SL",
+    "r_result": -1.0,
     "chart": "charts/call_S008.png",
     "fill_px": 3586.0,
     "fill_time_server": "2026-11-26 06:14:39 EET (bid 3586.04)",
     "asset": "XAUUSD",
     "name": "Gold · Scalping #8",
-    "scored_myt": "2026-11-26 12:17:00",
-    "result_note": "FILLED: bid touched the 3586 sell limit at 06:14:39 EET (12:14 MYT). Since fill: ask high 3586.82, far from SL 3600; TP 3558 not reached. Early exit if M15 closes above 3595; scalp closes at 15:19 MYT time stop. Analytical fill, not a broker execution."
+    "scored_myt": "2026-11-26 12:58:00",
+    "result_note": "SL: ask reached 3600 at 06:41:30 EET (12:41 MYT) after the 06:14:39 EET fill at 3586; lowest bid while open 3581.87, never near TP 3558. The early-exit rule (M15 close >3595) had not fired yet: the 06:30 M15 bar only closed at 06:45. Why it lost: the failed-breakout read was premature. After the 25 Nov V-bounce from 3426, buyers kept making higher lows (3551, 3555, 3575, 3582) and price came back into the box top with momentum instead of rejecting it, then pushed toward the 3607 high again. R = -1.0 (bid fill, ask exit). Analytical result, not a broker execution.",
+    "exit_px": 3600.0,
+    "exit_time_server": "2026-11-26 06:41:30 EET (ask 3600.02)"
    },
    "calls": [
     {
@@ -554,43 +560,45 @@
      "valid_until_myt": "2026-11-26 15:19:00",
      "confidence": 0,
      "reasoning": "Gold failed-breakout retest scalp. Context: W1/D1 down (D1 e20 3799), 25 Nov crash to 3426.63 then V-bounce into an Asia box 3551-3589 at H4 e20 (~3583). M15 04:30 EET broke the box top to 3607.1 (just under the 3607-3623 24 Nov H1 support-now-resistance band) but M15 04:45 closed back inside at 3588.7 and 05:00 at 3583.8 = failed break at the next resistance; now 3576.7. Do not chase at 3577 (mid-box, M15 e20 3574.5): sell only on a retest of the lost box top 3586-3590 from below (failed reclaim of the flip, not a sell in the middle of a base, unlike Gold Scalping #7). SL 3600 above the 3596.5 04:50 EET M5 retest high (~1 M15 ATR 15.5 from entry); a reclaim above 3600 means the breakout is back on. TP 3558 just above the 3551-3555 box-low sweeps. Spread 0.26 in RR ~2.0 (at 3586) / ~2.4 (mid 3588) / ~3.0 (at 3590). Validity 4 clock hours. Fill = bid touches 3586 or higher after creation. Exit early if M15 closes above 3595 after fill. No-fill if 3558 is reached before a retest. Not an H4-zone entry; H4 spike filter n/a (H4 04:00 range 39 < 2x ATR 98). Unvalidated setup; no calibrated probability. Analytical call, not an order.",
-     "status": "FILLED",
-     "r_result": null,
+     "status": "SL",
+     "r_result": -1.0,
      "chart": "charts/call_S008.png",
      "fill_px": 3586.0,
      "fill_time_server": "2026-11-26 06:14:39 EET (bid 3586.04)",
      "asset": "XAUUSD",
      "name": "Gold · Scalping #8",
-     "scored_myt": "2026-11-26 12:17:00",
-     "result_note": "FILLED: bid touched the 3586 sell limit at 06:14:39 EET (12:14 MYT). Since fill: ask high 3586.82, far from SL 3600; TP 3558 not reached. Early exit if M15 closes above 3595; scalp closes at 15:19 MYT time stop. Analytical fill, not a broker execution."
+     "scored_myt": "2026-11-26 12:58:00",
+     "result_note": "SL: ask reached 3600 at 06:41:30 EET (12:41 MYT) after the 06:14:39 EET fill at 3586; lowest bid while open 3581.87, never near TP 3558. The early-exit rule (M15 close >3595) had not fired yet: the 06:30 M15 bar only closed at 06:45. Why it lost: the failed-breakout read was premature. After the 25 Nov V-bounce from 3426, buyers kept making higher lows (3551, 3555, 3575, 3582) and price came back into the box top with momentum instead of rejecting it, then pushed toward the 3607 high again. R = -1.0 (bid fill, ask exit). Analytical result, not a broker execution.",
+     "exit_px": 3600.0,
+     "exit_time_server": "2026-11-26 06:41:30 EET (ask 3600.02)"
     }
    ],
-   "open_count": 1,
+   "open_count": 0,
    "scoreboard": {
-    "n": 9,
+    "n": 10,
     "wins": 2,
-    "sum_r": -3.97,
-    "open": 1
+    "sum_r": -4.97,
+    "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-26 06:15:00",
-    "last_m5_myt": "2026-11-26 12:15:00",
-    "tick_bid": 3586.3,
-    "tick_ask": 3586.56,
+    "last_m5_eet": "2026-11-26 06:55:00",
+    "last_m5_myt": "2026-11-26 12:55:00",
+    "tick_bid": 3594.72,
+    "tick_ask": 3594.98,
     "spread": 0.26,
-    "tick_eet": "2026-11-26T06:16:26",
-    "tick_myt": "2026-11-26 12:16:26",
+    "tick_eet": "2026-11-26T06:56:04",
+    "tick_myt": "2026-11-26 12:56:04",
     "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-26 12:17:00"
+    "scored_myt": "2026-11-26 12:58:00"
    },
    "tick": {
     "symbol": "XAUUSD.m",
-    "bid": 3586.3,
-    "ask": 3586.56,
+    "bid": 3594.72,
+    "ask": 3594.98,
     "spread": 0.26,
-    "time": "2026-11-26T04:16:26Z"
+    "time": "2026-11-26T04:56:04Z"
    }
   },
   "BTCUSD": {
@@ -1634,24 +1642,24 @@
     "open": 0
    },
    "freshness": {
-    "last_m5_eet": "2026-11-26 06:15:00",
-    "last_m5_myt": "2026-11-26 12:15:00",
-    "tick_bid": 42571.37,
-    "tick_ask": 42583.5,
-    "spread": 12.13,
-    "tick_eet": "2026-11-26T06:16:26",
-    "tick_myt": "2026-11-26 12:16:26",
+    "last_m5_eet": "2026-11-26 06:55:00",
+    "last_m5_myt": "2026-11-26 12:55:00",
+    "tick_bid": 42704.15,
+    "tick_ask": 42716.32,
+    "spread": 12.17,
+    "tick_eet": "2026-11-26T06:56:04",
+    "tick_myt": "2026-11-26 12:56:04",
     "age_min": 1.0,
     "ok": true,
     "note": "ok",
-    "scored_myt": "2026-11-26 12:17:00"
+    "scored_myt": "2026-11-26 12:58:00"
    },
    "tick": {
     "symbol": "FX Vol 80",
-    "bid": 42571.37,
-    "ask": 42583.5,
-    "spread": 12.13,
-    "time": "2026-11-26T04:16:26Z"
+    "bid": 42704.15,
+    "ask": 42716.32,
+    "spread": 12.17,
+    "time": "2026-11-26T04:56:04Z"
    }
   }
  },
@@ -1668,15 +1676,17 @@
   "valid_until_myt": "2026-11-26 15:19:00",
   "confidence": 0,
   "reasoning": "Gold failed-breakout retest scalp. Context: W1/D1 down (D1 e20 3799), 25 Nov crash to 3426.63 then V-bounce into an Asia box 3551-3589 at H4 e20 (~3583). M15 04:30 EET broke the box top to 3607.1 (just under the 3607-3623 24 Nov H1 support-now-resistance band) but M15 04:45 closed back inside at 3588.7 and 05:00 at 3583.8 = failed break at the next resistance; now 3576.7. Do not chase at 3577 (mid-box, M15 e20 3574.5): sell only on a retest of the lost box top 3586-3590 from below (failed reclaim of the flip, not a sell in the middle of a base, unlike Gold Scalping #7). SL 3600 above the 3596.5 04:50 EET M5 retest high (~1 M15 ATR 15.5 from entry); a reclaim above 3600 means the breakout is back on. TP 3558 just above the 3551-3555 box-low sweeps. Spread 0.26 in RR ~2.0 (at 3586) / ~2.4 (mid 3588) / ~3.0 (at 3590). Validity 4 clock hours. Fill = bid touches 3586 or higher after creation. Exit early if M15 closes above 3595 after fill. No-fill if 3558 is reached before a retest. Not an H4-zone entry; H4 spike filter n/a (H4 04:00 range 39 < 2x ATR 98). Unvalidated setup; no calibrated probability. Analytical call, not an order.",
-  "status": "FILLED",
-  "r_result": null,
+  "status": "SL",
+  "r_result": -1.0,
   "chart": "charts/call_S008.png",
   "fill_px": 3586.0,
   "fill_time_server": "2026-11-26 06:14:39 EET (bid 3586.04)",
   "asset": "XAUUSD",
   "name": "Gold · Scalping #8",
-  "scored_myt": "2026-11-26 12:17:00",
-  "result_note": "FILLED: bid touched the 3586 sell limit at 06:14:39 EET (12:14 MYT). Since fill: ask high 3586.82, far from SL 3600; TP 3558 not reached. Early exit if M15 closes above 3595; scalp closes at 15:19 MYT time stop. Analytical fill, not a broker execution."
+  "scored_myt": "2026-11-26 12:58:00",
+  "result_note": "SL: ask reached 3600 at 06:41:30 EET (12:41 MYT) after the 06:14:39 EET fill at 3586; lowest bid while open 3581.87, never near TP 3558. The early-exit rule (M15 close >3595) had not fired yet: the 06:30 M15 bar only closed at 06:45. Why it lost: the failed-breakout read was premature. After the 25 Nov V-bounce from 3426, buyers kept making higher lows (3551, 3555, 3575, 3582) and price came back into the box top with momentum instead of rejecting it, then pushed toward the 3607 high again. R = -1.0 (bid fill, ask exit). Analytical result, not a broker execution.",
+  "exit_px": 3600.0,
+  "exit_time_server": "2026-11-26 06:41:30 EET (ask 3600.02)"
  },
  "latest_by_type": {
   "SCALP": {
@@ -1692,15 +1702,17 @@
    "valid_until_myt": "2026-11-26 15:19:00",
    "confidence": 0,
    "reasoning": "Gold failed-breakout retest scalp. Context: W1/D1 down (D1 e20 3799), 25 Nov crash to 3426.63 then V-bounce into an Asia box 3551-3589 at H4 e20 (~3583). M15 04:30 EET broke the box top to 3607.1 (just under the 3607-3623 24 Nov H1 support-now-resistance band) but M15 04:45 closed back inside at 3588.7 and 05:00 at 3583.8 = failed break at the next resistance; now 3576.7. Do not chase at 3577 (mid-box, M15 e20 3574.5): sell only on a retest of the lost box top 3586-3590 from below (failed reclaim of the flip, not a sell in the middle of a base, unlike Gold Scalping #7). SL 3600 above the 3596.5 04:50 EET M5 retest high (~1 M15 ATR 15.5 from entry); a reclaim above 3600 means the breakout is back on. TP 3558 just above the 3551-3555 box-low sweeps. Spread 0.26 in RR ~2.0 (at 3586) / ~2.4 (mid 3588) / ~3.0 (at 3590). Validity 4 clock hours. Fill = bid touches 3586 or higher after creation. Exit early if M15 closes above 3595 after fill. No-fill if 3558 is reached before a retest. Not an H4-zone entry; H4 spike filter n/a (H4 04:00 range 39 < 2x ATR 98). Unvalidated setup; no calibrated probability. Analytical call, not an order.",
-   "status": "FILLED",
-   "r_result": null,
+   "status": "SL",
+   "r_result": -1.0,
    "chart": "charts/call_S008.png",
    "fill_px": 3586.0,
    "fill_time_server": "2026-11-26 06:14:39 EET (bid 3586.04)",
    "asset": "XAUUSD",
    "name": "Gold · Scalping #8",
-   "scored_myt": "2026-11-26 12:17:00",
-   "result_note": "FILLED: bid touched the 3586 sell limit at 06:14:39 EET (12:14 MYT). Since fill: ask high 3586.82, far from SL 3600; TP 3558 not reached. Early exit if M15 closes above 3595; scalp closes at 15:19 MYT time stop. Analytical fill, not a broker execution."
+   "scored_myt": "2026-11-26 12:58:00",
+   "result_note": "SL: ask reached 3600 at 06:41:30 EET (12:41 MYT) after the 06:14:39 EET fill at 3586; lowest bid while open 3581.87, never near TP 3558. The early-exit rule (M15 close >3595) had not fired yet: the 06:30 M15 bar only closed at 06:45. Why it lost: the failed-breakout read was premature. After the 25 Nov V-bounce from 3426, buyers kept making higher lows (3551, 3555, 3575, 3582) and price came back into the box top with momentum instead of rejecting it, then pushed toward the 3607 high again. R = -1.0 (bid fill, ask exit). Analytical result, not a broker execution.",
+   "exit_px": 3600.0,
+   "exit_time_server": "2026-11-26 06:41:30 EET (ask 3600.02)"
   },
   "INTRADAY": {
    "id": "V-I009",
@@ -1763,15 +1775,17 @@
   "valid_until_myt": "2026-11-26 15:19:00",
   "confidence": 0,
   "reasoning": "Gold failed-breakout retest scalp. Context: W1/D1 down (D1 e20 3799), 25 Nov crash to 3426.63 then V-bounce into an Asia box 3551-3589 at H4 e20 (~3583). M15 04:30 EET broke the box top to 3607.1 (just under the 3607-3623 24 Nov H1 support-now-resistance band) but M15 04:45 closed back inside at 3588.7 and 05:00 at 3583.8 = failed break at the next resistance; now 3576.7. Do not chase at 3577 (mid-box, M15 e20 3574.5): sell only on a retest of the lost box top 3586-3590 from below (failed reclaim of the flip, not a sell in the middle of a base, unlike Gold Scalping #7). SL 3600 above the 3596.5 04:50 EET M5 retest high (~1 M15 ATR 15.5 from entry); a reclaim above 3600 means the breakout is back on. TP 3558 just above the 3551-3555 box-low sweeps. Spread 0.26 in RR ~2.0 (at 3586) / ~2.4 (mid 3588) / ~3.0 (at 3590). Validity 4 clock hours. Fill = bid touches 3586 or higher after creation. Exit early if M15 closes above 3595 after fill. No-fill if 3558 is reached before a retest. Not an H4-zone entry; H4 spike filter n/a (H4 04:00 range 39 < 2x ATR 98). Unvalidated setup; no calibrated probability. Analytical call, not an order.",
-  "status": "FILLED",
-  "r_result": null,
+  "status": "SL",
+  "r_result": -1.0,
   "chart": "charts/call_S008.png",
   "fill_px": 3586.0,
   "fill_time_server": "2026-11-26 06:14:39 EET (bid 3586.04)",
   "asset": "XAUUSD",
   "name": "Gold · Scalping #8",
-  "scored_myt": "2026-11-26 12:17:00",
-  "result_note": "FILLED: bid touched the 3586 sell limit at 06:14:39 EET (12:14 MYT). Since fill: ask high 3586.82, far from SL 3600; TP 3558 not reached. Early exit if M15 closes above 3595; scalp closes at 15:19 MYT time stop. Analytical fill, not a broker execution."
+  "scored_myt": "2026-11-26 12:58:00",
+  "result_note": "SL: ask reached 3600 at 06:41:30 EET (12:41 MYT) after the 06:14:39 EET fill at 3586; lowest bid while open 3581.87, never near TP 3558. The early-exit rule (M15 close >3595) had not fired yet: the 06:30 M15 bar only closed at 06:45. Why it lost: the failed-breakout read was premature. After the 25 Nov V-bounce from 3426, buyers kept making higher lows (3551, 3555, 3575, 3582) and price came back into the box top with momentum instead of rejecting it, then pushed toward the 3607 high again. R = -1.0 (bid fill, ask exit). Analytical result, not a broker execution.",
+  "exit_px": 3600.0,
+  "exit_time_server": "2026-11-26 06:41:30 EET (ask 3600.02)"
  },
  "calls": [
   {
@@ -2277,34 +2291,36 @@
    "valid_until_myt": "2026-11-26 15:19:00",
    "confidence": 0,
    "reasoning": "Gold failed-breakout retest scalp. Context: W1/D1 down (D1 e20 3799), 25 Nov crash to 3426.63 then V-bounce into an Asia box 3551-3589 at H4 e20 (~3583). M15 04:30 EET broke the box top to 3607.1 (just under the 3607-3623 24 Nov H1 support-now-resistance band) but M15 04:45 closed back inside at 3588.7 and 05:00 at 3583.8 = failed break at the next resistance; now 3576.7. Do not chase at 3577 (mid-box, M15 e20 3574.5): sell only on a retest of the lost box top 3586-3590 from below (failed reclaim of the flip, not a sell in the middle of a base, unlike Gold Scalping #7). SL 3600 above the 3596.5 04:50 EET M5 retest high (~1 M15 ATR 15.5 from entry); a reclaim above 3600 means the breakout is back on. TP 3558 just above the 3551-3555 box-low sweeps. Spread 0.26 in RR ~2.0 (at 3586) / ~2.4 (mid 3588) / ~3.0 (at 3590). Validity 4 clock hours. Fill = bid touches 3586 or higher after creation. Exit early if M15 closes above 3595 after fill. No-fill if 3558 is reached before a retest. Not an H4-zone entry; H4 spike filter n/a (H4 04:00 range 39 < 2x ATR 98). Unvalidated setup; no calibrated probability. Analytical call, not an order.",
-   "status": "FILLED",
-   "r_result": null,
+   "status": "SL",
+   "r_result": -1.0,
    "chart": "charts/call_S008.png",
    "fill_px": 3586.0,
    "fill_time_server": "2026-11-26 06:14:39 EET (bid 3586.04)",
    "asset": "XAUUSD",
    "name": "Gold · Scalping #8",
-   "scored_myt": "2026-11-26 12:17:00",
-   "result_note": "FILLED: bid touched the 3586 sell limit at 06:14:39 EET (12:14 MYT). Since fill: ask high 3586.82, far from SL 3600; TP 3558 not reached. Early exit if M15 closes above 3595; scalp closes at 15:19 MYT time stop. Analytical fill, not a broker execution."
+   "scored_myt": "2026-11-26 12:58:00",
+   "result_note": "SL: ask reached 3600 at 06:41:30 EET (12:41 MYT) after the 06:14:39 EET fill at 3586; lowest bid while open 3581.87, never near TP 3558. The early-exit rule (M15 close >3595) had not fired yet: the 06:30 M15 bar only closed at 06:45. Why it lost: the failed-breakout read was premature. After the 25 Nov V-bounce from 3426, buyers kept making higher lows (3551, 3555, 3575, 3582) and price came back into the box top with momentum instead of rejecting it, then pushed toward the 3607 high again. R = -1.0 (bid fill, ask exit). Analytical result, not a broker execution.",
+   "exit_px": 3600.0,
+   "exit_time_server": "2026-11-26 06:41:30 EET (ask 3600.02)"
   }
  ],
  "scoreboard": {
-  "n": 27,
+  "n": 28,
   "wins": 12,
-  "sum_r": 7.7,
-  "open": 1
+  "sum_r": 6.7,
+  "open": 0
  },
  "quote_note": "Server times EET; MYT=EET+6. Spreads from live ticks.",
- "last_updated": "2026-11-26 12:17:00",
- "fxvol80_server_time": "2026-11-26 06:16:26",
- "status_note": "Kemas kini 12:17 MYT. Gold · Scalping #8 SELL kena entry 3586 pada 12:14 MYT (analitikal). SL 3600, TP 3558, exit awal jika M15 tutup >3595, tutup paling lewat 15:19 MYT. Gold Intraday/Swing & Vol 80: WAIT. BTC paused.",
+ "last_updated": "2026-11-26 12:58:00",
+ "fxvol80_server_time": "2026-11-26 06:56:04",
+ "status_note": "Kemas kini 12:58 MYT. Gold · Scalping #8 SELL kena SL 3600 pada 12:41 MYT (-1.0R, analitikal). Tiada call terbuka. Gold & Vol 80: WAIT. BTC paused.",
  "ticks": {
   "XAUUSD.m": {
    "symbol": "XAUUSD.m",
-   "bid": 3586.3,
-   "ask": 3586.56,
+   "bid": 3594.72,
+   "ask": 3594.98,
    "spread": 0.26,
-   "time": "2026-11-26T04:16:26Z"
+   "time": "2026-11-26T04:56:04Z"
   },
   "BTCUSD": {
    "bid": 73651.21,
@@ -2315,25 +2331,25 @@
   },
   "FXVOL80": {
    "symbol": "FX Vol 80",
-   "bid": 42571.37,
-   "ask": 42583.5,
-   "spread": 12.13,
-   "time": "2026-11-26T04:16:26Z"
+   "bid": 42704.15,
+   "ask": 42716.32,
+   "spread": 12.17,
+   "time": "2026-11-26T04:56:04Z"
   }
  },
  "freshness": {
   "XAUUSD": {
-   "last_m5_eet": "2026-11-26 06:15:00",
-   "last_m5_myt": "2026-11-26 12:15:00",
-   "tick_bid": 3586.3,
-   "tick_ask": 3586.56,
+   "last_m5_eet": "2026-11-26 06:55:00",
+   "last_m5_myt": "2026-11-26 12:55:00",
+   "tick_bid": 3594.72,
+   "tick_ask": 3594.98,
    "spread": 0.26,
-   "tick_eet": "2026-11-26T06:16:26",
-   "tick_myt": "2026-11-26 12:16:26",
+   "tick_eet": "2026-11-26T06:56:04",
+   "tick_myt": "2026-11-26 12:56:04",
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-26 12:17:00"
+   "scored_myt": "2026-11-26 12:58:00"
   },
   "BTCUSD": {
    "last_m5_eet": "2026-11-11 02:05:00",
@@ -2349,17 +2365,17 @@
    "scored_myt": "2026-11-11 08:08:00"
   },
   "FXVOL80": {
-   "last_m5_eet": "2026-11-26 06:15:00",
-   "last_m5_myt": "2026-11-26 12:15:00",
-   "tick_bid": 42571.37,
-   "tick_ask": 42583.5,
-   "spread": 12.13,
-   "tick_eet": "2026-11-26T06:16:26",
-   "tick_myt": "2026-11-26 12:16:26",
+   "last_m5_eet": "2026-11-26 06:55:00",
+   "last_m5_myt": "2026-11-26 12:55:00",
+   "tick_bid": 42704.15,
+   "tick_ask": 42716.32,
+   "spread": 12.17,
+   "tick_eet": "2026-11-26T06:56:04",
+   "tick_myt": "2026-11-26 12:56:04",
    "age_min": 1.0,
    "ok": true,
    "note": "ok",
-   "scored_myt": "2026-11-26 12:17:00"
+   "scored_myt": "2026-11-26 12:58:00"
   }
  },
  "outage": {
